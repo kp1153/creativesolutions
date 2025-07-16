@@ -21,7 +21,7 @@ export default function Footer() {
             बस, आम लोगों की जानकारी के लिए, नेक्स्ट.जेएस पर बनी वेबसाइट वर्सेल पर मुफ्त में होस्ट हो सकती है वर्ना बाजार में ठग बैठे हैं और हर साल आपसे पैसा वसूलेंगे, जबकि मैं सिर्फ एक बार मजदूरी लूँगा और ताला-कुंजी सब आपके हवाले कर दूँगा।
           </p>
           <p className="mt-4">
-            <strong>संपर्क:</strong> hamaramorcha1153@gmail.com, मो. 9996865069
+            <strong>संपर्क:</strong> prasad.kamta@gmail.com, मो. 9996865069
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function Footer() {
             Just for public awareness — websites built on Next.js can be hosted for free on Vercel. Otherwise, the market is full of tricksters who will charge you every year, while I will only charge once for my labor and will hand over everything — lock, key, and control — to you.
           </p>
           <p className="mt-4">
-            <strong>Contact:</strong> hamaramorcha1153@gmail.com, Mob. 9996865069
+            <strong>Contact:</strong> prasad.kamta@gmail.com, Mob. 9996865069
           </p>
         </div>
       </div>
