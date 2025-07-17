@@ -10,10 +10,7 @@ export default function Footer() {
           </p>
           <p>
             हमारा मोर्चा को बनाने के लिए उन्होंने HTML, CSS और JavaScript सीखी। फिर Tailwind CSS, React.js, Node.js पर हाथ साफ किया और Next.js 15 की जमकर प्रैक्टिस की और अभी भी कर ही रहे हैं।
-          </p>
-          <p>
-            उन्होंने JavaScript के सुपरसेट TypeScript पर भी हाथ साफ किया और इस तरह से इंडस्ट्री स्टैंडर्ड पर खुद को खरा उतारने के लिए दिन-रात एक किए हुए हैं।
-          </p>
+          </p>       
           <p>
             चूँकि कामता प्रसाद हिंदी-अंग्रेजी के अलावा उर्दू भी जानते हैं तो कांटेंट राइटिंग में भी आप उनसे मदद ले सकते हैं।
           </p>
@@ -34,10 +31,7 @@ export default function Footer() {
           </p>
           <p>
             To create Hamara Morcha, he learned HTML, CSS, and JavaScript. Then he practiced Tailwind CSS, React.js, and Node.js thoroughly, followed by intensive work on Next.js 15, which he is still actively practicing.
-          </p>
-          <p>
-            He also gained proficiency in TypeScript, the superset of JavaScript, and continues working day and night to meet industry standards.
-          </p>
+          </p>     
           <p>
             Since Kamta Prasad knows Hindi, English, and also Urdu, you may also seek his assistance in content writing.
           </p>
