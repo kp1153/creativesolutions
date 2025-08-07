@@ -2,7 +2,7 @@ export default function WorkProcess() {
   return (
     <section className="px-6 py-10 max-w-4xl mx-auto space-y-10 text-base leading-relaxed">
       <h2 className="text-2xl font-bold text-center text-black">
-        काम करने का मेरा ढंग। पारदर्शिता सुनिश्चित करना सर्वोपरि लक्ष्य।
+        काम करने का मेरा ढंग। पारदर्शिता सुनिश्चित करना सर्वोपरि लक्ष्य
       </h2>
 
       <div className="space-y-6">
