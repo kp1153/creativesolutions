@@ -14,9 +14,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// ❌ Removed default metadata (Create Next App)
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
-// ✅ Layout component
+export const metadata = {
+  title: "नेक्स्ट.जेएस 'क्रिएटिव सॉल्यूशंस'",
+  description: "हम लेटेस्ट टेक्नोलॉजी पर बनाते हैं, ऐसी वेबसाइट जिस पर नहीं आता कोई सालाना खर्च",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
