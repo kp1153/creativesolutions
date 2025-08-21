@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection";
-import TechStack from "./components/TechStack"; // Add this line
+import Visitors from "./components/Visitors";
+import TechStack from "./components/TechStack";
 import WorkProcess from "./components/WorkProcess";
 import LanguageExpertise from "./components/LanguageExpertise";
 import CallToAction from "./components/CallToAction";
@@ -12,6 +13,7 @@ export default function Home() {
       <WorkProcess />
       <LanguageExpertise />
       <CallToAction />
+      <Visitors />
     </main>
   );
 }
