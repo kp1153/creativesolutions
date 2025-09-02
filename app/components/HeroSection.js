@@ -1,56 +1,106 @@
+"use client";
+
 import Image from "next/image";
 
-export default function HeroSection() {
+const HeroSection = () => {
   return (
-    <section className="px-6 py-10 max-w-4xl mx-auto space-y-10 text-base leading-relaxed text-gray-800">
-      <div className="flex justify-center">
-        <Image
-          src="/1.jpeg"
-          alt="Kamta Prasad"
-          width={600}
-          height={400}
-          className="rounded-xl shadow-md"
-        />
+    <section className="relative bg-gradient-to-br from-indigo-500 to-purple-700 py-16 px-6">
+      <div className="max-w-6xl mx-auto text-center space-y-12">
+        {/* Heading */}
+        <div>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white">
+            Next.js: वर्तमान और भविष्य
+          </h1>
+          <p className="mt-4 text-lg text-indigo-100">
+            वर्डप्रेस पर बनी लचर और बेहद असुरक्षित वेबसाइटों से छुटकारा, Next.js
+            से पाएं तेज़ और सुरक्षित वेबसाइट
+          </p>
+        </div>
+
+        {/* Problems Section */}
+        <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-2xl p-8 shadow-xl text-left">
+          <h2 className="text-2xl font-bold mb-4">
+            WordPress पर बनी वेबसाइटों की समस्याएं
+          </h2>
+          <ul className="space-y-2">
+            <li>हर साल होस्टिंग पर हजारों रुपए खर्च</li>
+            <li>धीमी लोडिंग स्पीड - ग्राहक चले जाते हैं</li>
+            <li>
+              सिक्योरिटी इश्यूज (गंदे-गंदे कांटेंट खुद से अपलोड होने लगते हैं) -
+              हैकिंग का डर
+            </li>
+            <li>थीम-प्लगइन में टकराव हुआ नहीं कि आपकी वेबसाइट बैठ जाती है</li>
+            <li>Plugin की झंझट - साइट क्रैश हो जाती है</li>
+          </ul>
+        </div>
+
+        {/* Solutions Section */}
+        <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-2xl p-8 shadow-xl text-left">
+          <h2 className="text-2xl font-bold mb-4">Next.js के फायदे</h2>
+          <ul className="space-y-2">
+            <li>बिल्कुल फ्री होस्टिंग - Vercel पर</li>
+            <li>सुपर फास्ट लोडिंग</li>
+            <li>Modern Technology - Future Ready</li>
+            <li>SEO Friendly - Google में टॉप रैंकिंग</li>
+            <li>मोबाइल समेत सभी डिवाइसों पर परफेक्ट</li>
+          </ul>
+        </div>
+
+        {/* Comparison Table */}
+        <div className="overflow-hidden rounded-xl shadow-2xl bg-white">
+          <table className="w-full text-center text-base">
+            <thead>
+              <tr>
+                <th className="bg-indigo-600 text-white py-3 px-4">फीचर</th>
+                <th className="bg-indigo-600 text-white py-3 px-4">
+                  WordPress
+                </th>
+                <th className="bg-indigo-600 text-white py-3 px-4">Next.js</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b">
+                <td className="py-3 px-4 font-semibold">होस्टिंग कॉस्ट</td>
+                <td className="bg-red-50 text-red-600 py-3 px-4">
+                  ₹5000-15000/साल
+                </td>
+                <td className="bg-green-50 text-green-600 py-3 px-4">
+                  बिल्कुल फ्री
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-3 px-4 font-semibold">लोडिंग स्पीड</td>
+                <td className="bg-red-50 text-red-600 py-3 px-4">
+                  धीमी (3-5 सेकंड)
+                </td>
+                <td className="bg-green-50 text-green-600 py-3 px-4">
+                  बहुत तेज़ (0.5 सेकंड)
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-3 px-4 font-semibold">सिक्योरिटी</td>
+                <td className="bg-red-50 text-red-600 py-3 px-4">
+                  हैकिंग का डर
+                </td>
+                <td className="bg-green-50 text-green-600 py-3 px-4">
+                  100% सुरक्षित
+                </td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 font-semibold">अपडेट्स</td>
+                <td className="bg-red-50 text-red-600 py-3 px-4">
+                  मैन्युअल + पेड
+                </td>
+                <td className="bg-green-50 text-green-600 py-3 px-4">
+                  ऑटोमेटिक + फ्री
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-
-      <p>
-        <strong>समस्त जन,</strong> वेबसाइटें दो प्रकार की होती हैं: पहली
-        वर्डप्रेस पर बिना कोडिंग के बनने वाली, जो बिल्कुल भी सेफ नहीं होतीं और
-        जिनके डेवलपर गली में चार पाए जाते हैं। दूसरी वेबसाइटें वे होती हैं जो
-        कोडिंग सीखकर बनाई जाती हैं और जिनमें सुरक्षा और अनुकूलन के पुख्ता इंतजाम
-        होते हैं।<br></br>वर्डप्रेस पर वेबसाइट बनाने वाले मूलतः फांदेबाज-धंधेबाज
-        होते हैं और हर साल आपसे होस्टिंग-मेनटीनेंस के नाम पर धन-उगाही करते हैं,
-        जबकि मैं नेक्स्ट.जेएस पर वेबसाइट डेवलप करता हूँ और होस्टिंग प्रायः मुफ्त
-        रहती है, ताउम्र के लिए।<br></br> सबसे पहले मैं VS Code पर वेबसाइट डेवलप
-        करता हूँ। फिर मैं उसे GitHub पर एक नई रेपोजिटरी में पुश करता हूँ। वहाँ
-        से उसे Vercel पर लाइव कर देता हूँ। GitHub और Vercel आपस में जुड़े होते
-        हैं, जिससे किसी भी लेआउट या डिज़ाइन में बदलाव अपने आप वेबसाइट पर कुछ ही
-        क्षणों में लाइव हो जाता है। <br></br> मेरा नाम कामता प्रसाद है और मैं
-        पिछले तीन दशकों से हिंदी पत्रकारिता में सक्रिय हूँ। मैं अंग्रेज़ी और
-        उर्दू भाषा का भी जानकार हूँ। यदि आप चाहेंगे तो मैं आपकी वेबसाइट की
-        सामग्री तैयार करने में भी आपकी सहायता कर सकता हूँ।<br></br>मैं आपकी
-        वेबसाइट को किसी भी प्लेटफॉर्म पर होस्ट यानि कि डिप्लॉय कर सकता हूँ।
-      </p>
-
-      <p>
-        <strong>Dear All,</strong> Websites are of two types: the first are
-        built on WordPress without any coding — these are generally not secure,
-        and their developers are found on every street corner. The second type
-        are websites built by actually learning to code, with strong measures
-        for security and customization.<br></br>
-        WordPress website builders are, in essence, opportunists who charge you
-        every year under the name of hosting and maintenance, whereas I develop
-        websites in Next.js, where hosting is often free — for a lifetime.
-        <br></br>
-        First, I develop the website on VS Code. Then I push it to a new
-        repository on GitHub. From there, I deploy it live on Vercel. GitHub and
-        Vercel are connected, so any change in layout or design goes live on the
-        website within seconds.<br></br>
-        My name is Kamta Prasad, and I have been active in Hindi journalism for
-        the past three decades. I am also proficient in English and Urdu. If you
-        wish, I can also help you prepare the content for your website.<br></br>
-        I can host, i.e., deploy, your website on any platform.
-      </p>
     </section>
   );
-}
+};
+
+export default HeroSection;
