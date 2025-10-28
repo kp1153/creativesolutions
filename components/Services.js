@@ -5,10 +5,11 @@ export default function OurServices() {
       <div className="font-semibold">
         <h2 className="text-xl font-bold mb-4">हमारी सेवाएँ</h2>
         <p>
-          हम Next.js और Tailwind CSS पर आधारित पोर्टफोलियो वेबसाइट डेवलप करते
-          हैं। हम अंग्रेज़ी से हिंदी में अनुवाद और सटीक कांटेंट राइटिंग करते
-          हैं। आप हमसे लेआउट डिज़ाइन करवाने के लिए भी संपर्क कर सकते हैं। हमें
-          InDesign और CorelDRAW जैसे ग्राफिक टूल्स का अच्छा अनुभव है।
+          हम Next.js और लारावेल पर बनने वाली सभी तरह की वेबसाइटों को डेवलप करते
+          हैं। हम मोबाइल ऐप भी बनाते हैं। हम अंग्रेज़ी से हिंदी में अनुवाद और
+          सटीक कांटेंट राइटिंग करते हैं। आप हमसे लेआउट डिज़ाइन करवाने के लिए भी
+          संपर्क कर सकते हैं। हमें InDesign और CorelDRAW जैसे ग्राफिक टूल्स का
+          अच्छा अनुभव है।
         </p>
       </div>
 
@@ -16,10 +17,10 @@ export default function OurServices() {
       <div className="text-[#1A365D]">
         <h2 className="text-xl font-bold mb-4">Our Services</h2>
         <p>
-          We develop portfolio websites using Next.js and Tailwind CSS. We
-          provide English to Hindi translation along with precise content
-          writing. You may also consult us for layout design services. We’re
-          well-versed with graphic tools like InDesign and CorelDRAW.
+          We develop all types of websites using Next.js and Laravel. We provide
+          English to Hindi translation along with precise content writing. You
+          may also consult us for layout design services. We’re well-versed with
+          graphic tools like InDesign and CorelDRAW.
         </p>
       </div>
     </section>
