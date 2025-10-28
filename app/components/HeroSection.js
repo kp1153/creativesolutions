@@ -2,8 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
 
 const HeroSection = () => {
   const projects = [
@@ -200,7 +205,7 @@ const HeroSection = () => {
                   <CardTitle className="text-lg">{project.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <Link href={project.url} target="_blank">
+                  <Link href={project.url} target="_blank" rel="noreferrer">
                     <Button className="w-full">Visit Website</Button>
                   </Link>
                 </CardContent>

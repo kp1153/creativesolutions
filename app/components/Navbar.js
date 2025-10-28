@@ -18,7 +18,7 @@ const Navbar = () => {
 
           {/* ➡️ Right Side: Contact Info */}
           <div className="hidden md:flex items-center space-x-4">
-            
+            <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -33,7 +33,7 @@ const Navbar = () => {
               9996865069
             </a>
             <span>|</span>
-            
+            <a
               href="mailto:prasad.kamta@gmail.com"
               className="hover:text-blue-600 transition-colors duration-300"
             >
@@ -54,40 +54,40 @@ const Navbar = () => {
       <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-center">
         <ul className="flex flex-wrap justify-center gap-4 md:gap-6 text-gray-700 font-medium">
           <li>
-            <a 
-              href="#home" 
+            <a
+              href="#home"
               className="hover:text-amber-600 transition-colors duration-300"
             >
               Home
             </a>
           </li>
           <li>
-            <a 
-              href="#tech-stack" 
+            <a
+              href="#tech-stack"
               className="hover:text-amber-600 transition-colors duration-300"
             >
               Tech Stack
             </a>
           </li>
           <li>
-            <a 
-              href="#work-process" 
+            <a
+              href="#work-process"
               className="hover:text-amber-600 transition-colors duration-300"
             >
               Work Process
             </a>
           </li>
           <li>
-            <a 
-              href="#language" 
+            <a
+              href="#language"
               className="hover:text-amber-600 transition-colors duration-300"
             >
               Language
             </a>
           </li>
           <li>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="hover:text-amber-600 transition-colors duration-300"
             >
               Contact
