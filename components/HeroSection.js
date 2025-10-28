@@ -2,10 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
 
 const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = 7;
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   const projects = [
     {
       url: "https://www.interiordesignerchandni.com/",
@@ -37,18 +48,60 @@ const HeroSection = () => {
 
   return (
     <>
-      <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 px-6">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <div className="text-center space-y-4">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
-              Next.js: वर्तमान और भविष्य
+      {/* Slider Section */}
+      <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          {/* Top Text */}
+          <div className="text-center mb-10">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+              Next.js-लारावेल: वर्तमान और भविष्य
             </h1>
-            <p className="text-xl md:text-2xl text-indigo-100 max-w-3xl mx-auto">
+            <p className="text-lg md:text-2xl text-indigo-100 max-w-3xl mx-auto">
               वर्डप्रेस पर बनी लचर और बेहद असुरक्षित वेबसाइटों से छुटकारा,
-              Next.js से पाएं तेज़ और सुरक्षित वेबसाइट
+              Next.js-लारावेल से पाएं तेज़ और सुरक्षित वेबसाइट
             </p>
           </div>
 
+          {/* Image Slider */}
+          <div className="relative w-full max-w-4xl mx-auto h-64 md:h-96 overflow-hidden rounded-2xl shadow-2xl">
+            {[1, 2, 3, 4, 5, 6, 7].map((num, index) => (
+              <div
+                key={num}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  currentSlide === index ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <Image
+                  src={`/images/${num}.jpeg`}
+                  alt={`Slide ${num}`}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                />
+              </div>
+            ))}
+
+            {/* Dots */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+              {[...Array(totalSlides)].map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    currentSlide === index
+                      ? "bg-white w-8"
+                      : "bg-white/50 hover:bg-white/80"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 px-6">
+        <div className="max-w-6xl mx-auto space-y-16">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
@@ -89,13 +142,16 @@ const HeroSection = () => {
                   <span className="text-2xl">✨</span>
                 </div>
                 <h2 className="text-2xl font-bold text-white">
-                  Next.js के फायदे
+                  Next.js-लारावेल के फायदे
                 </h2>
               </div>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-white/90">
                   <span className="text-green-400 mt-1">✅</span>
-                  <span>बिल्कुल फ्री होस्टिंग - Vercel पर</span>
+                  <span>
+                    बिल्कुल फ्री होस्टिंग - Vercel पर, लारावेल की काफी सस्ती
+                    होस्टिंग
+                  </span>
                 </li>
                 <li className="flex items-start gap-3 text-white/90">
                   <span className="text-green-400 mt-1">✅</span>
@@ -186,7 +242,7 @@ const HeroSection = () => {
       </section>
 
       <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto border rounded-2xl shadow-lg bg-white p-10">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             My Recent Projects
           </h2>
@@ -201,7 +257,9 @@ const HeroSection = () => {
                 </CardHeader>
                 <CardContent>
                   <Link href={project.url} target="_blank" rel="noreferrer">
-                    <Button className="w-full">Visit Website</Button>
+                    <Button className="w-full bg-pink-500 hover:bg-pink-600 text-white">
+                      Visit Website
+                    </Button>
                   </Link>
                 </CardContent>
               </Card>

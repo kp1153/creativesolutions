@@ -1,23 +1,25 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const whatsappNumber = "919996865069";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
   return (
     <header className="bg-white shadow-md">
-      {/* 🔄 Top Bar: Left + Right aligned content */}
+      {/* 🔄 Top Bar */}
       <div className="max-w-7xl mx-auto px-4 pt-2">
-        <div className="flex justify-between items-center mb-2 text-sm text-gray-700">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2 text-sm text-gray-700 gap-2">
           {/* ⬅️ Left Side: Hosting Message */}
-          <div className="font-black text-pink-700">
+          <div className="font-black text-pink-700 text-center md:text-left">
             होस्टिंग वर्सेल पर, अभी के लिए मुफ्त
           </div>
 
           {/* ➡️ Right Side: Contact Info */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="flex flex-col md:flex-row items-center md:space-x-4 gap-2 md:gap-0">
             <a
               href={whatsappLink}
               target="_blank"
@@ -32,7 +34,7 @@ const Navbar = () => {
               </svg>
               9996865069
             </a>
-            <span>|</span>
+            <span className="hidden md:inline">|</span>
             <a
               href="mailto:prasad.kamta@gmail.com"
               className="hover:text-blue-600 transition-colors duration-300"
@@ -44,27 +46,63 @@ const Navbar = () => {
       </div>
 
       {/* 🔷 Branding Heading */}
-      <div className="text-center bg-white py-3">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-wide text-amber-600">
-          web-developer-kp
+      <div className="text-center bg-amber-600 py-4">
+        <h1 className="text-3xl md:text-5xl font-bold tracking-wide text-white">
+          क्रिएटिव सॉल्यूशंस
         </h1>
       </div>
 
-      {/* 🔽 Navigation with Hash Links */}
-      <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-center">
-        <ul className="flex flex-wrap justify-center gap-4 md:gap-6 text-gray-700 font-medium">
+      {/* 🔽 Navigation */}
+      <nav className="max-w-7xl mx-auto px-4 py-3">
+        {/* Hamburger Button */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden flex flex-col gap-1.5 p-2"
+          aria-label="Toggle menu"
+        >
+          <span className="w-6 h-0.5 bg-gray-700 transition-all"></span>
+          <span className="w-6 h-0.5 bg-gray-700 transition-all"></span>
+          <span className="w-6 h-0.5 bg-gray-700 transition-all"></span>
+        </button>
+
+        {/* Menu */}
+        <ul
+          className={`${
+            isMenuOpen ? "flex" : "hidden"
+          } md:flex flex-col md:flex-row md:justify-center gap-3 md:gap-6 text-gray-700 font-medium mt-3 md:mt-0`}
+        >
           <li>
             <a
               href="#home"
-              className="hover:text-amber-600 transition-colors duration-300"
+              className="block py-2 hover:text-amber-600 transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
             >
               Home
             </a>
           </li>
           <li>
             <a
+              href="#services"
+              className="block py-2 hover:text-amber-600 transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Services
+            </a>
+          </li>
+          <li>
+            <a
+              href="#why-us"
+              className="block py-2 hover:text-amber-600 transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Why Us
+            </a>
+          </li>
+          <li>
+            <a
               href="#tech-stack"
-              className="hover:text-amber-600 transition-colors duration-300"
+              className="block py-2 hover:text-amber-600 transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
             >
               Tech Stack
             </a>
@@ -72,7 +110,8 @@ const Navbar = () => {
           <li>
             <a
               href="#work-process"
-              className="hover:text-amber-600 transition-colors duration-300"
+              className="block py-2 hover:text-amber-600 transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
             >
               Work Process
             </a>
@@ -80,7 +119,8 @@ const Navbar = () => {
           <li>
             <a
               href="#language"
-              className="hover:text-amber-600 transition-colors duration-300"
+              className="block py-2 hover:text-amber-600 transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
             >
               Language
             </a>
@@ -88,7 +128,8 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="hover:text-amber-600 transition-colors duration-300"
+              className="block py-2 hover:text-amber-600 transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </a>
