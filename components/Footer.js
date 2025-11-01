@@ -51,7 +51,7 @@ export default function Footer() {
               </p>
               <p>
                 <strong className="text-green-400">Next.js</strong> पर बनी
-                वेबसाइट वर्सेल पर मुफ्त में होस्ट हो सकती है।{" "}
+                वेबसाइट वर्सेल पर सस्ते में होस्ट हो सकती है।{" "}
                 <strong className="text-red-400">Laravel</strong> की होस्टिंग
                 Digital Ocean पर ₹400-800/महीना में मिल जाती है, जो WordPress की
                 तुलना में बहुत सस्ती और सुरक्षित है।
@@ -97,7 +97,7 @@ export default function Footer() {
               </p>
               <p>
                 <strong className="text-green-400">Next.js</strong> websites can
-                be hosted for free on Vercel.{" "}
+                be hosted for less price on Vercel.{" "}
                 <strong className="text-red-400">Laravel</strong> hosting is
                 available on Digital Ocean for ₹400-800/month, which is much
                 cheaper and more secure compared to WordPress hosting.
