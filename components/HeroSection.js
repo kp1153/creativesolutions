@@ -149,7 +149,7 @@ const HeroSection = () => {
                 <li className="flex items-start gap-3 text-white/90">
                   <span className="text-green-400 mt-1">✅</span>
                   <span>
-                    बिल्कुल फ्री होस्टिंग - Vercel पर, लारावेल की काफी सस्ती
+                    नई वेबसाइट बनवाने पर होस्टिंग हमारी तरफ से लेकिन अगर आपकी पुरानी वेबसाइट है तो लारावेल की काफी सस्ती
                     होस्टिंग
                   </span>
                 </li>
