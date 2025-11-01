@@ -58,8 +58,9 @@ export default function Visitors() {
                 </div>
                 <div className="text-left">
                   <p className="text-sm text-white/80 font-medium">
-                    Total Visitors (Last 30 Days)
+                    Total Visitors 
                   </p>
+                  
                   <p className="text-4xl md:text-5xl font-black text-white">
                     {parseInt(visitors).toLocaleString('en-IN')}
                   </p>
