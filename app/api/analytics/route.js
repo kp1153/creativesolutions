@@ -24,7 +24,7 @@ export async function GET() {
       requestBody: {
         metrics: [{ name: "totalUsers" }],
 
-        dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+        dateRanges: [{ startDate: "2025-01-01", endDate: "today" }],
       },
     });
 
