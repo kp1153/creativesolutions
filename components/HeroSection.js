@@ -149,8 +149,8 @@ const HeroSection = () => {
                 <li className="flex items-start gap-3 text-white/90">
                   <span className="text-green-400 mt-1">✅</span>
                   <span>
-                    नई वेबसाइट बनवाने पर होस्टिंग हमारी तरफ से लेकिन अगर आपकी पुरानी वेबसाइट है तो लारावेल की काफी सस्ती
-                    होस्टिंग
+                    नई वेबसाइट बनवाने पर होस्टिंग हमारी तरफ से लेकिन अगर आपकी
+                    पुरानी वेबसाइट है तो लारावेल की काफी सस्ती होस्टिंग
                   </span>
                 </li>
                 <li className="flex items-start gap-3 text-white/90">
@@ -196,9 +196,6 @@ const HeroSection = () => {
                     </td>
                     <td className="py-4 px-6 bg-red-50 text-red-700 font-medium">
                       ₹5000-15000/साल
-                    </td>
-                    <td className="py-4 px-6 bg-green-50 text-green-700 font-medium">
-                      बिल्कुल फ्री
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors">

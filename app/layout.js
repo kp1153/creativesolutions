@@ -25,7 +25,7 @@ export const metadata = {
   openGraph: {
     title: "Web Developer KP | Next.js 16 & Laravel Expert",
     description:
-      "वर्डप्रेस से छुटकारा पाएं। Next.js पर फ्री होस्टिंग या Laravel पर किफायती होस्टिंग। 15+ websites delivered.",
+      "वर्डप्रेस से छुटकारा पाएं। नेक्स्ट.जेएस अथवा Laravel दोनों ही के लिए किफायती होस्टिंग की व्यवस्था।",
     url: "https://www.web-developer-kp.com",
     type: "website",
   },
