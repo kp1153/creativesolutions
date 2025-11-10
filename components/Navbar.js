@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2 text-sm text-gray-700 gap-2">
           {/* ⬅️ Left Side: Hosting Message */}
           <div className="font-black text-pink-700 text-center md:text-left">
-            होस्टिंग वर्सेल पर, अभी के लिए मुफ्त
+            होस्टिंग हम भी प्रदान करते हैं, काफी कम पैसे लेकर
           </div>
 
           {/* ➡️ Right Side: Contact Info */}

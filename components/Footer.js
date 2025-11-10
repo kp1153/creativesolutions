@@ -114,7 +114,7 @@ export default function Footer() {
               <h5 className="text-lg font-bold text-green-400">Next.js 16</h5>
             </div>
             <p className="text-gray-300 text-sm">
-              Modern full-stack framework | Free Vercel hosting | Perfect for
+              Modern full-stack framework | Smooth Vercel hosting | Perfect for
               new projects
             </p>
           </div>
