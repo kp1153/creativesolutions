@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -11,14 +12,9 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-md">
       {/* 🔄 Top Bar */}
-      <div className="max-w-7xl mx-auto px-4 pt-2">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2 text-sm text-gray-700 gap-2">
-          {/* ⬅️ Left Side: Hosting Message */}
-          <div className="font-black text-pink-700 text-center md:text-left">
-            होस्टिंग हम भी प्रदान करते हैं, काफी कम पैसे लेकर
-          </div>
-
-          {/* ➡️ Right Side: Contact Info */}
+      <div className="max-w-7xl mx-auto px-4 pt-2 pb-2">
+        <div className="flex flex-col md:flex-row md:justify-end md:items-center text-sm text-gray-700 gap-2">
+          {/* Contact Info */}
           <div className="flex flex-col md:flex-row items-center md:space-x-4 gap-2 md:gap-0">
             <a
               href={whatsappLink}
@@ -45,11 +41,19 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* 🔷 Branding Heading */}
-      <div className="text-center bg-amber-600 py-4">
-        <h1 className="text-3xl md:text-5xl font-bold tracking-wide text-white">
-          क्रिएटिव सॉल्यूशंस
-        </h1>
+      {/* 🔷 Logo Section */}
+      <div className="bg-amber-600 py-6 md:py-8">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
+          {/* Logo - Original Size */}
+          <Image
+            src="/logo.jpeg"
+            alt="Creative Solutions Logo"
+            width={600}
+            height={600}
+            className="w-auto h-auto max-w-full object-contain"
+            priority
+          />
+        </div>
       </div>
 
       {/* 🔽 Navigation */}
