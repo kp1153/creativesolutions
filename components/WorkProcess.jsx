@@ -2,34 +2,34 @@ export default function WorkProcess() {
   const steps = [
     {
       number: "01",
-      title: "प्लानिंग करना",
+      title: "Planning",
       icon: "🎯",
       description:
-        "सबसे पहले मैं आपकी आवश्यकताओं को समझता हूँ और उसी के अनुसार स्वरूप और अंतर्वस्तु की योजना बनाता हूँ। अगर आप व्यवसाय में नए हैं और कहने-बताने के लिए कुछ खास नहीं हैं तो अपने भाषाई हुनर और रंग-संयोजन की अपनी दक्षता का उपयोग करूँगा। लेकिन अगर आपके पास ठोस उपलब्धियाँ हैं तो उन्हीं के बखान में अपनी सारी ऊर्जा झोंक दूँगा।",
+        "I start by understanding your requirements and then plan the structure and content accordingly. If you are new to business and don’t have much to showcase, I use my linguistic skills and design sense to create impactful content. If you already have solid achievements, the entire focus goes into presenting them effectively.",
       color: "from-blue-500 to-cyan-500",
     },
     {
       number: "02",
-      title: "वेबसाइट आखिर बनती कैसे है?",
+      title: "How the Website Is Built",
       icon: "💻",
       description:
-        "VS Code का उपयोग करके, मैं Next.js के साथ अपने पीसी पर वेबसाइट विकसित करता हूँ, क्लाइंट के बिना कहे ही इसका पूरा ख्याल रखता हूँ कि वेबसाइट मोबाइल के साथ-साथ विभिन्न ब्राउजरों पर भी ढंग से दिखे। अभी हाल ही में माइक्रोसॉफ्ट के एज ब्राउजर पर कलर प्रॉपर्टी के ठीक से नजर नहीं आने का मसला सामने आया था, जिसे मैंने फौरन से पेशतर हल किया।",
+        "Using VS Code and Next.js, I develop the website on my system with special attention to cross-browser and mobile responsiveness. Recently, a color-rendering issue occurred on Microsoft Edge, which I immediately fixed — ensuring your website works perfectly everywhere.",
       color: "from-purple-500 to-pink-500",
     },
     {
       number: "03",
-      title: "होस्टिंग के लिए",
+      title: "Hosting & Deployment",
       icon: "🚀",
       description:
-        "प्रोजेक्ट को GitHub पर पुश किया जाता है और फिर वहाँ से उसे वर्सेल पर कनेक्ट कर दिया जाता है, जिससे भविष्य में कोई भी परिवर्तन करना आसान हो सके।",
+        "The project is pushed to GitHub and deployed via Vercel, ensuring that future updates become extremely easy and streamlined.",
       color: "from-green-500 to-emerald-500",
     },
     {
       number: "04",
-      title: "लाइव कैसे करते हैं?",
+      title: "Going Live",
       icon: "✨",
       description:
-        "जैसे-जैसे आप नए-नए आइडियाज देते जाते हैं, हम वेबसाइट को उसी के अनुरूप अपडेट करते जाते हैं और वर्सेल उन्हें रियल टाइम में आपको दिखाने लगता है। यही है वर्सेल की महिमा। वैसे, हम डिजिटल ओशन पर भी आपकी वेबसाइट को तैनात कर सकते हैं, अगर आपका बजट इसकी इजाजत देगा तो।",
+        "As you share new ideas, we update the website accordingly and Vercel shows live changes instantly. That’s the beauty of modern deployment. If needed, we can also deploy your site on Digital Ocean depending on your budget.",
       color: "from-orange-500 to-red-500",
     },
   ];
@@ -40,10 +40,10 @@ export default function WorkProcess() {
         {/* Header */}
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-            काम करने का मेरा ढंग
+            How I Work
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            पारदर्शिता सुनिश्चित करना सर्वोपरि लक्ष्य
+            Transparency at every step
           </p>
         </div>
 
@@ -91,10 +91,10 @@ export default function WorkProcess() {
         {/* Bottom CTA */}
         <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-center text-white shadow-xl">
           <h3 className="text-2xl font-bold mb-3">
-            पारदर्शी प्रक्रिया, भरोसेमंद परिणाम
+            Transparent Process, Reliable Results
           </h3>
           <p className="text-lg text-white/90">
-            हर कदम पर आपको पूरी जानकारी, कोई छिपा हुआ खर्च नहीं
+            Full clarity at every step — no hidden charges
           </p>
         </div>
       </div>

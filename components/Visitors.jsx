@@ -25,7 +25,6 @@ export default function Visitors() {
     <div className="bg-gradient-to-r from-indigo-500 to-purple-600 py-8 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20 shadow-xl">
-          
           {/* Loading State */}
           {isLoading && (
             <div className="text-center space-y-4">
@@ -58,17 +57,17 @@ export default function Visitors() {
                 </div>
                 <div className="text-left">
                   <p className="text-sm text-white/80 font-medium">
-                    Total Visitors 
+                    Total Visitors
                   </p>
-                  
+
                   <p className="text-4xl md:text-5xl font-black text-white">
-                    {parseInt(visitors).toLocaleString('en-IN')}
+                    {parseInt(visitors).toLocaleString("en-IN")}
                   </p>
                 </div>
               </div>
-              
+
               <p className="text-white/90 text-sm">
-                🙏 आपके विश्वास के लिए धन्यवाद | Thank you for your trust
+                🙏 Thank you for your trust
               </p>
             </div>
           )}

@@ -7,7 +7,7 @@ export default function TechStack() {
     },
     {
       name: "Laravel",
-      desc: "PHP Framework - WordPress Migration के लिए बेहतरीन",
+      desc: "PHP Framework - Excellent for WordPress Migration",
       icon: "🔴",
     },
     {
@@ -25,17 +25,17 @@ export default function TechStack() {
   const hosting = [
     {
       name: "Vercel",
-      desc: "Next.js के लिए - बिल्कुल फ्री",
+      desc: "Perfect for Next.js — Free Tier Available",
       icon: "▲",
     },
     {
       name: "Digital Ocean",
-      desc: "Laravel/VPS Hosting - ₹400/महीना से शुरू",
+      desc: "Laravel/VPS Hosting — Starts at ₹400/month",
       icon: "🌊",
     },
     {
       name: "Google Cloud",
-      desc: "Enterprise Solutions",
+      desc: "Enterprise-Level Solutions",
       icon: "☁️",
     },
   ];
@@ -67,7 +67,7 @@ export default function TechStack() {
             Technology Stack
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            आधुनिक और विश्वसनीय तकनीकों पर आधारित समाधान
+            Modern and reliable technologies we work with
           </p>
         </div>
 
@@ -79,29 +79,27 @@ export default function TechStack() {
             </div>
             <div>
               <h3 className="text-2xl font-bold">
-                Laravel - WordPress से Migration का बेहतरीन विकल्प
+                Laravel — Best Option for WordPress Migration
               </h3>
               <p className="text-white/90">PHP Based Full-Stack Framework</p>
             </div>
           </div>
           <div className="space-y-3 text-white/95 leading-relaxed">
             <p>
-              ✅ <strong>WordPress Users के लिए परफेक्ट:</strong> जिन लोगों की
-              वेबसाइटें पहले से WordPress पर बनी हैं और ढेर सारा डेटा है, जिसे
-              बनाए रखना है, ऐसे लोगों के लिए हम Laravel का समाधान लेकर आए हैं।
+              ✅ <strong>Perfect for WordPress Users:</strong> Ideal for
+              websites with large existing data that need long-term stability.
             </p>
             <p>
-              ✅ <strong>किफायती होस्टिंग:</strong> Laravel PHP-based full-stack
-              framework है, जिसकी होस्टिंग काफी सस्ती होती है - Digital Ocean पर
-              ₹400-800/महीना में मिल जाती है।
+              ✅ <strong>Affordable Hosting:</strong> Very cost-effective —
+              Digital Ocean plans start at ₹400–₹800/month.
             </p>
             <p>
-              ✅ <strong>Enterprise Level Security:</strong> WordPress से कहीं
-              ज्यादा सुरक्षित और स्केलेबल।
+              ✅ <strong>Enterprise-Level Security:</strong> Much safer and more
+              scalable compared to WordPress.
             </p>
             <p>
-              ✅ <strong>Database Support:</strong> MySQL/PostgreSQL - आपका पूरा
-              data safe रहेगा।
+              ✅ <strong>Database Support:</strong> MySQL / PostgreSQL — your
+              data stays secure and stable.
             </p>
           </div>
         </div>

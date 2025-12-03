@@ -51,17 +51,17 @@ const HeroSection = () => {
       {/* Slider Section */}
       <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Top Text */}
+          {/* Heading */}
           <div className="text-center mb-10">
             <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
-              Next.js-लारावेल: वर्तमान और भविष्य
+              Next.js + Laravel: The Present and the Future
             </h1>
             <p className="text-lg md:text-2xl text-indigo-100 max-w-3xl mx-auto">
-              अत्याधुनिक टेक-स्टैक पर वेबसाइट-मोबाइल ऐप और मेडिकल शॉप्स,
-              शैक्षणिक संस्थानों के लिए सॉफ्टवेयर बनवाने के लिए करें संपर्क। हम
-              आपको आपकी जरूरत के अनुसार बेहद किफायती दामों पर बेहतरीन समाधान
-              प्रदान करते हैं। अगर आपका बजट कम है तो हम वर्डप्रेस पर भी आपके लिए
-              वेबसाइट बना देंगे, हालांकि हम इसकी अनुशंसा नहीं करते।
+              Get your Website, Mobile App, or Business Software built on
+              cutting-edge technology. We provide affordable and high-quality
+              solutions tailored to your needs. If your budget is limited, we
+              can also build a WordPress website for you (although we don’t
+              recommend it).
             </p>
           </div>
 
@@ -103,86 +103,89 @@ const HeroSection = () => {
         </div>
       </section>
 
+      {/* Comparison Section */}
       <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 px-6">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="grid md:grid-cols-2 gap-8">
+            {/* WordPress Issues */}
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
                   <span className="text-2xl">⚠️</span>
                 </div>
                 <h2 className="text-2xl font-bold text-white">
-                  WordPress की समस्याएं
+                  Problems with WordPress
                 </h2>
               </div>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-white/90">
-                  <span className="text-red-400 mt-1">❌</span>
-                  <span>हर साल होस्टिंग पर हजारों रुपए खर्च</span>
+
+              <ul className="space-y-4 text-white/90">
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">❌</span> High recurring
+                  hosting costs
                 </li>
-                <li className="flex items-start gap-3 text-white/90">
-                  <span className="text-red-400 mt-1">❌</span>
-                  <span>धीमी लोडिंग स्पीड - ग्राहक चले जाते हैं</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">❌</span> Slow loading
+                  speed
                 </li>
-                <li className="flex items-start gap-3 text-white/90">
-                  <span className="text-red-400 mt-1">❌</span>
-                  <span>सिक्योरिटी इश्यूज - हैकिंग का डर</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">❌</span> Security
+                  vulnerabilities
                 </li>
-                <li className="flex items-start gap-3 text-white/90">
-                  <span className="text-red-400 mt-1">❌</span>
-                  <span>थीम-प्लगइन में टकराव</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">❌</span> Theme & plugin
+                  conflicts
                 </li>
-                <li className="flex items-start gap-3 text-white/90">
-                  <span className="text-red-400 mt-1">❌</span>
-                  <span>Plugin की झंझट - साइट क्रैश</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">❌</span> Plugins often
+                  break the site
                 </li>
               </ul>
             </div>
 
+            {/* Next.js + Laravel Benefits */}
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
                   <span className="text-2xl">✨</span>
                 </div>
                 <h2 className="text-2xl font-bold text-white">
-                  Next.js-लारावेल के फायदे
+                  Advantages of Next.js + Laravel
                 </h2>
               </div>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-white/90">
-                  <span className="text-green-400 mt-1">✅</span>
-                  <span>
-                    नई वेबसाइट बनवाने पर होस्टिंग हमारी तरफ से लेकिन अगर आपकी
-                    पुरानी वेबसाइट है तो लारावेल की काफी सस्ती होस्टिंग
-                  </span>
+
+              <ul className="space-y-4 text-white/90">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1">✅</span> Free hosting
+                  for new websites we build
                 </li>
-                <li className="flex items-start gap-3 text-white/90">
-                  <span className="text-green-400 mt-1">✅</span>
-                  <span>सुपर फास्ट लोडिंग</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1">✅</span> Super-fast
+                  performance
                 </li>
-                <li className="flex items-start gap-3 text-white/90">
-                  <span className="text-green-400 mt-1">✅</span>
-                  <span>Modern Technology - Future Ready</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1">✅</span> Modern,
+                  future-ready technology
                 </li>
-                <li className="flex items-start gap-3 text-white/90">
-                  <span className="text-green-400 mt-1">✅</span>
-                  <span>SEO Friendly - Google में टॉप रैंकिंग</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1">✅</span> SEO-friendly
+                  for top Google ranking
                 </li>
-                <li className="flex items-start gap-3 text-white/90">
-                  <span className="text-green-400 mt-1">✅</span>
-                  <span>सभी डिवाइसों पर परफेक्ट</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1">✅</span> Flawless on
+                  all devices
                 </li>
               </ul>
             </div>
           </div>
 
+          {/* Table */}
           <div className="overflow-hidden rounded-2xl shadow-2xl bg-white">
             <div className="overflow-x-auto">
               <table className="w-full text-center">
                 <thead>
                   <tr className="bg-gradient-to-r from-indigo-600 to-purple-600">
                     <th className="text-white py-4 px-6 text-lg font-bold">
-                      फीचर
+                      Feature
                     </th>
                     <th className="text-white py-4 px-6 text-lg font-bold">
                       WordPress
@@ -195,43 +198,49 @@ const HeroSection = () => {
                 <tbody className="divide-y divide-gray-200">
                   <tr className="hover:bg-gray-50 transition-colors">
                     <td className="py-4 px-6 font-semibold text-gray-900">
-                      होस्टिंग कॉस्ट
+                      Hosting Cost
                     </td>
                     <td className="py-4 px-6 bg-red-50 text-red-700 font-medium">
-                      ₹5000-15000/साल
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-gray-50 transition-colors">
-                    <td className="py-4 px-6 font-semibold text-gray-900">
-                      लोडिंग स्पीड
-                    </td>
-                    <td className="py-4 px-6 bg-red-50 text-red-700 font-medium">
-                      धीमी (3-5 सेकंड)
+                      ₹5000–15000/year
                     </td>
                     <td className="py-4 px-6 bg-green-50 text-green-700 font-medium">
-                      बहुत तेज़ (0.5 सेकंड)
+                      Free / Very Low
                     </td>
                   </tr>
+
                   <tr className="hover:bg-gray-50 transition-colors">
                     <td className="py-4 px-6 font-semibold text-gray-900">
-                      सिक्योरिटी
+                      Loading Speed
                     </td>
                     <td className="py-4 px-6 bg-red-50 text-red-700 font-medium">
-                      हैकिंग का डर
+                      Slow (3–5 sec)
                     </td>
                     <td className="py-4 px-6 bg-green-50 text-green-700 font-medium">
-                      100% सुरक्षित
+                      Ultra-fast (0.5 sec)
                     </td>
                   </tr>
+
                   <tr className="hover:bg-gray-50 transition-colors">
                     <td className="py-4 px-6 font-semibold text-gray-900">
-                      अपडेट्स
+                      Security
                     </td>
                     <td className="py-4 px-6 bg-red-50 text-red-700 font-medium">
-                      मैन्युअल + पेड
+                      High risk
                     </td>
                     <td className="py-4 px-6 bg-green-50 text-green-700 font-medium">
-                      ऑटोमेटिक + फ्री
+                      Very secure
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="py-4 px-6 font-semibold text-gray-900">
+                      Updates
+                    </td>
+                    <td className="py-4 px-6 bg-red-50 text-red-700 font-medium">
+                      Manual + Paid
+                    </td>
+                    <td className="py-4 px-6 bg-green-50 text-green-700 font-medium">
+                      Automatic + Free
                     </td>
                   </tr>
                 </tbody>
@@ -241,11 +250,13 @@ const HeroSection = () => {
         </div>
       </section>
 
+      {/* Projects */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto border rounded-2xl shadow-lg bg-white p-10">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             My Recent Projects
           </h2>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <Card
