@@ -166,6 +166,15 @@ const Navbar = () => {
               Contact
             </a>
           </li>
+          <li>
+            <a
+              href="/payment"
+              className="block py-2 hover:text-amber-600 transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Payment
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
