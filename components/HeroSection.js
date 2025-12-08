@@ -44,6 +44,8 @@ const HeroSection = () => {
     { url: "https://www.shrutinagvanshi.in/", name: "Shruti Nagvanshi" },
     { url: "https://www.arpindia.org/", name: "ARP India" },
     { url: "https://www.irexpharmacy.com/", name: "Irex Pharmacy" },
+    { url: "https://www.itpointcomputershop.com", name: "IT Point Computer Shop" },
+    { url: "https://www.sangopang.com", name: "Sangopang" },
   ];
 
   return (
@@ -60,7 +62,7 @@ const HeroSection = () => {
               Get your Website, Mobile App, or Business Software built on
               cutting-edge technology. We provide affordable and high-quality
               solutions tailored to your needs. If your budget is limited, we
-              can also build a WordPress website for you (although we don’t
+              can also build a WordPress website for you (although we don't
               recommend it).
             </p>
           </div>
