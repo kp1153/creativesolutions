@@ -33,7 +33,6 @@ const Navbar = () => {
             </a>
 
             <span className="hidden md:inline">|</span>
-
             <a
               href="mailto:prasad.kamta@gmail.com"
               className="hover:text-blue-600 transition-colors duration-300"
@@ -104,76 +103,76 @@ const Navbar = () => {
           } md:flex flex-col md:flex-row md:justify-center gap-3 md:gap-6 text-gray-700 font-medium mt-3 md:mt-0`}
         >
           <li>
-            <a
-              href="#home"
+            <Link
+              href="/#home"
               className="block py-2 hover:text-amber-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#services"
+            <Link
+              href="/#services"
               className="block py-2 hover:text-amber-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#why-us"
+            <Link
+              href="/#why-us"
               className="block py-2 hover:text-amber-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Why Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#tech-stack"
+            <Link
+              href="/#tech-stack"
               className="block py-2 hover:text-amber-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Tech Stack
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#work-process"
+            <Link
+              href="/#work-process"
               className="block py-2 hover:text-amber-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Work Process
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#language"
+            <Link
+              href="/#language"
               className="block py-2 hover:text-amber-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Language
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="block py-2 hover:text-amber-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/payment"
               className="block py-2 hover:text-amber-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Payment
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
