@@ -7,7 +7,7 @@ export default function ContactSection() {
       <div className="flex justify-center">
         <Image
           src="/2.jpeg"
-          alt="Kamta Prasad"
+          alt="Kamta Prasad - Web Developer specializing in Next.js and Laravel development"
           width={500}
           height={500}
           className="rounded-full shadow-lg"

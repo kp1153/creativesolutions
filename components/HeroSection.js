@@ -44,8 +44,21 @@ const HeroSection = () => {
     { url: "https://www.shrutinagvanshi.in/", name: "Shruti Nagvanshi" },
     { url: "https://www.arpindia.org/", name: "ARP India" },
     { url: "https://www.irexpharmacy.com/", name: "Irex Pharmacy" },
-    { url: "https://www.itpointcomputershop.com", name: "IT Point Computer Shop" },
+    {
+      url: "https://www.itpointcomputershop.com",
+      name: "IT Point Computer Shop",
+    },
     { url: "https://www.sangopang.com", name: "Sangopang" },
+  ];
+
+  const sliderImages = [
+    "Interior Designer Chandni - Modern home interior design portfolio",
+    "Kashi Panchakarma Hospital - Ayurvedic treatment center website",
+    "Lenin Raghuvanshi - Human rights activist official website",
+    "Hamara Morcha News - Hindi news portal and media platform",
+    "Web Developer KP - Professional web development services showcase",
+    "IT Point Computer Shop - Computer hardware and repair services website",
+    "Indian News Views - National and international news coverage",
   ];
 
   return (
@@ -55,9 +68,9 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-10">
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+            <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
               Next.js + Laravel: The Present and the Future
-            </h1>
+            </h2>
             <p className="text-lg md:text-2xl text-indigo-100 max-w-3xl mx-auto">
               Get your Website, Mobile App, or Business Software built on
               cutting-edge technology. We provide affordable and high-quality
@@ -78,7 +91,7 @@ const HeroSection = () => {
               >
                 <Image
                   src={`/images/${num}.jpeg`}
-                  alt={`Slide ${num}`}
+                  alt={sliderImages[index]}
                   fill
                   className="object-cover"
                   priority={index === 0}
@@ -115,9 +128,9 @@ const HeroSection = () => {
                 <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
                   <span className="text-2xl">⚠️</span>
                 </div>
-                <h2 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl font-bold text-white">
                   Problems with WordPress
-                </h2>
+                </h3>
               </div>
 
               <ul className="space-y-4 text-white/90">
@@ -150,9 +163,9 @@ const HeroSection = () => {
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
                   <span className="text-2xl">✨</span>
                 </div>
-                <h2 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl font-bold text-white">
                   Advantages of Next.js + Laravel
-                </h2>
+                </h3>
               </div>
 
               <ul className="space-y-4 text-white/90">
@@ -255,9 +268,9 @@ const HeroSection = () => {
       {/* Projects */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto border rounded-2xl shadow-lg bg-white p-10">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <h3 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             My Recent Projects
-          </h2>
+          </h3>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
