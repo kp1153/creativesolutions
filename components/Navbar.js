@@ -2,25 +2,48 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const whatsappNumber = "919996865069";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
+  const logoRef = useRef(null);
+  const navItemsRef = useRef([]);
+
+  useEffect(() => {
+    // Logo entrance animation
+    gsap.from(logoRef.current, {
+      scale: 0,
+      rotation: -360,
+      duration: 1.5,
+      ease: "elastic.out(1, 0.5)",
+    });
+
+    // Nav items stagger animation
+    gsap.from(navItemsRef.current, {
+      opacity: 0,
+      y: -20,
+      stagger: 0.1,
+      duration: 0.6,
+      ease: "power2.out",
+      delay: 0.5,
+    });
+  }, []);
+
   return (
-    <header className="bg-white shadow-md">
-      {/* 📄 Top Bar */}
+    <header className="bg-white shadow-md relative z-[9999]">
+      {/* Top Bar */}
       <div className="max-w-7xl mx-auto px-4 pt-2 pb-2">
         <div className="flex flex-col md:flex-row md:justify-end md:items-center text-sm text-gray-700 gap-2">
-          {/* Contact Info */}
           <div className="flex flex-col md:flex-row items-center md:space-x-4 gap-2 md:gap-0">
             <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center hover:text-green-600 transition-colors duration-300"
+              className="flex items-center hover:text-green-600 transition-colors duration-300 hover:scale-110 transform"
             >
               <svg
                 viewBox="0 0 32 32"
@@ -31,11 +54,10 @@ const Navbar = () => {
               </svg>
               9996865069
             </a>
-
             <span className="hidden md:inline">|</span>
             <a
               href="mailto:prasad.kamta@gmail.com"
-              className="hover:text-blue-600 transition-colors duration-300"
+              className="hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform"
             >
               prasad.kamta@gmail.com
             </a>
@@ -43,30 +65,27 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* 🖼️ Logo Section with 3D Effect */}
+      {/* Logo Section */}
       <div className="bg-zinc-900 py-6 md:py-8 relative overflow-hidden">
-        {/* 3D Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-br from-amber-700/20 to-transparent"></div>
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-700/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-700/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-700/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-700/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center relative z-10">
-          {/* Logo with 3D Shadow Effect */}
-          <div className="relative group">
+          <div ref={logoRef} className="relative group">
             <div className="absolute inset-0 bg-amber-700/30 blur-xl translate-y-2 group-hover:translate-y-3 transition-transform duration-300"></div>
             <Image
               src="/logo.jpg"
               alt="Creative Solutions Logo"
               width={600}
               height={600}
-              className="w-auto h-auto max-w-full object-contain relative z-10 drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+              className="w-auto h-auto max-w-full object-contain relative z-10 drop-shadow-2xl group-hover:scale-110 transition-transform duration-300"
               priority
             />
           </div>
 
-          {/* Creative Solutions Text with 3D Effect */}
           <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-amber-700 relative">
             <span className="relative inline-block">
               <span className="absolute inset-0 text-amber-900 blur-sm translate-x-1 translate-y-1">
@@ -78,14 +97,12 @@ const Navbar = () => {
             </span>
           </h1>
 
-          {/* Subtle underline decoration */}
           <div className="mt-3 h-1 w-32 bg-gradient-to-r from-transparent via-amber-700 to-transparent rounded-full"></div>
         </div>
       </div>
 
-      {/* 📽 Navigation */}
-      <nav className="max-w-7xl mx-auto px-4 py-3">
-        {/* Hamburger Button */}
+      {/* Navigation */}
+      <nav className="max-w-7xl mx-auto px-4 py-3 bg-white">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden flex flex-col gap-1.5 p-2"
@@ -96,84 +113,35 @@ const Navbar = () => {
           <span className="w-6 h-0.5 bg-gray-700 transition-all"></span>
         </button>
 
-        {/* Menu */}
         <ul
           className={`${
             isMenuOpen ? "flex" : "hidden"
           } md:flex flex-col md:flex-row md:justify-center gap-3 md:gap-6 text-gray-700 font-medium mt-3 md:mt-0`}
         >
-          <li>
-            <Link
-              href="/#home"
-              className="block py-2 hover:text-amber-600 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#services"
-              className="block py-2 hover:text-amber-600 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#why-us"
-              className="block py-2 hover:text-amber-600 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Why Us
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#tech-stack"
-              className="block py-2 hover:text-amber-600 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Tech Stack
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#work-process"
-              className="block py-2 hover:text-amber-600 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Work Process
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#language"
-              className="block py-2 hover:text-amber-600 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Language
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#contact"
-              className="block py-2 hover:text-amber-600 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/payment"
-              className="block py-2 hover:text-amber-600 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Payment
-            </Link>
-          </li>
+          {[
+            "Home",
+            "Services",
+            "Why Us",
+            "Tech Stack",
+            "Work Process",
+            "Language",
+            "Contact",
+            "Payment",
+          ].map((item, index) => (
+            <li key={item} ref={(el) => (navItemsRef.current[index] = el)}>
+              <Link
+                href={
+                  item === "Payment"
+                    ? "/payment"
+                    : `/#${item.toLowerCase().replace(/ /g, "-")}`
+                }
+                className="block py-2 hover:text-amber-600 transition-all duration-300 hover:scale-110 transform"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

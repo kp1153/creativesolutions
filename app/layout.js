@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Script from "next/script";
@@ -25,7 +24,6 @@ export const metadata = {
   robots:
     "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   googlebot: "index, follow",
-
   openGraph: {
     title: "Web Developer KP | Next.js 16 & Laravel Expert in India",
     description:
@@ -43,7 +41,6 @@ export const metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Web Developer KP | Next.js 16 & Laravel Specialist in India",
@@ -52,29 +49,23 @@ export const metadata = {
     images: ["https://www.web-developer-kp.com/logo.jpg"],
     creator: "@webdeveloperkp",
   },
-
   alternates: {
     canonical: "https://www.web-developer-kp.com",
     languages: {
       "en-IN": "https://www.web-developer-kp.com",
     },
   },
-
   verification: {
     google: "your-google-verification-code",
   },
-
   category: "Web Development",
   classification: "Business",
-
   viewport: {
     width: "device-width",
     initialScale: 1,
     maximumScale: 5,
   },
-
   applicationName: "Creative Solutions",
-
   geo: {
     region: "IN",
     placename: "Varanasi",
@@ -232,11 +223,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-        {/* JSON-LD */}
         <Script
           id="structured-data"
           type="application/ld+json"
@@ -244,7 +233,6 @@ export default function RootLayout({ children }) {
           strategy="beforeInteractive"
         />
 
-        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BR086CF3CY"
           strategy="afterInteractive"
@@ -258,22 +246,6 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* Tawk.to Chat Widget */}
-        <Script id="tawk-to-script" strategy="afterInteractive">
-          {`
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/693699c415212a1980343bbd/1jbukhaal';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-          `}
-        </Script>
-
-        {/* WhatsApp Floating Button */}
         <Script id="whatsapp-widget" strategy="afterInteractive">
           {`
             (function() {
