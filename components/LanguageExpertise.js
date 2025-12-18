@@ -17,14 +17,14 @@ export default function LanguageExpertise() {
     {
       title: "Mastery in Translation",
       description:
-        "Extensive experience translating English to Hindi — including several full-length books.",
-      icon: "🔄",
+        "Extensive experience translating English to Hindi – including several full-length books.",
+      icon: "📄",
       color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Wide Subject Coverage",
       description:
-        "From poetry to nuclear physics — versatility across genres.",
+        "From poetry to nuclear physics – versatility across genres.",
       icon: "🎯",
       color: "from-purple-500 to-pink-500",
     },
@@ -45,7 +45,6 @@ export default function LanguageExpertise() {
   return (
     <section className="bg-gradient-to-br from-amber-50 to-orange-50 px-6 py-20">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             Language Expertise
@@ -56,33 +55,27 @@ export default function LanguageExpertise() {
           </p>
         </div>
 
-        {/* Cards Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {languageQualities.map((quality, index) => (
             <div
               key={index}
               className="group relative bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border-2 border-gray-200 hover:border-gray-300 overflow-hidden"
             >
-              {/* Gradient Hover Background */}
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${quality.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
               ></div>
 
-              {/* Content */}
               <div className="relative z-10 text-center space-y-4">
-                {/* Icon */}
                 <div
                   className={`w-20 h-20 mx-auto rounded-full bg-gradient-to-br ${quality.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
                 >
                   <span className="text-4xl">{quality.icon}</span>
                 </div>
 
-                {/* Title */}
                 <h3 className="text-xl font-bold text-gray-900">
                   {quality.title}
                 </h3>
 
-                {/* Description */}
                 <p className="text-sm text-gray-600 leading-relaxed">
                   {quality.description}
                 </p>
@@ -91,7 +84,6 @@ export default function LanguageExpertise() {
           ))}
         </div>
 
-        {/* Bottom Highlight Box */}
         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border-2 border-amber-200">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-lg">
@@ -105,7 +97,7 @@ export default function LanguageExpertise() {
             <p className="text-lg text-gray-700 leading-relaxed">
               Even in the age of AI-generated content, human-crafted language
               holds a timeless value. Real creators write with intention,
-              clarity, and empathy — keeping the target reader at the center.
+              clarity, and empathy – keeping the target reader at the center.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 pt-4">

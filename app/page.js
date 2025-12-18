@@ -9,16 +9,49 @@ import WhyUs from "../components/Why-Us";
 import ContactSection from "../components/Contact";
 
 export const metadata = {
-  title: "Home | Web Developer KP - Next.js & Laravel Expert",
+  title: "Web Developer KP | Next.js & Laravel Expert in India",
   description:
-    "Professional Next.js 16 and Laravel website development in India. Fast, secure, SEO-friendly websites with free hosting. WordPress migration specialist.",
+    "Professional Next.js and Laravel web development services in India. Fast, secure, SEO-optimized websites with free hosting options.",
   keywords:
-    "Next.js developer India, Laravel developer, WordPress migration, web development Varanasi",
+    "Next.js developer, Laravel developer, web development India, WordPress migration, React developer",
   openGraph: {
-    title: "Creative Solutions - Web Developer KP",
-    description: "Modern website development using Next.js & Laravel",
+    title: "Web Developer KP - Modern Web Development",
+    description: "Professional Next.js and Laravel development services",
     url: "https://www.web-developer-kp.com",
     images: ["/logo.jpg"],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: "https://www.web-developer-kp.com",
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Web Developer KP",
+  url: "https://www.web-developer-kp.com",
+  logo: "https://www.web-developer-kp.com/logo.jpg",
+  description:
+    "Professional web development services specializing in Next.js and Laravel",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Varanasi",
+    addressRegion: "Uttar Pradesh",
+    addressCountry: "IN",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "Customer Service",
+    availableLanguage: ["English", "Hindi", "Urdu"],
   },
 };
 
@@ -39,7 +72,7 @@ const faqSchema = {
       name: "How much does hosting cost for Next.js websites?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Next.js websites can be hosted for free on Vercel. For Laravel websites, hosting on Digital Ocean starts at ₹400-800 per month.",
+        text: "Next.js websites can be hosted for free on Vercel. For Laravel websites, hosting on Digital Ocean starts at Rs 400-800 per month.",
       },
     },
     {
@@ -77,42 +110,69 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.web-developer-kp.com",
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
       <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        strategy="afterInteractive"
+      />
+
+      <Script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
       />
 
-      <main>
-        <section id="home">
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        strategy="afterInteractive"
+      />
+
+      <main className="overflow-x-hidden">
+        <section id="home" aria-label="Hero Section">
           <HeroSection />
         </section>
 
-        <section id="services">
+        <section id="services" aria-label="Our Services">
           <Services />
         </section>
 
-        <section id="why-us">
+        <section id="why-us" aria-label="Why Choose Us">
           <WhyUs />
         </section>
 
-        <section id="tech-stack">
+        <section id="tech-stack" aria-label="Technology Stack">
           <TechStack />
         </section>
 
-        <section id="work-process">
+        <section id="work-process" aria-label="Work Process">
           <WorkProcess />
         </section>
 
-        <section id="language">
+        <section id="language" aria-label="Language Expertise">
           <LanguageExpertise />
         </section>
 
-        <section id="contact">
+        <section id="contact" aria-label="Contact Us">
           <ContactSection />
         </section>
 

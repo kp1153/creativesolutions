@@ -63,10 +63,8 @@ const HeroSection = () => {
 
   return (
     <>
-      {/* Slider Section */}
       <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Heading */}
           <div className="text-center mb-10">
             <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
               Next.js + Laravel: The Present and the Future
@@ -80,7 +78,6 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Image Slider */}
           <div className="relative w-full max-w-4xl mx-auto h-64 md:h-96 overflow-hidden rounded-2xl shadow-2xl">
             {[1, 2, 3, 4, 5, 6, 7].map((num, index) => (
               <div
@@ -99,7 +96,6 @@ const HeroSection = () => {
               </div>
             ))}
 
-            {/* Dots */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
               {[...Array(totalSlides)].map((_, index) => (
                 <button
@@ -118,11 +114,9 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* Comparison Section */}
       <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 px-6">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="grid md:grid-cols-2 gap-8">
-            {/* WordPress Issues */}
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
@@ -157,7 +151,6 @@ const HeroSection = () => {
               </ul>
             </div>
 
-            {/* Next.js + Laravel Benefits */}
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
@@ -193,7 +186,6 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Table */}
           <div className="overflow-hidden rounded-2xl shadow-2xl bg-white">
             <div className="overflow-x-auto">
               <table className="w-full text-center">
@@ -265,7 +257,6 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* Projects */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto border rounded-2xl shadow-lg bg-white p-10">
           <h3 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">

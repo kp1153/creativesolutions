@@ -1,4 +1,3 @@
-// components/RazorpayPayment.js
 "use client";
 
 import { useState } from "react";

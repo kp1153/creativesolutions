@@ -5,7 +5,7 @@ export default function WorkProcess() {
       title: "Planning",
       icon: "🎯",
       description:
-        "I start by understanding your requirements and then plan the structure and content accordingly. If you are new to business and don’t have much to showcase, I use my linguistic skills and design sense to create impactful content. If you already have solid achievements, the entire focus goes into presenting them effectively.",
+        "I start by understanding your requirements and then plan the structure and content accordingly. If you are new to business and don't have much to showcase, I use my linguistic skills and design sense to create impactful content. If you already have solid achievements, the entire focus goes into presenting them effectively.",
       color: "from-blue-500 to-cyan-500",
     },
     {
@@ -13,7 +13,7 @@ export default function WorkProcess() {
       title: "How the Website Is Built",
       icon: "💻",
       description:
-        "Using VS Code and Next.js, I develop the website on my system with special attention to cross-browser and mobile responsiveness. Recently, a color-rendering issue occurred on Microsoft Edge, which I immediately fixed — ensuring your website works perfectly everywhere.",
+        "Using VS Code and Next.js, I develop the website on my system with special attention to cross-browser and mobile responsiveness. Recently, a color-rendering issue occurred on Microsoft Edge, which I immediately fixed – ensuring your website works perfectly everywhere.",
       color: "from-purple-500 to-pink-500",
     },
     {
@@ -29,7 +29,7 @@ export default function WorkProcess() {
       title: "Going Live",
       icon: "✨",
       description:
-        "As you share new ideas, we update the website accordingly and Vercel shows live changes instantly. That’s the beauty of modern deployment. If needed, we can also deploy your site on Digital Ocean depending on your budget.",
+        "As you share new ideas, we update the website accordingly and Vercel shows live changes instantly. That's the beauty of modern deployment. If needed, we can also deploy your site on Digital Ocean depending on your budget.",
       color: "from-orange-500 to-red-500",
     },
   ];
@@ -37,7 +37,6 @@ export default function WorkProcess() {
   return (
     <section className="bg-white px-6 py-20">
       <div className="max-w-5xl mx-auto space-y-12">
-        {/* Header */}
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             How I Work
@@ -47,19 +46,15 @@ export default function WorkProcess() {
           </p>
         </div>
 
-        {/* Process Steps */}
         <div className="space-y-8">
           {steps.map((step, index) => (
             <div key={index} className="group relative">
-              {/* Connector Line */}
               {index !== steps.length - 1 && (
                 <div className="hidden md:block absolute left-12 top-32 w-0.5 h-24 bg-gradient-to-b from-gray-300 to-transparent"></div>
               )}
 
-              {/* Card */}
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 md:p-8 hover:shadow-2xl hover:border-gray-300 transition-all duration-300">
                 <div className="flex flex-col md:flex-row gap-6">
-                  {/* Left: Number & Icon */}
                   <div className="flex md:flex-col items-center md:items-start gap-4 md:gap-2">
                     <div
                       className={`w-24 h-24 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}
@@ -73,7 +68,6 @@ export default function WorkProcess() {
                     </div>
                   </div>
 
-                  {/* Right: Content */}
                   <div className="flex-1 space-y-3">
                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
                       {step.title}
@@ -88,13 +82,12 @@ export default function WorkProcess() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
         <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-center text-white shadow-xl">
           <h3 className="text-2xl font-bold mb-3">
             Transparent Process, Reliable Results
           </h3>
           <p className="text-lg text-white/90">
-            Full clarity at every step — no hidden charges
+            Full clarity at every step – no hidden charges
           </p>
         </div>
       </div>

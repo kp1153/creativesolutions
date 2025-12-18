@@ -25,12 +25,12 @@ export default function TechStack() {
   const hosting = [
     {
       name: "Vercel",
-      desc: "Perfect for Next.js — Free Tier Available",
+      desc: "Perfect for Next.js – Free Tier Available",
       icon: "▲",
     },
     {
       name: "Digital Ocean",
-      desc: "Laravel/VPS Hosting — Starts at ₹400/month",
+      desc: "Laravel/VPS Hosting – Starts at ₹400/month",
       icon: "🌊",
     },
     {
@@ -61,7 +61,6 @@ export default function TechStack() {
   return (
     <section className="bg-gradient-to-br from-gray-50 to-gray-100 px-6 py-20">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Technology Stack
@@ -71,7 +70,6 @@ export default function TechStack() {
           </p>
         </div>
 
-        {/* Laravel Special Card */}
         <div className="mb-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl p-8 shadow-xl text-white">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl">
@@ -79,7 +77,7 @@ export default function TechStack() {
             </div>
             <div>
               <h3 className="text-2xl font-bold">
-                Laravel — Best Option for WordPress Migration
+                Laravel – Best Option for WordPress Migration
               </h3>
               <p className="text-white/90">PHP Based Full-Stack Framework</p>
             </div>
@@ -90,7 +88,7 @@ export default function TechStack() {
               websites with large existing data that need long-term stability.
             </p>
             <p>
-              ✅ <strong>Affordable Hosting:</strong> Very cost-effective —
+              ✅ <strong>Affordable Hosting:</strong> Very cost-effective –
               Digital Ocean plans start at ₹400–₹800/month.
             </p>
             <p>
@@ -98,15 +96,13 @@ export default function TechStack() {
               scalable compared to WordPress.
             </p>
             <p>
-              ✅ <strong>Database Support:</strong> MySQL / PostgreSQL — your
+              ✅ <strong>Database Support:</strong> MySQL / PostgreSQL – your
               data stays secure and stable.
             </p>
           </div>
         </div>
 
-        {/* Tech Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Core Technologies */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-900 border-b-4 border-indigo-600 pb-3 inline-block">
               Core Technologies
@@ -129,7 +125,6 @@ export default function TechStack() {
             </div>
           </div>
 
-          {/* Hosting & Deployment */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-900 border-b-4 border-green-600 pb-3 inline-block">
               Hosting & Deployment
@@ -152,7 +147,6 @@ export default function TechStack() {
             </div>
           </div>
 
-          {/* Professional Tools */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-900 border-b-4 border-purple-600 pb-3 inline-block">
               Professional Tools

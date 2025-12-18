@@ -10,8 +10,8 @@ export default function WhyUs() {
           technologies offer.
           <br />
           <br />
-          For any small revisions or upgrades, we’ll always be available —
-          that’s a firm promise.
+          For any small revisions or upgrades, we'll always be available —
+          that's a firm promise.
           <br />
           <br />
           Your website will gain better visibility on Google Search because of

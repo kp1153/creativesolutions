@@ -6,7 +6,7 @@ export default function OurServices() {
         <p>
           We develop all types of websites using Next.js and Laravel. We provide
           English to Hindi translation along with precise content writing. You
-          may also consult us for layout design services. We’re well-versed with
+          may also consult us for layout design services. We're well-versed with
           graphic tools like InDesign and CorelDRAW.
         </p>
       </div>

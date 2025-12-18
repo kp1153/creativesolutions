@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function ContactSection() {
   return (
     <section className="px-6 py-10 max-w-3xl mx-auto space-y-10 text-base leading-relaxed text-justify text-gray-800">
-      {/* Photo */}
       <div className="flex justify-center">
         <Image
           src="/2.jpeg"
@@ -14,7 +13,6 @@ export default function ContactSection() {
         />
       </div>
 
-      {/* Contact Information */}
       <div className="font-semibold text-[#1A365D]">
         <h2 className="text-xl font-bold text-center mb-4">📞 Contact</h2>
 

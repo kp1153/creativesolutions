@@ -1,43 +1,65 @@
-// app/api/analytics/route.js
-import { google } from "googleapis";
+import { NextResponse } from "next/server";
+import { BetaAnalyticsDataClient } from "@google-analytics/data";
+
+// Google Analytics credentials
+const propertyId = process.env.GA_PROPERTY_ID;
+
+// Initialize the client
+const analyticsDataClient = new BetaAnalyticsDataClient({
+  credentials: {
+    client_email: process.env.GA_CLIENT_EMAIL,
+    private_key: process.env.GA_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+  },
+});
 
 export async function GET() {
   try {
-    const credentials = {
-      client_email: process.env.GA_CLIENT_EMAIL,
-      private_key: process.env.GA_PRIVATE_KEY.replace(/\\n/g, "\n"),
-    };
+    if (!propertyId) {
+      throw new Error("GA_PROPERTY_ID missing in environment variables");
+    }
 
-    const auth = new google.auth.GoogleAuth({
-      credentials,
-      scopes: ["https://www.googleapis.com/auth/analytics.readonly"],
+    // Run report to get total users
+    const [response] = await analyticsDataClient.runReport({
+      property: `properties/${propertyId}`,
+      dateRanges: [
+        {
+          startDate: "2020-01-01", // Site launch date se
+          endDate: "today",
+        },
+      ],
+      metrics: [
+        {
+          name: "totalUsers",
+        },
+      ],
     });
 
-    const analyticsDataClient = google.analyticsdata({
-      version: "v1beta",
-      auth,
-    });
+    // Extract visitor count
+    const visitors = response?.rows?.[0]?.metricValues?.[0]?.value || "0";
 
-    // Run GA4 report
-    const response = await analyticsDataClient.properties.runReport({
-      property: `properties/${process.env.GA_PROPERTY_ID}`,
-      requestBody: {
-        metrics: [{ name: "totalUsers" }],
-
-        dateRanges: [{ startDate: "2025-01-01", endDate: "today" }],
+    return NextResponse.json(
+      {
+        visitors: parseInt(visitors),
+        success: true,
       },
-    });
-
-    const visitors = response.data.rows?.[0].metricValues?.[0]?.value || "0";
-
-    return new Response(JSON.stringify({ visitors }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
+      {
+        status: 200,
+        headers: {
+          "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
+        },
+      }
+    );
   } catch (error) {
-    return new Response(
-      JSON.stringify({ error: error.message || "Failed to fetch visitors" }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
+    console.error("GA4 Analytics Error:", error);
+
+    return NextResponse.json(
+      {
+        error: "Failed to fetch analytics",
+        message: error.message,
+        success: false,
+        visitors: 0,
+      },
+      { status: 500 }
     );
   }
 }
