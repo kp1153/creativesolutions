@@ -4,18 +4,34 @@ import { BetaAnalyticsDataClient } from "@google-analytics/data";
 // Google Analytics credentials
 const propertyId = process.env.GA_PROPERTY_ID;
 
+// Private key ko properly format karo
+const privateKey = process.env.GA_PRIVATE_KEY
+  ? process.env.GA_PRIVATE_KEY.replace(/\\n/gm, "\n")
+  : undefined;
+
 // Initialize the client
-const analyticsDataClient = new BetaAnalyticsDataClient({
-  credentials: {
-    client_email: process.env.GA_CLIENT_EMAIL,
-    private_key: process.env.GA_PRIVATE_KEY?.replace(/\\n/g, "\n"),
-  },
-});
+let analyticsDataClient;
+
+try {
+  analyticsDataClient = new BetaAnalyticsDataClient({
+    credentials: {
+      client_email: process.env.GA_CLIENT_EMAIL,
+      private_key: privateKey,
+    },
+  });
+} catch (error) {
+  console.error("Failed to initialize GA4 client:", error);
+}
 
 export async function GET() {
   try {
-    if (!propertyId) {
-      throw new Error("GA_PROPERTY_ID missing in environment variables");
+    // Validation
+    if (!propertyId || !privateKey || !process.env.GA_CLIENT_EMAIL) {
+      throw new Error("Missing required environment variables");
+    }
+
+    if (!analyticsDataClient) {
+      throw new Error("Analytics client not initialized");
     }
 
     // Run report to get total users
@@ -23,7 +39,7 @@ export async function GET() {
       property: `properties/${propertyId}`,
       dateRanges: [
         {
-          startDate: "2020-01-01", // Site launch date se
+          startDate: "2020-01-01",
           endDate: "today",
         },
       ],
