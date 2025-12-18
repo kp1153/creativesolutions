@@ -3,45 +3,49 @@
 import { useEffect, useState } from "react";
 
 export default function Visitors() {
-  const [visitors, setVisitors] = useState(0);
+  const [visitors, setVisitors] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(null);
+
+  const fetchVisitors = async () => {
+    try {
+      setIsLoading(true);
+      setError(null);
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+      const response = await fetch("/api/analytics", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log("API Response:", data);
+
+      if (data && typeof data.visitors === "number") {
+        setVisitors(data.visitors);
+      } else {
+        throw new Error("Invalid data format");
+      }
+    } catch (err) {
+      console.error("Failed to fetch visitors:", err);
+      setError(err.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchVisitors = async () => {
-      try {
-        setIsLoading(true);
-        setError(false);
-
-        const response = await fetch("/api/analytics", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-
-        const data = await response.json();
-
-        // Agar error bhi aaye to visitors 0 show karo
-        if (data && typeof data.visitors !== "undefined") {
-          setVisitors(data.visitors);
-        } else {
-          setVisitors(0);
-        }
-
-        // Error state sirf tab set karo jab data hi na mile
-        if (!response.ok && !data.visitors) {
-          setError(true);
-        }
-      } catch (err) {
-        console.error("Failed to fetch visitors:", err);
-        setError(true);
-        setVisitors(0); // Default 0 show karo
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
     fetchVisitors();
   }, []);
 
@@ -58,29 +62,55 @@ export default function Visitors() {
                   <div className="h-4 w-32 bg-white/20 rounded animate-pulse"></div>
                 </div>
               </div>
+              <p className="text-white/70 text-xs">Loading analytics...</p>
+            </div>
+          ) : error ? (
+            <div className="text-center space-y-4">
+              <div className="flex items-center justify-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-red-500/20 flex items-center justify-center">
+                  <span className="text-3xl">⚠️</span>
+                </div>
+                <div className="text-left">
+                  <p className="text-sm text-white/80 font-medium">
+                    Total Visitors
+                  </p>
+                  <p className="text-2xl font-bold text-white/70">
+                    Data Loading Failed
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={fetchVisitors}
+                className="mt-4 px-6 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-colors text-sm"
+              >
+                🔄 Retry
+              </button>
+              <p className="text-white/60 text-xs">{error}</p>
             </div>
           ) : (
             <div className="text-center space-y-3">
               <div className="flex items-center justify-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center shadow-lg animate-bounce">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center shadow-lg">
                   <span className="text-3xl">🌐</span>
                 </div>
                 <div className="text-left">
                   <p className="text-sm text-white/80 font-medium">
                     Total Visitors
                   </p>
-
                   <p className="text-4xl md:text-5xl font-black text-white">
-                    {visitors > 0
-                      ? parseInt(visitors).toLocaleString("en-IN")
-                      : "Loading..."}
+                    {visitors !== null ? visitors.toLocaleString("en-IN") : "0"}
                   </p>
                 </div>
               </div>
-
               <p className="text-white/90 text-sm">
                 🙏 धन्यवाद आपके विश्वास के लिए
               </p>
+              <button
+                onClick={fetchVisitors}
+                className="mt-2 text-white/60 hover:text-white text-xs transition-colors"
+              >
+                🔄 Refresh
+              </button>
             </div>
           )}
         </div>

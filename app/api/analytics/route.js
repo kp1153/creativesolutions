@@ -1,40 +1,44 @@
 import { NextResponse } from "next/server";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 
-// Google Analytics credentials
-const propertyId = process.env.GA_PROPERTY_ID;
-
-// Private key ko properly format karo
-const privateKey = process.env.GA_PRIVATE_KEY
-  ? process.env.GA_PRIVATE_KEY.replace(/\\n/gm, "\n")
-  : undefined;
-
-// Initialize the client
-let analyticsDataClient;
-
-try {
-  analyticsDataClient = new BetaAnalyticsDataClient({
-    credentials: {
-      client_email: process.env.GA_CLIENT_EMAIL,
-      private_key: privateKey,
-    },
-  });
-} catch (error) {
-  console.error("Failed to initialize GA4 client:", error);
-}
-
 export async function GET() {
   try {
-    // Validation
-    if (!propertyId || !privateKey || !process.env.GA_CLIENT_EMAIL) {
-      throw new Error("Missing required environment variables");
+    // Step 1: Check environment variables
+    const propertyId = process.env.GA_PROPERTY_ID;
+    const clientEmail = process.env.GA_CLIENT_EMAIL;
+    const privateKey = process.env.GA_PRIVATE_KEY;
+
+    console.log("=== GA4 Configuration Check ===");
+    console.log("Property ID:", propertyId ? "✓ Set" : "✗ Missing");
+    console.log("Client Email:", clientEmail ? "✓ Set" : "✗ Missing");
+    console.log("Private Key:", privateKey ? "✓ Set" : "✗ Missing");
+
+    if (!propertyId || !clientEmail || !privateKey) {
+      return NextResponse.json(
+        {
+          error: "Missing GA4 credentials",
+          details: {
+            propertyId: !!propertyId,
+            clientEmail: !!clientEmail,
+            privateKey: !!privateKey,
+          },
+          visitors: 0,
+        },
+        { status: 500 }
+      );
     }
 
-    if (!analyticsDataClient) {
-      throw new Error("Analytics client not initialized");
-    }
+    // Step 2: Initialize client
+    const analyticsDataClient = new BetaAnalyticsDataClient({
+      credentials: {
+        client_email: clientEmail,
+        private_key: privateKey.replace(/\\n/g, "\n"),
+      },
+    });
 
-    // Run report to get total users
+    console.log("✓ GA4 Client initialized");
+
+    // Step 3: Fetch data from GA4
     const [response] = await analyticsDataClient.runReport({
       property: `properties/${propertyId}`,
       dateRanges: [
@@ -50,13 +54,20 @@ export async function GET() {
       ],
     });
 
-    // Extract visitor count
-    const visitors = response?.rows?.[0]?.metricValues?.[0]?.value || "0";
+    // Step 4: Extract and parse visitor count
+    const visitorValue = response?.rows?.[0]?.metricValues?.[0]?.value;
+    const visitors = visitorValue ? parseInt(visitorValue) : 0;
+
+    console.log("=== GA4 API Response ===");
+    console.log("Raw Value:", visitorValue);
+    console.log("Parsed Visitors:", visitors);
+    console.log("Response Rows:", response?.rows?.length || 0);
 
     return NextResponse.json(
       {
-        visitors: parseInt(visitors),
+        visitors: visitors,
         success: true,
+        timestamp: new Date().toISOString(),
       },
       {
         status: 200,
@@ -66,12 +77,16 @@ export async function GET() {
       }
     );
   } catch (error) {
-    console.error("GA4 Analytics Error:", error);
+    console.error("=== GA4 Error ===");
+    console.error("Error Name:", error.name);
+    console.error("Error Message:", error.message);
+    console.error("Full Error:", error);
 
     return NextResponse.json(
       {
         error: "Failed to fetch analytics",
         message: error.message,
+        errorType: error.name,
         success: false,
         visitors: 0,
       },
