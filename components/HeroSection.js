@@ -49,6 +49,15 @@ const HeroSection = () => {
       name: "IT Point Computer Shop",
     },
     { url: "https://www.sangopang.com", name: "Sangopang" },
+    {
+      url: "https://www.uttamadixit.com/",
+      name: "Prof. Uttama Dixit - Artist, Educator, Researcher",
+    },
+    { url: "https://medhabooks.site", name: "Medha Books" },
+    {
+      url: "https://www.psychiatristkushwahark.store/",
+      name: "Psychiatrist Kushwaha RK",
+    },
   ];
 
   const sliderImages = [
