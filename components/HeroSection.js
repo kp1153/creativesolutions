@@ -18,47 +18,49 @@ const HeroSection = () => {
   }, []);
 
   const projects = [
-    {
-      url: "https://www.interiordesignerchandni.com/",
-      name: "Interior Designer Chandni",
-    },
-    {
-      url: "https://www.kashipanchakarmahospital.in/",
-      name: "Kashi Panchakarma Hospital",
-    },
-    {
-      url: "https://www.leninraghuvanshiofkashi.com/",
-      name: "Lenin Raghuvanshi Official",
-    },
-    { url: "https://www.hamaramorcha.com/", name: "Hamara Morcha News" },
-    { url: "https://www.web-developer-kp.com/", name: "Web Developer KP" },
-    { url: "https://www.bloomingkashmir.org/", name: "Blooming Kashmir" },
-    { url: "https://www.indiannewsviews.com/", name: "Indian News Views" },
-    { url: "https://mothertongue.co.in/", name: "Mother Tongue" },
-    { url: "https://www.shop-at-albelee.com/", name: "Shop at Albelee" },
-    { url: "https://www.medvally.com/", name: "Medvally" },
-    {
-      url: "https://www.vistarapremiumsolaragency.com",
-      name: "Vistara Premium Solar Agency",
-    },
-    { url: "https://www.shrutinagvanshi.in/", name: "Shruti Nagvanshi" },
-    { url: "https://www.arpindia.org/", name: "ARP India" },
-    { url: "https://www.irexpharmacy.com/", name: "Irex Pharmacy" },
-    {
-      url: "https://www.itpointcomputershop.com",
-      name: "IT Point Computer Shop",
-    },
-    { url: "https://www.sangopang.com", name: "Sangopang" },
-    {
-      url: "https://www.uttamadixit.com/",
-      name: "Prof. Uttama Dixit - Artist, Educator, Researcher",
-    },
-    { url: "https://medhabooks.site", name: "Medha Books" },
-    {
-      url: "https://www.psychiatristkushwahark.store/",
-      name: "Psychiatrist Kushwaha RK",
-    },
-  ];
+  {
+    url: "https://www.interiordesignerchandni.com/",
+    name: "Interior Designer Chandni",
+  },
+  {
+    url: "https://www.kashipanchakarmahospital.in/",
+    name: "Kashi Panchakarma Hospital",
+  },
+  {
+    url: "https://www.leninraghuvanshiofkashi.com/",
+    name: "Lenin Raghuvanshi Official",
+  },
+  { url: "https://www.hamaramorcha.com/", name: "Hamara Morcha News" },
+  { url: "https://www.web-developer-kp.com/", name: "Web Developer KP" },
+  { url: "https://www.bloomingkashmir.org/", name: "Blooming Kashmir" },
+  { url: "https://www.indiannewsviews.com/", name: "Indian News Views" },
+  { url: "https://mothertongue.co.in/", name: "Mother Tongue" },
+  { url: "https://www.shop-at-albelee.com/", name: "Shop at Albelee" },
+  { url: "https://www.medvally.com/", name: "Medvally" },
+  {
+    url: "https://www.vistarapremiumsolaragency.com",
+    name: "Vistara Premium Solar Agency",
+  },
+  { url: "https://www.shrutinagvanshi.in/", name: "Shruti Nagvanshi" },
+  { url: "https://www.arpindia.org/", name: "ARP India" },
+  { url: "https://www.irexpharmacy.com/", name: "Irex Pharmacy" },
+  {
+    url: "https://www.itpointcomputershop.com",
+    name: "IT Point Computer Shop",
+  },
+  { url: "https://www.sangopang.com", name: "Sangopang" },
+  {
+    url: "https://www.uttamadixit.com/",
+    name: "Prof. Uttama Dixit - Artist, Educator, Researcher",
+  },
+  { url: "https://medhabooks.site", name: "Medha Books" },
+  {
+    url: "https://www.psychiatristkushwahark.store/",
+    name: "Psychiatrist Kushwaha RK",
+  },
+  { url: "https://www.drkushwahark.in/", name: "Dr Kushwaha RK" },
+  { url: "http://www.itservicespoint.com/", name: "IT Services Point" },
+];
 
   const sliderImages = [
     "Interior Designer Chandni - Modern home interior design portfolio",
