@@ -55,8 +55,8 @@ const HeroSection = () => {
   },
   { url: "https://medhabooks.site", name: "Medha Books" },
   {
-    url: "https://www.psychiatristkushwahark.store/",
-    name: "Psychiatrist Kushwaha RK",
+    url: "http://www.abhivyakti.xyz//",
+    name: "Abhivyakti",
   },
   { url: "https://www.drkushwahark.in/", name: "Dr Kushwaha RK" },
   { url: "http://www.itservicespoint.com/", name: "IT Services Point" },
