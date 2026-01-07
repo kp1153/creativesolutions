@@ -51,7 +51,7 @@ export default function HeroSection() {
     },
     { url: "https://www.sangopang.com", name: "Sangopang" },
     {
-      url: "https://www.uttamadixit.com/",
+      url: "https://www.artistuttamadixit.online/",
       name: "Prof. Uttama Dixit",
     },
     { url: "https://medhabooks.site", name: "Medha Books" },
