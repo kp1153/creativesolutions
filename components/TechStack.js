@@ -1,24 +1,26 @@
+import { Zap, Database, Palette, Server, Cloud, Code, Lock } from "lucide-react";
+
 export default function TechStack() {
   const coretech = [
     {
       name: "Next.js 16",
       desc: "Full-Stack Framework - Turbopack Stable",
-      icon: "⚡",
+      icon: <Zap className="w-8 h-8" />,
     },
     {
       name: "Laravel",
       desc: "PHP Framework - Excellent for WordPress Migration",
-      icon: "🔴",
+      icon: <Server className="w-8 h-8" />,
     },
     {
       name: "MongoDB",
       desc: "NoSQL Database - Fast & Scalable",
-      icon: "🍃",
+      icon: <Database className="w-8 h-8" />,
     },
     {
       name: "Tailwind CSS",
       desc: "Modern Styling - Beautiful UI",
-      icon: "🎨",
+      icon: <Palette className="w-8 h-8" />,
     },
   ];
 
@@ -26,17 +28,17 @@ export default function TechStack() {
     {
       name: "Vercel",
       desc: "Perfect for Next.js – Free Tier Available",
-      icon: "▲",
+      icon: <Cloud className="w-8 h-8" />,
     },
     {
       name: "Digital Ocean",
       desc: "Laravel/VPS Hosting – Starts at ₹400/month",
-      icon: "🌊",
+      icon: <Server className="w-8 h-8" />,
     },
     {
       name: "Google Cloud",
       desc: "Enterprise-Level Solutions",
-      icon: "☁️",
+      icon: <Cloud className="w-8 h-8" />,
     },
   ];
 
@@ -44,17 +46,17 @@ export default function TechStack() {
     {
       name: "VS Code",
       desc: "Professional Code Editor",
-      icon: "💻",
+      icon: <Code className="w-8 h-8" />,
     },
     {
       name: "Git Workflow",
       desc: "Version Control & Collaboration",
-      icon: "🔧",
+      icon: <Code className="w-8 h-8" />,
     },
     {
       name: "Domain & SSL",
       desc: "Complete Setup",
-      icon: "🔒",
+      icon: <Lock className="w-8 h-8" />,
     },
   ];
 
@@ -72,8 +74,8 @@ export default function TechStack() {
 
         <div className="mb-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl p-8 shadow-xl text-white">
           <div className="flex items-center gap-4 mb-4">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl">
-              🔴
+            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+              <Server className="w-8 h-8" />
             </div>
             <div>
               <h3 className="text-2xl font-bold">
@@ -82,22 +84,22 @@ export default function TechStack() {
               <p className="text-white/90">PHP Based Full-Stack Framework</p>
             </div>
           </div>
-          <div className="space-y-3 text-white/95 leading-relaxed">
+          <div className="space-y-3 text-white/95">
             <p>
               ✅ <strong>Perfect for WordPress Users:</strong> Ideal for
-              websites with large existing data that need long-term stability.
+              websites with large existing data.
             </p>
             <p>
-              ✅ <strong>Affordable Hosting:</strong> Very cost-effective –
-              Digital Ocean plans start at ₹400–₹800/month.
+              ✅ <strong>Affordable Hosting:</strong> Digital Ocean plans start
+              at ₹400–₹800/month.
             </p>
             <p>
-              ✅ <strong>Enterprise-Level Security:</strong> Much safer and more
-              scalable compared to WordPress.
+              ✅ <strong>Enterprise-Level Security:</strong> Much safer than
+              WordPress.
             </p>
             <p>
               ✅ <strong>Database Support:</strong> MySQL / PostgreSQL – your
-              data stays secure and stable.
+              data stays secure.
             </p>
           </div>
         </div>
@@ -114,7 +116,7 @@ export default function TechStack() {
                   className="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-indigo-400"
                 >
                   <div className="flex items-start gap-3">
-                    <span className="text-3xl">{tech.icon}</span>
+                    <div className="text-indigo-600">{tech.icon}</div>
                     <div>
                       <h4 className="font-bold text-gray-900">{tech.name}</h4>
                       <p className="text-sm text-gray-600">{tech.desc}</p>
@@ -136,7 +138,7 @@ export default function TechStack() {
                   className="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-green-400"
                 >
                   <div className="flex items-start gap-3">
-                    <span className="text-3xl">{host.icon}</span>
+                    <div className="text-green-600">{host.icon}</div>
                     <div>
                       <h4 className="font-bold text-gray-900">{host.name}</h4>
                       <p className="text-sm text-gray-600">{host.desc}</p>
@@ -158,7 +160,7 @@ export default function TechStack() {
                   className="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-purple-400"
                 >
                   <div className="flex items-start gap-3">
-                    <span className="text-3xl">{tool.icon}</span>
+                    <div className="text-purple-600">{tool.icon}</div>
                     <div>
                       <h4 className="font-bold text-gray-900">{tool.name}</h4>
                       <p className="text-sm text-gray-600">{tool.desc}</p>

@@ -1,25 +1,27 @@
+import { Target, Code, Rocket, Sparkles } from "lucide-react";
+
 export default function WorkProcess() {
   const steps = [
     {
       number: "01",
       title: "Planning",
-      icon: "🎯",
+      icon: <Target className="w-12 h-12" />,
       description:
-        "I start by understanding your requirements and then plan the structure and content accordingly. If you are new to business and don't have much to showcase, I use my linguistic skills and design sense to create impactful content. If you already have solid achievements, the entire focus goes into presenting them effectively.",
+        "I start by understanding your requirements and then plan the structure and content accordingly. If you are new to business, I use my linguistic skills to create impactful content.",
       color: "from-blue-500 to-cyan-500",
     },
     {
       number: "02",
       title: "How the Website Is Built",
-      icon: "💻",
+      icon: <Code className="w-12 h-12" />,
       description:
-        "Using VS Code and Next.js, I develop the website on my system with special attention to cross-browser and mobile responsiveness. Recently, a color-rendering issue occurred on Microsoft Edge, which I immediately fixed – ensuring your website works perfectly everywhere.",
+        "Using VS Code and Next.js, I develop the website with special attention to cross-browser and mobile responsiveness. Every detail is tested thoroughly.",
       color: "from-purple-500 to-pink-500",
     },
     {
       number: "03",
       title: "Hosting & Deployment",
-      icon: "🚀",
+      icon: <Rocket className="w-12 h-12" />,
       description:
         "The project is pushed to GitHub and deployed via Vercel, ensuring that future updates become extremely easy and streamlined.",
       color: "from-green-500 to-emerald-500",
@@ -27,9 +29,9 @@ export default function WorkProcess() {
     {
       number: "04",
       title: "Going Live",
-      icon: "✨",
+      icon: <Sparkles className="w-12 h-12" />,
       description:
-        "As you share new ideas, we update the website accordingly and Vercel shows live changes instantly. That's the beauty of modern deployment. If needed, we can also deploy your site on Digital Ocean depending on your budget.",
+        "As you share new ideas, we update the website accordingly and Vercel shows live changes instantly. That's the beauty of modern deployment.",
       color: "from-orange-500 to-red-500",
     },
   ];
@@ -50,16 +52,16 @@ export default function WorkProcess() {
           {steps.map((step, index) => (
             <div key={index} className="group relative">
               {index !== steps.length - 1 && (
-                <div className="hidden md:block absolute left-12 top-32 w-0.5 h-24 bg-gradient-to-b from-gray-300 to-transparent"></div>
+                <div className="hidden md:block absolute left-12 top-32 w-0.5 h-24 bg-gradient-to-b from-gray-300 to-transparent" />
               )}
 
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 md:p-8 hover:shadow-2xl hover:border-gray-300 transition-all duration-300">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex md:flex-col items-center md:items-start gap-4 md:gap-2">
                     <div
-                      className={`w-24 h-24 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}
+                      className={`w-24 h-24 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg text-white`}
                     >
-                      <span className="text-4xl">{step.icon}</span>
+                      {step.icon}
                     </div>
                     <div
                       className={`text-6xl font-black bg-gradient-to-r ${step.color} bg-clip-text text-transparent`}

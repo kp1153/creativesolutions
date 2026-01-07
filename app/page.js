@@ -9,28 +9,52 @@ import WhyUs from "../components/Why-Us";
 import ContactSection from "../components/Contact";
 
 export const metadata = {
-  title: "Web Developer KP | Next.js & Laravel Expert in India",
+  metadataBase: new URL("https://www.web-developer-kp.com"),
+  title: "Web Developer KP | Next.js 16 & Laravel Expert Varanasi, India",
   description:
-    "Professional Next.js and Laravel web development services in India. Fast, secure, SEO-optimized websites with free hosting options.",
+    "Professional Next.js 16 & Laravel developer in Varanasi. Fast, secure, SEO-optimized websites. Free Vercel hosting. WordPress migration expert. 30+ projects delivered. Contact: 9996865069",
   keywords:
-    "Next.js developer, Laravel developer, web development India, WordPress migration, React developer",
-  openGraph: {
-    title: "Web Developer KP - Modern Web Development",
-    description: "Professional Next.js and Laravel development services",
-    url: "https://www.web-developer-kp.com",
-    images: ["/logo.jpg"],
-    type: "website",
-  },
+    "web developer Varanasi, Next.js developer India, Laravel developer, WordPress migration, React developer, SEO expert",
+  authors: [{ name: "Kamta Prasad" }],
+  creator: "Kamta Prasad",
+  publisher: "Creative Solutions",
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://www.web-developer-kp.com",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://www.web-developer-kp.com",
+    siteName: "Web Developer KP",
+    title: "Web Developer KP - Next.js & Laravel Expert",
+    description:
+      "Professional web development in Varanasi. Next.js 16, Laravel, React. Free hosting, WordPress migration, SEO optimization.",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Web Developer KP Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Developer KP | Next.js & Laravel Expert",
+    description:
+      "Professional web development. Next.js, Laravel, React. Free hosting.",
+    images: ["/logo.jpg"],
+  },
+  verification: {
+    google: "google3a3df6f8e66bd622",
   },
 };
 
@@ -41,17 +65,64 @@ const organizationSchema = {
   url: "https://www.web-developer-kp.com",
   logo: "https://www.web-developer-kp.com/logo.jpg",
   description:
-    "Professional web development services specializing in Next.js and Laravel",
+    "Professional web development services in Next.js 16 and Laravel",
+  founder: {
+    "@type": "Person",
+    name: "Kamta Prasad",
+    email: "prasad.kamta@gmail.com",
+    telephone: "+91-9996865069",
+  },
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Tiwari Bhawan, Village Gaharpur",
     addressLocality: "Varanasi",
     addressRegion: "Uttar Pradesh",
+    postalCode: "221202",
     addressCountry: "IN",
   },
   contactPoint: {
     "@type": "ContactPoint",
+    telephone: "+91-9996865069",
     contactType: "Customer Service",
+    email: "prasad.kamta@gmail.com",
     availableLanguage: ["English", "Hindi", "Urdu"],
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Web Development",
+  provider: {
+    "@type": "Organization",
+    name: "Web Developer KP",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Web Development Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Next.js Development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laravel Development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "WordPress Migration",
+        },
+      },
+    ],
   },
 };
 
@@ -61,64 +132,27 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What technologies do you use for web development?",
+      name: "What technologies do you use?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We specialize in Next.js 16 and Laravel for building modern, fast, and secure websites. We also work with React, Tailwind CSS, MongoDB, and MySQL.",
+        text: "We specialize in Next.js 16 and Laravel with React, Tailwind CSS, MongoDB, and MySQL.",
       },
     },
     {
       "@type": "Question",
-      name: "How much does hosting cost for Next.js websites?",
+      name: "How much does hosting cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Next.js websites can be hosted for free on Vercel. For Laravel websites, hosting on Digital Ocean starts at Rs 400-800 per month.",
+        text: "Next.js websites can be hosted free on Vercel. Laravel hosting starts at Rs 400-800/month on Digital Ocean.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you migrate my WordPress website to Next.js or Laravel?",
+      name: "Can you migrate WordPress sites?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we specialize in WordPress migration to modern technologies. Laravel is especially recommended for WordPress sites with large amounts of data, as both are PHP-based.",
+        text: "Yes, we specialize in WordPress migration to Next.js or Laravel.",
       },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide content writing services?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we provide high-quality content writing and translation services in English, Hindi, and Urdu.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to build a website?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Project timelines vary based on complexity. A simple website takes 1-2 weeks, while complex applications may take 4-8 weeks.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is your service area?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We serve clients across India, with a base in Varanasi, Uttar Pradesh. We work remotely with clients nationwide.",
-      },
-    },
-  ],
-};
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.web-developer-kp.com",
     },
   ],
 };
@@ -134,45 +168,45 @@ export default function Home() {
       />
 
       <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        strategy="afterInteractive"
+      />
+
+      <Script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         strategy="afterInteractive"
       />
 
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        strategy="afterInteractive"
-      />
-
-      <main className="overflow-x-hidden">
-        <section id="home" aria-label="Hero Section">
+      <main>
+        <section id="home">
           <HeroSection />
         </section>
 
-        <section id="services" aria-label="Our Services">
+        <section id="services">
           <Services />
         </section>
 
-        <section id="why-us" aria-label="Why Choose Us">
+        <section id="why-us">
           <WhyUs />
         </section>
 
-        <section id="tech-stack" aria-label="Technology Stack">
+        <section id="tech-stack">
           <TechStack />
         </section>
 
-        <section id="work-process" aria-label="Work Process">
+        <section id="work-process">
           <WorkProcess />
         </section>
 
-        <section id="language" aria-label="Language Expertise">
+        <section id="language">
           <LanguageExpertise />
         </section>
 
-        <section id="contact" aria-label="Contact Us">
+        <section id="contact">
           <ContactSection />
         </section>
 

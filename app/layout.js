@@ -7,49 +7,64 @@ import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
-  title: "Web Developer KP | Next.js 16 & Laravel Developer India",
+  metadataBase: new URL("https://www.web-developer-kp.com"),
+  title: {
+    default: "Web Developer KP | Next.js & Laravel Expert India",
+    template: "%s | Web Developer KP",
+  },
   description:
-    "Professional Next.js 16 & Laravel developer in India. Fast, SEO-optimized websites with affordable hosting. WordPress migration expert.",
+    "Professional Next.js 16 & Laravel developer. Fast, SEO-optimized websites with affordable hosting. WordPress migration expert.",
   keywords:
-    "Next.js developer India, Laravel developer, web development Varanasi, WordPress migration, SEO expert India",
-  author: "Kamta Prasad",
-  robots: "index, follow",
+    "Next.js developer India, Laravel developer, web development Varanasi, WordPress migration, SEO expert",
+  authors: [{ name: "Kamta Prasad" }],
+  creator: "Kamta Prasad",
+  publisher: "Creative Solutions",
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: "Web Developer KP | Next.js 16 & Laravel Expert",
-    description:
-      "Next.js and Laravel development for Indian businesses. SEO-optimized, fast websites.",
-    url: "https://www.web-developer-kp.com",
-    siteName: "Web Developer KP",
     type: "website",
     locale: "en_IN",
+    url: "https://www.web-developer-kp.com",
+    siteName: "Web Developer KP",
+    title: "Web Developer KP | Next.js & Laravel Expert",
+    description:
+      "Next.js and Laravel development. SEO-optimized, fast websites.",
     images: [
       {
-        url: "https://www.web-developer-kp.com/logo.jpg",
+        url: "/logo.jpg",
         width: 1200,
         height: 630,
         alt: "Web Developer KP Logo",
       },
     ],
   },
-  alternates: {
-    canonical: "https://www.web-developer-kp.com",
+  twitter: {
+    card: "summary_large_image",
   },
-  category: "Web Development",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1A365D",
 };
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Web Developer KP",
-  description: "Next.js and Laravel web development services in India",
   url: "https://www.web-developer-kp.com",
   telephone: "+91-9996865069",
   email: "prasad.kamta@gmail.com",
@@ -60,13 +75,11 @@ const structuredData = {
     postalCode: "221202",
     addressCountry: "IN",
   },
-  priceRange: "₹₹",
-  areaServed: "IN",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <Script
           id="structured-data"
@@ -79,6 +92,7 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=G-FKX0BH3EQ5"
           strategy="afterInteractive"
         />
+        
         <Script id="ga4-script" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -88,19 +102,17 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        <Script id="whatsapp-widget" strategy="afterInteractive">
+        <Script id="whatsapp-widget" strategy="lazyOnload">
           {`
-            (function() {
-              const link = document.createElement('a');
-              link.href = 'https://wa.me/919996865069?text=नमस्ते, मुझे वेबसाइट के बारे में जानकारी चाहिए';
-              link.target = '_blank';
-              link.rel = 'noopener noreferrer';
-              link.style.cssText = 'position:fixed;bottom:20px;left:20px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:9999;transition:transform 0.3s;';
-              link.innerHTML = '<svg viewBox="0 0 32 32" width="32" height="32" fill="white"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.826.735 5.482 2.024 7.784L.057 31.191l7.613-1.995A15.923 15.923 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.334c-2.548 0-4.948-.709-6.988-1.94l-.502-.298-5.194 1.362 1.387-5.068-.327-.52A13.265 13.265 0 012.667 16c0-7.364 5.97-13.334 13.333-13.334S29.333 8.636 29.333 16 23.363 29.334 16 29.334zm7.317-9.988c-.4-.2-2.37-1.169-2.738-1.303-.367-.133-.634-.2-.901.2-.267.4-1.034 1.303-1.268 1.57-.233.267-.467.3-.867.1-.4-.2-1.688-.622-3.215-1.984-1.189-1.06-1.991-2.368-2.224-2.768-.233-.4-.025-.617.176-.816.18-.18.4-.467.6-.7.2-.233.267-.4.4-.667.133-.267.067-.5-.033-.7-.1-.2-.901-2.17-1.234-2.97-.325-.78-.655-.674-.901-.687-.233-.012-.5-.015-.767-.015s-.7.1-1.067.5c-.367.4-1.401 1.37-1.401 3.34s1.434 3.874 1.634 4.141c.2.267 2.822 4.308 6.837 6.043.955.413 1.701.66 2.282.845.959.305 1.832.262 2.522.159.77-.115 2.37-.969 2.704-1.905.334-.936.334-1.738.234-1.905-.1-.167-.367-.267-.767-.467z"/></svg>';
-              link.onmouseover = function() { this.style.transform = 'scale(1.1)'; };
-              link.onmouseout = function() { this.style.transform = 'scale(1)'; };
-              document.body.appendChild(link);
-            })();
+            const link = document.createElement('a');
+            link.href = 'https://wa.me/919996865069?text=नमस्ते, मुझे वेबसाइट के बारे में जानकारी चाहिए';
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.style.cssText = 'position:fixed;bottom:20px;left:20px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:9999;transition:transform 0.3s;';
+            link.innerHTML = '<svg viewBox="0 0 24 24" width="32" height="32" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>';
+            link.onmouseover = () => link.style.transform = 'scale(1.1)';
+            link.onmouseout = () => link.style.transform = 'scale(1)';
+            document.body.appendChild(link);
           `}
         </Script>
       </head>
