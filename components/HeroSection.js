@@ -173,8 +173,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-2xl shadow-2xl bg-white">
-            <table className="w-full text-center">
+          <div className="overflow-x-auto rounded-2xl shadow-2xl bg-white">
+            <table className="w-full text-center min-w-[600px]">
               <thead>
                 <tr className="bg-gradient-to-r from-indigo-600 to-purple-600">
                   <th className="text-white py-4 px-6 text-lg font-bold">
