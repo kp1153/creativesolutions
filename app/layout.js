@@ -50,7 +50,7 @@ export const metadata = {
       "K.P. Tiwari - Next.js-Sanity Expert, Mobile App & Website Developer. Building modern, scalable web applications.",
     images: [
       {
-        url: "https://www.web-developer-kp.com/og-image.jpg",
+        url: "https://www.web-developer-kp.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "K.P. Tiwari - Next.js-Sanity Expert",
