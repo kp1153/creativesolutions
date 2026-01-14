@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+// OG Image URL - सिर्फ यहाँ बदलो
+const OG_IMAGE_URL = "https://www.web-developer-kp.com/og-image.jpg";
+
 export const metadata = {
   metadataBase: new URL("https://www.web-developer-kp.com"),
   title: {
@@ -50,11 +53,10 @@ export const metadata = {
       "K.P. Tiwari - Next.js-Sanity Expert, Mobile App & Website Developer. Building modern, scalable web applications.",
     images: [
       {
-        url: "https://www.web-developer-kp.com/og-image.png",
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: "K.P. Tiwari - Next.js-Sanity Expert",
-        type: "image/jpeg",
       },
     ],
   },
@@ -63,7 +65,7 @@ export const metadata = {
     title: "K.P. Tiwari | Next.js-Sanity Expert",
     description:
       "Next.js-Sanity Expert, Mobile App & Website Developer. Building modern web solutions.",
-    images: ["https://www.web-developer-kp.com/og-image.jpg"],
+    images: [OG_IMAGE_URL],
     creator: "@kptiwari",
   },
   alternates: {
@@ -81,6 +83,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "K.P. Tiwari - Web Developer",
+  image: OG_IMAGE_URL,
   url: "https://www.web-developer-kp.com",
   telephone: "+91-9996865069",
   email: "prasad.kamta@gmail.com",
@@ -97,6 +100,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* Meta tags for better OG image compatibility */}
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="K.P. Tiwari - Next.js-Sanity Expert" />
+        
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+        <meta name="twitter:card" content="summary_large_image" />
+        
         <Script
           id="structured-data"
           type="application/ld+json"
