@@ -19,39 +19,55 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL("https://www.web-developer-kp.com"),
   title: {
-    default: "Web Developer KP | Next.js & Laravel Expert India",
-    template: "%s | Web Developer KP",
+    default: "K.P. Tiwari | Next.js-Sanity Expert | Mobile App & Website Developer",
+    template: "%s | K.P. Tiwari",
   },
   description:
-    "Professional Next.js 16 & Laravel developer. Fast, SEO-optimized websites with affordable hosting. WordPress migration expert.",
+    "K.P. Tiwari - Next.js-Sanity Expert, Mobile App & Website Developer. Professional web development services with modern technologies.",
   keywords:
-    "Next.js developer India, Laravel developer, web development Varanasi, WordPress migration, SEO expert",
-  authors: [{ name: "Kamta Prasad" }],
-  creator: "Kamta Prasad",
-  publisher: "Creative Solutions",
+    "Next.js developer, Sanity CMS expert, web development, mobile app developer, K.P. Tiwari, React developer, fullstack developer",
+  authors: [{ name: "K.P. Tiwari" }],
+  creator: "K.P. Tiwari",
+  publisher: "K.P. Tiwari",
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://www.web-developer-kp.com",
-    siteName: "Web Developer KP",
-    title: "Web Developer KP | Next.js & Laravel Expert",
+    siteName: "K.P. Tiwari - Developer Portfolio",
+    title: "K.P. Tiwari | Next.js-Sanity Expert | Mobile App & Website Developer",
     description:
-      "Next.js and Laravel development. SEO-optimized, fast websites.",
+      "K.P. Tiwari - Next.js-Sanity Expert, Mobile App & Website Developer. Building modern, scalable web applications.",
     images: [
       {
-        url: "/logo.jpg",
+        url: "https://www.web-developer-kp.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Web Developer KP Logo",
+        alt: "K.P. Tiwari - Next.js-Sanity Expert",
+        type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    title: "K.P. Tiwari | Next.js-Sanity Expert",
+    description:
+      "Next.js-Sanity Expert, Mobile App & Website Developer. Building modern web solutions.",
+    images: ["https://www.web-developer-kp.com/og-image.jpg"],
+    creator: "@kptiwari",
+  },
+  alternates: {
+    canonical: "https://www.web-developer-kp.com",
   },
 };
 
@@ -64,7 +80,7 @@ export const viewport = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Web Developer KP",
+  name: "K.P. Tiwari - Web Developer",
   url: "https://www.web-developer-kp.com",
   telephone: "+91-9996865069",
   email: "prasad.kamta@gmail.com",
