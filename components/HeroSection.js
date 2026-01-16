@@ -20,6 +20,10 @@ export default function HeroSection() {
 
   const projects = [
     {
+      url: "https://www.pashuchikitsakshukla.online",
+      name: "Pashu Chikitsak Shukla",
+    },
+    {
       url: "https://www.interiordesignerchandni.com/",
       name: "Interior Designer Chandni",
     },
