@@ -47,12 +47,6 @@ export default function HeroSection() {
       name: "Vistara Premium Solar Agency",
     },
     { url: "https://www.shrutinagvanshi.in/", name: "Shruti Nagvanshi" },
-    { url: "https://www.arpindia.org/", name: "ARP India" },
-    { url: "https://www.irexpharmacy.com/", name: "Irex Pharmacy" },
-    {
-      url: "https://www.itpointcomputershop.com",
-      name: "IT Point Computer Shop",
-    },
     { url: "https://www.sangopang.com", name: "Sangopang" },
     {
       url: "https://www.artistuttamadixit.online/",
@@ -61,6 +55,7 @@ export default function HeroSection() {
     { url: "https://medhabooks.site", name: "Medha Books" },
     { url: "http://www.abhivyakti.xyz/", name: "Abhivyakti" },
     { url: "https://www.drkushwahark.in/", name: "Dr Kushwaha RK" },
+    { url: "https://www.psychiatristdinesh.online", name: "Psychiatrist Dinesh" },
     { url: "http://www.itservicespoint.com/", name: "IT Services Point" },
   ];
 
