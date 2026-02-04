@@ -57,6 +57,8 @@ export default function HeroSection() {
     { url: "https://www.drkushwahark.in/", name: "Dr Kushwaha RK" },
     { url: "https://www.psychiatristdinesh.online", name: "Psychiatrist Dinesh" },
     { url: "http://www.itservicespoint.com/", name: "IT Services Point" },
+    { uri: "https://www.agoraprakashan.store/", name: "Agora Prakashan" },
+    { url: "https://www.vetlifecare.com/", name: "Vet Life Care" },
   ];
 
   const sliderImages = [
