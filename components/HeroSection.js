@@ -59,6 +59,7 @@ export default function HeroSection() {
     { url: "http://www.itservicespoint.com/", name: "IT Services Point" },
     { uri: "https://www.agoraprakashan.store/", name: "Agora Prakashan" },
     { url: "https://www.vetlifecare.com/", name: "Vet Life Care" },
+    { uri: "https://www.kulhareprakashan.store/", name: "Kulhare Prakashan" },
   ];
 
   const sliderImages = [
