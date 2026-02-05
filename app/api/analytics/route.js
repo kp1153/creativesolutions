@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 
-export async function GET() {
+export async function GET(request) {
   try {
-    // Step 1: Check environment variables
     const propertyId = process.env.GA_PROPERTY_ID;
     const clientEmail = process.env.GA_CLIENT_EMAIL;
     const privateKey = process.env.GA_PRIVATE_KEY;
@@ -28,7 +27,6 @@ export async function GET() {
       );
     }
 
-    // Step 2: Initialize client
     const analyticsDataClient = new BetaAnalyticsDataClient({
       credentials: {
         client_email: clientEmail,
@@ -38,7 +36,6 @@ export async function GET() {
 
     console.log("✓ GA4 Client initialized");
 
-    // Step 3: Fetch data from GA4
     const [response] = await analyticsDataClient.runReport({
       property: `properties/${propertyId}`,
       dateRanges: [
@@ -54,7 +51,6 @@ export async function GET() {
       ],
     });
 
-    // Step 4: Extract and parse visitor count
     const visitorValue = response?.rows?.[0]?.metricValues?.[0]?.value;
     const visitors = visitorValue ? parseInt(visitorValue) : 0;
 
