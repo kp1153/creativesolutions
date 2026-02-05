@@ -1,6 +1,6 @@
 import Script from "next/script";
 import HeroSection from "../components/HeroSection";
-// import Visitors from "../components/Visitors";
+import Visitors from "../components/Visitors";
 import TechStack from "../components/TechStack";
 import WorkProcess from "../components/WorkProcess";
 import LanguageExpertise from "../components/LanguageExpertise";
@@ -210,7 +210,7 @@ export default function Home() {
           <ContactSection />
         </section>
 
-        {/* <Visitors /> */}
+        <Visitors />
       </main>
     </>
   );
