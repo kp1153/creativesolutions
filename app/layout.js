@@ -16,7 +16,6 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-// OG Image URL - सिर्फ यहाँ बदलो
 const OG_IMAGE_URL = "https://www.web-developer-kp.com/og-image.jpg";
 
 export const metadata = {
@@ -100,7 +99,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Meta tags for better OG image compatibility */}
         <meta property="og:image" content={OG_IMAGE_URL} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -115,20 +113,6 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
           strategy="beforeInteractive"
         />
-
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-FKX0BH3EQ5"
-          strategy="afterInteractive"
-        />
-        
-        <Script id="ga4-script" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-FKX0BH3EQ5');
-          `}
-        </Script>
 
         <Script id="whatsapp-widget" strategy="lazyOnload">
           {`
