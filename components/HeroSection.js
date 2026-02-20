@@ -59,6 +59,7 @@ export default function HeroSection() {
     { url: "http://www.itservicespoint.com/", name: "IT Services Point" },
     { url: "https://www.agoraprakashan.store/", name: "Agora Prakashan" },
     { url: "https://www.vetlifecare.com/", name: "Vet Life Care" },
+     { url: "https://www.akhilmedical.store/", name: "Akhil Medical Store" },
     { url: "https://www.kulhareprakashan.store/", name: "Kulhare Prakashan" },
   ];
 
