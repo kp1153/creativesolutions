@@ -16,21 +16,21 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const OG_IMAGE_URL = "https://www.web-developer-kp.com/og-image.jpg";
+const OG_IMAGE_URL = "https://www.web-developer-kp.com/og-image.png";
 
 export const metadata = {
   metadataBase: new URL("https://www.web-developer-kp.com"),
   title: {
-    default: "K.P. Tiwari | Next.js Expert | Mobile App & Website Developer",
-    template: "%s | K.P. Tiwari",
+    default: "Kamta Prasad | Next.js Expert | Mobile App & Website Developer",
+    template: "%s | Kamta Prasad",
   },
   description:
-    "K.P. Tiwari - Next.js Expert, Mobile App & Website Developer. Professional web development services with modern technologies.",
+    "Kamta Prasad - Next.js Expert, Mobile App & Website Developer. Professional web development services with modern technologies.",
   keywords:
-    "Next.js developer, web development, mobile app developer, K.P. Tiwari, React developer, fullstack developer",
-  authors: [{ name: "K.P. Tiwari" }],
-  creator: "K.P. Tiwari",
-  publisher: "K.P. Tiwari",
+    "Next.js developer, web development, mobile app developer, Kamta Prasad, React developer, fullstack developer, Turso, SaaS developer",
+  authors: [{ name: "Kamta Prasad" }],
+  creator: "Kamta Prasad",
+  publisher: "Kamta Prasad",
   robots: {
     index: true,
     follow: true,
@@ -46,26 +46,26 @@ export const metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://www.web-developer-kp.com",
-    siteName: "K.P. Tiwari - Developer Portfolio",
-    title: "K.P. Tiwari | Next.js Expert | Mobile App & Website Developer",
+    siteName: "Kamta Prasad - Developer Portfolio",
+    title: "Kamta Prasad | Next.js Expert | Mobile App & Website Developer",
     description:
-      "K.P. Tiwari - Next.js Expert, Mobile App & Website Developer. Building modern, scalable web applications.",
+      "Kamta Prasad - Next.js Expert, Mobile App & Website Developer. Building modern, scalable web applications.",
     images: [
       {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "K.P. Tiwari - Next.js Expert",
+        alt: "Kamta Prasad - Next.js Expert",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "K.P. Tiwari | Next.js Expert",
+    title: "Kamta Prasad | Next.js Expert",
     description:
       "Next.js Expert, Mobile App & Website Developer. Building modern web solutions.",
     images: [OG_IMAGE_URL],
-    creator: "@kptiwari",
+    creator: "@Webdeveloperkp",
   },
   alternates: {
     canonical: "https://www.web-developer-kp.com",
@@ -81,7 +81,7 @@ export const viewport = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "K.P. Tiwari - Web Developer",
+  name: "Kamta Prasad - Web Developer",
   image: OG_IMAGE_URL,
   url: "https://www.web-developer-kp.com",
   telephone: "+91-9996865069",
@@ -99,14 +99,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta property="og:image" content={OG_IMAGE_URL} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="K.P. Tiwari - Next.js Expert" />
-        
-        <meta name="twitter:image" content={OG_IMAGE_URL} />
-        <meta name="twitter:card" content="summary_large_image" />
-        
         <Script
           id="structured-data"
           type="application/ld+json"
@@ -118,7 +110,7 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=G-FKX0BH3EQ5"
           strategy="afterInteractive"
         />
-        
+
         <Script id="ga4-script" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
