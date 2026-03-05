@@ -55,11 +55,14 @@ export default function HeroSection() {
     { url: "https://medhabooks.site", name: "Medha Books" },
     { url: "http://www.abhivyakti.xyz/", name: "Abhivyakti" },
     { url: "https://www.drkushwahark.in/", name: "Dr Kushwaha RK" },
-    { url: "https://www.psychiatristdinesh.online", name: "Psychiatrist Dinesh" },
+    {
+      url: "https://www.psychiatristdinesh.online",
+      name: "Psychiatrist Dinesh",
+    },
     { url: "http://www.itservicespoint.com/", name: "IT Services Point" },
     { url: "https://www.agoraprakashan.store/", name: "Agora Prakashan" },
     { url: "https://www.vetlifecare.com/", name: "Vet Life Care" },
-     { url: "https://www.akhilmedical.store/", name: "Akhil Medical Store" },
+    { url: "https://www.akhilmedical.store/", name: "Akhil Medical Store" },
     { url: "https://www.kulhareprakashan.store/", name: "Kulhare Prakashan" },
   ];
 
@@ -68,30 +71,12 @@ export default function HeroSection() {
       src: "/images/1.jpeg",
       alt: "Interior Designer Chandni portfolio website",
     },
-    {
-      src: "/images/2.jpeg",
-      alt: "Kashi Panchakarma Hospital website",
-    },
-    {
-      src: "/images/3.jpeg",
-      alt: "Lenin Raghuvanshi official website",
-    },
-    {
-      src: "/images/4.jpeg",
-      alt: "Hamara Morcha News portal",
-    },
-    {
-      src: "/images/5.jpeg",
-      alt: "Web Developer KP portfolio",
-    },
-    {
-      src: "/images/6.jpeg",
-      alt: "IT Point Computer Shop website",
-    },
-    {
-      src: "/images/7.jpeg",
-      alt: "Indian News Views platform",
-    },
+    { src: "/images/2.jpg", alt: "Kashi Panchakarma Hospital website" },
+    { src: "/images/3.jpg", alt: "Lenin Raghuvanshi official website" },
+    { src: "/images/4.jpg", alt: "Hamara Morcha News portal" },
+    { src: "/images/5.jpg", alt: "Web Developer KP portfolio" },
+    { src: "/images/6.jpg", alt: "IT Point Computer Shop website" },
+    { src: "/images/7.jpg", alt: "Indian News Views platform" },
   ];
 
   return (
@@ -250,7 +235,10 @@ export default function HeroSection() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <Card key={index} className="shadow-md hover:shadow-xl transition">
+              <Card
+                key={index}
+                className="shadow-md hover:shadow-xl transition"
+              >
                 <CardHeader>
                   <CardTitle className="text-lg">{project.name}</CardTitle>
                 </CardHeader>
