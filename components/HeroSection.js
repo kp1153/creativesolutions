@@ -64,6 +64,7 @@ export default function HeroSection() {
     { url: "https://www.vetlifecare.com/", name: "Vet Life Care" },
     { url: "https://www.akhilmedical.store/", name: "Akhil Medical Store" },
     { url: "https://www.kulhareprakashan.store/", name: "Kulhare Prakashan" },
+    { url: "https://pdf-invoice-generator.com/", name: "Invoice Generator" },
   ];
 
   const sliderImages = [
