@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const EXE_DOWNLOAD_URL = "https://github.com/kp1153/nishant/releases/latest/download/nishant-setup.exe";
+const EXE_DOWNLOAD_URL = "https://pub-36b3216d45d24541a20e55f6b3f26d07.r2.dev/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%A4%20Setup%200.1.0.exe";
 
 const features = [
   { icon: "🧾", title: "बिलिंग", desc: "GST के साथ तुरंत बिल बनाओ — CGST, SGST automatic" },
