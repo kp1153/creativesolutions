@@ -21,13 +21,13 @@ const OG_IMAGE_URL = "https://www.web-developer-kp.com/og-image.png";
 export const metadata = {
   metadataBase: new URL("https://www.web-developer-kp.com"),
   title: {
-    default: "Kamta Prasad | Next.js Expert | Mobile App & Website Developer",
-    template: "%s | Kamta Prasad",
+    default: "निशांत हार्डवेयर सॉफ्टवेयर | Windows + Android | GST Billing",
+    template: "%s | निशांत सॉफ्टवेयर",
   },
   description:
-    "Kamta Prasad - Next.js Expert, Mobile App & Website Developer. Professional web development services with modern technologies.",
+    "हार्डवेयर दुकान के लिए GST billing, stock, उधारी सॉफ्टवेयर। Windows पर install करो, Android tablet पर राह चलते देखो। 7 दिन मुफ्त trial।",
   keywords:
-    "Next.js developer, web development, mobile app developer, Kamta Prasad, React developer, fullstack developer, Turso, SaaS developer",
+    "hardware shop software, GST billing software, hardware dukan software, stock management, उधारी software, Android tablet billing",
   authors: [{ name: "Kamta Prasad" }],
   creator: "Kamta Prasad",
   publisher: "Kamta Prasad",
@@ -37,33 +37,32 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
     type: "website",
-    locale: "en_IN",
+    locale: "hi_IN",
     url: "https://www.web-developer-kp.com",
-    siteName: "Kamta Prasad - Developer Portfolio",
-    title: "Kamta Prasad | Next.js Expert | Mobile App & Website Developer",
+    siteName: "निशांत हार्डवेयर सॉफ्टवेयर",
+    title: "निशांत हार्डवेयर सॉफ्टवेयर | Windows + Android",
     description:
-      "Kamta Prasad - Next.js Expert, Mobile App & Website Developer. Building modern, scalable web applications.",
+      "हार्डवेयर दुकान के लिए GST billing, stock, उधारी। Windows + Android दोनों पर चलता है।",
     images: [
       {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Kamta Prasad - Next.js Expert",
+        alt: "निशांत हार्डवेयर सॉफ्टवेयर",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kamta Prasad | Next.js Expert",
-    description:
-      "Next.js Expert, Mobile App & Website Developer. Building modern web solutions.",
+    title: "निशांत हार्डवेयर सॉफ्टवेयर",
+    description: "Windows + Android पर चलने वाला hardware billing software।",
     images: [OG_IMAGE_URL],
     creator: "@Webdeveloperkp",
   },
@@ -80,24 +79,23 @@ export const viewport = {
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Kamta Prasad - Web Developer",
-  image: OG_IMAGE_URL,
+  "@type": "SoftwareApplication",
+  name: "निशांत हार्डवेयर सॉफ्टवेयर",
+  operatingSystem: "Windows, Android",
+  applicationCategory: "BusinessApplication",
+  offers: {
+    "@type": "Offer",
+    price: "5500",
+    priceCurrency: "INR",
+  },
   url: "https://www.web-developer-kp.com",
   telephone: "+91-9996865069",
   email: "prasad.kamta@gmail.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Varanasi",
-    addressRegion: "Uttar Pradesh",
-    postalCode: "221202",
-    addressCountry: "IN",
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="hi" className="scroll-smooth">
       <head>
         <Script
           id="structured-data"
@@ -105,12 +103,10 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
           strategy="beforeInteractive"
         />
-
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FKX0BH3EQ5"
           strategy="afterInteractive"
         />
-
         <Script id="ga4-script" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -119,11 +115,10 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-FKX0BH3EQ5');
           `}
         </Script>
-
         <Script id="whatsapp-widget" strategy="lazyOnload">
           {`
             const link = document.createElement('a');
-            link.href = 'https://wa.me/919996865069?text=नमस्ते, मुझे वेबसाइट के बारे में जानकारी चाहिए';
+            link.href = 'https://wa.me/919996865069?text=नमस्ते, निशांत सॉफ्टवेयर के बारे में जानकारी चाहिए';
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
             link.style.cssText = 'position:fixed;bottom:20px;left:20px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:9999;transition:transform 0.3s;';
@@ -134,10 +129,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}>
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

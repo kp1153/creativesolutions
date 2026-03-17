@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
-
 const EXE_DOWNLOAD_URL = "https://pub-36b3216d45d24541a20e55f6b3f26d07.r2.dev/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%A4%20Setup%200.1.0.exe";
+const PWA_URL = "https://nishant-ten.vercel.app";
 
 const features = [
   { icon: "🧾", title: "बिलिंग", desc: "GST के साथ तुरंत बिल बनाओ — CGST, SGST automatic" },
@@ -26,12 +25,17 @@ export default function Home() {
             निशांत हार्डवेयर<br />प्रबंधन सॉफ्टवेयर
           </h1>
           <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-xl mx-auto">
-            हार्डवेयर की दुकान के लिए बना — बिल, स्टॉक, उधारी, GST रिपोर्ट सब एक जगह। Windows पर चलता है।
+            हार्डवेयर की दुकान के लिए बना — बिल, स्टॉक, उधारी, GST रिपोर्ट सब एक जगह।
           </p>
-          <a href={EXE_DOWNLOAD_URL} className="inline-block bg-white text-blue-700 font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-blue-50 transition">
-            ⬇️ मुफ्त में डाउनलोड करें (.exe)
-          </a>
-          <p className="text-blue-200 text-sm mt-3">Windows 10 / 11 — 64-bit</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={EXE_DOWNLOAD_URL} className="inline-block bg-white text-blue-700 font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-blue-50 transition">
+              🖥️ Windows पर डाउनलोड करें (.exe)
+            </a>
+            <a href={PWA_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-green-600 transition">
+              📱 Android / Tablet पर खोलें
+            </a>
+          </div>
+          <p className="text-blue-200 text-sm mt-3">Windows 10/11 — 64-bit &nbsp;|&nbsp; Android Chrome पर भी चलता है</p>
         </div>
       </section>
 
@@ -51,6 +55,48 @@ export default function Home() {
       </section>
 
       <section className="py-16 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4 text-gray-800">दो तरीके — एक सॉफ्टवेयर</h2>
+          <p className="text-center text-gray-500 mb-10">Windows पर दुकान में चलाओ, Android पर राह चलते देखो</p>
+          <div className="grid md:grid-cols-2 gap-8">
+
+            <div className="rounded-2xl border-2 border-blue-600 p-8 shadow-lg">
+              <div className="text-5xl mb-4">🖥️</div>
+              <h3 className="text-2xl font-bold mb-2 text-blue-700">Windows Software</h3>
+              <p className="text-gray-500 text-sm mb-4">दुकान के computer पर install करो — internet बंद हो तो भी 72 घंटे काम करता है</p>
+              <ul className="text-sm text-gray-600 space-y-2 mb-6">
+                <li>✅ एक बार install — हमेशा के लिए</li>
+                <li>✅ Internet बंद हो तो भी 72 घंटे चलेगा</li>
+                <li>✅ बड़ी screen पर आसान billing</li>
+                <li>✅ Printer से सीधे bill print</li>
+                <li>✅ Windows 10 / 11 — 64-bit</li>
+              </ul>
+              <a href={EXE_DOWNLOAD_URL} className="block w-full bg-blue-600 text-white font-bold py-3 rounded-xl text-center hover:bg-blue-700 transition">
+                ⬇️ Download करें (.exe)
+              </a>
+            </div>
+
+            <div className="rounded-2xl border-2 border-green-500 p-8 shadow-lg">
+              <div className="text-5xl mb-4">📱</div>
+              <h3 className="text-2xl font-bold mb-2 text-green-700">Android / Tablet App</h3>
+              <p className="text-gray-500 text-sm mb-4">कोई install नहीं — Chrome में खोलो और Home Screen पर add करो</p>
+              <ul className="text-sm text-gray-600 space-y-2 mb-6">
+                <li>✅ 10 इंच tablet पर बिल्कुल सही</li>
+                <li>✅ राह चलते stock और उधारी देखो</li>
+                <li>✅ रिपोर्ट कहीं से भी check करो</li>
+                <li>✅ कोई app install नहीं — Chrome में खुलता है</li>
+                <li>✅ Home Screen पर icon बनाओ — app जैसा लगेगा</li>
+              </ul>
+              <a href={PWA_URL} target="_blank" rel="noopener noreferrer" className="block w-full bg-green-500 text-white font-bold py-3 rounded-xl text-center hover:bg-green-600 transition">
+                📱 Android पर खोलें
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">कीमत</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -63,6 +109,7 @@ export default function Home() {
               <div className="text-5xl font-extrabold text-blue-600 mb-1">₹5,500</div>
               <p className="text-gray-400 text-sm mb-6">एक बार — 1 साल शामिल</p>
               <ul className="text-left text-sm text-gray-600 space-y-2 mb-6">
+                <li>✅ Windows + Android दोनों</li>
                 <li>✅ सभी features</li>
                 <li>✅ अपडेट मुफ्त</li>
                 <li>✅ WhatsApp support</li>
@@ -78,6 +125,7 @@ export default function Home() {
               <div className="text-5xl font-extrabold text-blue-600 mb-1">₹2,500</div>
               <p className="text-gray-400 text-sm mb-6">प्रति वर्ष</p>
               <ul className="text-left text-sm text-gray-600 space-y-2 mb-6">
+                <li>✅ Windows + Android दोनों</li>
                 <li>✅ सभी features</li>
                 <li>✅ अपडेट मुफ्त</li>
                 <li>✅ WhatsApp support</li>
@@ -92,7 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-gray-50 text-center">
+      <section className="py-12 px-4 bg-white text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-bold mb-3 text-gray-800">मुफ्त Invoice Generator</h2>
           <p className="text-gray-500 mb-6 text-sm">GST invoice तुरंत बनाओ — कोई signup नहीं, बिल्कुल मुफ्त</p>
@@ -106,9 +154,14 @@ export default function Home() {
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">आज ही शुरू करें — मुफ्त में</h2>
           <p className="text-blue-100 mb-8">7 दिन पूरी तरह मुफ्त। कोई card नहीं, कोई झंझट नहीं।</p>
-          <a href={EXE_DOWNLOAD_URL} className="inline-block bg-white text-blue-700 font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-blue-50 transition">
-            ⬇️ अभी डाउनलोड करें
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={EXE_DOWNLOAD_URL} className="inline-block bg-white text-blue-700 font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-blue-50 transition">
+              🖥️ Windows Download
+            </a>
+            <a href={PWA_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-green-600 transition">
+              📱 Android पर खोलें
+            </a>
+          </div>
           <p className="text-blue-200 text-sm mt-4">
             मदद चाहिए?{" "}
             <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">
