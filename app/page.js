@@ -16,6 +16,22 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900 font-sans">
 
+      <section className="bg-amber-500 py-3 px-4 text-center">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-3 text-white font-bold text-lg">
+          <a href="tel:+919996865069" className="flex items-center gap-2 hover:underline">
+            📞 9996865069
+          </a>
+          <span className="hidden sm:inline">|</span>
+          <a href="mailto:prasad.kamta@gmail.com" className="flex items-center gap-2 hover:underline">
+            ✉️ prasad.kamta@gmail.com
+          </a>
+          <span className="hidden sm:inline">|</span>
+          <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
+            💬 WhatsApp करें
+          </a>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-700 text-white py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <div className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1 rounded-full mb-6">
@@ -35,7 +51,7 @@ export default function Home() {
               <a href={PWA_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-green-600 transition">
                 📱 Android / Tablet पर खोलें
               </a>
-              <p className="text-green-100 text-xs mt-2">👉 खुले तो Chrome menu ⋮ → <strong>Add to Home Screen</strong> → Install</p>
+              <p className="text-green-100 text-xs mt-2">👉 Chrome menu ⋮ → <strong>Add to Home Screen</strong> → Install</p>
               <p className="text-green-100 text-xs">📲 एक बार install करो — हमेशा app जैसा चलेगा</p>
             </div>
           </div>
@@ -155,6 +171,17 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-12 px-4 bg-blue-50 text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold mb-2 text-gray-800">🏫 जल्द आ रहा है</h2>
+          <p className="text-gray-600 mb-2 font-semibold">CBSE स्कूल प्रबंधन सॉफ्टवेयर — कक्षा 1 से 12 तक</p>
+          <p className="text-gray-500 text-sm mb-6">फीस, attendance, result, report card, staff — सब एक जगह। Windows + Android।</p>
+          <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-blue-700 transition">
+            💬 जानकारी के लिए WhatsApp करें
+          </a>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-br from-blue-700 to-indigo-700 text-white py-16 px-4 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">आज ही शुरू करें — मुफ्त में</h2>
@@ -170,12 +197,13 @@ export default function Home() {
               <p className="text-green-200 text-xs mt-2">👉 Chrome menu ⋮ → Add to Home Screen → Install</p>
             </div>
           </div>
-          <p className="text-blue-200 text-sm mt-4">
-            मदद चाहिए?{" "}
-            <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">
-              WhatsApp करें
-            </a>
-          </p>
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 text-sm">
+            <a href="tel:+919996865069" className="text-white font-bold hover:underline">📞 9996865069</a>
+            <span className="hidden sm:inline text-blue-300">|</span>
+            <a href="mailto:prasad.kamta@gmail.com" className="text-white font-bold hover:underline">✉️ prasad.kamta@gmail.com</a>
+            <span className="hidden sm:inline text-blue-300">|</span>
+            <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:underline">💬 WhatsApp करें</a>
+          </div>
         </div>
       </section>
 
