@@ -31,11 +31,15 @@ export default function Home() {
             <a href={EXE_DOWNLOAD_URL} className="inline-block bg-white text-blue-700 font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-blue-50 transition">
               🖥️ Windows पर डाउनलोड करें (.exe)
             </a>
-            <a href={PWA_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-green-600 transition">
-              📱 Android / Tablet पर खोलें
-            </a>
+            <div className="flex flex-col items-center">
+              <a href={PWA_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-green-600 transition">
+                📱 Android / Tablet पर खोलें
+              </a>
+              <p className="text-green-100 text-xs mt-2">👉 खुले तो Chrome menu ⋮ → <strong>Add to Home Screen</strong> → Install</p>
+              <p className="text-green-100 text-xs">📲 एक बार install करो — हमेशा app जैसा चलेगा</p>
+            </div>
           </div>
-          <p className="text-blue-200 text-sm mt-3">Windows 10/11 — 64-bit &nbsp;|&nbsp; Android Chrome पर भी चलता है</p>
+          <p className="text-blue-200 text-sm mt-4">Windows 10/11 — 64-bit &nbsp;|&nbsp; Android Chrome पर भी चलता है</p>
         </div>
       </section>
 
@@ -90,6 +94,7 @@ export default function Home() {
               <a href={PWA_URL} target="_blank" rel="noopener noreferrer" className="block w-full bg-green-500 text-white font-bold py-3 rounded-xl text-center hover:bg-green-600 transition">
                 📱 Android पर खोलें
               </a>
+              <p className="text-gray-400 text-xs mt-3 text-center">👉 Chrome menu ⋮ → Add to Home Screen → Install</p>
             </div>
 
           </div>
@@ -158,9 +163,12 @@ export default function Home() {
             <a href={EXE_DOWNLOAD_URL} className="inline-block bg-white text-blue-700 font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-blue-50 transition">
               🖥️ Windows Download
             </a>
-            <a href={PWA_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-green-600 transition">
-              📱 Android पर खोलें
-            </a>
+            <div className="flex flex-col items-center">
+              <a href={PWA_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-green-600 transition">
+                📱 Android पर खोलें
+              </a>
+              <p className="text-green-200 text-xs mt-2">👉 Chrome menu ⋮ → Add to Home Screen → Install</p>
+            </div>
           </div>
           <p className="text-blue-200 text-sm mt-4">
             मदद चाहिए?{" "}
