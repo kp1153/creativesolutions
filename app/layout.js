@@ -97,6 +97,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="hi" className="scroll-smooth">
       <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="निशांत" />
         <Script
           id="structured-data"
           type="application/ld+json"
