@@ -9,8 +9,8 @@ export default function PaymentPage() {
   const [loading, setLoading] = useState(false);
 
   const plans = {
-    new: { label: "नया — पहली बार", amount: 5500 },
-    renew: { label: "नवीनीकरण — सालाना", amount: 2000 },
+    new: { label: "नया — पहली बार (1 साल शामिल)", amount: 5500 },
+    renew: { label: "नवीनीकरण — सालाना", amount: 2500 },
   };
 
   async function handlePayment() {
@@ -74,7 +74,9 @@ export default function PaymentPage() {
       <Script src="https://checkout.razorpay.com/v1/checkout.js" />
       <main className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-16">
         <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md">
-          <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">निशांत सॉफ्टवेयर — Payment</h1>
+          <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+            निशांत सॉफ्टवेयर — Payment
+          </h1>
 
           <div className="flex gap-3 mb-6">
             {Object.entries(plans).map(([key, val]) => (
@@ -83,7 +85,8 @@ export default function PaymentPage() {
                 onClick={() => setPlan(key)}
                 className={`flex-1 py-3 rounded-xl font-semibold text-sm border-2 transition ${plan === key ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-200 text-gray-600"}`}
               >
-                {val.label}<br />
+                {val.label}
+                <br />
                 <span className="text-lg font-bold">₹{val.amount}</span>
               </button>
             ))}
@@ -123,7 +126,12 @@ export default function PaymentPage() {
 
           <p className="text-center text-xs text-gray-400 mt-4">
             मदद चाहिए?{" "}
-            <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="text-green-600 underline">
+            <a
+              href="https://wa.me/919996865069"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 underline"
+            >
               WhatsApp करें
             </a>
           </p>
