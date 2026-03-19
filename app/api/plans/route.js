@@ -16,7 +16,7 @@ export async function GET(req) {
     }
 
     const regResult = await registry.execute({
-      sql: 'SELECT name FROM software_registry WHERE software_key = ?',
+      sql: 'SELECT * FROM software_registry WHERE software_key = ?',
       args: [software],
     });
 
