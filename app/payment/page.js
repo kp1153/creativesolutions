@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Script from "next/script";
 import { useSearchParams } from "next/navigation";
 
-export default function PaymentPage() {
+function PaymentForm() {
   const searchParams = useSearchParams();
   const [form, setForm] = useState({ name: "", email: "", phone: "" });
   const [software, setSoftware] = useState("hardware");
@@ -81,10 +81,10 @@ export default function PaymentPage() {
 
           const data = await verifyRes.json();
           if (data.success) {
-            alert("Payment सफल!");
+            alert("Payment successful!");
             window.location.href = data.redirectUrl;
           } else {
-            alert("कुछ गलत हुआ। WhatsApp करें।");
+            alert("Something went wrong. Please WhatsApp us.");
           }
         },
         prefill: {
@@ -98,7 +98,7 @@ export default function PaymentPage() {
       const rzp = new window.Razorpay(options);
       rzp.open();
     } catch (e) {
-      alert("कुछ गलत हुआ। दोबारा कोशिश करें।");
+      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -137,7 +137,7 @@ export default function PaymentPage() {
           <div className="space-y-4 mb-6">
             <input
               type="text"
-              placeholder="नाम / Name *"
+              placeholder="Name *"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-400"
@@ -151,7 +151,7 @@ export default function PaymentPage() {
             />
             <input
               type="tel"
-              placeholder="फोन नंबर / Phone *"
+              placeholder="Phone *"
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-400"
@@ -167,13 +167,21 @@ export default function PaymentPage() {
           </button>
 
           <p className="text-center text-xs text-gray-400 mt-4">
-            मदद चाहिए?{" "}
+            Need help?{" "}
             <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="text-green-600 underline">
-              WhatsApp करें
+              WhatsApp us
             </a>
           </p>
         </div>
       </main>
     </>
+  );
+}
+
+export default function PaymentPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-gray-400">Loading...</div>}>
+      <PaymentForm />
+    </Suspense>
   );
 }
