@@ -246,7 +246,7 @@ export default function Home() {
           <p className="text-blue-100 mb-8">7 दिन पूरी तरह मुफ्त। कोई card नहीं, कोई झंझट नहीं।</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={HARDWARE_EXE_URL} className="inline-block bg-white text-blue-700 font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-blue-50 transition">
-              🖥️ Hardware Software
+              🖥️ Sanitary Shop Software
             </a>
             <a href={SCHOOL_EXE_URL} className="inline-block bg-white text-indigo-700 font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-indigo-50 transition">
               🏫 School Software
