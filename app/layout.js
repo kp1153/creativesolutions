@@ -21,13 +21,13 @@ const OG_IMAGE_URL = "https://www.web-developer-kp.com/og-image.png";
 export const metadata = {
   metadataBase: new URL("https://www.web-developer-kp.com"),
   title: {
-    default: "निशांत हार्डवेयर सॉफ्टवेयर | Windows + Android | GST Billing",
-    template: "%s | निशांत सॉफ्टवेयर",
+    default: "Nishant Hardware Software | Windows + Android | GST Billing",
+    template: "%s | Nishant Softwares",
   },
   description:
-    "हार्डवेयर दुकान के लिए GST billing, stock, उधारी सॉफ्टवेयर। Windows पर install करो, Android tablet पर राह चलते देखो। 7 दिन मुफ्त trial।",
+    "GST billing, stock, credit management software for hardware shops. Works on Windows & Android tablet. 7 days free trial.",
   keywords:
-    "hardware shop software, GST billing software, hardware dukan software, stock management, उधारी software, Android tablet billing",
+    "hardware shop software, GST billing software, stock management, credit software, Android tablet billing",
   authors: [{ name: "Kamta Prasad" }],
   creator: "Kamta Prasad",
   publisher: "Kamta Prasad",
@@ -46,23 +46,23 @@ export const metadata = {
     type: "website",
     locale: "hi_IN",
     url: "https://www.web-developer-kp.com",
-    siteName: "निशांत हार्डवेयर सॉफ्टवेयर",
-    title: "निशांत हार्डवेयर सॉफ्टवेयर | Windows + Android",
+    siteName: "Nishant Hardware Software",
+    title: "Nishant Hardware Software | Windows + Android",
     description:
-      "हार्डवेयर दुकान के लिए GST billing, stock, उधारी। Windows + Android दोनों पर चलता है।",
+      "GST billing, stock & credit management for hardware shops. Works on Windows + Android.",
     images: [
       {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "निशांत हार्डवेयर सॉफ्टवेयर",
+        alt: "Nishant Hardware Software",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "निशांत हार्डवेयर सॉफ्टवेयर",
-    description: "Windows + Android पर चलने वाला hardware billing software।",
+    title: "Nishant Hardware Software",
+    description: "Hardware billing software for Windows + Android.",
     images: [OG_IMAGE_URL],
     creator: "@Webdeveloperkp",
   },
@@ -80,7 +80,7 @@ export const viewport = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "निशांत हार्डवेयर सॉफ्टवेयर",
+  name: "Nishant Hardware Software",
   operatingSystem: "Windows, Android",
   applicationCategory: "BusinessApplication",
   offers: {
@@ -95,13 +95,13 @@ const structuredData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="hi" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="निशांत" />
+        <meta name="apple-mobile-web-app-title" content="Nishant" />
         <Script
           id="structured-data"
           type="application/ld+json"
@@ -123,7 +123,7 @@ export default function RootLayout({ children }) {
         <Script id="whatsapp-widget" strategy="lazyOnload">
           {`
             const link = document.createElement('a');
-            link.href = 'https://wa.me/919996865069?text=नमस्ते, निशांत सॉफ्टवेयर के बारे में जानकारी चाहिए';
+            link.href = 'https://wa.me/919996865069?text=Hello, I need information about Nishant Softwares';
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
             link.style.cssText = 'position:fixed;bottom:20px;left:20px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:9999;transition:transform 0.3s;';

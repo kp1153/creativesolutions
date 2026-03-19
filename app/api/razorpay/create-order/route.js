@@ -8,13 +8,13 @@ export async function POST(req) {
       key_secret: process.env.RAZORPAY_KEY_SECRET,
     });
 
-    const { amount, plan } = await req.json();
+    const { amount, plan, software } = await req.json();
 
     const order = await razorpay.orders.create({
       amount: amount * 100,
       currency: 'INR',
       receipt: `receipt_${Date.now()}`,
-      notes: { plan },
+      notes: { plan, software },
     });
 
     return NextResponse.json(order);
