@@ -123,7 +123,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-block bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-green-600 transition"
               >
-                📱 Android / Tablet पर खोलें
+                📱 Android / Tablet पर इंस्टाल करें
               </a>
               <p className="text-green-100 text-xs mt-2">
                 👉 Chrome menu ⋮ → <strong>Add to Home Screen</strong> → Install
