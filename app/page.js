@@ -101,7 +101,7 @@ export default function Home() {
             🆓 7 दिन बिल्कुल मुफ्त — कोई card नहीं चाहिए
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-            निशांत हार्डवेयर
+            निशांत सैनिटरी-हार्डवेयर
             <br />
             प्रबंधन सॉफ्टवेयर
           </h1>
@@ -279,7 +279,7 @@ export default function Home() {
             🆓 7 Days Completely Free — No Card Required
           </div>
           <h2 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-            EduSaaS School
+            Nishant School
             <br />
             Management Software
           </h2>
