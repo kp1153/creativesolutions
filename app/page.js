@@ -195,9 +195,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2 text-green-700">
                 Android / Tablet App
               </h3>
-              <p className="text-gray-500 text-sm mb-4">
-                कोई install नहीं — Chrome में खोलो और Home Screen पर add करो
-              </p>
+
               <ul className="text-sm text-gray-600 space-y-2 mb-6">
                 <li>✅ 10 इंच tablet पर बिल्कुल सही</li>
                 <li>✅ राह चलते stock और उधारी देखो</li>
@@ -211,7 +209,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="block w-full bg-green-500 text-white font-bold py-3 rounded-xl text-center hover:bg-green-600 transition"
               >
-                📱 Android पर खोलें
+                📱 Android मोबाइल-टैबलेट पर इंस्टाल करें
               </a>
               <p className="text-gray-400 text-xs mt-3 text-center">
                 👉 Chrome menu ⋮ → Add to Home Screen → Install
@@ -303,7 +301,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-block bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-green-600 transition"
               >
-                📱 Android / Tablet पर खोलें
+                📱 Android मोबाइल-टैबलेट पर इंस्टाल करें
               </a>
               <p className="text-green-100 text-xs mt-2">
                 👉 Chrome menu ⋮ → <strong>Add to Home Screen</strong> → Install
