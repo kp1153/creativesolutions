@@ -99,7 +99,7 @@ export async function POST(req) {
     }
 
     await resend.emails.send({
-      from: 'Nishant Software <onboarding@resend.dev>',
+      from: 'Nishant Software <no-reply@web-developer-kp.com>',
       to: ['hamaramorcha1153@gmail.com'],
       subject: `New payment — ${name} — ${reg.name}`,
       html: `<p>Software: ${reg.name}</p><p>Name: ${name}</p><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Plan: ${plan}</p><p>Payment ID: ${razorpay_payment_id}</p><p>Expiry: ${expiryDate.toDateString()}</p>`,
@@ -107,7 +107,7 @@ export async function POST(req) {
 
     if (email) {
       await resend.emails.send({
-        from: 'Nishant Software <onboarding@resend.dev>',
+        from: 'Nishant Software <no-reply@web-developer-kp.com>',
         to: [email],
         subject: `${reg.name} — Payment Successful`,
         html: `<p>Thank you ${name}!</p><p>Your payment was successful.</p><p>Software: ${reg.name}</p><p>Plan: ${plan}</p><p>Expiry: ${expiryDate.toDateString()}</p>`,
