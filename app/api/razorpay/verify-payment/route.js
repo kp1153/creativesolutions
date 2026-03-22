@@ -4,7 +4,6 @@ import { createClient } from '@libsql/client';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
 const registry = createClient({
   url: process.env.TURSO_DATABASE_URL,
   authToken: process.env.TURSO_AUTH_TOKEN,
@@ -43,48 +42,67 @@ export async function POST(req) {
     }
 
     const reg = regResult.rows[0];
-
-    const softwareDb = createClient({
-      url: reg.turso_url,
-      authToken: reg.turso_token,
-    });
-
     const expiryDate = new Date();
     expiryDate.setFullYear(expiryDate.getFullYear() + 1);
 
-    await softwareDb.execute(`CREATE TABLE IF NOT EXISTS users (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      email TEXT UNIQUE,
-      name TEXT,
-      phone TEXT,
-      trial_start TEXT DEFAULT CURRENT_TIMESTAMP,
-      expiry_date TEXT,
-      status TEXT NOT NULL DEFAULT 'trial',
-      reminder_sent INTEGER DEFAULT 0
-    )`);
-
-    const existing = await softwareDb.execute({
-      sql: 'SELECT * FROM users WHERE email = ?',
-      args: [email],
-    });
-
-    if (existing.rows.length > 0) {
-      await softwareDb.execute({
-        sql: `UPDATE users SET status = 'active', expiry_date = ?, reminder_sent = 0 WHERE email = ?`,
-        args: [expiryDate.toISOString(), email],
+    if (reg.activate_url) {
+      const activateRes = await fetch(reg.activate_url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          name,
+          phone,
+          plan,
+          secret: process.env.HUB_SECRET,
+        }),
       });
+
+      const activateData = await activateRes.json();
+
+      if (!activateData.success) {
+        return NextResponse.json({ success: false, message: 'Activation failed' }, { status: 500 });
+      }
     } else {
-      await softwareDb.execute({
-        sql: `INSERT INTO users (email, name, phone, status, expiry_date, reminder_sent) VALUES (?, ?, ?, 'active', ?, 0)`,
-        args: [email, name, phone, expiryDate.toISOString()],
+      const softwareDb = createClient({
+        url: reg.turso_url,
+        authToken: reg.turso_token,
       });
+
+      await softwareDb.execute(`CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        email TEXT UNIQUE,
+        name TEXT,
+        phone TEXT,
+        trial_start TEXT DEFAULT CURRENT_TIMESTAMP,
+        expiry_date TEXT,
+        status TEXT NOT NULL DEFAULT 'trial',
+        reminder_sent INTEGER DEFAULT 0
+      )`);
+
+      const existing = await softwareDb.execute({
+        sql: 'SELECT * FROM users WHERE email = ?',
+        args: [email],
+      });
+
+      if (existing.rows.length > 0) {
+        await softwareDb.execute({
+          sql: `UPDATE users SET status = 'active', expiry_date = ?, reminder_sent = 0 WHERE email = ?`,
+          args: [expiryDate.toISOString(), email],
+        });
+      } else {
+        await softwareDb.execute({
+          sql: `INSERT INTO users (email, name, phone, status, expiry_date, reminder_sent) VALUES (?, ?, ?, 'active', ?, 0)`,
+          args: [email, name, phone, expiryDate.toISOString()],
+        });
+      }
     }
 
     await resend.emails.send({
       from: 'Nishant Software <onboarding@resend.dev>',
       to: ['hamaramorcha1153@gmail.com'],
-      subject: `नया payment — ${name} — ${reg.name}`,
-      html: `<p>Software: ${reg.name}</p><p>नाम: ${name}</p><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Plan: ${plan}</p><p>Payment ID: ${razorpay_payment_id}</p><p>Expiry: ${expiryDate.toDateString()}</p>`,
+      subject: `New payment — ${name} — ${reg.name}`,
+      html: `<p>Software: ${reg.name}</p><p>Name: ${name}</p><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Plan: ${plan}</p><p>Payment ID: ${razorpay_payment_id}</p><p>Expiry: ${expiryDate.toDateString()}</p>`,
     });
 
     if (email) {
