@@ -389,6 +389,75 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ERPBRIDGE */}
+      <section className="bg-gradient-to-br from-yellow-600 via-yellow-500 to-amber-600 text-white py-20 px-4 text-center">
+        <div className="max-w-3xl mx-auto">
+          <div className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1 rounded-full mb-6">
+            🆓 7 Days Completely Free — No Card Required
+          </div>
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-gray-900">
+            ERPBridge
+            <br />
+            Business Intelligence
+          </h2>
+          <p className="text-lg md:text-xl text-yellow-900 mb-8 max-w-xl mx-auto">
+            Tally, Busy, Marg ka data upload karo — Sales, Purchase, P&L aur Party Ledger reports ek jagah.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={ERPBRIDGE_EXE_URL} className="inline-block bg-gray-900 text-yellow-400 font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-gray-800 transition">
+              🖥️ Windows par Download Karen (.exe)
+            </a>
+            <div className="flex flex-col items-center">
+              <a href={ERPBRIDGE_PWA_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-600 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-green-700 transition">
+                📱 Android / Tablet par Install Karen
+              </a>
+              <p className="text-yellow-900 text-xs mt-2">
+                👉 Chrome menu ⋮ → <strong>Add to Home Screen</strong> → Install
+              </p>
+            </div>
+          </div>
+          <p className="text-yellow-900 text-sm mt-4">Windows 10/11 — 64-bit &nbsp;|&nbsp; Android Chrome par bhi chalta hai</p>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">ERPBridge Pricing</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl border-2 border-yellow-500 p-8 text-center shadow-lg relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-gray-900 text-xs font-bold px-4 py-1 rounded-full">New Account</div>
+              <h3 className="text-xl font-bold mb-2 text-gray-700">First Time</h3>
+              <div className="text-5xl font-extrabold text-yellow-600 mb-1">₹11,999</div>
+              <p className="text-gray-400 text-sm mb-6">One time — 1 year included</p>
+              <ul className="text-left text-sm text-gray-600 space-y-2 mb-6">
+                <li>✅ Windows + Android both</li>
+                <li>✅ Sales, Purchase, P&L, Ledger</li>
+                <li>✅ All ERP formats supported</li>
+                <li>✅ Free updates</li>
+                <li>✅ 7 days free trial</li>
+              </ul>
+              <a href="/payment?software=erpbridge" className="block w-full bg-yellow-500 text-gray-900 font-bold py-3 rounded-xl hover:bg-yellow-400 transition">
+                Start Free Trial
+              </a>
+            </div>
+            <div className="rounded-2xl border-2 border-gray-200 p-8 text-center shadow-sm hover:shadow-md transition">
+              <h3 className="text-xl font-bold mb-2 text-gray-700">Renewal</h3>
+              <div className="text-5xl font-extrabold text-yellow-600 mb-1">₹4,999</div>
+              <p className="text-gray-400 text-sm mb-6">Per year</p>
+              <ul className="text-left text-sm text-gray-600 space-y-2 mb-6">
+                <li>✅ Windows + Android both</li>
+                <li>✅ All features</li>
+                <li>✅ Free updates</li>
+                <li>✅ WhatsApp support</li>
+                <li>✅ Hosting + maintenance</li>
+              </ul>
+              <a href="/payment?software=erpbridge" className="block w-full bg-yellow-500 text-gray-900 font-bold py-3 rounded-xl hover:bg-yellow-400 transition">
+                Start Free Trial
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-12 px-4 bg-white text-center">
         <div className="max-w-xl mx-auto">
