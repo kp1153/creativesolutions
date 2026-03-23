@@ -6,6 +6,32 @@ const SCHOOL_EXE_URL = "https://pub-ba88bef35aa84924b5e8bc26eb733d33.r2.dev/EduS
 const ERPBRIDGE_EXE_URL = "https://pub-b7b15d809a3649a48535433d66376f24.r2.dev/ERPBridge%20Setup%200.1.0.exe";
 const ERPBRIDGE_PWA_URL = "https://erpbridge.vercel.app";
 
+const erpbridgeFeatures = [
+  { hi: "टैली से सीधे डेटा अपलोड करें", en: "Upload directly from Tally, Busy or Marg" },
+  { hi: "Sales, Purchase, P&L रिपोर्ट तुरंत", en: "Instant Sales, Purchase & P&L Reports" },
+  { hi: "Party Ledger — हर पार्टी का हिसाब", en: "Party-wise Ledger with full balance" },
+  { hi: "Date filter से किसी भी period की रिपोर्ट", en: "Filter reports by any date range" },
+  { hi: "Excel में Export — accountant को भेजें", en: "Export to Excel in one click" },
+  { hi: "मोबाइल, tablet, laptop — कहीं से भी", en: "Works on any device, anywhere" },
+  { hi: "Google login — कोई password नहीं", en: "Secure Google login, no password needed" },
+  { hi: "Duplicate protection — data double नहीं होगा", en: "Smart duplicate upload protection" },
+];
+
+const erpbridgeFmcgFeatures = [
+  { hi: "Party-wise Sales — कौन सी party को कितने boxes गए", en: "Party-wise sales with city, state & qty" },
+  { hi: "Product-wise Sales — कौन सा product कितना बिका", en: "Product-wise qty sold across all invoices" },
+  { hi: "SO Performance — हर Sales Officer की performance", en: "Sales Officer wise invoices, qty & parties" },
+  { hi: "ASM Performance — Area Sales Manager की report", en: "ASM wise performance with SO breakdown" },
+  { hi: "City-wise Sales — शहर के हिसाब से data", en: "City and state wise sales analysis" },
+];
+
+const erpbridgeHowTo = [
+  { hi: "Google account से login करें", en: "Login with your Google account" },
+  { hi: "Tally → Sales Register → Export → Excel", en: "Export from Tally as Excel file" },
+  { hi: "Dashboard → Upload Data → file चुनें", en: "Go to Dashboard → Upload Data" },
+  { hi: "Reports देखें — Sales, Purchase, Ledger, P&L", en: "View instant reports on dashboard" },
+];
+
 const products = [
   {
     key: "erpbridge",
@@ -17,33 +43,21 @@ const products = [
     hover: "hover:bg-yellow-400",
     badge: "🆓 7 Days Completely Free — No Card Required",
     title: "Nishant ERPBridge Business Intelligence",
-    desc: "Tally, Busy, Marg ka data upload karo — Sales, Purchase, P&L aur Party Ledger reports ek jagah.",
+    descHi: "Tally, Busy, Marg का data upload करो — Sales, Purchase, P&L और Party Ledger reports एक जगह। FMCG companies के लिए SO और ASM performance reports भी।",
+    descEn: "Upload data from Tally, Busy or Marg — get instant Sales, Purchase, P&L and Party Ledger reports. FMCG companies get SO and ASM performance reports too.",
     exeUrl: ERPBRIDGE_EXE_URL,
     pwaUrl: ERPBRIDGE_PWA_URL,
-    pwaLabel: "📱 Android / Tablet par Install Karen",
-    exeLabel: "🖥️ Windows par Download Karen (.exe)",
+    pwaLabel: "📱 Android / Tablet पर Install करें",
+    exeLabel: "🖥️ Windows पर Download करें (.exe)",
     software: "erpbridge",
     newPrice: "₹11,999",
     renewPrice: "₹4,999",
     titleColor: "text-gray-900",
     descColor: "text-yellow-900",
     exeBtnClass: "bg-gray-900 text-yellow-400 hover:bg-gray-800",
-    features: [
-      { hi: "टैली से सीधे डेटा अपलोड करें", en: "Upload directly from Tally, Busy or Marg" },
-      { hi: "Sales, Purchase, P&L रिपोर्ट तुरंत", en: "Instant Sales, Purchase & P&L Reports" },
-      { hi: "Party Ledger — हर पार्टी का हिसाब", en: "Party-wise Ledger with full balance" },
-      { hi: "Date filter से किसी भी period की रिपोर्ट", en: "Filter reports by any date range" },
-      { hi: "Excel में Export — accountant को भेजें", en: "Export to Excel in one click" },
-      { hi: "मोबाइल, tablet, laptop — कहीं से भी", en: "Works on any device, anywhere" },
-      { hi: "Google login — कोई password नहीं", en: "Secure Google login, no password needed" },
-      { hi: "डेटा double नहीं होगा — duplicate protection", en: "Smart duplicate upload protection" },
-    ],
-    howTo: [
-      { hi: "Google account से login करें", en: "Login with your Google account" },
-      { hi: "Tally → Sales Register → Export → Excel", en: "Export from Tally as Excel file" },
-      { hi: "Dashboard → Upload Data → file चुनें", en: "Go to Dashboard → Upload Data" },
-      { hi: "Reports देखें — Sales, Purchase, Ledger, P&L", en: "View instant reports on dashboard" },
-    ],
+    features: erpbridgeFeatures,
+    fmcgFeatures: erpbridgeFmcgFeatures,
+    howTo: erpbridgeHowTo,
   },
   {
     key: "hardware",
@@ -55,7 +69,8 @@ const products = [
     hover: "hover:bg-blue-700",
     badge: "🆓 7 दिन बिल्कुल मुफ्त — कोई card नहीं चाहिए",
     title: "निशांत सैनिटरी-हार्डवेयर प्रबंधन सॉफ्टवेयर",
-    desc: "हार्डवेयर की दुकान के लिए बना — बिल, स्टॉक, उधारी, GST रिपोर्ट सब एक जगह।",
+    descHi: "हार्डवेयर की दुकान के लिए बना — बिल, स्टॉक, उधारी, GST रिपोर्ट सब एक जगह।",
+    descEn: "Built for hardware shops — billing, stock, credit management and GST reports all in one place.",
     exeUrl: HARDWARE_EXE_URL,
     pwaUrl: HARDWARE_PWA_URL,
     pwaLabel: "📱 Android / Tablet पर इंस्टाल करें",
@@ -74,11 +89,12 @@ const products = [
     hover: "hover:bg-indigo-700",
     badge: "🆓 7 Days Completely Free — No Card Required",
     title: "Nishant School Management Software",
-    desc: "Built for CBSE private schools — Students, Fees, Attendance, Exams, Results & Parent Portal all in one place.",
+    descHi: "CBSE प्राइवेट स्कूलों के लिए बना — Students, Fees, Attendance, Exams, Results और Parent Portal सब एक जगह।",
+    descEn: "Built for CBSE private schools — Students, Fees, Attendance, Exams, Results & Parent Portal all in one place.",
     exeUrl: SCHOOL_EXE_URL,
     pwaUrl: "https://school-saas-azure.vercel.app",
-    pwaLabel: "📱 Android / Tablet par Install Karen",
-    exeLabel: "🖥️ Download for Windows (.exe)",
+    pwaLabel: "📱 Android / Tablet पर Install करें",
+    exeLabel: "🖥️ Windows पर Download करें (.exe)",
     software: "school",
     newPrice: "₹5,500",
     renewPrice: "₹2,500",
@@ -105,7 +121,8 @@ export default function Home() {
             <div className="max-w-3xl mx-auto">
               <div className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">{p.badge}</div>
               <h2 className={`text-3xl md:text-5xl font-extrabold mb-3 leading-tight ${p.titleColor || ""}`}>{p.title}</h2>
-              <p className={`text-lg mb-6 max-w-xl mx-auto ${p.descColor || "text-white/80"}`}>{p.desc}</p>
+              <p className={`text-lg mb-1 max-w-xl mx-auto font-semibold ${p.descColor || "text-white/90"}`}>{p.descHi}</p>
+              <p className={`text-base mb-6 max-w-xl mx-auto ${p.descColor || "text-white/70"}`}>{p.descEn}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href={p.exeUrl} className={`inline-block font-bold text-lg px-8 py-3 rounded-2xl shadow-lg transition ${p.exeBtnClass || "bg-white text-gray-900 hover:bg-gray-100"}`}>{p.exeLabel}</a>
                 <div className="flex flex-col items-center">
@@ -113,17 +130,27 @@ export default function Home() {
                   <p className="text-xs mt-1 opacity-80">👉 Chrome menu ⋮ → Add to Home Screen → Install</p>
                 </div>
               </div>
-              <p className="text-sm mt-3 opacity-70">Windows 10/11 — 64-bit &nbsp;|&nbsp; Android Chrome par bhi chalta hai</p>
+              <p className="text-sm mt-3 opacity-70">Windows 10/11 — 64-bit &nbsp;|&nbsp; Android Chrome पर भी चलता है</p>
             </div>
           </section>
 
           {p.features && (
             <section className="py-12 px-4 bg-gray-900 text-white">
               <div className="max-w-4xl mx-auto">
-                <h3 className="text-2xl font-bold text-center mb-2 text-yellow-400">खासियत / Features</h3>
-                <p className="text-center text-gray-400 text-sm mb-8">यह सॉफ्टवेयर क्या करता है — What this software does</p>
-                <div className="grid md:grid-cols-2 gap-4">
+                <h3 className="text-2xl font-bold text-center mb-1 text-yellow-400">खासियत / Features</h3>
+                <p className="text-center text-gray-400 text-sm mb-4">Tally / ERP users के लिए — For Tally / ERP Users</p>
+                <div className="grid md:grid-cols-2 gap-4 mb-10">
                   {p.features.map((f, i) => (
+                    <div key={i} className="bg-gray-800 border border-yellow-500/20 rounded-xl px-5 py-4">
+                      <div className="text-yellow-400 font-semibold text-sm mb-1">✦ {f.hi}</div>
+                      <div className="text-gray-400 text-xs">{f.en}</div>
+                    </div>
+                  ))}
+                </div>
+                <h3 className="text-2xl font-bold text-center mb-1 text-yellow-400">FMCG Companies के लिए</h3>
+                <p className="text-center text-gray-400 text-sm mb-4">200 parties, 20 SO, 5 ASM — सब एक dashboard पर — All on one dashboard</p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {p.fmcgFeatures.map((f, i) => (
                     <div key={i} className="bg-gray-800 border border-yellow-500/20 rounded-xl px-5 py-4">
                       <div className="text-yellow-400 font-semibold text-sm mb-1">✦ {f.hi}</div>
                       <div className="text-gray-400 text-xs">{f.en}</div>
@@ -137,7 +164,7 @@ export default function Home() {
           {p.howTo && (
             <section className="py-12 px-4 bg-yellow-50">
               <div className="max-w-3xl mx-auto">
-                <h3 className="text-2xl font-bold text-center mb-2 text-gray-800">कैसे उपयोग करें / How to Use</h3>
+                <h3 className="text-2xl font-bold text-center mb-1 text-gray-800">कैसे उपयोग करें / How to Use</h3>
                 <p className="text-center text-gray-500 text-sm mb-8">सिर्फ 4 आसान स्टेप — Just 4 simple steps</p>
                 <div className="grid md:grid-cols-2 gap-4">
                   {p.howTo.map((s, i) => (
@@ -154,22 +181,51 @@ export default function Home() {
             </section>
           )}
 
+          {p.features && (
+            <section className="py-10 px-4 bg-gray-50">
+              <div className="max-w-3xl mx-auto">
+                <h3 className="text-xl font-bold text-center mb-1 text-gray-700">Testing कैसे करें / How to Test</h3>
+                <p className="text-center text-gray-500 text-sm mb-6">Login करें, file upload करें, reports देखें — It&apos;s that simple</p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  {[
+                    { step: "01", hi: "Login करें", en: "Open site → Start Free Trial → Google login", icon: "🔐" },
+                    { step: "02", hi: "File Upload करें", en: "Dashboard → Upload Data → Tally or FMCG Excel", icon: "📤" },
+                    { step: "03", hi: "Reports देखें", en: "Reports → Sales, Purchase, Ledger, P&L, FMCG", icon: "📊" },
+                  ].map((t) => (
+                    <div key={t.step} className="bg-white border border-gray-200 rounded-xl p-5 text-center shadow-sm">
+                      <div className="text-3xl mb-2">{t.icon}</div>
+                      <div className="text-xs text-gray-400 font-bold mb-1">STEP {t.step}</div>
+                      <div className="font-bold text-gray-800 mb-1">{t.hi}</div>
+                      <div className="text-xs text-gray-500">{t.en}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 bg-yellow-100 border border-yellow-300 rounded-xl p-4 text-center">
+                  <p className="text-sm text-yellow-800 font-semibold">⚠️ गलत data upload हो जाए तो — If wrong data uploaded</p>
+                  <p className="text-xs text-yellow-700 mt-1">Settings → Clear All Data → दोबारा सही file upload करें — Go to Settings → Clear All Data → Re-upload correct file</p>
+                </div>
+              </div>
+            </section>
+          )}
+
           <section className="py-10 px-4 bg-gray-50">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">Pricing</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className={`rounded-2xl border-2 ${p.border} p-6 text-center shadow-lg relative`}>
-                  <div className={`absolute -top-4 left-1/2 -translate-x-1/2 ${p.bg} text-white text-xs font-bold px-4 py-1 rounded-full`}>New Account</div>
-                  <h4 className="text-lg font-bold mb-1 text-gray-700 mt-2">First Time</h4>
+                  <div className={`absolute -top-4 left-1/2 -translate-x-1/2 ${p.bg} text-white text-xs font-bold px-4 py-1 rounded-full`}>New Account / नया Account</div>
+                  <h4 className="text-lg font-bold mb-1 text-gray-700 mt-2">पहली बार / First Time</h4>
                   <div className={`text-4xl font-extrabold ${p.textAccent} mb-1`}>{p.newPrice}</div>
-                  <p className="text-gray-400 text-sm mb-4">One time — 1 year included</p>
-                  <a href={`/payment?software=${p.software}`} className={`block w-full ${p.bg} text-white font-bold py-2 rounded-xl ${p.hover} transition`}>Start Free Trial</a>
+                  <p className="text-gray-400 text-sm mb-1">एक बार — 1 साल included</p>
+                  <p className="text-gray-400 text-xs mb-4">One time — 1 year included</p>
+                  <a href={`/payment?software=${p.software}`} className={`block w-full ${p.bg} text-white font-bold py-2 rounded-xl ${p.hover} transition`}>Start Free Trial — मुफ्त शुरू करें</a>
                 </div>
                 <div className="rounded-2xl border-2 border-gray-200 p-6 text-center shadow-sm hover:shadow-md transition">
-                  <h4 className="text-lg font-bold mb-1 text-gray-700 mt-2">Renewal</h4>
+                  <h4 className="text-lg font-bold mb-1 text-gray-700 mt-2">नवीनीकरण / Renewal</h4>
                   <div className={`text-4xl font-extrabold ${p.textAccent} mb-1`}>{p.renewPrice}</div>
-                  <p className="text-gray-400 text-sm mb-4">Per year</p>
-                  <a href={`/payment?software=${p.software}`} className={`block w-full ${p.bg} text-white font-bold py-2 rounded-xl ${p.hover} transition`}>Start Free Trial</a>
+                  <p className="text-gray-400 text-sm mb-1">प्रति वर्ष</p>
+                  <p className="text-gray-400 text-xs mb-4">Per year</p>
+                  <a href={`/payment?software=${p.software}`} className={`block w-full ${p.bg} text-white font-bold py-2 rounded-xl ${p.hover} transition`}>Start Free Trial — मुफ्त शुरू करें</a>
                 </div>
               </div>
             </div>
@@ -179,16 +235,18 @@ export default function Home() {
 
       <section className="py-12 px-4 bg-white text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-2xl font-bold mb-3 text-gray-800">मुफ्त Invoice Generator</h2>
-          <p className="text-gray-500 mb-6 text-sm">GST invoice तुरंत बनाओ — कोई signup नहीं, बिल्कुल मुफ्त</p>
-          <a href="https://pdf-invoice-generator.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-green-700 transition">Invoice बनाओ →</a>
+          <h2 className="text-2xl font-bold mb-1 text-gray-800">मुफ्त Invoice Generator</h2>
+          <p className="text-gray-600 text-sm font-medium mb-1">Free GST Invoice Generator</p>
+          <p className="text-gray-500 mb-6 text-sm">GST invoice तुरंत बनाओ — कोई signup नहीं, बिल्कुल मुफ्त | Create GST invoices instantly — no signup, completely free</p>
+          <a href="https://pdf-invoice-generator.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-green-700 transition">Invoice बनाओ / Create Invoice →</a>
         </div>
       </section>
 
       <section className="bg-gradient-to-br from-blue-700 to-indigo-700 text-white py-16 px-4 text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">आज ही शुरू करें — मुफ्त में</h2>
-          <p className="text-blue-100 mb-8">7 दिन पूरी तरह मुफ्त। कोई card नहीं, कोई झंझट नहीं।</p>
+          <h2 className="text-3xl font-bold mb-1">आज ही शुरू करें — मुफ्त में</h2>
+          <p className="text-blue-200 text-lg font-medium mb-2">Start Today — For Free</p>
+          <p className="text-blue-100 mb-8">7 दिन पूरी तरह मुफ्त। कोई card नहीं, कोई झंझट नहीं। | 7 days completely free. No card, no hassle.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
             {products.map((p) => (
               <a key={p.key} href={p.exeUrl} className="inline-block bg-white font-bold text-lg px-6 py-3 rounded-2xl shadow-lg hover:bg-gray-100 transition text-gray-800">{p.exeLabel.split(" ").slice(0, 2).join(" ")}</a>
