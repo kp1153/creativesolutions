@@ -8,6 +8,44 @@ const ERPBRIDGE_PWA_URL = "https://erpbridge.vercel.app";
 
 const products = [
   {
+    key: "erpbridge",
+    color: "yellow",
+    gradient: "from-yellow-600 via-yellow-500 to-amber-600",
+    border: "border-yellow-500",
+    textAccent: "text-yellow-600",
+    bg: "bg-yellow-500",
+    hover: "hover:bg-yellow-400",
+    badge: "🆓 7 Days Completely Free — No Card Required",
+    title: "Nishant ERPBridge Business Intelligence",
+    desc: "Tally, Busy, Marg ka data upload karo — Sales, Purchase, P&L aur Party Ledger reports ek jagah.",
+    exeUrl: ERPBRIDGE_EXE_URL,
+    pwaUrl: ERPBRIDGE_PWA_URL,
+    pwaLabel: "📱 Android / Tablet par Install Karen",
+    exeLabel: "🖥️ Windows par Download Karen (.exe)",
+    software: "erpbridge",
+    newPrice: "₹11,999",
+    renewPrice: "₹4,999",
+    titleColor: "text-gray-900",
+    descColor: "text-yellow-900",
+    exeBtnClass: "bg-gray-900 text-yellow-400 hover:bg-gray-800",
+    features: [
+      { hi: "टैली से सीधे डेटा अपलोड करें", en: "Upload directly from Tally, Busy or Marg" },
+      { hi: "Sales, Purchase, P&L रिपोर्ट तुरंत", en: "Instant Sales, Purchase & P&L Reports" },
+      { hi: "Party Ledger — हर पार्टी का हिसाब", en: "Party-wise Ledger with full balance" },
+      { hi: "Date filter से किसी भी period की रिपोर्ट", en: "Filter reports by any date range" },
+      { hi: "Excel में Export — accountant को भेजें", en: "Export to Excel in one click" },
+      { hi: "मोबाइल, tablet, laptop — कहीं से भी", en: "Works on any device, anywhere" },
+      { hi: "Google login — कोई password नहीं", en: "Secure Google login, no password needed" },
+      { hi: "डेटा double नहीं होगा — duplicate protection", en: "Smart duplicate upload protection" },
+    ],
+    howTo: [
+      { hi: "Google account से login करें", en: "Login with your Google account" },
+      { hi: "Tally → Sales Register → Export → Excel", en: "Export from Tally as Excel file" },
+      { hi: "Dashboard → Upload Data → file चुनें", en: "Go to Dashboard → Upload Data" },
+      { hi: "Reports देखें — Sales, Purchase, Ledger, P&L", en: "View instant reports on dashboard" },
+    ],
+  },
+  {
     key: "hardware",
     color: "blue",
     gradient: "from-blue-700 via-blue-600 to-indigo-700",
@@ -45,28 +83,6 @@ const products = [
     newPrice: "₹5,500",
     renewPrice: "₹2,500",
   },
-  {
-    key: "erpbridge",
-    color: "yellow",
-    gradient: "from-yellow-600 via-yellow-500 to-amber-600",
-    border: "border-yellow-500",
-    textAccent: "text-yellow-600",
-    bg: "bg-yellow-500",
-    hover: "hover:bg-yellow-400",
-    badge: "🆓 7 Days Completely Free — No Card Required",
-    title: "ERPBridge Business Intelligence",
-    desc: "Tally, Busy, Marg ka data upload karo — Sales, Purchase, P&L aur Party Ledger reports ek jagah.",
-    exeUrl: ERPBRIDGE_EXE_URL,
-    pwaUrl: ERPBRIDGE_PWA_URL,
-    pwaLabel: "📱 Android / Tablet par Install Karen",
-    exeLabel: "🖥️ Windows par Download Karen (.exe)",
-    software: "erpbridge",
-    newPrice: "₹11,999",
-    renewPrice: "₹4,999",
-    titleColor: "text-gray-900",
-    descColor: "text-yellow-900",
-    exeBtnClass: "bg-gray-900 text-yellow-400 hover:bg-gray-800",
-  },
 ];
 
 export default function Home() {
@@ -100,6 +116,43 @@ export default function Home() {
               <p className="text-sm mt-3 opacity-70">Windows 10/11 — 64-bit &nbsp;|&nbsp; Android Chrome par bhi chalta hai</p>
             </div>
           </section>
+
+          {p.features && (
+            <section className="py-12 px-4 bg-gray-900 text-white">
+              <div className="max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold text-center mb-2 text-yellow-400">खासियत / Features</h3>
+                <p className="text-center text-gray-400 text-sm mb-8">यह सॉफ्टवेयर क्या करता है — What this software does</p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {p.features.map((f, i) => (
+                    <div key={i} className="bg-gray-800 border border-yellow-500/20 rounded-xl px-5 py-4">
+                      <div className="text-yellow-400 font-semibold text-sm mb-1">✦ {f.hi}</div>
+                      <div className="text-gray-400 text-xs">{f.en}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {p.howTo && (
+            <section className="py-12 px-4 bg-yellow-50">
+              <div className="max-w-3xl mx-auto">
+                <h3 className="text-2xl font-bold text-center mb-2 text-gray-800">कैसे उपयोग करें / How to Use</h3>
+                <p className="text-center text-gray-500 text-sm mb-8">सिर्फ 4 आसान स्टेप — Just 4 simple steps</p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {p.howTo.map((s, i) => (
+                    <div key={i} className="bg-white border border-yellow-300 rounded-xl px-5 py-4 flex gap-4 items-start shadow-sm">
+                      <div className="text-2xl font-black text-yellow-500 leading-none">{i + 1}</div>
+                      <div>
+                        <div className="font-semibold text-gray-800 text-sm">{s.hi}</div>
+                        <div className="text-gray-400 text-xs mt-1">{s.en}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
 
           <section className="py-10 px-4 bg-gray-50">
             <div className="max-w-3xl mx-auto">
