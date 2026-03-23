@@ -4,6 +4,7 @@ const HARDWARE_EXE_URL = "https://pub-36b3216d45d24541a20e55f6b3f26d07.r2.dev/%E
 const HARDWARE_PWA_URL = "https://nishant-ten.vercel.app";
 const SCHOOL_EXE_URL = "https://pub-ba88bef35aa84924b5e8bc26eb733d33.r2.dev/EduSaaS%20School%20Setup%200.1.0.exe";
 const ERPBRIDGE_EXE_URL = "https://pub-b7b15d809a3649a48535433d66376f24.r2.dev/ERPBridge%20Setup%200.1.0.exe";
+const ERPBRIDGE_AGENT_URL = "https://pub-b7b15d809a3649a48535433d66376f24.r2.dev/ERPBridge%20Tally%20Agent%20Setup%201.0.0.exe";
 const ERPBRIDGE_PWA_URL = "https://erpbridge.vercel.app";
 
 const erpbridgeFeatures = [
@@ -177,6 +178,116 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+              </div>
+            </section>
+          )}
+
+          {p.key === "erpbridge" && (
+            <section className="py-14 px-4 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+              <div className="max-w-4xl mx-auto">
+
+                {/* Heading */}
+                <div className="text-center mb-10">
+                  <div className="inline-block bg-yellow-500/20 text-yellow-400 text-xs font-bold px-4 py-1 rounded-full mb-3 tracking-widest uppercase">New Feature</div>
+                  <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2">Tally Auto-Sync Agent</h3>
+                  <p className="text-yellow-400 font-semibold text-lg mb-1">टैली का data अपने आप ERPBridge में आएगा</p>
+                  <p className="text-gray-400 text-sm max-w-xl mx-auto">हर 15 मिनट में automatic sync — कोई file export नहीं, कोई manual upload नहीं | Automatic sync every 15 minutes — no file export, no manual upload needed</p>
+                </div>
+
+                {/* Download Button */}
+                <div className="text-center mb-12">
+                  <a
+                    href={ERPBRIDGE_AGENT_URL}
+                    className="inline-block bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-extrabold text-lg px-10 py-4 rounded-2xl shadow-xl transition"
+                  >
+                    🖥️ Tally Agent Download करें (.exe) — Windows
+                  </a>
+                  <p className="text-gray-500 text-xs mt-2">Windows 10 / 11 — 64-bit &nbsp;|&nbsp; Size: ~76 MB</p>
+                </div>
+
+                {/* Steps */}
+                <div className="grid md:grid-cols-2 gap-5 mb-10">
+
+                  {/* Step 1 */}
+                  <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">1</div>
+                      <div>
+                        <div className="font-bold text-white">Agent Install करें</div>
+                        <div className="text-gray-400 text-xs">Install the Agent</div>
+                      </div>
+                    </div>
+                    <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
+                      <li>▸ ऊपर दिया <span className="text-yellow-400 font-semibold">.exe</span> download करें</li>
+                      <li>▸ File पर double-click करें → Install होगा</li>
+                      <li>▸ कोई option नहीं आएगा — automatic install</li>
+                      <li className="text-gray-500 text-xs pt-1">Download the .exe above → Double-click to install automatically</li>
+                    </ul>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">2</div>
+                      <div>
+                        <div className="font-bold text-white">Sync Token लें</div>
+                        <div className="text-gray-400 text-xs">Get your Sync Token</div>
+                      </div>
+                    </div>
+                    <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
+                      <li>▸ <a href={ERPBRIDGE_PWA_URL} target="_blank" rel="noopener noreferrer" className="text-yellow-400 underline">erpbridge.vercel.app</a> पर जाएं</li>
+                      <li>▸ Google account से <span className="text-yellow-400 font-semibold">Login</span> करें</li>
+                      <li>▸ <span className="text-yellow-400 font-semibold">Settings → Get Sync Token</span> पर click करें</li>
+                      <li>▸ Token <span className="text-yellow-400 font-semibold">Copy</span> कर लें</li>
+                      <li className="text-gray-500 text-xs pt-1">Login → Settings → Get Sync Token → Copy</li>
+                    </ul>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">3</div>
+                      <div>
+                        <div className="font-bold text-white">Agent में Token डालें</div>
+                        <div className="text-gray-400 text-xs">Paste Token in Agent</div>
+                      </div>
+                    </div>
+                    <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
+                      <li>▸ Taskbar में नीचे <span className="text-yellow-400 font-semibold">right side</span> देखें (clock के पास)</li>
+                      <li>▸ <span className="text-yellow-400 font-semibold">ERPBridge icon</span> दिखेगा — उस पर click करें</li>
+                      <li>▸ Settings window में <span className="text-yellow-400 font-semibold">Sync Token</span> box में token paste करें</li>
+                      <li>▸ <span className="text-yellow-400 font-semibold">Save</span> दबाएं → &quot;Settings saved successfully&quot; आएगा</li>
+                      <li className="text-gray-500 text-xs pt-1">Click tray icon → Paste token → Save</li>
+                    </ul>
+                  </div>
+
+                  {/* Step 4 */}
+                  <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">4</div>
+                      <div>
+                        <div className="font-bold text-white">Tally चालू रखें — बस!</div>
+                        <div className="text-gray-400 text-xs">Keep Tally running — that&apos;s it!</div>
+                      </div>
+                    </div>
+                    <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
+                      <li>▸ अपना <span className="text-yellow-400 font-semibold">Tally</span> software खोलें</li>
+                      <li>▸ Agent <span className="text-yellow-400 font-semibold">हर 15 मिनट</span> में automatically sync करेगा</li>
+                      <li>▸ ERPBridge dashboard पर data अपने आप आ जाएगा</li>
+                      <li>▸ Manual कुछ नहीं करना — Agent background में चलता रहेगा</li>
+                      <li className="text-gray-500 text-xs pt-1">Open Tally → Agent syncs every 15 min automatically</li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                {/* Info box */}
+                <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-5 text-center">
+                  <p className="text-yellow-400 font-bold text-sm mb-1">💡 ध्यान रखें / Important</p>
+                  <p className="text-gray-300 text-sm">Sync के समय <span className="text-yellow-400 font-semibold">Tally चालू होना चाहिए</span> — Agent और Tally दोनों एक ही computer पर होने चाहिए।</p>
+                  <p className="text-gray-500 text-xs mt-1">Tally must be running during sync — Agent and Tally must be on the same computer.</p>
+                </div>
+
               </div>
             </section>
           )}
