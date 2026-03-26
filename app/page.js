@@ -33,6 +33,22 @@ const erpbridgeHowTo = [
   { hi: "Reports देखें — Sales, Purchase, Ledger, P&L", en: "View instant reports on dashboard" },
 ];
 
+// Magenta BI vs ERPBridge comparison data
+const comparisonRows = [
+  { feature: "कीमत / Price",           magenta: "₹36,000/year",     erp: "₹11,999 एक बार",    erpWin: true },
+  { feature: "Free Trial",              magenta: "❌ नहीं",           erp: "✅ 7 दिन, no card",  erpWin: true },
+  { feature: "Sales Analytics",         magenta: "✅",                erp: "✅",                  erpWin: false },
+  { feature: "Purchase Insights",       magenta: "✅",                erp: "✅",                  erpWin: false },
+  { feature: "Outstanding Tracking",    magenta: "✅",                erp: "✅",                  erpWin: false },
+  { feature: "Inventory Monitoring",    magenta: "✅",                erp: "✅",                  erpWin: false },
+  { feature: "Payment Follow-up",       magenta: "✅",                erp: "✅ WhatsApp Direct",  erpWin: true },
+  { feature: "Tally Auto-Sync",         magenta: "✅",                erp: "✅ हर 15 मिनट",      erpWin: false },
+  { feature: "Mobile App",              magenta: "✅",                erp: "✅ PWA — free",       erpWin: true },
+  { feature: "ASM / SO Performance",    magenta: "❌ नहीं",           erp: "✅ FMCG exclusive",   erpWin: true },
+  { feature: "Roles & Rights",          magenta: "✅",                erp: "✅",                  erpWin: false },
+  { feature: "Hindi Support",           magenta: "❌",                erp: "✅ पूरी Hindi UI",    erpWin: true },
+];
+
 const products = [
   {
     key: "erpbridge",
@@ -101,6 +117,87 @@ const products = [
     renewPrice: "₹2,500",
   },
 ];
+
+// ── Magenta vs ERPBridge Comparison Section ──────────────────────
+function MagentaComparison() {
+  return (
+    <section className="py-16 px-4 bg-gray-950 text-white">
+      <div className="max-w-4xl mx-auto">
+
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <div className="inline-block bg-yellow-500/20 text-yellow-400 text-xs font-bold px-4 py-1 rounded-full mb-3 tracking-widest uppercase">
+            Magenta BI vs ERPBridge
+          </div>
+          <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2">
+            Magenta से <span className="text-yellow-400">3x सस्ता</span> — features ज़्यादा
+          </h3>
+          <p className="text-gray-400 text-sm max-w-xl mx-auto">
+            Magenta BI लेता है ₹36,000/year। हम लेते हैं ₹11,999 एक बार — और features वही सब, कुछ extra भी।
+          </p>
+        </div>
+
+        {/* Price highlight cards */}
+        <div className="grid grid-cols-2 gap-4 mb-10 max-w-lg mx-auto">
+          <div className="bg-red-950/60 border border-red-500/30 rounded-2xl p-5 text-center">
+            <div className="text-xs text-red-400 font-bold mb-1 tracking-widest uppercase">Magenta BI</div>
+            <div className="text-3xl font-extrabold text-red-400 mb-1">₹36,000</div>
+            <div className="text-xs text-red-400/70">प्रति वर्ष — हर साल</div>
+            <div className="text-xs text-gray-500 mt-2">3 साल = ₹1,08,000 😰</div>
+          </div>
+          <div className="bg-yellow-500/10 border-2 border-yellow-500/60 rounded-2xl p-5 text-center relative">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-500 text-gray-900 text-xs font-extrabold px-3 py-0.5 rounded-full">बेहतर चुनाव</div>
+            <div className="text-xs text-yellow-400 font-bold mb-1 tracking-widest uppercase">ERPBridge</div>
+            <div className="text-3xl font-extrabold text-yellow-400 mb-1">₹11,999</div>
+            <div className="text-xs text-yellow-400/70">एक बार — 1 साल included</div>
+            <div className="text-xs text-gray-400 mt-2">3 साल = ₹21,997 🎉</div>
+          </div>
+        </div>
+
+        {/* Comparison Table */}
+        <div className="rounded-2xl overflow-hidden border border-gray-800">
+          {/* Table Header */}
+          <div className="grid grid-cols-3 bg-gray-800 text-xs font-bold uppercase tracking-wider">
+            <div className="px-5 py-3 text-gray-400">Feature</div>
+            <div className="px-5 py-3 text-center text-red-400">Magenta BI</div>
+            <div className="px-5 py-3 text-center text-yellow-400">ERPBridge ✦</div>
+          </div>
+
+          {comparisonRows.map((row, i) => (
+            <div
+              key={i}
+              className={`grid grid-cols-3 border-t border-gray-800 ${
+                row.erpWin ? "bg-yellow-500/5" : "bg-gray-900/50"
+              }`}
+            >
+              <div className="px-5 py-3 text-sm text-gray-300 font-medium">{row.feature}</div>
+              <div className="px-5 py-3 text-sm text-center text-gray-400">{row.magenta}</div>
+              <div className={`px-5 py-3 text-sm text-center font-semibold ${row.erpWin ? "text-yellow-400" : "text-gray-300"}`}>
+                {row.erp}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-10 text-center">
+          <p className="text-gray-400 text-sm mb-4">
+            7 दिन मुफ्त — कोई credit card नहीं, कोई commitment नहीं
+          </p>
+          
+            href={ERPBRIDGE_PWA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-extrabold text-lg px-10 py-4 rounded-2xl shadow-xl transition"
+          >
+            🚀 अभी Free Trial शुरू करें
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   return (
@@ -183,113 +280,85 @@ export default function Home() {
           )}
 
           {p.key === "erpbridge" && (
-            <section className="py-14 px-4 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-              <div className="max-w-4xl mx-auto">
-
-                {/* Heading */}
-                <div className="text-center mb-10">
-                  <div className="inline-block bg-yellow-500/20 text-yellow-400 text-xs font-bold px-4 py-1 rounded-full mb-3 tracking-widest uppercase">New Feature</div>
-                  <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2">Tally Auto-Sync Agent</h3>
-                  <p className="text-yellow-400 font-semibold text-lg mb-1">टैली का data अपने आप ERPBridge में आएगा</p>
-                  <p className="text-gray-400 text-sm max-w-xl mx-auto">हर 15 मिनट में automatic sync — कोई file export नहीं, कोई manual upload नहीं | Automatic sync every 15 minutes — no file export, no manual upload needed</p>
-                </div>
-
-                {/* Download Button */}
-                <div className="text-center mb-12">
-                  <a
-                    href={ERPBRIDGE_AGENT_URL}
-                    className="inline-block bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-extrabold text-lg px-10 py-4 rounded-2xl shadow-xl transition"
-                  >
-                    🖥️ Tally Agent Download करें (.exe) — Windows
-                  </a>
-                  <p className="text-gray-500 text-xs mt-2">Windows 10 / 11 — 64-bit &nbsp;|&nbsp; Size: ~76 MB</p>
-                </div>
-
-                {/* Steps */}
-                <div className="grid md:grid-cols-2 gap-5 mb-10">
-
-                  {/* Step 1 */}
-                  <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">1</div>
-                      <div>
-                        <div className="font-bold text-white">Agent Install करें</div>
-                        <div className="text-gray-400 text-xs">Install the Agent</div>
-                      </div>
-                    </div>
-                    <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
-                      <li>▸ ऊपर दिया <span className="text-yellow-400 font-semibold">.exe</span> download करें</li>
-                      <li>▸ File पर double-click करें → Install होगा</li>
-                      <li>▸ कोई option नहीं आएगा — automatic install</li>
-                      <li className="text-gray-500 text-xs pt-1">Download the .exe above → Double-click to install automatically</li>
-                    </ul>
+            <>
+              <section className="py-14 px-4 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+                <div className="max-w-4xl mx-auto">
+                  <div className="text-center mb-10">
+                    <div className="inline-block bg-yellow-500/20 text-yellow-400 text-xs font-bold px-4 py-1 rounded-full mb-3 tracking-widest uppercase">New Feature</div>
+                    <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2">Tally Auto-Sync Agent</h3>
+                    <p className="text-yellow-400 font-semibold text-lg mb-1">टैली का data अपने आप ERPBridge में आएगा</p>
+                    <p className="text-gray-400 text-sm max-w-xl mx-auto">हर 15 मिनट में automatic sync — कोई file export नहीं, कोई manual upload नहीं | Automatic sync every 15 minutes — no file export, no manual upload needed</p>
                   </div>
-
-                  {/* Step 2 */}
-                  <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">2</div>
-                      <div>
-                        <div className="font-bold text-white">Sync Token लें</div>
-                        <div className="text-gray-400 text-xs">Get your Sync Token</div>
-                      </div>
-                    </div>
-                    <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
-                      <li>▸ <a href={ERPBRIDGE_PWA_URL} target="_blank" rel="noopener noreferrer" className="text-yellow-400 underline">erpbridge.vercel.app</a> पर जाएं</li>
-                      <li>▸ Google account से <span className="text-yellow-400 font-semibold">Login</span> करें</li>
-                      <li>▸ <span className="text-yellow-400 font-semibold">Settings → Get Sync Token</span> पर click करें</li>
-                      <li>▸ Token <span className="text-yellow-400 font-semibold">Copy</span> कर लें</li>
-                      <li className="text-gray-500 text-xs pt-1">Login → Settings → Get Sync Token → Copy</li>
-                    </ul>
+                  <div className="text-center mb-12">
+                    <a href={ERPBRIDGE_AGENT_URL} className="inline-block bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-extrabold text-lg px-10 py-4 rounded-2xl shadow-xl transition">
+                      🖥️ Tally Agent Download करें (.exe) — Windows
+                    </a>
+                    <p className="text-gray-500 text-xs mt-2">Windows 10 / 11 — 64-bit &nbsp;|&nbsp; Size: ~76 MB</p>
                   </div>
-
-                  {/* Step 3 */}
-                  <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">3</div>
-                      <div>
-                        <div className="font-bold text-white">Agent में Token डालें</div>
-                        <div className="text-gray-400 text-xs">Paste Token in Agent</div>
+                  <div className="grid md:grid-cols-2 gap-5 mb-10">
+                    <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">1</div>
+                        <div><div className="font-bold text-white">Agent Install करें</div><div className="text-gray-400 text-xs">Install the Agent</div></div>
                       </div>
+                      <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
+                        <li>▸ ऊपर दिया <span className="text-yellow-400 font-semibold">.exe</span> download करें</li>
+                        <li>▸ File पर double-click करें → Install होगा</li>
+                        <li>▸ कोई option नहीं आएगा — automatic install</li>
+                        <li className="text-gray-500 text-xs pt-1">Download the .exe above → Double-click to install automatically</li>
+                      </ul>
                     </div>
-                    <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
-                      <li>▸ Taskbar में नीचे <span className="text-yellow-400 font-semibold">right side</span> देखें (clock के पास)</li>
-                      <li>▸ <span className="text-yellow-400 font-semibold">ERPBridge icon</span> दिखेगा — उस पर click करें</li>
-                      <li>▸ Settings window में <span className="text-yellow-400 font-semibold">Sync Token</span> box में token paste करें</li>
-                      <li>▸ <span className="text-yellow-400 font-semibold">Save</span> दबाएं → &quot;Settings saved successfully&quot; आएगा</li>
-                      <li className="text-gray-500 text-xs pt-1">Click tray icon → Paste token → Save</li>
-                    </ul>
-                  </div>
-
-                  {/* Step 4 */}
-                  <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">4</div>
-                      <div>
-                        <div className="font-bold text-white">Tally चालू रखें — बस!</div>
-                        <div className="text-gray-400 text-xs">Keep Tally running — that&apos;s it!</div>
+                    <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">2</div>
+                        <div><div className="font-bold text-white">Sync Token लें</div><div className="text-gray-400 text-xs">Get your Sync Token</div></div>
                       </div>
+                      <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
+                        <li>▸ <a href={ERPBRIDGE_PWA_URL} target="_blank" rel="noopener noreferrer" className="text-yellow-400 underline">erpbridge.vercel.app</a> पर जाएं</li>
+                        <li>▸ Google account से <span className="text-yellow-400 font-semibold">Login</span> करें</li>
+                        <li>▸ <span className="text-yellow-400 font-semibold">Settings → Get Sync Token</span> पर click करें</li>
+                        <li>▸ Token <span className="text-yellow-400 font-semibold">Copy</span> कर लें</li>
+                        <li className="text-gray-500 text-xs pt-1">Login → Settings → Get Sync Token → Copy</li>
+                      </ul>
                     </div>
-                    <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
-                      <li>▸ अपना <span className="text-yellow-400 font-semibold">Tally</span> software खोलें</li>
-                      <li>▸ Agent <span className="text-yellow-400 font-semibold">हर 15 मिनट</span> में automatically sync करेगा</li>
-                      <li>▸ ERPBridge dashboard पर data अपने आप आ जाएगा</li>
-                      <li>▸ Manual कुछ नहीं करना — Agent background में चलता रहेगा</li>
-                      <li className="text-gray-500 text-xs pt-1">Open Tally → Agent syncs every 15 min automatically</li>
-                    </ul>
+                    <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">3</div>
+                        <div><div className="font-bold text-white">Agent में Token डालें</div><div className="text-gray-400 text-xs">Paste Token in Agent</div></div>
+                      </div>
+                      <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
+                        <li>▸ Taskbar में नीचे <span className="text-yellow-400 font-semibold">right side</span> देखें (clock के पास)</li>
+                        <li>▸ <span className="text-yellow-400 font-semibold">ERPBridge icon</span> दिखेगा — उस पर click करें</li>
+                        <li>▸ Settings window में <span className="text-yellow-400 font-semibold">Sync Token</span> box में token paste करें</li>
+                        <li>▸ <span className="text-yellow-400 font-semibold">Save</span> दबाएं → &quot;Settings saved successfully&quot; आएगा</li>
+                        <li className="text-gray-500 text-xs pt-1">Click tray icon → Paste token → Save</li>
+                      </ul>
+                    </div>
+                    <div className="bg-gray-800 border border-yellow-500/20 rounded-2xl p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-yellow-500 text-gray-900 font-black text-lg w-9 h-9 rounded-full flex items-center justify-center">4</div>
+                        <div><div className="font-bold text-white">Tally चालू रखें — बस!</div><div className="text-gray-400 text-xs">Keep Tally running — that&apos;s it!</div></div>
+                      </div>
+                      <ul className="text-sm text-gray-300 space-y-1 leading-relaxed">
+                        <li>▸ अपना <span className="text-yellow-400 font-semibold">Tally</span> software खोलें</li>
+                        <li>▸ Agent <span className="text-yellow-400 font-semibold">हर 15 मिनट</span> में automatically sync करेगा</li>
+                        <li>▸ ERPBridge dashboard पर data अपने आप आ जाएगा</li>
+                        <li>▸ Manual कुछ नहीं करना — Agent background में चलता रहेगा</li>
+                        <li className="text-gray-500 text-xs pt-1">Open Tally → Agent syncs every 15 min automatically</li>
+                      </ul>
+                    </div>
                   </div>
-
+                  <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-5 text-center">
+                    <p className="text-yellow-400 font-bold text-sm mb-1">💡 ध्यान रखें / Important</p>
+                    <p className="text-gray-300 text-sm">Sync के समय <span className="text-yellow-400 font-semibold">Tally चालू होना चाहिए</span> — Agent और Tally दोनों एक ही computer पर होने चाहिए।</p>
+                    <p className="text-gray-500 text-xs mt-1">Tally must be running during sync — Agent and Tally must be on the same computer.</p>
+                  </div>
                 </div>
+              </section>
 
-                {/* Info box */}
-                <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-5 text-center">
-                  <p className="text-yellow-400 font-bold text-sm mb-1">💡 ध्यान रखें / Important</p>
-                  <p className="text-gray-300 text-sm">Sync के समय <span className="text-yellow-400 font-semibold">Tally चालू होना चाहिए</span> — Agent और Tally दोनों एक ही computer पर होने चाहिए।</p>
-                  <p className="text-gray-500 text-xs mt-1">Tally must be running during sync — Agent and Tally must be on the same computer.</p>
-                </div>
-
-              </div>
-            </section>
+              {/* ── Magenta Comparison यहाँ जोड़ा ── */}
+              <MagentaComparison />
+            </>
           )}
 
           {p.features && (

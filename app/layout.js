@@ -21,13 +21,13 @@ const OG_IMAGE_URL = "https://www.web-developer-kp.com/og-image.png";
 export const metadata = {
   metadataBase: new URL("https://www.web-developer-kp.com"),
   title: {
-    default: "Nishant Hardware Software | Windows + Android | GST Billing",
+    default: "Nishant ERPBridge — Tally BI Software | Magenta से सस्ता, features ज़्यादा",
     template: "%s | Nishant Softwares",
   },
   description:
-    "GST billing, stock, credit management software for hardware shops. Works on Windows & Android tablet. 7 days free trial.",
+    "Tally, Busy, Marg का data — Sales, Purchase, Outstanding, Inventory सब एक जगह। Magenta BI से 3x सस्ता। 7 दिन free trial, कोई card नहीं।",
   keywords:
-    "hardware shop software, GST billing software, stock management, credit software, Android tablet billing",
+    "tally business intelligence software, magenta bi alternative, erp bridge tally, outstanding tracking, inventory monitoring, tally reports hindi, GST billing software",
   authors: [{ name: "Kamta Prasad" }],
   creator: "Kamta Prasad",
   publisher: "Kamta Prasad",
@@ -46,23 +46,23 @@ export const metadata = {
     type: "website",
     locale: "hi_IN",
     url: "https://www.web-developer-kp.com",
-    siteName: "Nishant Hardware Software",
-    title: "Nishant Hardware Software | Windows + Android",
+    siteName: "Nishant ERPBridge",
+    title: "Nishant ERPBridge — Tally BI | Magenta से सस्ता",
     description:
-      "GST billing, stock & credit management for hardware shops. Works on Windows + Android.",
+      "Tally का data — Outstanding, Inventory, Purchase Insights एक जगह। ₹11,999 एक बार। Magenta BI ₹36,000/year लेता है।",
     images: [
       {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Nishant Hardware Software",
+        alt: "Nishant ERPBridge — Tally Business Intelligence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nishant Hardware Software",
-    description: "Hardware billing software for Windows + Android.",
+    title: "Nishant ERPBridge — Tally BI Software",
+    description: "Magenta BI से 3x सस्ता। Outstanding, Inventory, WhatsApp Reminder सब।",
     images: [OG_IMAGE_URL],
     creator: "@Webdeveloperkp",
   },
@@ -74,34 +74,35 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1A365D",
+  themeColor: "#f5c842",
 };
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Nishant Hardware Software",
+  name: "Nishant ERPBridge Business Intelligence",
   operatingSystem: "Windows, Android",
   applicationCategory: "BusinessApplication",
   offers: {
     "@type": "Offer",
-    price: "5500",
+    price: "11999",
     priceCurrency: "INR",
   },
   url: "https://www.web-developer-kp.com",
   telephone: "+91-9996865069",
   email: "prasad.kamta@gmail.com",
+  description: "Tally, Busy, Marg integrated Business Intelligence — Sales, Purchase, Outstanding, Inventory reports",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="hi" className="scroll-smooth">
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Nishant" />
+        <meta name="apple-mobile-web-app-title" content="ERPBridge" />
         <Script
           id="structured-data"
           type="application/ld+json"
