@@ -44,6 +44,10 @@ const erpbridgeFeatures = [
     hi: "Duplicate protection — data double नहीं होगा",
     en: "Smart duplicate upload protection",
   },
+  { hi: "Outstanding Tracking — उधारी का पूरा हिसाब", en: "Party-wise outstanding with aging analysis" },
+  { hi: "WhatsApp Payment Reminder — एक click में भेजें", en: "Send payment reminder directly on WhatsApp" },
+  { hi: "Inventory Monitoring — स्टॉक की निगरानी", en: "Real-time stock tracking from Tally data" },
+  { hi: "Team Management — Roles & Rights", en: "Add accountant or viewer with controlled access" },
 ];
 
 const erpbridgeFmcgFeatures = [
