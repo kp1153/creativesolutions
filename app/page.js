@@ -184,12 +184,7 @@ function MagentaComparison() {
           <p className="text-gray-400 text-sm mb-4">
             7 दिन मुफ्त — कोई credit card नहीं, कोई commitment नहीं
           </p>
-          
-            href={ERPBRIDGE_PWA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-extrabold text-lg px-10 py-4 rounded-2xl shadow-xl transition"
-          >
+      <a href={ERPBRIDGE_PWA_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-extrabold text-lg px-10 py-4 rounded-2xl shadow-xl transition">{"🚀"} अभी Free Trial शुरू करें</a>
             🚀 अभी Free Trial शुरू करें
           </a>
         </div>
