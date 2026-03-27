@@ -1,0 +1,1 @@
+const fs = require('fs'); ['app/page.js', 'app/pharma/page.js'].forEach(f => { if (!fs.existsSync(f)) return; let c = fs.readFileSync(f, 'utf8'); c = c.split('Marg ????').join('Medical Store Management'); fs.writeFileSync(f, c); console.log('DONE: ' + f); });
