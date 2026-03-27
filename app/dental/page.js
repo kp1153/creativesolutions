@@ -144,7 +144,7 @@ export default function DentalPage() {
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-green-700 font-bold text-lg px-8 py-3 rounded-2xl shadow-lg hover:bg-green-50 transition"
               >
-                📱 Try Free — Open App
+                📱 Android Mobile पर Install करने के लिए यहाँ Click करें
               </a>
               <p className="text-xs mt-1 text-green-200/70">
                 👉 Chrome menu ⋮ → Add to Home Screen → Install
