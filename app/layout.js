@@ -25,7 +25,7 @@ export const metadata = {
     template: "%s | Nishant Softwares",
   },
   description:
-    "Tally, Busy, Marg का data — Sales, Purchase, Outstanding, Inventory सब एक जगह। Magenta BI से 3x सस्ता। 7 दिन free trial, कोई card नहीं।",
+    "Tally, Busy, Marg का data — Sales, Purchase, Outstanding, Inventory सब एक जगह। 7 दिन free trial, कोई card नहीं।",
   keywords:
     "tally business intelligence software, magenta bi alternative, erp bridge tally, outstanding tracking, inventory monitoring, tally reports hindi, GST billing software",
   authors: [{ name: "Kamta Prasad" }],
