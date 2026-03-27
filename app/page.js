@@ -6,6 +6,7 @@ const SCHOOL_EXE_URL = "https://pub-ba88bef35aa84924b5e8bc26eb733d33.r2.dev/EduS
 const ERPBRIDGE_EXE_URL = "https://pub-b7b15d809a3649a48535433d66376f24.r2.dev/ERPBridge%20Setup%200.1.0.exe";
 const ERPBRIDGE_PWA_URL = "https://erpbridge.vercel.app";
 const DENTAL_PWA_URL = "https://dental-generic.vercel.app";
+const DENTAL_EXE_URL = "https://pub-2bb08b9a599048e48fa0e6a4a9f137bb.r2.dev/Nishant%20Dental%20Pro%20Setup%201.0.0.exe";
 
 const products = [
   { key: "erpbridge", icon: "📊", title: "ERPBridge", subtitle: "Business Intelligence", descHi: "Tally, Busy, Marg का data — Sales, Purchase, P&L, Ledger एक जगह", descEn: "Upload Tally data — instant Sales, Purchase, P&L & Ledger reports", exeUrl: ERPBRIDGE_EXE_URL, pwaUrl: ERPBRIDGE_PWA_URL, software: "erpbridge", newPrice: "₹11,999", renewPrice: "₹4,999", accentText: "text-yellow-400", accentBorder: "border-yellow-500", accent: "bg-yellow-500" },
