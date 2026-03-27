@@ -39,7 +39,7 @@ export default function PharmaPage() {
       <section className="bg-gradient-to-br from-red-700 via-red-600 to-rose-700 text-white py-16 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <div className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">🆓 7 दिन बिल्कुल मुफ्त — कोई card नहीं</div>
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-3 leading-tight">💊 Nishant Pharma Pro<br />दवा दुकान — Marg जैसा</h1>
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-3 leading-tight">💊 Nishant Pharma Pro<br />दवा दुकान — Medical Store Management</h1>
           <p className="text-lg mb-1 font-semibold text-red-100">दवा की दुकान के लिए — stock, expiry alert, GST billing, prescription billing सब एक जगह।</p>
           <p className="text-base mb-8 text-red-200/70">Medicine stock management, expiry alerts, GST billing & prescription billing — all in one place.</p>
           <div className="flex flex-col items-center gap-3">
