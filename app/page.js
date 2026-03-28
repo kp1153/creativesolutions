@@ -23,32 +23,9 @@ const products = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-950 text-white font-sans">
-      <div className="bg-amber-500 py-2 px-4 text-center text-sm font-bold text-white flex flex-col sm:flex-row justify-center items-center gap-3">
-        <a href="tel:+919996865069" className="hover:underline">📞 9996865069</a>
-        <span className="hidden sm:inline">|</span>
-        <a href="mailto:prasad.kamta@gmail.com" className="hover:underline">✉️ prasad.kamta@gmail.com</a>
-        <span className="hidden sm:inline">|</span>
-        <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="hover:underline">💬 WhatsApp</a>
-      </div>
+    <main className="min-h-screen bg-zinc-900 text-white font-sans">
 
-      <nav className="sticky top-0 z-50 bg-gray-900 border-b border-gray-800 px-4 py-3">
-        <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
-          <div className="font-extrabold text-white text-lg tracking-tight whitespace-nowrap">
-            🖥️ <span className="text-amber-400">Nishant</span> Software
-          </div>
-          <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
-            {products.map((p) => (
-              <a key={p.key} href={"/" + p.key}
-                className={`flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg border whitespace-nowrap transition ${p.accentBorder} ${p.accentText} hover:bg-gray-800`}>
-                {p.icon} {p.title}
-              </a>
-            ))}
-          </div>
-        </div>
-      </nav>
-
-      <section className="py-16 px-4 text-center bg-gradient-to-b from-gray-900 to-gray-950">
+      <section className="py-16 px-4 text-center bg-gradient-to-b from-zinc-800 to-zinc-900">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block bg-amber-500/20 text-amber-400 text-xs font-bold px-4 py-1 rounded-full mb-4 tracking-widest uppercase">
             🆓 7 Days Free Trial — No Card Required
@@ -62,13 +39,13 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
             {products.map((p) => (
               <a key={p.key} href={"/" + p.key}
-                className={`relative flex flex-col items-center gap-2 p-4 rounded-2xl border ${p.accentBorder} border-opacity-40 bg-gray-900 hover:bg-gray-800 transition group`}>
+                className={`relative flex flex-col items-center gap-2 p-4 rounded-2xl border ${p.accentBorder} border-opacity-40 bg-zinc-800 hover:bg-zinc-700 transition group`}>
                 {p.comingSoon && (
-                  <span className="absolute top-2 right-2 text-xs bg-gray-700 text-gray-400 px-2 py-0.5 rounded-full">Soon</span>
+                  <span className="absolute top-2 right-2 text-xs bg-zinc-700 text-zinc-400 px-2 py-0.5 rounded-full">Soon</span>
                 )}
                 <span className="text-3xl">{p.icon}</span>
                 <span className={`font-bold text-sm ${p.accentText}`}>{p.title}</span>
-                <span className="text-gray-500 text-xs text-center leading-tight">{p.subtitle}</span>
+                <span className="text-zinc-400 text-xs text-center leading-tight">{p.subtitle}</span>
                 <span className={`text-xs font-bold ${p.accentText}`}>{p.newPrice}</span>
               </a>
             ))}
@@ -76,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-amber-500 py-12 px-4 text-center">
+      <section className="bg-zink-900 py-12 px-4 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-extrabold text-white mb-2">आज ही शुरू करें — मुफ्त में</h2>
           <p className="text-amber-100 mb-6 text-sm">7 दिन पूरी तरह मुफ्त — कोई card नहीं | 7 days free, no card required</p>
@@ -89,6 +66,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </main>
   );
 }
