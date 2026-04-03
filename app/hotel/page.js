@@ -35,7 +35,7 @@ export default function HotelPage() {
         <div className="text-6xl mb-4">🏨</div>
         <h1 className="text-3xl md:text-5xl font-extrabold mb-3">Nishant Hotel Pro</h1>
         <p className="text-gray-400 text-lg mb-2">Hotel Management Software — भारत के होटलों के लिए</p>
-        <p className="text-gray-500 max-w-lg mb-4 text-sm leading-relaxed">
+        <p className="text-gray-500 max-w-lg mb-4 text-base leading-relaxed">
           Room booking, check-in/check-out, billing, restaurant billing और staff management —
           सब एक जगह। Offline काम करे, GST-ready, हिंदी में।
         </p>
@@ -49,13 +49,13 @@ export default function HotelPage() {
       <section className="px-4 py-14 bg-gray-950">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-extrabold text-center text-white mb-2">क्या-क्या मिलेगा?</h2>
-          <p className="text-center text-gray-500 text-sm mb-10">Hotel Pro की सभी खूबियाँ</p>
+          <p className="text-center text-gray-500 text-base mb-10">Hotel Pro की सभी खूबियाँ</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
             {features.map((f, i) => (
               <div key={i} className="bg-gray-900 border border-gray-800 hover:border-pink-500/40 rounded-2xl p-5 transition">
                 <div className="text-3xl mb-3">{f.icon}</div>
-                <h3 className="font-bold text-white text-sm mb-1">{f.title}</h3>
-                <p className="text-gray-400 text-xs leading-relaxed">{f.desc}</p>
+                <h3 className="font-bold text-white text-base mb-1">{f.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -66,17 +66,17 @@ export default function HotelPage() {
       <section className="px-4 py-14 bg-gray-900">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-extrabold text-white mb-2">Nishant Hotel Pro क्यों?</h2>
-          <p className="text-gray-500 text-sm mb-10">बाकी hotel software से बेहतर क्यों है</p>
+          <p className="text-gray-500 text-base mb-10">बाकी hotel software से बेहतर क्यों है</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 text-left">
             {[
-              { icon: "💸", title: "सबसे सस्ता", desc: "IDS, Hotelogix से कई गुना सस्ता — छोटे होटलों के बजट में।" },
+              { icon: "💸", title: "सबसे सस्ता", desc: "बाज़ार के बाकी hotel software से कई गुना सस्ता — छोटे होटलों के बजट में।" },
               { icon: "🇮🇳", title: "भारत के लिए", desc: "GST invoice, हिंदी UI, Indian payment modes — सब ready।" },
               { icon: "📞", title: "Direct Support", desc: "कोई IVR नहीं — WhatsApp पर सीधे developer से बात करो।" },
             ].map((w, i) => (
               <div key={i} className="bg-gray-800 rounded-2xl p-5 border border-gray-700">
                 <div className="text-3xl mb-2">{w.icon}</div>
-                <h3 className="font-bold text-white text-sm mb-1">{w.title}</h3>
-                <p className="text-gray-400 text-xs leading-relaxed">{w.desc}</p>
+                <h3 className="font-bold text-white text-base mb-1">{w.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{w.desc}</p>
               </div>
             ))}
           </div>
