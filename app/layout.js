@@ -21,7 +21,7 @@ const OG_IMAGE_URL = "https://www.web-developer-kp.com/og-image.png";
 export const metadata = {
   metadataBase: new URL("https://www.web-developer-kp.com"),
   title: {
-    default: "Nishant ERPBridge — Tally BI Software | Magenta से सस्ता, features ज़्यादा",
+    default: "Nishant ERPBridge — बेहद सस्ता लेकिन कोई नहीं है टक्कर में, features ज़्यादा",
     template: "%s | Nishant Softwares",
   },
   description:
