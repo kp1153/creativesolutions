@@ -45,7 +45,7 @@ export default function HotelPage() {
           <span className="text-2xl font-extrabold text-pink-400">₹6,999</span>
           <span className="text-gray-500 text-sm">/साल • Renewal ₹2,499</span>
         </div>
-        
+        <a
           href={HOTEL_EXE_URL}
           className="bg-pink-600 hover:bg-pink-500 text-white font-bold px-8 py-3 rounded-2xl text-base transition"
         >

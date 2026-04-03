@@ -44,7 +44,7 @@ export default function Home() {
             🆓 7 Days Free Trial — No Card Required
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-            इंडिया का अपना<br /><span className="text-amber-400">Business Software</span>
+            इंडिया के अपने<br /><span className="text-amber-400">Business Softwares</span>
           </h1>
           <p className="text-gray-400 text-lg mb-2">10 industries के लिए — एक platform पर</p>
           <p className="text-gray-500 mb-10">Built for Indian businesses — affordable, simple, powerful</p>
