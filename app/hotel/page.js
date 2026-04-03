@@ -1,5 +1,7 @@
 "use client";
 
+const HOTEL_EXE_URL = "https://pub-f773dd480900429baad9123bdff7a15f.r2.dev/Nishant%20Hotel%20Pro%20Setup%200.1.0.exe";
+
 const features = [
   { icon: "🛏️", title: "Room Management", desc: "सभी rooms की real-time availability — single, double, suite। एक नज़र में पूरा status।" },
   { icon: "📅", title: "Booking & Check-in/out", desc: "Advance booking, walk-in check-in, और quick check-out — सब कुछ 2 clicks में।" },
@@ -43,6 +45,12 @@ export default function HotelPage() {
           <span className="text-2xl font-extrabold text-pink-400">₹6,999</span>
           <span className="text-gray-500 text-sm">/साल • Renewal ₹2,499</span>
         </div>
+        
+          href={HOTEL_EXE_URL}
+          className="bg-pink-600 hover:bg-pink-500 text-white font-bold px-8 py-3 rounded-2xl text-base transition"
+        >
+          ⬇️ Download करो — Windows
+        </a>
       </section>
 
       {/* Features */}
