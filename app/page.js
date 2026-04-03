@@ -5,7 +5,7 @@ const HARDWARE_PWA_URL = "https://nishant-ten.vercel.app";
 const SCHOOL_EXE_URL = "https://pub-ba88bef35aa84924b5e8bc26eb733d33.r2.dev/EduSaaS%20School%20Setup%200.1.0.exe";
 const ERPBRIDGE_EXE_URL = "https://pub-b7b15d809a3649a48535433d66376f24.r2.dev/ERPBridge%20Setup%200.1.0.exe";
 const ERPBRIDGE_PWA_URL = "https://erpbridge.vercel.app";
-const DENTAL_PWA_URL = "https://dental-saas-pi.vercel.app"; 
+const DENTAL_PWA_URL = "https://dental-saas-pi.vercel.app";
 const DENTAL_EXE_URL = "https://pub-2bb08b9a599048e48fa0e6a4a9f137bb.r2.dev/Nishant%20Dental%20Pro%20Setup%201.0.0.exe";
 
 const products = [
@@ -18,13 +18,25 @@ const products = [
   { key: "heera", icon: "💎", title: "Heera Pro", subtitle: "हीरा उद्योग प्रबंधन", descHi: "हीरा उद्योग के लिए — rough, polished, karigar, party ledger", descEn: "Diamond industry — rough tracking, karigar management & party ledger", exeUrl: "", pwaUrl: "#", software: "heera", newPrice: "₹7,999", renewPrice: "₹2,999", accentText: "text-cyan-400", accentBorder: "border-cyan-500", accent: "bg-cyan-600" },
   { key: "clinic", icon: "🏥", title: "Clinic Pro", subtitle: "सामान्य क्लिनिक", descHi: "डॉक्टर के क्लिनिक के लिए — OPD, prescription, billing", descEn: "OPD management, prescriptions & billing for general clinics", exeUrl: "", pwaUrl: "#", software: "clinic", newPrice: "₹4,999", renewPrice: "₹1,999", accentText: "text-teal-400", accentBorder: "border-teal-500", accent: "bg-teal-600" },
   { key: "legal", icon: "⚖️", title: "Legal Pro", subtitle: "वकीलों के लिए", descHi: "वकीलों के लिए — cases, clients, dates, documents", descEn: "Cases, clients, court dates & document management for lawyers", exeUrl: "", pwaUrl: "#", software: "legal", newPrice: "₹4,999", renewPrice: "₹1,999", accentText: "text-purple-400", accentBorder: "border-purple-500", accent: "bg-purple-600" },
-  { key: "hotel", icon: "🏨", title: "Hotel Pro", subtitle: "Hotel Management", descHi: "होटल के लिए — rooms, booking, billing, staff", descEn: "Room booking, billing & staff management for hotels", exeUrl: "", pwaUrl: "#", software: "hotel", newPrice: "₹6,999", renewPrice: "₹2,499", accentText: "text-pink-400", accentBorder: "border-pink-500", accent: "bg-pink-600", comingSoon: true },
+  { key: "hotel", icon: "🏨", title: "Hotel Pro", subtitle: "Hotel Management", descHi: "होटल के लिए — rooms, booking, billing, staff", descEn: "Room booking, billing & staff management for hotels", exeUrl: "", pwaUrl: "/hotel", software: "hotel", newPrice: "₹6,999", renewPrice: "₹2,499", accentText: "text-pink-400", accentBorder: "border-pink-500", accent: "bg-pink-600", comingSoon: true },
+];
+
+const whyUs = [
+  { icon: "🇮🇳", title: "भारत के लिए बना", desc: "GST, HSN code, हिंदी UI — सब कुछ Indian business की ज़रूरत के हिसाब से।" },
+  { icon: "📴", title: "Offline भी काम करे", desc: "Internet नहीं है? Desktop app बिना internet के भी पूरी तरह काम करती है।" },
+  { icon: "💸", title: "सबसे सस्ता — सबसे अच्छा", desc: "Tally, Busy, Marg से कम कीमत में ज़्यादा features। कोई hidden charge नहीं।" },
+  { icon: "🔒", title: "आपका data — आपके पास", desc: "Data आपके device पर। कोई third-party cloud नहीं। पूरी privacy।" },
+  { icon: "📱", title: "Mobile + Desktop दोनों", desc: "PWA से mobile पर चलाओ, या Desktop app install करो — एक ही software।" },
+  { icon: "🛠️", title: "7 दिन मुफ्त Trial", desc: "पहले आज़माओ — फिर खरीदो। कोई card नहीं, कोई commitment नहीं।" },
+  { icon: "📞", title: "सीधी Support", desc: "WhatsApp पर बात करो — कोई IVR नहीं, कोई ticket नहीं। सीधे developer से।" },
+  { icon: "🔄", title: "हमेशा अपडेट", desc: "नई GST changes, नए features — सब automatic update। कोई extra charge नहीं।" },
 ];
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-zinc-900 text-white font-sans">
 
+      {/* Hero */}
       <section className="py-16 px-4 text-center bg-gradient-to-b from-zinc-800 to-zinc-900">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block bg-amber-500/20 text-amber-400 text-xs font-bold px-4 py-1 rounded-full mb-4 tracking-widest uppercase">
@@ -53,7 +65,66 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-zink-900 py-12 px-4 text-center">
+      {/* Why Us */}
+      <section className="py-16 px-4 bg-zinc-900">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-center text-white mb-2">
+            Nishant Software क्यों चुनें?
+          </h2>
+          <p className="text-center text-gray-400 mb-10 text-sm">जो बात हमें बाकी सबसे अलग बनाती है</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+            {whyUs.map((w, i) => (
+              <div key={i} className="bg-zinc-800 rounded-2xl p-5 border border-zinc-700 hover:border-amber-500/40 transition">
+                <div className="text-3xl mb-3">{w.icon}</div>
+                <h3 className="font-bold text-white text-sm mb-1">{w.title}</h3>
+                <p className="text-zinc-400 text-xs leading-relaxed">{w.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison */}
+      <section className="py-16 px-4 bg-zinc-800">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-center text-white mb-2">
+            Tally / Busy / Marg से तुलना
+          </h2>
+          <p className="text-center text-gray-400 mb-10 text-sm">कीमत कम — features ज़्यादा</p>
+          <div className="overflow-x-auto rounded-2xl border border-zinc-700">
+            <table className="w-full text-sm text-left">
+              <thead>
+                <tr className="bg-zinc-700 text-zinc-300">
+                  <th className="px-4 py-3 font-bold">Feature</th>
+                  <th className="px-4 py-3 font-bold text-amber-400">Nishant Software</th>
+                  <th className="px-4 py-3 font-bold text-zinc-400">Tally / Busy</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-zinc-700">
+                {[
+                  ["कीमत (सालाना)", "₹2,499 – ₹4,999", "₹18,000+"],
+                  ["Offline काम करे", "✅ हाँ", "✅ हाँ"],
+                  ["Mobile App", "✅ PWA included", "❌ नहीं / extra"],
+                  ["GST Ready", "✅ हाँ", "✅ हाँ"],
+                  ["हिंदी UI", "✅ पूरी तरह", "⚠️ आंशिक"],
+                  ["Industry-specific", "✅ 10 industries", "❌ generic"],
+                  ["WhatsApp Support", "✅ सीधे developer", "❌ नहीं"],
+                  ["Free Trial", "✅ 7 दिन, no card", "❌ नहीं"],
+                ].map(([feature, ours, theirs], i) => (
+                  <tr key={i} className={i % 2 === 0 ? "bg-zinc-800" : "bg-zinc-750"}>
+                    <td className="px-4 py-3 text-zinc-300">{feature}</td>
+                    <td className="px-4 py-3 text-amber-400 font-semibold">{ours}</td>
+                    <td className="px-4 py-3 text-zinc-500">{theirs}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-zinc-900 py-12 px-4 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-extrabold text-white mb-2">आज ही शुरू करें — मुफ्त में</h2>
           <p className="text-amber-100 mb-6 text-sm">7 दिन पूरी तरह मुफ्त — कोई card नहीं | 7 days free, no card required</p>

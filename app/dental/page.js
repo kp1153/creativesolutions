@@ -1,6 +1,6 @@
 "use client";
 
-const DENTAL_PWA_URL = "https://dental-generic.vercel.app";
+const DENTAL_PWA_URL = "https://dental-saas-pi.vercel.app";
 const DENTAL_EXE_URL =
   "https://pub-2bb08b9a599048e48fa0e6a4a9f137bb.r2.dev/Nishant%20Dental%20Pro%20Setup%201.0.0.exe";
 
