@@ -33,7 +33,6 @@ export default function HotelPage() {
       {/* Hero */}
       <section className="flex flex-col items-center justify-center text-center px-4 py-16 bg-gradient-to-b from-gray-900 to-gray-950">
         <div className="text-6xl mb-4">🏨</div>
-        <div className="inline-block bg-pink-500/20 text-pink-400 text-xs font-bold px-4 py-1 rounded-full mb-4 tracking-widest uppercase">Coming Soon</div>
         <h1 className="text-3xl md:text-5xl font-extrabold mb-3">Nishant Hotel Pro</h1>
         <p className="text-gray-400 text-lg mb-2">Hotel Management Software — भारत के होटलों के लिए</p>
         <p className="text-gray-500 max-w-lg mb-4 text-sm leading-relaxed">
@@ -43,14 +42,6 @@ export default function HotelPage() {
         <div className="flex items-center gap-3 mb-8">
           <span className="text-2xl font-extrabold text-pink-400">₹6,999</span>
           <span className="text-gray-500 text-sm">/साल • Renewal ₹2,499</span>
-        </div>
-        <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 max-w-sm w-full">
-          <p className="text-gray-400 text-sm mb-3">अभी notify करें — जब launch हो तो पता चले</p>
-          <a href="https://wa.me/919996865069?text=Hotel Pro के launch होने पर notify करें"
-            target="_blank" rel="noopener noreferrer"
-            className="block w-full bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-500 transition">
-            💬 WhatsApp पर notify करें
-          </a>
         </div>
       </section>
 
