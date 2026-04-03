@@ -5,7 +5,7 @@ const HARDWARE_PWA_URL = "https://nishant-ten.vercel.app";
 const SCHOOL_EXE_URL = "https://pub-ba88bef35aa84924b5e8bc26eb733d33.r2.dev/EduSaaS%20School%20Setup%200.1.0.exe";
 const ERPBRIDGE_EXE_URL = "https://pub-b7b15d809a3649a48535433d66376f24.r2.dev/ERPBridge%20Setup%200.1.0.exe";
 const ERPBRIDGE_PWA_URL = "https://erpbridge.vercel.app";
-const DENTAL_PWA_URL = "https://dental-generic.vercel.app";
+const DENTAL_PWA_URL = "https://dental-saas-pi.vercel.app"; 
 const DENTAL_EXE_URL = "https://pub-2bb08b9a599048e48fa0e6a4a9f137bb.r2.dev/Nishant%20Dental%20Pro%20Setup%201.0.0.exe";
 
 const products = [
