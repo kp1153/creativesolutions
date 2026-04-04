@@ -91,7 +91,7 @@ const structuredData = {
   url: "https://www.web-developer-kp.com",
   telephone: "+91-9996865069",
   email: "prasad.kamta@gmail.com",
-  description: "Tally, Busy, Marg integrated Business Intelligence — Sales, Purchase, Outstanding, Inventory reports",
+  description: "निशांत सॉफ्टवेयर्सः जब कोई नहीं है टक्कर में तो क्यों पड़ते हो चक्कर में",
 };
 
 export default function RootLayout({ children }) {
