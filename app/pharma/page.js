@@ -148,13 +148,13 @@ export default function PharmaPage() {
             <div className="rounded-2xl border-2 border-red-500 p-6 text-center shadow-lg relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-red-600 text-white text-xs font-bold px-4 py-1 rounded-full">नया खाता</div>
               <h3 className="text-lg font-bold mb-1 text-gray-700 mt-2">पहली बार</h3>
-              <div className="text-4xl font-extrabold text-red-600 mb-1">₹४,९९९</div>
-              <p className="text-gray-400 text-sm mb-4">एक बार — १ साल शामिल</p>
+              <div className="text-4xl font-extrabold text-red-600 mb-1">₹,4999</div>
+              <p className="text-gray-400 text-sm mb-4">एक बार — 1 साल शामिल</p>
               <a href="/payment?software=pharma" className="block w-full bg-red-600 text-white font-bold py-2 rounded-xl hover:bg-red-500 transition">मुफ्त परीक्षण शुरू करो</a>
             </div>
             <div className="rounded-2xl border-2 border-gray-200 p-6 text-center shadow-sm">
               <h3 className="text-lg font-bold mb-1 text-gray-700 mt-2">नवीनीकरण</h3>
-              <div className="text-4xl font-extrabold text-red-600 mb-1">₹१,९९९</div>
+              <div className="text-4xl font-extrabold text-red-600 mb-1">₹2,500</div>
               <p className="text-gray-400 text-sm mb-4">प्रति वर्ष</p>
               <a href="/payment?software=pharma" className="block w-full bg-red-600 text-white font-bold py-2 rounded-xl hover:bg-red-500 transition">अभी नवीनीकरण करो</a>
             </div>
