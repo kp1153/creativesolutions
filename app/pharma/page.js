@@ -1,6 +1,7 @@
 "use client";
 
-const PHARMA_PWA_URL = "#";
+const PHARMA_PWA_URL = "https://pharmacy-bay.vercel.app";
+const WINDOWS_EXE_URL = "https://pub-5c3d94458d0849a39a4599f634afa58f.r2.dev/ClinicOS%20Setup%201.0.0.exe";
 
 const features = [
   { hi: "जीएसटी-मोबाइल ऑटो मैपिंग — जीएसटीआईएन डालो, सब भरा", en: "Enter GSTIN once — name, address & phone auto-filled instantly" },
@@ -69,7 +70,7 @@ export default function PharmaPage() {
           <p className="text-sm mb-10 text-red-200/80">
             जीएसटी ऑटो मैपिंग · क्लाउड बैकअप · बैच-वाइज़ स्टॉक · मोबाइल और डेस्कटॉप दोनों
           </p>
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-4">
             <a
               href={PHARMA_PWA_URL}
               target="_blank"
@@ -77,6 +78,12 @@ export default function PharmaPage() {
               className="inline-block bg-white text-red-700 font-extrabold text-lg px-10 py-3.5 rounded-2xl shadow-xl hover:bg-amber-50 transition"
             >
               📱 मुफ्त आज़माओ — ऐप खोलो
+            </a>
+            <a
+              href={WINDOWS_EXE_URL}
+              className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold text-sm px-8 py-3 rounded-2xl hover:bg-white/25 transition"
+            >
+              🖥️ Windows के लिए डाउनलोड करो
             </a>
             <p className="text-xs text-red-200/70">👉 Chrome मेनू ⋮ → होम स्क्रीन पर जोड़ें → इंस्टॉल करें</p>
           </div>
@@ -148,7 +155,7 @@ export default function PharmaPage() {
             <div className="rounded-2xl border-2 border-red-500 p-6 text-center shadow-lg relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-red-600 text-white text-xs font-bold px-4 py-1 rounded-full">नया खाता</div>
               <h3 className="text-lg font-bold mb-1 text-gray-700 mt-2">पहली बार</h3>
-              <div className="text-4xl font-extrabold text-red-600 mb-1">₹,4999</div>
+              <div className="text-4xl font-extrabold text-red-600 mb-1">₹4,999</div>
               <p className="text-gray-400 text-sm mb-4">एक बार — 1 साल शामिल</p>
               <a href="/payment?software=pharma" className="block w-full bg-red-600 text-white font-bold py-2 rounded-xl hover:bg-red-500 transition">मुफ्त परीक्षण शुरू करो</a>
             </div>
