@@ -1,105 +1,373 @@
 "use client";
 
-const RATION_PWA_URL = "#";
+const RATION_PWA_URL = "https://ration-pro.vercel.app";
+const RATION_EXE_URL = "#";
+
+const painPoints = [
+  { icon: "😤", pain: "उधारी याद नहीं रहती?", fix: "हर ग्राहक का उधार — नाम के साथ, पैसे कब मिले — सब दर्ज" },
+  { icon: "📦", pain: "माल खत्म होने का पता नहीं चलता?", fix: "जैसे ही stock कम हो — अपने आप alert आएगा" },
+  { icon: "🧮", pain: "महीने के अंत में हिसाब नहीं मिलता?", fix: "एक click में पूरे महीने की बिक्री, खर्च और मुनाफा" },
+  { icon: "📝", pain: "supplier का हिसाब अलग-अलग कॉपी में?", fix: "हर supplier का हिसाब — कितना लिया, कितना देना बाकी" },
+];
 
 const features = [
-  { hi: "Stock Management — आटा, चावल, दाल, तेल — हर item का stock", en: "Track stock of every item — wheat, rice, pulses, oil, sugar" },
-  { hi: "Daily Sales — कितना बिका, किसको बिका", en: "Record daily sales — who bought what and how much" },
-  { hi: "Customer Ledger — उधारी का पूरा हिसाब", en: "Complete ledger for each customer with credit balance" },
-  { hi: "Monthly Report — महीने का पूरा हिसाब", en: "Monthly sales & purchase summary report" },
-  { hi: "Purchase Entry — माल कब आया, कितना आया, कहाँ से", en: "Record purchases — date, quantity, supplier & rate" },
-  { hi: "Low Stock Alert — जब stock कम हो तो alert", en: "Get alert when any item's stock goes below minimum level" },
-  { hi: "Supplier Management — किस supplier से क्या लिया", en: "Track purchases supplier-wise with outstanding amounts" },
-  { hi: "PWA — mobile पर app की तरह चलता है", en: "Works as an app on Android mobile — no Play Store needed" },
-  { hi: "7-Day Free Trial — कोई card नहीं", en: "7-day free trial — no credit card required" },
-  { hi: "Google Login — secure, कोई password याद नहीं करना", en: "Secure Google login — no separate password needed" },
+  {
+    icon: "🧾",
+    title: "तेज़ बिलिंग",
+    titleEn: "Fast Billing",
+    desc: "सामान का नाम type करो — bill 30 seconds में तैयार। Cash, UPI या उधार — सब accept करो।",
+    detail: "बिल बनाते वक्त सामान का नाम लिखते ही वो खुद ही आ जाता है। मात्रा डालो — बिल तैयार। Print करो या WhatsApp पर भेजो।"
+  },
+  {
+    icon: "📦",
+    title: "Stock की पूरी जानकारी",
+    titleEn: "Complete Stock Management",
+    desc: "आटा, चावल, दाल, तेल, चीनी — हर सामान का stock real-time में।",
+    detail: "जब भी कोई सामान बेचो — stock अपने आप घटता है। जब खरीदो — बढ़ता है। जब कम हो — alert आता है। कभी माल खत्म नहीं होगा।"
+  },
+  {
+    icon: "💰",
+    title: "उधारी का हिसाब",
+    titleEn: "Credit/Udhar Tracking",
+    desc: "राम का ₹450, श्याम का ₹1,200 — हर ग्राहक का उधार अलग-अलग।",
+    detail: "हर ग्राहक का उधार कितना है एक नज़र में दिखता है। WhatsApp से reminder भेजो। जब पैसे मिलें — एक click में काट दो।"
+  },
+  {
+    icon: "📊",
+    title: "Daily और Monthly Report",
+    titleEn: "Sales Reports",
+    desc: "आज कितना बिका, इस महीने कितना — सब एक जगह।",
+    detail: "सुबह दुकान खोलते ही देखो — कल कितना बिका। महीने के अंत में देखो — पूरे महीने का हिसाब। कौन सा सामान सबसे ज़्यादा बिका।"
+  },
+  {
+    icon: "🚚",
+    title: "Purchase Entry",
+    titleEn: "Purchase Management",
+    desc: "कब माल आया, कहाँ से, कितने में — सब दर्ज।",
+    detail: "Supplier से माल आने पर entry करो। Stock अपने आप बढ़ जाएगा। हर supplier का हिसाब अलग — किसका कितना बाकी है।"
+  },
+  {
+    icon: "⚠️",
+    title: "Low Stock Alert",
+    titleEn: "Stock Alerts",
+    desc: "आटा 10 kg बचा है — alert आ गया। कभी माल खत्म नहीं होगा।",
+    detail: "हर सामान के लिए minimum stock set करो। जैसे ही उससे कम हो — dashboard पर बड़ा alert दिखेगा। अभी order करो।"
+  },
+  {
+    icon: "👥",
+    title: "ग्राहकों की list",
+    titleEn: "Customer Management",
+    desc: "नाम, नंबर, पता और उधार — हर ग्राहक की पूरी जानकारी।",
+    detail: "ग्राहक का नाम save करो। बिल बनाते वक्त नाम search करो — पुराना उधार भी दिखेगा। सब linked।"
+  },
+  {
+    icon: "📱",
+    title: "Mobile पर चलता है",
+    titleEn: "Mobile PWA + Windows App",
+    desc: "Android mobile पर app की तरह install करो। Windows PC पर भी चलता है।",
+    detail: "कोई Play Store नहीं, कोई App Store नहीं। Chrome में खोलो — install करो। काउंटर पर mobile रखो, बिल बनाओ।"
+  },
 ];
 
 const howTo = [
-  { step: "01", hi: "Google से login करें", en: "Login with Google account", icon: "🔐" },
-  { step: "02", hi: "Items add करो — आटा, चावल, दाल etc.", en: "Add your items with opening stock & minimum level", icon: "📦" },
-  { step: "03", hi: "Daily sales और purchase entry करो", en: "Enter daily sales to customers & purchases from suppliers", icon: "📋" },
-  { step: "04", hi: "Reports देखो — stock, ledger, monthly", en: "View stock status, customer ledger & monthly reports", icon: "📊" },
+  {
+    step: "01",
+    icon: "🔐",
+    title: "Google से Login करो",
+    desc: "App खोलो — 'Google से Login करो' button दबाओ। अपना Gmail account से login हो जाओगे। कोई नया password नहीं बनाना।",
+    tip: "💡 वही Gmail use करो जो हमेशा mobile में हो"
+  },
+  {
+    step: "02",
+    icon: "⚙️",
+    title: "दुकान की जानकारी भरो",
+    desc: "Settings में जाओ — दुकान का नाम, मालिक का नाम, पता, फोन नंबर और UPI ID डालो। यह बिल पर छपेगा।",
+    tip: "💡 GSTIN भी डाल सकते हो अगर GST registered हो"
+  },
+  {
+    step: "03",
+    icon: "📦",
+    title: "सामान की list बनाओ",
+    desc: "सामान → नया सामान में जाओ। आटा, चावल, दाल, तेल — हर सामान का नाम, भाव और अभी कितना stock है वो डालो। एक बार करना है — बस।",
+    tip: "💡 हिंदी नाम भी डाल सकते हो — जैसे 'आटा 5 किलो'"
+  },
+  {
+    step: "04",
+    icon: "👥",
+    title: "ग्राहकों को add करो",
+    desc: "जो ग्राहक उधार लेते हैं उनका नाम और नंबर save करो। बिल बनाते वक्त नाम select करो — उधार अपने आप उनके खाते में जाएगा।",
+    tip: "💡 नकद ग्राहकों के लिए कुछ नहीं करना"
+  },
+  {
+    step: "05",
+    icon: "🧾",
+    title: "बिल बनाओ — रोज़ाना",
+    desc: "बिल बनाओ पर click करो। सामान का नाम type करो — आ जाएगा। मात्रा डालो। Cash/UPI/उधार select करो। बिल तैयार।",
+    tip: "💡 बिल बनाते ही stock अपने आप घटेगा"
+  },
+  {
+    step: "06",
+    icon: "🚚",
+    title: "माल आने पर Purchase Entry",
+    desc: "जब Supplier से माल आए — खरीद में जाओ। सामान select करो, मात्रा और भाव डालो। Stock अपने आप बढ़ जाएगा।",
+    tip: "💡 Supplier का नाम और bill number भी save कर सकते हो"
+  },
+  {
+    step: "07",
+    icon: "💰",
+    title: "उधार का हिसाब करो",
+    desc: "उधारी में जाओ — देखो किसका कितना बाकी है। जब पैसे मिलें — 'पैसे मिले' button दबाओ। WhatsApp से reminder भी भेज सकते हो।",
+    tip: "💡 WhatsApp Reminder एक click में — 'राम जी, आपका ₹500 बाकी है'"
+  },
+  {
+    step: "08",
+    icon: "📊",
+    title: "Report देखो",
+    desc: "Report में जाओ — आज कितना बिका, इस महीने कितना, कौन सा सामान सबसे ज़्यादा बिका। सब एक जगह।",
+    tip: "💡 हर रात 2 मिनट में पूरे दिन का हिसाब"
+  },
+];
+
+const categories = [
+  { icon: "🌾", name: "अनाज/दालें", items: "चावल, गेहूँ, आटा, बेसन, मूंग, अरहर, चना, मसूर" },
+  { icon: "🫙", name: "तेल/घी", items: "सरसों तेल, रिफाइंड, देसी घी, वनस्पति" },
+  { icon: "🌶️", name: "मसाले", items: "हल्दी, मिर्च, धनिया, जीरा, नमक, गरम मसाला" },
+  { icon: "🍬", name: "चीनी/गुड़", items: "चीनी, गुड़, शक्कर, बूरा" },
+  { icon: "🧴", name: "साबुन/डिटर्जेंट", items: "सर्फ, विम, हार्पिक, डेटॉल, लाइफबॉय" },
+  { icon: "☕", name: "चाय/कॉफी", items: "चाय पत्ती, इंस्टेंट कॉफी, बोर्नविटा" },
+  { icon: "🍪", name: "पैकेज्ड फूड", items: "बिस्किट, नमकीन, मैगी, चिप्स, पापड़" },
+  { icon: "🧃", name: "पेय/Drinks", items: "कोल्ड ड्रिंक, जूस, पानी की बोतल" },
 ];
 
 export default function RationPage() {
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-sans">
-      <div className="bg-amber-500 py-2 px-4 text-center text-sm font-bold text-white flex flex-col sm:flex-row justify-center items-center gap-3">
-        <a href="tel:+919996865069" className="hover:underline">📞 9996865069</a>
-        <span className="hidden sm:inline">|</span>
-        <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="hover:underline">💬 WhatsApp</a>
+    <main style={{ minHeight: "100vh", background: "#fff", fontFamily: "'Baloo 2', sans-serif" }}>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800;900&display=swap');
+        * { font-family: 'Baloo 2', sans-serif; box-sizing: border-box; }
+        .orange { color: #ea580c; }
+        .orange-bg { background: #ea580c; }
+        .card { background: #fff; border-radius: 20px; padding: 24px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border: 1px solid #fed7aa; }
+        .card:hover { border-color: #ea580c; transform: translateY(-2px); transition: all 0.2s; }
+        .btn-primary { background: linear-gradient(135deg, #ea580c, #c2410c); color: #fff; font-weight: 900; font-size: 18px; padding: 16px 36px; border-radius: 16px; text-decoration: none; display: inline-block; transition: all 0.2s; box-shadow: 0 4px 20px rgba(234,88,12,0.4); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(234,88,12,0.5); }
+        .btn-secondary { background: transparent; color: #ea580c; font-weight: 800; font-size: 16px; padding: 14px 28px; border-radius: 14px; text-decoration: none; display: inline-block; border: 2.5px solid #ea580c; transition: all 0.2s; }
+        .btn-secondary:hover { background: #fff7ed; }
+        .step-card { background: #fff; border-radius: 20px; padding: 24px; border: 2px solid #fed7aa; position: relative; overflow: hidden; }
+        .step-num { font-size: 72px; font-weight: 900; color: #ffedd5; position: absolute; right: 12px; top: -8px; line-height: 1; }
+        .tip { background: #fef9c3; border: 1px solid #fde047; border-radius: 10px; padding: 8px 12px; font-size: 13px; color: #713f12; margin-top: 10px; font-weight: 600; }
+        .cat-card { background: #fff7ed; border-radius: 16px; padding: 16px; border: 1.5px solid #fed7aa; }
+        .section-title { font-size: 32px; font-weight: 900; color: #1c1917; text-align: center; margin-bottom: 8px; }
+        .section-sub { font-size: 16px; color: #78716c; text-align: center; margin-bottom: 36px; }
+        .pain-card { background: #fff; border-radius: 16px; padding: 20px 24px; display: flex; gap: 16px; align-items: flex-start; border: 1.5px solid #e7e5e4; }
+        .pain-card:hover { border-color: #ea580c; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-up { animation: fadeUp 0.6s ease forwards; }
+        .divider { height: 3px; background: linear-gradient(90deg, transparent, #ea580c, transparent); margin: 0; }
+      `}</style>
+
+      {/* Top bar */}
+      <div style={{ background: "#ea580c", padding: "10px 16px", textAlign: "center", color: "#fff", fontSize: "15px", fontWeight: "700", display: "flex", justifyContent: "center", gap: "24px", flexWrap: "wrap" }}>
+        <a href="tel:+919996865069" style={{ color: "#fff", textDecoration: "none" }}>📞 9996865069</a>
+        <span>|</span>
+        <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", textDecoration: "none" }}>💬 WhatsApp पर बात करें</a>
       </div>
-      <nav className="sticky top-0 z-50 bg-gray-900 border-b border-gray-800 px-4 py-3">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <a href="/" className="font-extrabold text-white text-lg">🖥️ <span className="text-amber-400">Nishant</span> Software</a>
-          <a href="/" className="text-xs text-gray-400 hover:text-white border border-gray-700 px-3 py-1.5 rounded-lg transition">← सभी Products</a>
-        </div>
+
+      {/* Nav */}
+      <nav style={{ background: "#1c1917", padding: "14px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 50 }}>
+        <a href="/" style={{ color: "#fff", textDecoration: "none", fontWeight: "900", fontSize: "18px" }}>🖥️ <span style={{ color: "#fb923c" }}>Nishant</span> Software</a>
+        <a href="/" style={{ color: "#a8a29e", fontSize: "13px", textDecoration: "none", border: "1px solid #44403c", padding: "6px 14px", borderRadius: "8px" }}>← सभी Products</a>
       </nav>
-      <section className="bg-gradient-to-br from-orange-600 via-orange-500 to-amber-600 text-white py-16 px-4 text-center">
-        <div className="max-w-3xl mx-auto">
-          <div className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">🆓 7 दिन बिल्कुल मुफ्त — कोई card नहीं</div>
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-3 leading-tight">🏪 Nishant Ration Pro<br />राशन दुकान प्रबंधन</h1>
-          <p className="text-lg mb-1 font-semibold text-orange-100">राशन की दुकान के लिए बना — stock, बिक्री, उधारी और monthly report सब एक जगह।</p>
-          <p className="text-base mb-8 text-orange-200/70">Built for ration shops — stock management, daily sales, credit tracking & monthly reports all in one place.</p>
-          <div className="flex flex-col items-center gap-3">
-            <a href={RATION_PWA_URL} target="_blank" rel="noopener noreferrer"
-              className="inline-block bg-white text-orange-700 font-bold text-lg px-8 py-3 rounded-2xl shadow-lg hover:bg-orange-50 transition">
-              📱 Try Free — Open App
+
+      {/* Hero */}
+      <section style={{ background: "linear-gradient(135deg, #7c2d12 0%, #c2410c 40%, #ea580c 70%, #f97316 100%)", padding: "72px 20px", textAlign: "center", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 40%)" }} />
+        <div style={{ maxWidth: "760px", margin: "0 auto", position: "relative" }}>
+          <div style={{ display: "inline-block", background: "rgba(255,255,255,0.2)", color: "#fff", fontWeight: "800", fontSize: "15px", padding: "8px 24px", borderRadius: "999px", marginBottom: "24px" }}>
+            🆓 7 दिन बिल्कुल मुफ्त — कोई card नहीं, कोई commitment नहीं
+          </div>
+          <h1 style={{ fontSize: "clamp(36px, 7vw, 72px)", fontWeight: "900", color: "#fff", lineHeight: 1.15, marginBottom: "16px" }}>
+            🏪 Ration Pro<br />
+            <span style={{ color: "#fed7aa" }}>राशन दुकान का</span><br />
+            <span style={{ color: "#fef08a" }}>पूरा हिसाब</span>
+          </h1>
+          <p style={{ fontSize: "20px", fontWeight: "700", color: "#fed7aa", marginBottom: "8px" }}>
+            Stock · बिक्री · उधारी · रिपोर्ट — सब एक जगह
+          </p>
+          <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.75)", marginBottom: "40px" }}>
+            UP, Bihar, MP की राशन और किराना दुकानों के लिए बना — हिंदी में, आसान भाषा में
+          </p>
+          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+            <a href={RATION_PWA_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              📱 App खोलो — मुफ्त में
             </a>
-            <p className="text-xs text-orange-200/70">👉 Chrome menu ⋮ → Add to Home Screen → Install</p>
+            <a href={RATION_EXE_URL} className="btn-secondary" style={{ background: "rgba(255,255,255,0.15)", color: "#fff", border: "2.5px solid rgba(255,255,255,0.5)" }}>
+              💻 Windows App Download
+            </a>
+          </div>
+          <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "13px", marginTop: "16px" }}>
+            Mobile पर: Chrome ⋮ → Add to Home Screen | Windows: Setup file install करें
+          </p>
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* Pain Points */}
+      <section style={{ padding: "64px 20px", background: "#fafaf9" }}>
+        <div style={{ maxWidth: "860px", margin: "0 auto" }}>
+          <h2 className="section-title">क्या यह <span className="orange">आपकी problem</span> है?</h2>
+          <p className="section-sub">हर राशन दुकानदार की यही परेशानी है — Ration Pro इसका जवाब है</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "16px" }}>
+            {painPoints.map((p, i) => (
+              <div key={i} className="pain-card">
+                <div style={{ fontSize: "36px" }}>{p.icon}</div>
+                <div>
+                  <div style={{ fontWeight: "800", fontSize: "17px", color: "#dc2626", marginBottom: "4px" }}>{p.pain}</div>
+                  <div style={{ fontWeight: "600", fontSize: "15px", color: "#374151" }}>✅ {p.fix}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-      <section className="py-12 px-4 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-1 text-orange-400">खासियत / Features</h2>
-          <p className="text-center text-gray-400 text-sm mb-8">राशन, किराना, grocery दुकानों के लिए</p>
-          <div className="grid md:grid-cols-2 gap-4">
+
+      <div className="divider" />
+
+      {/* Features */}
+      <section style={{ padding: "64px 20px", background: "#1c1917" }}>
+        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+          <h2 style={{ fontSize: "32px", fontWeight: "900", color: "#fb923c", textAlign: "center", marginBottom: "8px" }}>क्या-क्या मिलता है?</h2>
+          <p style={{ textAlign: "center", color: "#a8a29e", fontSize: "16px", marginBottom: "40px" }}>एक software — पूरी दुकान का हिसाब</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px" }}>
             {features.map((f, i) => (
-              <div key={i} className="bg-gray-800 border border-orange-500/20 rounded-xl px-5 py-4">
-                <div className="text-orange-400 font-semibold text-sm mb-1">✦ {f.hi}</div>
-                <div className="text-gray-400 text-xs">{f.en}</div>
+              <div key={i} style={{ background: "#292524", borderRadius: "20px", padding: "24px", border: "1px solid rgba(234,88,12,0.2)" }}
+                onMouseEnter={e => e.currentTarget.style.borderColor = "#ea580c"}
+                onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(234,88,12,0.2)"}>
+                <div style={{ fontSize: "36px", marginBottom: "12px" }}>{f.icon}</div>
+                <div style={{ fontWeight: "800", fontSize: "18px", color: "#fb923c", marginBottom: "4px" }}>{f.title}</div>
+                <div style={{ fontWeight: "600", fontSize: "14px", color: "#fff", marginBottom: "8px" }}>{f.desc}</div>
+                <div style={{ fontSize: "13px", color: "#a8a29e", lineHeight: 1.6 }}>{f.detail}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <section className="py-12 px-4 bg-orange-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-8 text-gray-800">कैसे उपयोग करें</h2>
-          <div className="grid md:grid-cols-4 gap-4">
+
+      <div className="divider" />
+
+      {/* Categories */}
+      <section style={{ padding: "64px 20px", background: "#fff7ed" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          <h2 className="section-title">किस सामान का <span className="orange">हिसाब रखेगा?</span></h2>
+          <p className="section-sub">राशन दुकान का हर सामान — सब categories में organized</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "14px" }}>
+            {categories.map((cat, i) => (
+              <div key={i} className="cat-card">
+                <div style={{ fontSize: "28px", marginBottom: "8px" }}>{cat.icon}</div>
+                <div style={{ fontWeight: "800", fontSize: "16px", color: "#1c1917", marginBottom: "6px" }}>{cat.name}</div>
+                <div style={{ fontSize: "13px", color: "#78716c", lineHeight: 1.5 }}>{cat.items}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* How To — Detailed */}
+      <section style={{ padding: "64px 20px", background: "#fafaf9" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          <h2 className="section-title">कैसे <span className="orange">use करें?</span></h2>
+          <p className="section-sub">8 आसान steps — पहले दिन से शुरू करो</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))", gap: "20px" }}>
             {howTo.map((h) => (
-              <div key={h.step} className="bg-white border border-orange-200 rounded-xl p-4 text-center shadow-sm">
-                <div className="text-2xl mb-2">{h.icon}</div>
-                <div className="text-xs text-gray-400 font-bold mb-1">STEP {h.step}</div>
-                <div className="font-bold text-gray-800 text-xs mb-1">{h.hi}</div>
-                <div className="text-xs text-gray-500">{h.en}</div>
+              <div key={h.step} className="step-card">
+                <div className="step-num">{h.step}</div>
+                <div style={{ display: "flex", gap: "14px", alignItems: "flex-start" }}>
+                  <div style={{ fontSize: "36px" }}>{h.icon}</div>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontWeight: "900", fontSize: "20px", color: "#1c1917", marginBottom: "6px" }}>
+                      <span style={{ color: "#ea580c" }}>Step {h.step}:</span> {h.title}
+                    </div>
+                    <div style={{ fontWeight: "600", fontSize: "15px", color: "#44403c", lineHeight: 1.6, marginBottom: "8px" }}>{h.desc}</div>
+                    <div className="tip">{h.tip}</div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <section className="py-10 px-4 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Pricing</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border-2 border-orange-500 p-6 text-center shadow-lg relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-xs font-bold px-4 py-1 rounded-full">New Account</div>
-              <h3 className="text-lg font-bold mb-1 text-gray-700 mt-2">पहली बार / First Time</h3>
-              <div className="text-4xl font-extrabold text-orange-500 mb-1">₹3,999</div>
-              <p className="text-gray-400 text-sm mb-4">एक बार — 1 साल included</p>
-              <a href="/payment?software=ration" className="block w-full bg-orange-500 text-white font-bold py-2 rounded-xl hover:bg-orange-400 transition">Start Free Trial</a>
+
+      <div className="divider" />
+
+      {/* Pricing */}
+      <section style={{ padding: "64px 20px", background: "#1c1917" }}>
+        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+          <h2 style={{ fontSize: "32px", fontWeight: "900", color: "#fb923c", textAlign: "center", marginBottom: "8px" }}>कीमत</h2>
+          <p style={{ textAlign: "center", color: "#a8a29e", fontSize: "16px", marginBottom: "40px" }}>एक बार खरीदो — पूरा साल चलाओ। कोई monthly charge नहीं।</p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+            <div style={{ background: "#292524", borderRadius: "24px", padding: "32px 24px", textAlign: "center", border: "2.5px solid #ea580c", position: "relative" }}>
+              <div style={{ position: "absolute", top: "-16px", left: "50%", transform: "translateX(-50%)", background: "#ea580c", color: "#fff", fontWeight: "800", fontSize: "13px", padding: "6px 20px", borderRadius: "999px", whiteSpace: "nowrap" }}>नया Account</div>
+              <div style={{ fontSize: "18px", fontWeight: "700", color: "#d6d3d1", marginTop: "8px", marginBottom: "8px" }}>पहली बार</div>
+              <div style={{ fontSize: "52px", fontWeight: "900", color: "#fb923c", lineHeight: 1 }}>₹3,999</div>
+              <div style={{ color: "#a8a29e", fontSize: "14px", margin: "8px 0 4px" }}>एक बार · 1 साल included</div>
+              <div style={{ color: "#86efac", fontSize: "13px", fontWeight: "700", marginBottom: "24px" }}>7 दिन free trial — कोई card नहीं</div>
+              <a href={RATION_PWA_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display: "block", background: "linear-gradient(135deg, #ea580c, #c2410c)", color: "#fff", fontWeight: "900", fontSize: "16px", padding: "14px", borderRadius: "14px", textDecoration: "none", marginBottom: "10px" }}>
+                Free Trial शुरू करो
+              </a>
+              <a href="/payment?software=ration"
+                style={{ display: "block", background: "transparent", color: "#fb923c", fontWeight: "800", fontSize: "14px", padding: "12px", borderRadius: "14px", textDecoration: "none", border: "2px solid #ea580c" }}>
+                Buy Now — ₹3,999
+              </a>
             </div>
-            <div className="rounded-2xl border-2 border-gray-200 p-6 text-center shadow-sm">
-              <h3 className="text-lg font-bold mb-1 text-gray-700 mt-2">Renewal</h3>
-              <div className="text-4xl font-extrabold text-orange-500 mb-1">₹1,499</div>
-              <p className="text-gray-400 text-sm mb-4">प्रति वर्ष</p>
-              <a href="/payment?software=ration" className="block w-full bg-orange-500 text-white font-bold py-2 rounded-xl hover:bg-orange-400 transition">Renew Now</a>
+            <div style={{ background: "#292524", borderRadius: "24px", padding: "32px 24px", textAlign: "center", border: "2px solid #44403c" }}>
+              <div style={{ fontSize: "18px", fontWeight: "700", color: "#d6d3d1", marginTop: "8px", marginBottom: "8px" }}>Renewal</div>
+              <div style={{ fontSize: "52px", fontWeight: "900", color: "#fb923c", lineHeight: 1 }}>₹1,499</div>
+              <div style={{ color: "#a8a29e", fontSize: "14px", margin: "8px 0 24px" }}>प्रति वर्ष · सभी features</div>
+              <a href="/payment?software=ration&plan=renewal"
+                style={{ display: "block", background: "linear-gradient(135deg, #ea580c, #c2410c)", color: "#fff", fontWeight: "900", fontSize: "16px", padding: "14px", borderRadius: "14px", textDecoration: "none" }}>
+                Renew Now — ₹1,499
+              </a>
             </div>
+          </div>
+          <div style={{ background: "#292524", borderRadius: "16px", padding: "20px", textAlign: "center", marginTop: "20px" }}>
+            <p style={{ color: "#a8a29e", fontSize: "15px", margin: 0 }}>
+              💬 <strong style={{ color: "#fff" }}>Demo देखना है?</strong> — WhatsApp करो, live दिखाएंगे ·
+              <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" style={{ color: "#fb923c", marginLeft: "6px" }}>wa.me/919996865069</a>
+            </p>
           </div>
         </div>
       </section>
+
+      {/* Final CTA */}
+      <section style={{ background: "linear-gradient(135deg, #7c2d12, #c2410c)", padding: "72px 20px", textAlign: "center" }}>
+        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(28px, 5vw, 48px)", fontWeight: "900", color: "#fff", marginBottom: "12px" }}>
+            आज से शुरू करो —<br /><span style={{ color: "#fef08a" }}>7 दिन बिल्कुल मुफ्त</span>
+          </h2>
+          <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "17px", marginBottom: "36px", fontWeight: "600" }}>
+            कोई card नहीं · कोई commitment नहीं · हिंदी में · WhatsApp support
+          </p>
+          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+            <a href={RATION_PWA_URL} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: "20px", padding: "18px 40px" }}>
+              🏪 App खोलो — Free है
+            </a>
+            <a href={RATION_EXE_URL} className="btn-secondary" style={{ background: "rgba(255,255,255,0.15)", color: "#fff", border: "2.5px solid rgba(255,255,255,0.5)", fontSize: "16px" }}>
+              💻 Windows App Download
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer style={{ background: "#0c0a09", padding: "20px", textAlign: "center", color: "#57534e", fontSize: "14px", fontWeight: "600" }}>
+        © 2026 Nishant Softwares · भारत के लिए बना ·
+        <a href="tel:+919996865069" style={{ color: "#fb923c", marginLeft: "6px" }}>9996865069</a>
+      </footer>
+
     </main>
   );
 }

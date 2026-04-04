@@ -112,10 +112,10 @@ export default function LegalPage() {
         .court-tag {
           background: rgba(255,255,255,0.05);
           border: 1px solid rgba(255,255,255,0.1);
-          font-size: 0.75rem;
-          padding: 4px 12px;
+          font-size: 0.9rem;
+          padding: 6px 16px;
           border-radius: 999px;
-          color: #aaa;
+          color: #ccc;
         }
       `}</style>
 
@@ -129,8 +129,8 @@ export default function LegalPage() {
       {/* Nav */}
       <nav className="body-font sticky top-0 z-50 border-b border-white/5 px-4 py-3" style={{ background: 'rgba(10,10,15,0.95)', backdropFilter: 'blur(12px)' }}>
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <span className="font-bold text-white text-base">🖥️ <span className="gold">Nishant</span> Software</span>
-          <a href="/" className="text-xs text-gray-400 hover:text-white border border-white/10 px-3 py-1.5 rounded-lg transition">← सभी Products</a>
+          <span className="font-bold text-white text-lg">🖥️ <span className="gold">Nishant</span> Software</span>
+          <a href="/" className="text-sm text-gray-400 hover:text-white border border-white/10 px-3 py-1.5 rounded-lg transition">← सभी Products</a>
         </div>
       </nav>
 
@@ -138,29 +138,29 @@ export default function LegalPage() {
       <section className="hero-bg py-24 px-4 text-center relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent)' }} />
         <div className="max-w-4xl mx-auto">
-          <div className="pill inline-block text-sm px-5 py-1.5 rounded-full mb-6 body-font fade-up">
+          <div className="pill inline-block text-base px-5 py-2 rounded-full mb-6 body-font fade-up">
             ⚖️ भारत के वकीलों के लिए — District Court से Supreme Court तक
           </div>
           <h1 className="hero-font text-5xl md:text-7xl font-black mb-4 leading-tight fade-up d1">
             Nishant<br /><span className="gold">Legal Pro</span>
           </h1>
-          <p className="body-font text-lg md:text-xl text-gray-300 mb-3 max-w-2xl mx-auto fade-up d2">
+          <p className="body-font text-xl md:text-2xl text-gray-300 mb-3 max-w-2xl mx-auto fade-up d2">
             Cases · Clients · Court Dates · Documents · Fee — <strong className="text-white">सब एक जगह।</strong>
           </p>
-          <p className="body-font text-sm text-gray-500 mb-10 fade-up d2">
+          <p className="body-font text-base text-gray-400 mb-10 fade-up d2">
             तारीख कभी नहीं भूलेंगे। मुवक्किल बार-बार फोन नहीं करेगा। फीस का हिसाब साफ रहेगा।
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up d3">
             <a href={LEGAL_PWA_URL} target="_blank" rel="noopener noreferrer"
-              className="cta-primary body-font text-base px-10 py-4 rounded-xl inline-block">
+              className="cta-primary body-font text-lg px-10 py-4 rounded-xl inline-block">
               ⚖️ Free Trial शुरू करो — 7 दिन मुफ्त
             </a>
             <a href={WINDOWS_EXE_URL}
-              className="cta-secondary body-font text-base px-10 py-4 rounded-xl inline-block">
+              className="cta-secondary body-font text-lg px-10 py-4 rounded-xl inline-block">
               💻 Windows App Download करो
             </a>
           </div>
-          <p className="body-font text-xs text-gray-600 mt-4 fade-up d4">कोई card नहीं · कोई commitment नहीं · 7 दिन बाद ₹4,999/साल</p>
+          <p className="body-font text-sm text-gray-500 mt-4 fade-up d4">कोई card नहीं · कोई commitment नहीं · 7 दिन बाद ₹4,999/साल</p>
         </div>
       </section>
 
@@ -169,15 +169,15 @@ export default function LegalPage() {
       {/* Pain Points */}
       <section className="py-14 px-4 bg-[#0d0d12]">
         <div className="max-w-4xl mx-auto">
-          <h2 className="hero-font text-3xl text-center mb-2">क्या यह <span className="gold">आपकी problem</span> है?</h2>
-          <p className="body-font text-center text-gray-500 text-sm mb-10">हर वकील की यही परेशानी है — Legal Pro का जवाब है</p>
+          <h2 className="hero-font text-3xl md:text-4xl text-center mb-2">क्या यह <span className="gold">आपकी problem</span> है?</h2>
+          <p className="body-font text-center text-gray-400 text-base mb-10">हर वकील की यही परेशानी है — Legal Pro का जवाब है</p>
           <div className="grid md:grid-cols-2 gap-4">
             {painPoints.map((p, i) => (
               <div key={i} className="card-dark rounded-2xl p-6 flex gap-5 items-start">
-                <div className="text-3xl">{p.icon}</div>
+                <div className="text-4xl">{p.icon}</div>
                 <div>
-                  <div className="body-font text-red-400 font-semibold text-sm mb-1">{p.pain}</div>
-                  <div className="body-font text-gray-300 text-sm">✅ {p.fix}</div>
+                  <div className="body-font text-red-400 font-semibold text-lg mb-2">{p.pain}</div>
+                  <div className="body-font text-gray-200 text-base">✅ {p.fix}</div>
                 </div>
               </div>
             ))}
@@ -190,8 +190,8 @@ export default function LegalPage() {
       {/* Courts */}
       <section className="py-12 px-4 bg-[#0a0a0f]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="hero-font text-2xl mb-2">किन Courts के लिए?</h2>
-          <p className="body-font text-gray-500 text-sm mb-8">हर court, हर tribunal — सब supported</p>
+          <h2 className="hero-font text-3xl mb-2">किन Courts के लिए?</h2>
+          <p className="body-font text-gray-400 text-base mb-8">हर court, हर tribunal — सब supported</p>
           <div className="flex flex-wrap justify-center gap-3">
             {courts.map((c, i) => (
               <span key={i} className="court-tag body-font">{c}</span>
@@ -206,13 +206,13 @@ export default function LegalPage() {
       <section className="py-16 px-4 bg-[#0d0d12]">
         <div className="max-w-5xl mx-auto">
           <h2 className="hero-font text-3xl md:text-4xl text-center mb-2">सब कुछ जो एक <span className="gold">वकील को चाहिए</span></h2>
-          <p className="body-font text-center text-gray-500 text-sm mb-10">और कुछ जो किसी और software में नहीं है</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <p className="body-font text-center text-gray-400 text-base mb-10">और कुछ जो किसी और software में नहीं है</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {features.map((f, i) => (
-              <div key={i} className="card-dark rounded-2xl p-5">
-                <div className="text-2xl mb-3">{f.icon}</div>
-                <div className="body-font font-semibold text-white text-sm mb-2">{f.title}</div>
-                <div className="body-font text-gray-400 text-xs leading-relaxed">{f.desc}</div>
+              <div key={i} className="card-dark rounded-2xl p-6">
+                <div className="text-3xl mb-3">{f.icon}</div>
+                <div className="body-font font-bold text-white text-lg mb-2">{f.title}</div>
+                <div className="body-font text-gray-300 text-base leading-relaxed">{f.desc}</div>
               </div>
             ))}
           </div>
@@ -225,22 +225,22 @@ export default function LegalPage() {
       <section className="py-14 px-4 bg-[#0a0a0f]">
         <div className="max-w-3xl mx-auto">
           <h2 className="hero-font text-3xl text-center mb-2">पुराने Software से <span className="gold">तुलना</span></h2>
-          <p className="body-font text-center text-gray-500 text-sm mb-8">जो पुराने software में नहीं — वो यहाँ है</p>
+          <p className="body-font text-center text-gray-400 text-base mb-8">जो पुराने software में नहीं — वो यहाँ है</p>
           <div className="rounded-2xl overflow-hidden border border-white/10">
-            <table className="w-full text-sm body-font">
+            <table className="w-full body-font">
               <thead>
                 <tr style={{ background: 'rgba(201,168,76,0.08)' }}>
-                  <th className="text-left px-5 py-3 text-gray-300 font-semibold">सुविधा</th>
-                  <th className="text-center px-5 py-3 text-gray-500 font-semibold">पुराना Software</th>
-                  <th className="text-center px-5 py-3 gold font-semibold">Nishant Legal Pro</th>
+                  <th className="text-left px-5 py-4 text-gray-200 font-semibold text-base">सुविधा</th>
+                  <th className="text-center px-5 py-4 text-gray-400 font-semibold text-base">पुराना Software</th>
+                  <th className="text-center px-5 py-4 gold font-semibold text-base">Nishant Legal Pro</th>
                 </tr>
               </thead>
               <tbody>
                 {compare.map((row, i) => (
                   <tr key={i} style={{ background: i % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent' }}>
-                    <td className="px-5 py-3 text-gray-300">{row.label}</td>
-                    <td className="px-5 py-3 text-center text-lg">{row.them ? "✅" : "❌"}</td>
-                    <td className="px-5 py-3 text-center text-lg">✅</td>
+                    <td className="px-5 py-4 text-gray-200 text-base">{row.label}</td>
+                    <td className="px-5 py-4 text-center text-xl">{row.them ? "✅" : "❌"}</td>
+                    <td className="px-5 py-4 text-center text-xl">✅</td>
                   </tr>
                 ))}
               </tbody>
@@ -255,14 +255,14 @@ export default function LegalPage() {
       <section className="py-14 px-4 bg-[#0d0d12]">
         <div className="max-w-4xl mx-auto">
           <h2 className="hero-font text-3xl text-center mb-2">शुरू करो — <span className="gold">4 Steps में</span></h2>
-          <p className="body-font text-center text-gray-500 text-sm mb-10">कोई training नहीं, कोई setup नहीं</p>
+          <p className="body-font text-center text-gray-400 text-base mb-10">कोई training नहीं, कोई setup नहीं</p>
           <div className="grid md:grid-cols-4 gap-4">
             {howTo.map((h) => (
-              <div key={h.step} className="card-dark rounded-2xl p-5 text-center">
-                <div className="text-3xl mb-3">{h.icon}</div>
-                <div className="gold text-xs font-bold mb-1 body-font">STEP {h.step}</div>
-                <div className="text-white font-semibold text-sm mb-2 body-font">{h.title}</div>
-                <div className="text-gray-400 text-xs body-font">{h.desc}</div>
+              <div key={h.step} className="card-dark rounded-2xl p-6 text-center">
+                <div className="text-4xl mb-3">{h.icon}</div>
+                <div className="gold text-sm font-bold mb-2 body-font">STEP {h.step}</div>
+                <div className="text-white font-bold text-lg mb-2 body-font">{h.title}</div>
+                <div className="text-gray-300 text-base body-font">{h.desc}</div>
               </div>
             ))}
           </div>
@@ -275,34 +275,34 @@ export default function LegalPage() {
       <section className="py-16 px-4 bg-[#0a0a0f]">
         <div className="max-w-3xl mx-auto">
           <h2 className="hero-font text-3xl text-center mb-2"><span className="gold">मूल्य</span></h2>
-          <p className="body-font text-center text-gray-500 text-sm mb-10">एक बार खरीदो — पूरा साल चलाओ</p>
+          <p className="body-font text-center text-gray-400 text-base mb-10">एक बार खरीदो — पूरा साल चलाओ</p>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="stamp rounded-2xl p-7 text-center relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 gold-bg text-[#0a0a0f] text-xs font-bold px-5 py-1 rounded-full body-font">नया Account</div>
-              <h3 className="hero-font text-lg mb-3 text-gray-300 mt-2">पहली बार</h3>
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 gold-bg text-[#0a0a0f] text-sm font-bold px-5 py-1 rounded-full body-font">नया Account</div>
+              <h3 className="hero-font text-xl mb-3 text-gray-300 mt-2">पहली बार</h3>
               <div className="hero-font text-5xl font-black gold mb-1">₹4,999</div>
-              <p className="body-font text-gray-500 text-sm mb-6">एक बार · 1 साल included · Free Trial 7 दिन</p>
+              <p className="body-font text-gray-400 text-base mb-6">एक बार · 1 साल included · Free Trial 7 दिन</p>
               <a href={LEGAL_PWA_URL} target="_blank" rel="noopener noreferrer"
-                className="cta-primary body-font block w-full py-3 rounded-xl text-center text-sm mb-3">
+                className="cta-primary body-font block w-full py-3 rounded-xl text-center text-base mb-3">
                 Free Trial शुरू करो
               </a>
               <a href="https://www.web-developer-kp.com/payment?software=legal"
-                className="cta-secondary body-font block w-full py-3 rounded-xl text-center text-sm">
+                className="cta-secondary body-font block w-full py-3 rounded-xl text-center text-base">
                 Buy Now — Rs.4,999
               </a>
             </div>
             <div className="card-dark rounded-2xl p-7 text-center">
-              <h3 className="hero-font text-lg mb-3 text-gray-300 mt-2">Renewal</h3>
+              <h3 className="hero-font text-xl mb-3 text-gray-300 mt-2">Renewal</h3>
               <div className="hero-font text-5xl font-black gold mb-1">₹1,999</div>
-              <p className="body-font text-gray-500 text-sm mb-6">प्रति वर्ष · सभी features · Cloud backup</p>
+              <p className="body-font text-gray-400 text-base mb-6">प्रति वर्ष · सभी features · Cloud backup</p>
               <a href="https://www.web-developer-kp.com/payment?software=legal&plan=renewal"
-                className="cta-secondary body-font block w-full py-3 rounded-xl text-center text-sm">
+                className="cta-secondary body-font block w-full py-3 rounded-xl text-center text-base">
                 Renew Now — Rs.1,999
               </a>
             </div>
           </div>
           <div className="mt-8 card-dark rounded-2xl p-5 text-center body-font">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-base">
               💬 <strong className="text-white">Demo चाहिए?</strong> — WhatsApp करो, live दिखाएंगे ·
               <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="gold ml-1 hover:underline">wa.me/919996865069</a>
             </p>
@@ -316,14 +316,14 @@ export default function LegalPage() {
           <h2 className="hero-font text-3xl md:text-4xl mb-4">
             अब और कागज़ नहीं।<br /><span className="gold">Digital चलो।</span>
           </h2>
-          <p className="body-font text-gray-400 text-sm mb-8">7 दिन मुफ्त — कोई card नहीं, कोई commitment नहीं।</p>
+          <p className="body-font text-gray-400 text-base mb-8">7 दिन मुफ्त — कोई card नहीं, कोई commitment नहीं।</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={LEGAL_PWA_URL} target="_blank" rel="noopener noreferrer"
-              className="cta-primary body-font inline-block text-base px-12 py-4 rounded-xl">
+              className="cta-primary body-font inline-block text-lg px-12 py-4 rounded-xl">
               ⚖️ अभी शुरू करो — Free है
             </a>
             <a href={WINDOWS_EXE_URL}
-              className="cta-secondary body-font inline-block text-base px-12 py-4 rounded-xl">
+              className="cta-secondary body-font inline-block text-lg px-12 py-4 rounded-xl">
               💻 Windows App Download करो
             </a>
           </div>
@@ -331,7 +331,7 @@ export default function LegalPage() {
       </section>
 
       {/* Footer */}
-      <footer className="body-font py-6 px-4 text-center text-gray-600 text-xs border-t border-white/5 bg-[#0a0a0f]">
+      <footer className="body-font py-6 px-4 text-center text-gray-500 text-sm border-t border-white/5 bg-[#0a0a0f]">
         © 2026 Nishant Softwares · भारत के लिए बना ·
         <a href="tel:+919996865069" className="gold hover:underline ml-1">9996865069</a>
       </footer>
