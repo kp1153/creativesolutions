@@ -21,50 +21,42 @@ const OG_IMAGE_URL = "https://www.web-developer-kp.com/og-image.png";
 export const metadata = {
   metadataBase: new URL("https://www.web-developer-kp.com"),
   title: {
-    default: "Nishant ERPBridge — बेहद सस्ता लेकिन कोई नहीं है टक्कर में, features ज़्यादा",
+    default: "Nishant Softwares — आधुनिक, सुरक्षित और किफायती सॉफ्टवेयर समाधान",
     template: "%s | Nishant Softwares",
   },
   description:
-    "Tally, Busy, Marg का data — Sales, Purchase, Outstanding, Inventory सब एक जगह। 7 दिन free trial, कोई card नहीं।",
+    "निशांत सॉफ्टवेयर्स लेटेस्ट टेक्नोलॉजी पर आधारित बेहद सुरक्षित और किफायती सॉफ्टवेयर समाधान प्रदान करते हैं।",
   keywords:
-    "tally business intelligence software, erp bridge tally, outstanding tracking, inventory monitoring, tally reports hindi, GST billing software",
+    "secure software, affordable erp, modern web applications, custom software india, latest technology solutions",
   authors: [{ name: "Kamta Prasad" }],
   creator: "Kamta Prasad",
   publisher: "Kamta Prasad",
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
   openGraph: {
     type: "website",
     locale: "hi_IN",
     url: "https://www.web-developer-kp.com",
-    siteName: "Nishant ERPBridge",
-    title: "Nishant ERPBridge — Tally BI | सबसे सस्ता",
+    siteName: "Nishant Softwares",
+    title: "Nishant Softwares — सुरक्षित और किफायती समाधान",
     description:
-      "Tally का data — Outstanding, Inventory, Purchase Insights एक जगह। ₹11,999 एक बार। Magenta BI ₹36,000/year लेता है।",
+      "आधुनिक तकनीक से बने बेहद सुरक्षित और किफायती सॉफ्टवेयर्स।",
     images: [
       {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Nishant ERPBridge — Tally Business Intelligence",
+        alt: "Nishant Softwares",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nishant ERPBridge — Tally BI Software",
-    description: "Magenta BI से 3x सस्ता। Outstanding, Inventory, WhatsApp Reminder सब।",
+    title: "Nishant Softwares — Modern & Secure",
+    description: "लेटेस्ट टेक्नोलॉजी पर आधारित सुरक्षित और किफायती सॉफ्टवेयर समाधान।",
     images: [OG_IMAGE_URL],
-    creator: "@Webdeveloperkp",
   },
   alternates: {
     canonical: "https://www.web-developer-kp.com",
@@ -80,18 +72,11 @@ export const viewport = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Nishant ERPBridge Business Intelligence",
-  operatingSystem: "Windows, Android",
+  name: "Nishant Softwares",
+  operatingSystem: "Windows, Android, Web",
   applicationCategory: "BusinessApplication",
-  offers: {
-    "@type": "Offer",
-    price: "11999",
-    priceCurrency: "INR",
-  },
   url: "https://www.web-developer-kp.com",
-  telephone: "+91-9996865069",
-  email: "prasad.kamta@gmail.com",
-  description: "निशांत सॉफ्टवेयर्सः जब कोई नहीं है टक्कर में तो क्यों पड़ते हो चक्कर में",
+  description: "निशांत सॉफ्टवेयर्स लेटेस्ट टेक्नोलॉजी पर बने हैं और बेहद सुरक्षित और किफायती हैं।",
 };
 
 export default function RootLayout({ children }) {
@@ -102,7 +87,7 @@ export default function RootLayout({ children }) {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="ERPBridge" />
+        <meta name="apple-mobile-web-app-title" content="NishantSoft" />
         <Script
           id="structured-data"
           type="application/ld+json"
