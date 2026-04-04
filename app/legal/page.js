@@ -1,7 +1,7 @@
 "use client";
 
-const LEGAL_PWA_URL = "#";
-const WINDOWS_EXE_URL = "#";
+const LEGAL_PWA_URL = "https://judicial-phi.vercel.app";
+const WINDOWS_EXE_URL = "https://pub-b1d62729c0a54dd6b851eb17bd62a93c.r2.dev/Legal%20Pro%20Setup%200.1.0.exe";
 
 const painPoints = [
   { icon: "😰", pain: "तारीख भूल गए?", fix: "अगली पेशी की reminder खुद आएगी — email पर" },
@@ -19,7 +19,7 @@ const features = [
   { icon: "📎", title: "Document Attach", desc: "Vakalatnama, FIR copy, petition, judgment — case से attach करो।" },
   { icon: "🔗", title: "Client Portal", desc: "मुवक्किल खुद अपने case की status और अगली तारीख online देख सकता है।" },
   { icon: "📊", title: "Cause List", desc: "आज के सभी cases एक नज़र में — कोर्ट जाने से पहले तैयारी।" },
-  { icon: "👨‍💼", title: "Junior Management", desc: "Senior → Junior को काम assign करो। कौन किस case पर है — track करो।" },
+  { icon: "👨‍💼", title: "Junior Management", desc: "Senior to Junior को काम assign करो। कौन किस case पर है — track करो।" },
   { icon: "📱", title: "Mobile PWA", desc: "कोर्ट रूम में भी चले — Android पर app की तरह install करो। कोई app store नहीं।" },
 ];
 
@@ -40,10 +40,10 @@ const compare = [
 ];
 
 const howTo = [
-  { step: "०१", icon: "🔐", title: "Google Login", desc: "एक click — Google account से login करो। कोई form नहीं।" },
-  { step: "०२", icon: "👤", title: "Client जोड़ो", desc: "मुवक्किल का नाम, contact और matter type।" },
-  { step: "०३", icon: "⚖️", title: "Case बनाओ", desc: "Court, opposite party, filing date — सब enter करो।" },
-  { step: "०४", icon: "📋", title: "हर पेशी के बाद", desc: "Notes और अगली तारीख — 30 seconds में।" },
+  { step: "01", icon: "🔐", title: "Google Login", desc: "एक click — Google account से login करो। कोई form नहीं।" },
+  { step: "02", icon: "👤", title: "Client जोड़ो", desc: "मुवक्किल का नाम, contact और matter type।" },
+  { step: "03", icon: "⚖️", title: "Case बनाओ", desc: "Court, opposite party, filing date — सब enter करो।" },
+  { step: "04", icon: "📋", title: "हर पेशी के बाद", desc: "Notes और अगली तारीख — 30 seconds में।" },
 ];
 
 export default function LegalPage() {
@@ -117,7 +117,6 @@ export default function LegalPage() {
           border-radius: 999px;
           color: #aaa;
         }
-        .num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: #c9a84c; line-height: 1; }
       `}</style>
 
       {/* Top Bar */}
@@ -153,43 +152,25 @@ export default function LegalPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up d3">
             <a href={LEGAL_PWA_URL} target="_blank" rel="noopener noreferrer"
-              className="cta-primary body-font text-base px-10 py-3.5 rounded-xl">
-              📱 मुफ्त आज़माओ — 7 दिन Free
+              className="cta-primary body-font text-base px-10 py-4 rounded-xl inline-block">
+              ⚖️ Free Trial शुरू करो — 7 दिन मुफ्त
             </a>
-            <a href={WINDOWS_EXE_URL} className="cta-secondary body-font text-sm px-8 py-3.5 rounded-xl">
-              🖥️ Windows पर Download करो
+            <a href={WINDOWS_EXE_URL}
+              className="cta-secondary body-font text-base px-10 py-4 rounded-xl inline-block">
+              💻 Windows App Download करो
             </a>
           </div>
-          <p className="body-font text-xs text-gray-600 mt-4 fade-up d4">कोई Credit Card नहीं · कोई Lock-in नहीं</p>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* Stats */}
-      <section className="body-font py-14 px-4 bg-[#0d0d12]">
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { n: "4 करोड़+", label: "District Courts में pending cases" },
-            { n: "62 लाख+", label: "High Courts में pending cases" },
-            { n: "90,000+", label: "Supreme Court में pending" },
-            { n: "₹0", label: "Extra WhatsApp cost" },
-          ].map((s, i) => (
-            <div key={i}>
-              <div className="num">{s.n}</div>
-              <div className="text-gray-500 text-xs mt-2">{s.label}</div>
-            </div>
-          ))}
+          <p className="body-font text-xs text-gray-600 mt-4 fade-up d4">कोई card नहीं · कोई commitment नहीं · 7 दिन बाद ₹4,999/साल</p>
         </div>
       </section>
 
       <div className="section-divider" />
 
       {/* Pain Points */}
-      <section className="py-16 px-4 bg-[#0a0a0f]">
+      <section className="py-14 px-4 bg-[#0d0d12]">
         <div className="max-w-4xl mx-auto">
-          <h2 className="hero-font text-3xl md:text-4xl text-center mb-2">वकील की असली <span className="gold">परेशानी</span></h2>
-          <p className="body-font text-center text-gray-500 text-sm mb-10">और हर परेशानी का हल</p>
+          <h2 className="hero-font text-3xl text-center mb-2">क्या यह <span className="gold">आपकी problem</span> है?</h2>
+          <p className="body-font text-center text-gray-500 text-sm mb-10">हर वकील की यही परेशानी है — Legal Pro का जवाब है</p>
           <div className="grid md:grid-cols-2 gap-4">
             {painPoints.map((p, i) => (
               <div key={i} className="card-dark rounded-2xl p-6 flex gap-5 items-start">
@@ -207,7 +188,7 @@ export default function LegalPage() {
       <div className="section-divider" />
 
       {/* Courts */}
-      <section className="py-12 px-4 bg-[#0d0d12]">
+      <section className="py-12 px-4 bg-[#0a0a0f]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="hero-font text-2xl mb-2">किन Courts के लिए?</h2>
           <p className="body-font text-gray-500 text-sm mb-8">हर court, हर tribunal — सब supported</p>
@@ -222,7 +203,7 @@ export default function LegalPage() {
       <div className="section-divider" />
 
       {/* Features */}
-      <section className="py-16 px-4 bg-[#0a0a0f]">
+      <section className="py-16 px-4 bg-[#0d0d12]">
         <div className="max-w-5xl mx-auto">
           <h2 className="hero-font text-3xl md:text-4xl text-center mb-2">सब कुछ जो एक <span className="gold">वकील को चाहिए</span></h2>
           <p className="body-font text-center text-gray-500 text-sm mb-10">और कुछ जो किसी और software में नहीं है</p>
@@ -241,7 +222,7 @@ export default function LegalPage() {
       <div className="section-divider" />
 
       {/* Comparison */}
-      <section className="py-14 px-4 bg-[#0d0d12]">
+      <section className="py-14 px-4 bg-[#0a0a0f]">
         <div className="max-w-3xl mx-auto">
           <h2 className="hero-font text-3xl text-center mb-2">पुराने Software से <span className="gold">तुलना</span></h2>
           <p className="body-font text-center text-gray-500 text-sm mb-8">जो पुराने software में नहीं — वो यहाँ है</p>
@@ -271,7 +252,7 @@ export default function LegalPage() {
       <div className="section-divider" />
 
       {/* How to */}
-      <section className="py-14 px-4 bg-[#0a0a0f]">
+      <section className="py-14 px-4 bg-[#0d0d12]">
         <div className="max-w-4xl mx-auto">
           <h2 className="hero-font text-3xl text-center mb-2">शुरू करो — <span className="gold">4 Steps में</span></h2>
           <p className="body-font text-center text-gray-500 text-sm mb-10">कोई training नहीं, कोई setup नहीं</p>
@@ -291,7 +272,7 @@ export default function LegalPage() {
       <div className="section-divider" />
 
       {/* Pricing */}
-      <section className="py-16 px-4 bg-[#0d0d12]">
+      <section className="py-16 px-4 bg-[#0a0a0f]">
         <div className="max-w-3xl mx-auto">
           <h2 className="hero-font text-3xl text-center mb-2"><span className="gold">मूल्य</span></h2>
           <p className="body-font text-center text-gray-500 text-sm mb-10">एक बार खरीदो — पूरा साल चलाओ</p>
@@ -301,16 +282,22 @@ export default function LegalPage() {
               <h3 className="hero-font text-lg mb-3 text-gray-300 mt-2">पहली बार</h3>
               <div className="hero-font text-5xl font-black gold mb-1">₹4,999</div>
               <p className="body-font text-gray-500 text-sm mb-6">एक बार · 1 साल included · Free Trial 7 दिन</p>
-              <a href="/payment?software=legal" className="cta-primary body-font block w-full py-3 rounded-xl text-center text-sm">
-                Free Trial शुरू करो →
+              <a href={LEGAL_PWA_URL} target="_blank" rel="noopener noreferrer"
+                className="cta-primary body-font block w-full py-3 rounded-xl text-center text-sm mb-3">
+                Free Trial शुरू करो
+              </a>
+              <a href="https://www.web-developer-kp.com/payment?software=legal"
+                className="cta-secondary body-font block w-full py-3 rounded-xl text-center text-sm">
+                Buy Now — Rs.4,999
               </a>
             </div>
             <div className="card-dark rounded-2xl p-7 text-center">
               <h3 className="hero-font text-lg mb-3 text-gray-300 mt-2">Renewal</h3>
               <div className="hero-font text-5xl font-black gold mb-1">₹1,999</div>
               <p className="body-font text-gray-500 text-sm mb-6">प्रति वर्ष · सभी features · Cloud backup</p>
-              <a href="/payment?software=legal" className="cta-secondary body-font block w-full py-3 rounded-xl text-center text-sm">
-                Renew करो →
+              <a href="https://www.web-developer-kp.com/payment?software=legal&plan=renewal"
+                className="cta-secondary body-font block w-full py-3 rounded-xl text-center text-sm">
+                Renew Now — Rs.1,999
               </a>
             </div>
           </div>
@@ -330,10 +317,16 @@ export default function LegalPage() {
             अब और कागज़ नहीं।<br /><span className="gold">Digital चलो।</span>
           </h2>
           <p className="body-font text-gray-400 text-sm mb-8">7 दिन मुफ्त — कोई card नहीं, कोई commitment नहीं।</p>
-          <a href={LEGAL_PWA_URL} target="_blank" rel="noopener noreferrer"
-            className="cta-primary body-font inline-block text-base px-12 py-4 rounded-xl">
-            ⚖️ अभी शुरू करो — Free है
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href={LEGAL_PWA_URL} target="_blank" rel="noopener noreferrer"
+              className="cta-primary body-font inline-block text-base px-12 py-4 rounded-xl">
+              ⚖️ अभी शुरू करो — Free है
+            </a>
+            <a href={WINDOWS_EXE_URL}
+              className="cta-secondary body-font inline-block text-base px-12 py-4 rounded-xl">
+              💻 Windows App Download करो
+            </a>
+          </div>
         </div>
       </section>
 
