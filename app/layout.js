@@ -27,7 +27,7 @@ export const metadata = {
   description:
     "Tally, Busy, Marg का data — Sales, Purchase, Outstanding, Inventory सब एक जगह। 7 दिन free trial, कोई card नहीं।",
   keywords:
-    "tally business intelligence software, magenta bi alternative, erp bridge tally, outstanding tracking, inventory monitoring, tally reports hindi, GST billing software",
+    "tally business intelligence software, erp bridge tally, outstanding tracking, inventory monitoring, tally reports hindi, GST billing software",
   authors: [{ name: "Kamta Prasad" }],
   creator: "Kamta Prasad",
   publisher: "Kamta Prasad",
@@ -47,7 +47,7 @@ export const metadata = {
     locale: "hi_IN",
     url: "https://www.web-developer-kp.com",
     siteName: "Nishant ERPBridge",
-    title: "Nishant ERPBridge — Tally BI | Magenta से सस्ता",
+    title: "Nishant ERPBridge — Tally BI | सबसे सस्ता",
     description:
       "Tally का data — Outstanding, Inventory, Purchase Insights एक जगह। ₹11,999 एक बार। Magenta BI ₹36,000/year लेता है।",
     images: [
