@@ -1,7 +1,7 @@
 "use client";
 
 const RATION_PWA_URL = "https://ration-pro.vercel.app";
-const RATION_EXE_URL = "#";
+const RATION_EXE_URL = "https://pub-f7a0759dcf83428bad5a877e80483613.r2.dev/Kirana%20Shop%20Setup%200.1.0.exe";
 
 const painPoints = [
   { icon: "😤", pain: "उधारी याद नहीं रहती?", fix: "हर ग्राहक का उधार — नाम के साथ, पैसे कब मिले — सब दर्ज" },
