@@ -16,12 +16,12 @@ const खासियत = [
 ];
 
 const कैसेचलाएं = [
-  { नंबर: "१", आइकन: "⬇️", काम: "सॉफ्टवेयर डाउनलोड करो", विवरण: "नीचे दिए डाउनलोड बटन से फाइल डाउनलोड करो। इंस्टॉल करो — बस।" },
-  { नंबर: "२", आइकन: "🔐", काम: "गूगल से लॉगिन करो", विवरण: "अपने जीमेल खाते से लॉगिन करो। कोई नया खाता नहीं बनाना।" },
-  { नंबर: "३", आइकन: "💎", काम: "कच्चा माल दर्ज करो", विवरण: "कच्चा हीरा कहाँ से आया, कितना, क्या भाव था — पहली एंट्री करो।" },
-  { नंबर: "४", आइकन: "👨‍🏭", काम: "कारीगर को लॉट दो", विवरण: "लॉट चुनो, कारीगर चुनो, वजन डालो — काम सौंप दिया।" },
-  { नंबर: "५", आइकन: "✨", काम: "पॉलिश वापस लो", विवरण: "कारीगर ने काम करके दे दिया — वजन जाँचो, मजदूरी अपने आप बनेगी।" },
-  { नंबर: "६", आइकन: "📒", काम: "पार्टी को बेचो", विवरण: "पॉलिश हीरे पार्टी को बेचो, बिल बनाओ, भुगतान का हिसाब रखो।" },
+  { नंबर: "1", आइकन: "⬇️", काम: "सॉफ्टवेयर डाउनलोड करो", विवरण: "नीचे दिए डाउनलोड बटन से फाइल डाउनलोड करो। इंस्टॉल करो — बस।" },
+  { नंबर: "2", आइकन: "🔐", काम: "गूगल से लॉगिन करो", विवरण: "अपने जीमेल खाते से लॉगिन करो। कोई नया खाता नहीं बनाना।" },
+  { नंबर: "3", आइकन: "💎", काम: "कच्चा माल दर्ज करो", विवरण: "कच्चा हीरा कहाँ से आया, कितना, क्या भाव था — पहली एंट्री करो।" },
+  { नंबर: "4", आइकन: "👨‍🏭", काम: "कारीगर को लॉट दो", विवरण: "लॉट चुनो, कारीगर चुनो, वजन डालो — काम सौंप दिया।" },
+  { नंबर: "5", आइकन: "✨", काम: "पॉलिश वापस लो", विवरण: "कारीगर ने काम करके दे दिया — वजन जाँचो, मजदूरी अपने आप बनेगी।" },
+  { नंबर: "6", आइकन: "📒", काम: "पार्टी को बेचो", विवरण: "पॉलिश हीरे पार्टी को बेचो, बिल बनाओ, भुगतान का हिसाब रखो।" },
 ];
 
 export default function HeeraPage() {
@@ -30,9 +30,9 @@ export default function HeeraPage() {
 
       {/* ऊपरी पट्टी */}
       <div className="bg-cyan-600 py-2 px-4 text-center text-base font-bold text-white">
-        📞 सम्पर्क करें: <a href="tel:+919415233816" className="underline">9415233816</a>
+        📞 सम्पर्क करें: <a href="tel:+919996865069" className="underline">9996865069</a>
         &nbsp;|&nbsp;
-        <a href="https://wa.me/919415233816" target="_blank" rel="noopener noreferrer" className="underline">💬 व्हाट्सएप</a>
+        <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="underline">💬 व्हाट्सएप</a>
       </div>
 
       {/* नेवबार */}
@@ -47,7 +47,7 @@ export default function HeeraPage() {
       <section className="bg-gradient-to-br from-cyan-700 via-cyan-600 to-teal-700 text-white py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <div className="inline-block bg-white/20 text-white text-base font-bold px-5 py-2 rounded-full mb-6">
-            🆓 ७ दिन बिल्कुल मुफ्त — कोई कार्ड नहीं चाहिए
+            🆓 7 दिन बिल्कुल मुफ्त — कोई कार्ड नहीं चाहिए
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
             💎 हीरा डेस्क
@@ -110,8 +110,8 @@ export default function HeeraPage() {
             <div className="rounded-2xl border-2 border-cyan-500 p-8 text-center shadow-lg relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-cyan-600 text-white text-sm font-bold px-4 py-1 rounded-full">नया खाता</div>
               <h3 className="text-xl font-bold mb-2 text-gray-700 mt-2">पहली बार</h3>
-              <div className="text-5xl font-extrabold text-cyan-600 mb-2">₹७,९९९</div>
-              <p className="text-gray-400 text-base mb-6">एक बार — १ साल शामिल</p>
+              <div className="text-5xl font-extrabold text-cyan-600 mb-2">₹5,500</div>
+              <p className="text-gray-400 text-base mb-6">एक बार — 1 साल शामिल</p>
               <a href={डाउनलोड_लिंक}
                 className="block w-full bg-cyan-600 text-white font-extrabold text-lg py-3 rounded-xl hover:bg-cyan-500 transition">
                 ⬇️ मुफ्त आज़माएं
@@ -119,9 +119,9 @@ export default function HeeraPage() {
             </div>
             <div className="rounded-2xl border-2 border-gray-200 p-8 text-center shadow-sm">
               <h3 className="text-xl font-bold mb-2 text-gray-700 mt-2">नवीनीकरण</h3>
-              <div className="text-5xl font-extrabold text-cyan-600 mb-2">₹२,९९९</div>
+              <div className="text-5xl font-extrabold text-cyan-600 mb-2">₹2,500</div>
               <p className="text-gray-400 text-base mb-6">प्रति वर्ष</p>
-              <a href="https://wa.me/919415233816"
+              <a href="https://wa.me/919996865069"
                 className="block w-full bg-cyan-600 text-white font-extrabold text-lg py-3 rounded-xl hover:bg-cyan-500 transition">
                 💬 व्हाट्सएप करें
               </a>
@@ -136,35 +136,35 @@ export default function HeeraPage() {
           <h2 className="text-3xl font-extrabold text-center mb-10 text-gray-800">📖 उपयोगकर्ता पुस्तिका</h2>
           <div className="space-y-6">
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">१. पहली बार कैसे शुरू करें?</h3>
-              <p className="text-gray-700 text-base leading-relaxed">ऊपर दिए डाउनलोड बटन से सॉफ्टवेयर डाउनलोड करें। फाइल खोलें — इंस्टॉल हो जाएगा। खुलेगा तो गूगल से लॉगिन का बटन दिखेगा। अपने जीमेल खाते से लॉगिन करें। पहली बार लॉगिन करने पर ७ दिन मुफ्त मिलेंगे।</p>
+              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">1. पहली बार कैसे शुरू करें?</h3>
+              <p className="text-gray-700 text-base leading-relaxed">ऊपर दिए डाउनलोड बटन से सॉफ्टवेयर डाउनलोड करें। फाइल खोलें — इंस्टॉल हो जाएगा। खुलेगा तो गूगल से लॉगिन का बटन दिखेगा। अपने जीमेल खाते से लॉगिन करें। पहली बार लॉगिन करने पर 7 दिन मुफ्त मिलेंगे।</p>
             </div>
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">२. कच्चा माल कैसे दर्ज करें?</h3>
+              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">2. कच्चा माल कैसे दर्ज करें?</h3>
               <p className="text-gray-700 text-base leading-relaxed">बाईं तरफ मेनू में "लॉट" पर क्लिक करें। "नया लॉट जोड़ें" बटन दबाएं। लॉट नंबर, वजन (कैरेट में), गुणवत्ता और आकार भरें। सेव करें — लॉट तैयार है।</p>
             </div>
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">३. कारीगर कैसे जोड़ें?</h3>
+              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">3. कारीगर कैसे जोड़ें?</h3>
               <p className="text-gray-700 text-base leading-relaxed">मेनू में "कारीगर" पर क्लिक करें। "नया कारीगर" बटन दबाएं। कारीगर का नाम, मोबाइल नंबर और काम का प्रकार (आरी/घिसाई/पॉलिश) भरें। सेव करें।</p>
             </div>
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">४. कारीगर को काम कैसे सौंपें?</h3>
+              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">4. कारीगर को काम कैसे सौंपें?</h3>
               <p className="text-gray-700 text-base leading-relaxed">मेनू में "काम सौंपें" पर क्लिक करें। कारीगर चुनें, लॉट चुनें, वजन डालें। सेव करें — कारीगर के खाते में दर्ज हो जाएगा।</p>
             </div>
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">५. काम वापस आने पर क्या करें?</h3>
-              <p className="text-gray-700 text-base leading-relaxed">"काम सौंपें" में जाएं, वो एंट्री खोलें जो पेंडिंग है। वापस आया वजन डालें। मजदूरी अपने आप बन जाएगी। महीने के अंत में पर्ची भी छाप सकते हैं।</p>
+              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">5. काम वापस आने पर क्या करें?</h3>
+              <p className="text-gray-700 text-base leading-relaxed">"काम सौंपें" में जाएं, वो एंट्री खोलें जो लंबित है। वापस आया वजन डालें। मजदूरी अपने आप बन जाएगी। महीने के अंत में पर्ची भी छाप सकते हैं।</p>
             </div>
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">६. बिक्री कैसे दर्ज करें?</h3>
+              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">6. बिक्री कैसे दर्ज करें?</h3>
               <p className="text-gray-700 text-base leading-relaxed">मेनू में "बिक्री" पर क्लिक करें। पार्टी का नाम, वजन, राशि और तारीख भरें। सेव करें — पार्टी के बही-खाते में दर्ज हो जाएगा। भुगतान आने पर अपडेट करें।</p>
             </div>
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">७. रिपोर्ट कैसे देखें?</h3>
+              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">7. रिपोर्ट कैसे देखें?</h3>
               <p className="text-gray-700 text-base leading-relaxed">मेनू में "रिपोर्ट" पर क्लिक करें। महीना चुनें — कुल खरीद, कुल बिक्री, कारीगरों की मजदूरी और नफा-नुकसान सब एक पेज पर दिखेगा।</p>
             </div>
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">८. डेटा कहाँ सेव होता है?</h3>
+              <h3 className="text-xl font-extrabold text-cyan-600 mb-3">8. डेटा कहाँ सेव होता है?</h3>
               <p className="text-gray-700 text-base leading-relaxed">सारा डेटा क्लाउड पर सेव होता है — आपके कम्प्यूटर में नहीं। इसलिए कम्प्यूटर खराब हो जाए तो भी डेटा सुरक्षित रहेगा। कहीं से भी खोल सकते हैं।</p>
             </div>
           </div>
@@ -175,12 +175,12 @@ export default function HeeraPage() {
       <section className="py-16 px-4 bg-cyan-600 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-extrabold mb-4">अभी शुरू करें — मुफ्त</h2>
-          <p className="text-xl mb-8 text-cyan-100">७ दिन मुफ्त आज़माएं। कोई कार्ड नहीं। कोई झंझट नहीं।</p>
+          <p className="text-xl mb-8 text-cyan-100">7 दिन मुफ्त आज़माएं। कोई कार्ड नहीं। कोई झंझट नहीं।</p>
           <a href={डाउनलोड_लिंक}
             className="inline-block bg-white text-cyan-700 font-extrabold text-2xl px-10 py-4 rounded-2xl shadow-xl hover:bg-cyan-50 transition">
             ⬇️ अभी डाउनलोड करें
           </a>
-          <p className="text-base text-cyan-200 mt-4">कोई सवाल हो तो व्हाट्सएप करें: <a href="https://wa.me/919415233816" className="underline font-bold">9415233816</a></p>
+          <p className="text-base text-cyan-200 mt-4">कोई सवाल हो तो व्हाट्सएप करें: <a href="https://wa.me/919996865069" className="underline font-bold">9996865069</a></p>
         </div>
       </section>
 
