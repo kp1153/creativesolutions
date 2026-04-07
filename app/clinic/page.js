@@ -1,6 +1,6 @@
 "use client";
 
-const CLINIC_PWA_URL = "https://medical-saas-32pt.vercel.app";
+const CLINIC_PWA_URL = "https://medical-saas-32pt.vercel.app/login";
 const CLINIC_EXE_URL = "https://pub-70d93acc97f04394bd956a27e7e6b849.r2.dev/ClinicOS%20Setup%201.0.0.exe";
 
 const features = [
