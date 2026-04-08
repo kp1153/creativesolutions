@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 
 const HARDWARE_EXE_URL = "https://pub-36b3216d45d24541a20e55f6b3f26d07.r2.dev/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%A4%20Setup%200.1.0.exe";
 const HARDWARE_PWA_URL = "https://nishant-ten.vercel.app";
@@ -36,8 +37,20 @@ const whyUs = [
 ];
 
 export default function Home() {
+  const [views, setViews] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/views").then(r => r.json()).then(d => setViews(d.views));
+  }, []);
+
   return (
     <main className="min-h-screen bg-zinc-900 text-white font-sans">
+
+      {views && (
+        <div className="bg-zinc-800 text-center py-2 px-4 text-xs text-amber-400 font-semibold">
+          👁️ अब तक {Number(views).toLocaleString("hi-IN")} बार देखा गया
+        </div>
+      )}
 
       {/* Hero */}
       <section className="py-16 px-4 text-center bg-gradient-to-b from-zinc-800 to-zinc-900">
