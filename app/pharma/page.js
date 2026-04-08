@@ -4,30 +4,30 @@ const PHARMA_PWA_URL = "https://pharmacy-bay.vercel.app";
 const WINDOWS_EXE_URL = "https://pub-5c3d94458d0849a39a4599f634afa58f.r2.dev/ClinicOS%20Setup%201.0.0.exe";
 
 const features = [
-  { hi: "जीएसटी-मोबाइल ऑटो मैपिंग — जीएसटीआईएन डालो, सब भरा", en: "Enter GSTIN once — name, address & phone auto-filled instantly" },
-  { hi: "दवाई स्टॉक — बैच और एक्सपायरी के साथ", en: "Track every medicine by batch number, expiry date & rack location" },
-  { hi: "एक्सपायरी अलर्ट — ३०/६०/९० दिन पहले", en: "Alerts before medicines expire — never sell outdated stock again" },
-  { hi: "जीएसटी बिलिंग — ०%, ५%, १२% स्वचालित", en: "GST auto-calculated on every bill — GSTR-1 ready monthly export" },
-  { hi: "पर्चा बिलिंग — डॉक्टर का पर्चा, सीधे बिल", en: "Prescription-linked billing — medicines added from doctor's slip" },
-  { hi: "खरीद एंट्री — वितरक से माल, सब दर्ज", en: "Record distributor purchases with batch, expiry & price details" },
-  { hi: "उधारी खाता — ग्राहक का हिसाब", en: "Customer credit ledger with outstanding balance tracking" },
-  { hi: "वितरक प्रबंधन — किससे क्या, कितना बाकी", en: "Distributor-wise purchase history with pending payment tracking" },
-  { hi: "बिक्री वापसी — क्रेडिट नोट स्वचालित", en: "Sales return with automatic credit note & stock adjustment" },
-  { hi: "क्लाउड डेटा — फोन टूटे तो भी सुरक्षित", en: "Cloud-backed data — no loss even if device is damaged or lost" },
+  "जीएसटी-मोबाइल ऑटो मैपिंग — जीएसटीआईएन डालो, नाम, पता, फोन सब अपने आप भरेगा",
+  "दवाई स्टॉक — बैच नंबर और एक्सपायरी के साथ",
+  "एक्सपायरी अलर्ट — ३०, ६०, ९० दिन पहले चेतावनी",
+  "जीएसटी बिलिंग — ०%, ५%, १२% अपने आप लगेगा",
+  "पर्चा बिलिंग — डॉक्टर का पर्चा, सीधे बिल बनाओ",
+  "खरीद एंट्री — वितरक से माल आए, सब दर्ज करो",
+  "उधारी खाता — ग्राहक का पूरा हिसाब",
+  "वितरक प्रबंधन — किससे क्या खरीदा, कितना बाकी",
+  "बिक्री वापसी — क्रेडिट नोट अपने आप बनेगा",
+  "क्लाउड डेटा — फोन टूटे या खो जाए, डेटा सुरक्षित",
 ];
 
 const howTo = [
-  { step: "०१", hi: "गूगल से लॉगिन करो", en: "One-click Google login", icon: "🔐" },
-  { step: "०२", hi: "दवाइयाँ जोड़ो — बैच, दर, एक्सपायरी", en: "Add medicines with batch number, expiry date & MRP", icon: "💊" },
-  { step: "०३", hi: "बिल बनाओ → जीएसटी स्वचालित", en: "Create bill → select medicines → GST auto-calculated", icon: "🧾" },
-  { step: "०४", hi: "रिपोर्ट देखो — स्टॉक, मुनाफा", en: "View stock status, expiry alerts & monthly reports", icon: "📊" },
+  { step: "०१", hi: "गूगल से लॉगिन करो", icon: "🔐" },
+  { step: "०२", hi: "दवाइयाँ जोड़ो — बैच, दर, एक्सपायरी", icon: "💊" },
+  { step: "०३", hi: "बिल बनाओ — जीएसटी अपने आप लगेगा", icon: "🧾" },
+  { step: "०४", hi: "रिपोर्ट देखो — स्टॉक और मुनाफा", icon: "📊" },
 ];
 
 const compare = [
   { label: "जीएसटी-मोबाइल ऑटो मैपिंग", them: false, us: true },
   { label: "क्लाउड बैकअप", them: false, us: true },
   { label: "बैच-वाइज़ स्टॉक", them: false, us: true },
-  { label: "मोबाइल पीडब्ल्यूए", them: false, us: true },
+  { label: "मोबाइल पर चलेगा", them: false, us: true },
   { label: "जीएसटी बिलिंग", them: true, us: true },
   { label: "एक्सपायरी अलर्ट", them: true, us: true },
   { label: "खरीद एंट्री", them: true, us: true },
@@ -47,7 +47,7 @@ export default function PharmaPage() {
       <nav className="sticky top-0 z-50 bg-gray-900 border-b border-gray-800 px-4 py-3">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <a href="/" className="font-extrabold text-white text-xl">🖥️ <span className="text-amber-400">निशांत</span> सॉफ्टवेयर</a>
-          <a href="/" className="text-sm text-gray-400 hover:text-white border border-gray-700 px-3 py-1.5 rounded-lg transition">← सभी उत्पाद</a>
+          <a href="/" className="text-base text-gray-400 hover:text-white border border-gray-700 px-3 py-1.5 rounded-lg transition">← सभी उत्पाद</a>
         </div>
       </nav>
 
@@ -92,10 +92,10 @@ export default function PharmaPage() {
 
       <section className="py-8 px-4 bg-yellow-50 border-b-4 border-yellow-400">
         <div className="max-w-3xl mx-auto bg-white rounded-2xl border-2 border-yellow-400 p-6 shadow">
-          <p className="text-xl font-extrabold text-gray-800 mb-3">⚠️ Windows पर इंस्टॉल करते समय यह संदेश आ सकता है</p>
+          <p className="text-xl font-extrabold text-gray-800 mb-3">⚠️ Windows पर इंस्टॉल करते समय रुकावट आ सकती है</p>
           <p className="text-lg text-gray-600 mb-4">Windows 11 में <strong>Smart App Control</strong> नाम की सुरक्षा होती है जो नए सॉफ्टवेयर को रोकती है। घबराएं नहीं — यह सॉफ्टवेयर पूरी तरह सुरक्षित है।</p>
-          <p className="text-lg font-bold text-gray-800 mb-2">इस तरह इंस्टॉल करें:</p>
-          <ol className="text-lg text-gray-600 space-y-2 list-none">
+          <p className="text-lg font-bold text-gray-800 mb-3">इस तरह ठीक करें:</p>
+          <ol className="text-lg text-gray-600 space-y-2">
             <li>१. Start menu में <strong>Windows Security</strong> खोजें और खोलें</li>
             <li>२. <strong>App &amp; browser control</strong> पर क्लिक करें</li>
             <li>३. <strong>Smart App Control</strong> को <strong>Off</strong> करें</li>
@@ -139,8 +139,7 @@ export default function PharmaPage() {
           <div className="grid md:grid-cols-2 gap-4">
             {features.map((f, i) => (
               <div key={i} className="bg-gray-800 border border-red-500/20 rounded-xl px-5 py-4">
-                <div className="text-red-400 font-semibold text-base mb-1">✦ {f.hi}</div>
-                <div className="text-gray-400 text-sm">{f.en}</div>
+                <div className="text-red-400 font-semibold text-lg">✦ {f}</div>
               </div>
             ))}
           </div>
@@ -154,9 +153,8 @@ export default function PharmaPage() {
             {howTo.map((h) => (
               <div key={h.step} className="bg-white border border-red-200 rounded-xl p-4 text-center shadow-sm">
                 <div className="text-3xl mb-2">{h.icon}</div>
-                <div className="text-sm text-gray-400 font-bold mb-1">चरण {h.step}</div>
-                <div className="font-bold text-gray-800 text-base mb-1">{h.hi}</div>
-                <div className="text-sm text-gray-500">{h.en}</div>
+                <div className="text-base text-gray-400 font-bold mb-1">चरण {h.step}</div>
+                <div className="font-bold text-gray-800 text-base">{h.hi}</div>
               </div>
             ))}
           </div>
@@ -168,10 +166,10 @@ export default function PharmaPage() {
           <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">मूल्य</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-2xl border-2 border-red-500 p-6 text-center shadow-lg relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-red-600 text-white text-sm font-bold px-4 py-1 rounded-full">नया खाता</div>
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-red-600 text-white text-base font-bold px-4 py-1 rounded-full">नया खाता</div>
               <h3 className="text-xl font-bold mb-1 text-gray-700 mt-2">पहली बार</h3>
               <div className="text-5xl font-extrabold text-red-600 mb-1">₹4,999</div>
-              <p className="text-gray-400 text-base mb-4">एक बार — 1 साल शामिल</p>
+              <p className="text-gray-400 text-base mb-4">एक बार — १ साल शामिल</p>
               <a href="/payment?software=pharma" className="block w-full bg-red-600 text-white font-bold py-3 rounded-xl hover:bg-red-500 transition text-lg">मुफ्त परीक्षण शुरू करो</a>
             </div>
             <div className="rounded-2xl border-2 border-gray-200 p-6 text-center shadow-sm">
