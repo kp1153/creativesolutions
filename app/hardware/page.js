@@ -1,7 +1,7 @@
 "use client";
 
 const HARDWARE_EXE_URL = "https://pub-36b3216d45d24541a20e55f6b3f26d07.r2.dev/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%A4%20Setup%200.1.0.exe";
-const HARDWARE_PWA_URL = "https://nishant-ten.vercel.app";
+const HARDWARE_PWA_URL = "https://hardware.nishantsoftwares.in";
 
 const features = [
   { hi: "बिल बनाओ — दुकान का बिल झटपट बनेगा, छापो या व्हाट्सएप पर भेजो" },
