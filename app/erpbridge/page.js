@@ -95,7 +95,7 @@ const syncSteps = [
     hi: "Tally में Server Enable करें",
     en: "Enable XML Server in TallyPrime — one time setting",
     detail:
-      "Tally Prime खोलें → F1: Help → Settings → CoNnectivity → Client/Server configuration → TallyPrime acts as: Server → Y से save करें → Tally restart करें।",
+      "Tally Prime खोलें → F1: Help → Settings → CoNnectivity → Client/Server configuration → TallyPrime Edit Log acts as: Server → Y से save करें → Tally restart करें।",
   },
   {
     step: "03",
@@ -118,7 +118,7 @@ const syncSteps = [
     hi: "Sync Now दबाएं",
     en: "Click Sync Now — data will appear on dashboard",
     detail:
-      "Agent icon → Sync Now → 'Sync complete. X records inserted.' दिखे तो सफल। अब हर 15 मिनट में auto-sync होगा।",
+      "Agent icon → Sync Now → 'Sync complete. X records inserted.' दिखे तो सफल। Agent चालू वित्तीय वर्ष (1 अप्रैल से 31 मार्च) का data sync करेगा। अब हर 15 मिनट में auto-sync होगा।",
   },
 ];
 
