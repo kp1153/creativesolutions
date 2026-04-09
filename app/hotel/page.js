@@ -44,11 +44,11 @@ export default function HotelPage() {
         </p>
         <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
           <div className="bg-gray-800 rounded-2xl px-5 py-3 text-center">
-            <p className="text-2xl font-extrabold text-pink-400">₹६,९९९</p>
+            <p className="text-2xl font-extrabold text-pink-400">₹4,999</p>
             <p className="text-gray-500 text-xs mt-1">पहले साल</p>
           </div>
           <div className="bg-gray-800 rounded-2xl px-5 py-3 text-center">
-            <p className="text-2xl font-extrabold text-green-400">₹२,४९९</p>
+            <p className="text-2xl font-extrabold text-green-400">₹2,500</p>
             <p className="text-gray-500 text-xs mt-1">नवीनीकरण / साल</p>
           </div>
           <div className="bg-gray-800 rounded-2xl px-5 py-3 text-center">
