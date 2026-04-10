@@ -72,13 +72,19 @@ export default function PharmaPage() {
           </p>
           <div className="flex flex-col items-center gap-4">
             <a
-              href={PHARMA_PWA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-white text-red-700 font-extrabold text-2xl px-10 py-4 rounded-2xl shadow-xl hover:bg-amber-50 transition"
-            >
-              📱 मुफ्त आज़माओ — ऐप खोलो
-            </a>
+             <div className="flex flex-col items-center">
+  <a
+    href={PHARMA_PWA_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-white text-red-700 font-extrabold text-2xl px-10 py-4 rounded-2xl shadow-xl hover:bg-amber-50 transition"
+  >
+    📱 Android पर Install करें
+  </a>
+  <p className="text-sm mt-1 text-red-200/70">
+    👉 Chrome menu ⋮ → Add to Home Screen
+  </p>
+</div>
             <a
               href={WINDOWS_EXE_URL}
               className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold text-xl px-8 py-3 rounded-2xl hover:bg-white/25 transition"
