@@ -67,24 +67,24 @@ export default function ClinicPage() {
             एक बार सेट करो, रोज़ काम आएगा।
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-  <div className="flex flex-col items-center gap-1">
-    <a
-      href={CLINIC_PWA_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center justify-center gap-2 bg-white text-teal-700 font-bold text-lg px-8 py-3.5 rounded-2xl shadow-lg hover:bg-teal-50 transition active:scale-95"
-    >
-      📱 Android पर Install करें
-    </a>
-    <p className="text-xs text-teal-200/60">👉 Chrome menu ⋮ → Add to Home Screen</p>
-  </div>
-  <a
-    href={CLINIC_EXE_URL}
-    className="inline-flex items-center justify-center gap-2 bg-teal-600 border-2 border-white/40 text-white font-bold text-lg px-8 py-3.5 rounded-2xl shadow-lg hover:bg-teal-500 transition active:scale-95"
-  >
-    💻 विंडोज़ पर डाउनलोड करें
-  </a>
-</div>
+            <div className="flex flex-col items-center gap-1">
+              <a
+                href={CLINIC_PWA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-white text-teal-700 font-bold text-lg px-8 py-3.5 rounded-2xl shadow-lg hover:bg-teal-50 transition active:scale-95"
+              >
+                📱 Android पर Install करें
+              </a>
+              <p className="text-xs text-teal-200/60">👉 Chrome menu ⋮ → Add to Home Screen</p>
+            </div>
+            <a
+              href={CLINIC_EXE_URL}
+              className="inline-flex items-center justify-center gap-2 bg-teal-600 border-2 border-white/40 text-white font-bold text-lg px-8 py-3.5 rounded-2xl shadow-lg hover:bg-teal-500 transition active:scale-95"
+            >
+              💻 विंडोज़ पर डाउनलोड करें
+            </a>
+          </div>
         </div>
       </section>
 
@@ -131,7 +131,7 @@ export default function ClinicPage() {
             कैसे काम करता है?
           </h2>
           <p className="text-center text-gray-400 text-base mb-10">
-            शुरू से अंत तक — बस ६ कदम
+             शुरू से अंत तक — बस ६ कदम
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
             {howTo.map((h, i) => (
@@ -217,18 +217,17 @@ export default function ClinicPage() {
           <h2 className="text-2xl font-extrabold mb-2">आज ही शुरू करें — बिल्कुल मुफ्त</h2>
           <p className="text-teal-200 mb-6 text-base">७ दिन पूरी तरह मुफ्त — कोई कार्ड नहीं, कोई वादा नहीं</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-            <a
-              <div className="flex flex-col items-center gap-1">
-  <a
-    href={CLINIC_PWA_URL}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-white text-teal-700 font-bold px-8 py-3 rounded-2xl hover:bg-teal-50 transition text-base"
-  >
-    📱 Android पर Install करें
-  </a>
-  <p className="text-xs text-teal-200/60">👉 Chrome menu ⋮ → Add to Home Screen</p>
-</div>
+            <div className="flex flex-col items-center gap-1">
+              <a
+                href={CLINIC_PWA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-teal-700 font-bold px-8 py-3 rounded-2xl hover:bg-teal-50 transition text-base"
+              >
+                📱 Android पर Install करें
+              </a>
+              <p className="text-xs text-teal-200/60">👉 Chrome menu ⋮ → Add to Home Screen</p>
+            </div>
             <a
               href={CLINIC_EXE_URL}
               className="bg-teal-600 border-2 border-white/40 text-white font-bold px-8 py-3 rounded-2xl hover:bg-teal-500 transition text-base"
