@@ -1,6 +1,7 @@
 "use client";
 const RATION_PWA_URL = "https://ration.nishantsoftwares.in";
-const RATION_EXE_URL = "https://pub-f7a0759dcf83428bad5a877e80483613.r2.dev/Kirana%20Shop%20Setup%200.1.0.exe";
+const RATION_EXE_URL =
+  "https://pub-f7a0759dcf83428bad5a877e80483613.r2.dev/Kirana%20Shop%20Setup%200.1.0.exe";
 const painPoints = [
   {
     icon: "😤",
@@ -257,12 +258,40 @@ export default function RationPage() {
               marginBottom: "32px",
             }}
           >
-            <a href="https://ration.nishantsoftwares.in/login" className="btn-primary">
+            <a
+              href="https://ration.nishantsoftwares.in/login"
+              className="btn-primary"
+            >
               🏪 Free Trial शुरू करो — 7 दिन
             </a>
             <a href={RATION_EXE_URL} className="btn-secondary">
               💻 Windows App Download
             </a>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <a
+                href={RATION_PWA_URL}
+                className="btn-secondary"
+                style={{ background: "#16a34a", color: "#fff", border: "none" }}
+              >
+                📱 Mobile पर Install करें
+              </a>
+              <p
+                style={{
+                  fontSize: "12px",
+                  color: "#78716c",
+                  marginTop: "4px",
+                  fontWeight: "600",
+                }}
+              >
+                👉 Chrome menu ⋮ → Add to Home Screen
+              </p>
+            </div>
           </div>
           <p style={{ color: "#78716c", fontSize: "14px", fontWeight: "600" }}>
             ✅ कोई card नहीं &nbsp;·&nbsp; ✅ कोई commitment नहीं &nbsp;·&nbsp;
