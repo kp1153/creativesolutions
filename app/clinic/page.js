@@ -67,24 +67,24 @@ export default function ClinicPage() {
             एक बार सेट करो, रोज़ काम आएगा।
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href={CLINIC_PWA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-white text-teal-700 font-bold text-lg px-8 py-3.5 rounded-2xl shadow-lg hover:bg-teal-50 transition active:scale-95"
-            >
-              📱 मुफ्त में आज़माएं
-            </a>
-            <a
-              href={CLINIC_EXE_URL}
-              className="inline-flex items-center justify-center gap-2 bg-teal-600 border-2 border-white/40 text-white font-bold text-lg px-8 py-3.5 rounded-2xl shadow-lg hover:bg-teal-500 transition active:scale-95"
-            >
-              💻 विंडोज़ पर डाउनलोड करें
-            </a>
-          </div>
-          <p className="text-sm text-teal-200/60 mt-3">
-            मोबाइल पर: Chrome मेनू ⋮ → होम स्क्रीन पर जोड़ें &nbsp;|&nbsp; विंडोज़: सेटअप फाइल चलाओ
-          </p>
+  <div className="flex flex-col items-center gap-1">
+    <a
+      href={CLINIC_PWA_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center gap-2 bg-white text-teal-700 font-bold text-lg px-8 py-3.5 rounded-2xl shadow-lg hover:bg-teal-50 transition active:scale-95"
+    >
+      📱 Android पर Install करें
+    </a>
+    <p className="text-xs text-teal-200/60">👉 Chrome menu ⋮ → Add to Home Screen</p>
+  </div>
+  <a
+    href={CLINIC_EXE_URL}
+    className="inline-flex items-center justify-center gap-2 bg-teal-600 border-2 border-white/40 text-white font-bold text-lg px-8 py-3.5 rounded-2xl shadow-lg hover:bg-teal-500 transition active:scale-95"
+  >
+    💻 विंडोज़ पर डाउनलोड करें
+  </a>
+</div>
         </div>
       </section>
 
@@ -218,13 +218,17 @@ export default function ClinicPage() {
           <p className="text-teal-200 mb-6 text-base">७ दिन पूरी तरह मुफ्त — कोई कार्ड नहीं, कोई वादा नहीं</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
             <a
-              href={CLINIC_PWA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-teal-700 font-bold px-8 py-3 rounded-2xl hover:bg-teal-50 transition text-base"
-            >
-              📱 मुफ्त में खोलें
-            </a>
+              <div className="flex flex-col items-center gap-1">
+  <a
+    href={CLINIC_PWA_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-white text-teal-700 font-bold px-8 py-3 rounded-2xl hover:bg-teal-50 transition text-base"
+  >
+    📱 Android पर Install करें
+  </a>
+  <p className="text-xs text-teal-200/60">👉 Chrome menu ⋮ → Add to Home Screen</p>
+</div>
             <a
               href={CLINIC_EXE_URL}
               className="bg-teal-600 border-2 border-white/40 text-white font-bold px-8 py-3 rounded-2xl hover:bg-teal-500 transition text-base"
