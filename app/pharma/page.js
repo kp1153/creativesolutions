@@ -71,20 +71,19 @@ export default function PharmaPage() {
             जीएसटी ऑटो मैपिंग · क्लाउड बैकअप · बैच-वाइज़ स्टॉक · मोबाइल और डेस्कटॉप दोनों
           </p>
           <div className="flex flex-col items-center gap-4">
-            <a
-             <div className="flex flex-col items-center">
-  <a
-    href={PHARMA_PWA_URL}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block bg-white text-red-700 font-extrabold text-2xl px-10 py-4 rounded-2xl shadow-xl hover:bg-amber-50 transition"
-  >
-    📱 Android पर Install करें
-  </a>
-  <p className="text-sm mt-1 text-red-200/70">
-    👉 Chrome menu ⋮ → Add to Home Screen
-  </p>
-</div>
+            <div className="flex flex-col items-center">
+              <a
+                href={PHARMA_PWA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-red-700 font-extrabold text-2xl px-10 py-4 rounded-2xl shadow-xl hover:bg-amber-50 transition"
+              >
+                📱 Android पर Install करें
+              </a>
+              <p className="text-sm mt-1 text-red-200/70">
+                👉 Chrome menu ⋮ → Add to Home Screen
+              </p>
+            </div>
             <a
               href={WINDOWS_EXE_URL}
               className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold text-xl px-8 py-3 rounded-2xl hover:bg-white/25 transition"
@@ -174,13 +173,13 @@ export default function PharmaPage() {
             <div className="rounded-2xl border-2 border-red-500 p-6 text-center shadow-lg relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-red-600 text-white text-base font-bold px-4 py-1 rounded-full">नया खाता</div>
               <h3 className="text-xl font-bold mb-1 text-gray-700 mt-2">पहली बार</h3>
-              <div className="text-5xl font-extrabold text-red-600 mb-1">₹4,999</div>
+              <div className="hf text-5xl font-extrabold text-red-600 mb-1">₹4,999</div>
               <p className="text-gray-400 text-base mb-4">एक बार — १ साल शामिल</p>
               <a href="/payment?software=pharma" className="block w-full bg-red-600 text-white font-bold py-3 rounded-xl hover:bg-red-500 transition text-lg">मुफ्त परीक्षण शुरू करो</a>
             </div>
             <div className="rounded-2xl border-2 border-gray-200 p-6 text-center shadow-sm">
               <h3 className="text-xl font-bold mb-1 text-gray-700 mt-2">नवीनीकरण</h3>
-              <div className="text-5xl font-extrabold text-red-600 mb-1">₹2,500</div>
+              <div className="hf text-5xl font-extrabold text-red-600 mb-1">₹2,500</div>
               <p className="text-gray-400 text-base mb-4">प्रति वर्ष</p>
               <a href="/payment?software=pharma" className="block w-full bg-red-600 text-white font-bold py-3 rounded-xl hover:bg-red-500 transition text-lg">अभी नवीनीकरण करो</a>
             </div>
