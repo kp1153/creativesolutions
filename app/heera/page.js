@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 const डाउनलोड_लिंक =
-  "https://pub-31ce429b28bc4ce8bf56e0a2af375815.r2.dev/Heera%20Desk%200.1.0.exe";
+  "https://pub-31ce429b28bc4ce8bf56e0a2af375815.r2.dev/Heera%20Desk%20Setup%200.1.0.exe";
 const खासियत = [
   {
     आइकन: "💎",
@@ -206,6 +206,19 @@ export default function HeeraPage() {
           >
             ⬇️ अभी डाउनलोड करें — मुफ्त
           </a>
+          <div className="flex flex-col items-center mt-4 gap-1">
+            <a
+              href="https://heera.nishantsoftwares.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-green-500 hover:bg-green-400 text-white font-extrabold text-2xl px-10 py-4 rounded-2xl shadow-xl transition"
+            >
+              📱 Android पर Install करें
+            </a>
+            <p className="text-sm text-cyan-200/70">
+              👉 Chrome menu ⋮ → Add to Home Screen
+            </p>
+          </div>
           <p className="text-base text-cyan-200 mt-3">
             विंडोज़ कम्प्यूटर पर चलेगा • इंटरनेट ज़रूरी है
           </p>
