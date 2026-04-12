@@ -296,7 +296,7 @@ export default function PharmaPage() {
             <h3 className="text-2xl font-extrabold mb-2">❓ कोई परेशानी हो तो</h3>
             <p className="text-lg font-bold text-gray-300 mb-4">हम हर दिन सुबह १० बजे से शाम ७ बजे तक उपलब्ध हैं।</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="tel:+919996865069" className="bg-amber-500 text-white font-extrabold text-lg px-6 py-3 rounded-xl hover:bg-amber-400 transition">📞 ९९९६८६५०६९</a>
+              <a href="tel:+919996865069" className="bg-amber-500 text-white font-extrabold text-lg px-6 py-3 rounded-xl hover:bg-amber-400 transition">📞 9996865069/9519221202</a>
               <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-extrabold text-lg px-6 py-3 rounded-xl hover:bg-green-400 transition">💬 WhatsApp करें</a>
             </div>
           </div>
