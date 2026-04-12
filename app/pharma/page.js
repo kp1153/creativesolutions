@@ -1,6 +1,6 @@
 "use client";
 
-const PHARMA_PWA_URL = "https://pharmacy-bay.vercel.app";
+const PHARMA_PWA_URL = "https://pharma.nishantsoftwares.in";
 const WINDOWS_EXE_URL = "https://pub-5c3d94458d0849a39a4599f634afa58f.r2.dev/ClinicOS%20Setup%201.0.0.exe";
 
 const features = [
@@ -184,6 +184,123 @@ export default function PharmaPage() {
               <a href="/payment?software=pharma" className="block w-full bg-red-600 text-white font-bold py-3 rounded-xl hover:bg-red-500 transition text-lg">अभी नवीनीकरण करो</a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 bg-white border-t border-gray-200">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-extrabold text-center mb-2 text-gray-900">📖 उपयोगकर्ता पुस्तिका</h2>
+          <p className="text-center text-gray-500 text-lg mb-10">निशांत फार्मा प्रो — पूरा गाइड</p>
+
+          {/* Step 1 */}
+          <div className="mb-8 bg-red-50 rounded-2xl p-6 border border-red-100">
+            <h3 className="text-2xl font-extrabold text-red-700 mb-3">🔐 चरण १ — लॉगिन करें</h3>
+            <p className="text-lg font-bold text-gray-700 mb-2">पहली बार उपयोग करने पर:</p>
+            <ul className="space-y-2 text-lg text-gray-700">
+              <li className="font-bold">▸ सॉफ्टवेयर खोलें और <span className="text-red-600">Google से लॉगिन करें</span> बटन दबाएं।</li>
+              <li className="font-bold">▸ अपना Google खाता चुनें — लॉगिन हो जाएगा।</li>
+              <li className="font-bold">▸ पहली बार ७ दिन बिल्कुल मुफ्त — कोई कार्ड नहीं चाहिए।</li>
+            </ul>
+          </div>
+
+          {/* Step 2 */}
+          <div className="mb-8 bg-blue-50 rounded-2xl p-6 border border-blue-100">
+            <h3 className="text-2xl font-extrabold text-blue-700 mb-3">⚙️ चरण २ — सेटिंग भरें</h3>
+            <p className="text-lg font-bold text-gray-700 mb-2">सबसे पहले अपनी दुकान की जानकारी डालें:</p>
+            <ul className="space-y-2 text-lg text-gray-700">
+              <li className="font-bold">▸ Dashboard → Settings पर जाएं।</li>
+              <li className="font-bold">▸ <span className="text-blue-600">दुकान का नाम, मालिक का नाम, पता, फोन</span> भरें।</li>
+              <li className="font-bold">▸ GSTIN और Drug License Number डालें — यह बिल पर छपेगा।</li>
+              <li className="font-bold">▸ Save बटन दबाएं।</li>
+            </ul>
+          </div>
+
+          {/* Step 3 */}
+          <div className="mb-8 bg-green-50 rounded-2xl p-6 border border-green-100">
+            <h3 className="text-2xl font-extrabold text-green-700 mb-3">💊 चरण ३ — दवाइयाँ जोड़ें</h3>
+            <p className="text-lg font-bold text-gray-700 mb-2">स्टॉक में दवाइयाँ दर्ज करें:</p>
+            <ul className="space-y-2 text-lg text-gray-700">
+              <li className="font-bold">▸ Dashboard → Medicines → Add Medicine पर जाएं।</li>
+              <li className="font-bold">▸ <span className="text-green-600">दवाई का नाम, कंपनी, बैच नंबर, एक्सपायरी तारीख, MRP और स्टॉक</span> भरें।</li>
+              <li className="font-bold">▸ GST % चुनें — आमतौर पर दवाइयों पर ५% या १२% होता है।</li>
+              <li className="font-bold">▸ Rack नंबर डालें — ताकि दुकान में जल्दी मिले।</li>
+              <li className="font-bold">▸ Save करें।</li>
+            </ul>
+            <p className="text-base font-bold text-amber-700 mt-3">⚠️ Low Stock और Near Expiry की चेतावनी अपने आप आएगी।</p>
+          </div>
+
+          {/* Step 4 */}
+          <div className="mb-8 bg-amber-50 rounded-2xl p-6 border border-amber-100">
+            <h3 className="text-2xl font-extrabold text-amber-700 mb-3">📦 चरण ४ — खरीद दर्ज करें</h3>
+            <p className="text-lg font-bold text-gray-700 mb-2">वितरक से माल आने पर:</p>
+            <ul className="space-y-2 text-lg text-gray-700">
+              <li className="font-bold">▸ Dashboard → New Purchase पर जाएं।</li>
+              <li className="font-bold">▸ वितरक का नाम, इनवॉइस नंबर भरें।</li>
+              <li className="font-bold">▸ दवाई का नाम, बैच, एक्सपायरी, मात्रा, खरीद मूल्य और MRP डालें।</li>
+              <li className="font-bold">▸ Save करें — <span className="text-amber-600">स्टॉक अपने आप बढ़ जाएगा।</span></li>
+            </ul>
+          </div>
+
+          {/* Step 5 */}
+          <div className="mb-8 bg-purple-50 rounded-2xl p-6 border border-purple-100">
+            <h3 className="text-2xl font-extrabold text-purple-700 mb-3">🧾 चरण ५ — बिल बनाएं</h3>
+            <p className="text-lg font-bold text-gray-700 mb-2">ग्राहक को दवाई देते समय:</p>
+            <ul className="space-y-2 text-lg text-gray-700">
+              <li className="font-bold">▸ Dashboard → New Bill पर जाएं।</li>
+              <li className="font-bold">▸ मरीज़ का नाम और फोन नंबर डालें।</li>
+              <li className="font-bold">▸ दवाई का नाम टाइप करें — सूची अपने आप आएगी।</li>
+              <li className="font-bold">▸ मात्रा डालें — MRP और GST अपने आप लगेगा।</li>
+              <li className="font-bold">▸ Payment का तरीका चुनें — <span className="text-purple-600">Cash, UPI या Credit।</span></li>
+              <li className="font-bold">▸ Create Bill दबाएं — बिल बन जाएगा और स्टॉक कम हो जाएगा।</li>
+              <li className="font-bold">▸ WhatsApp बटन से बिल सीधे ग्राहक को भेजें।</li>
+            </ul>
+            <p className="text-base font-bold text-red-700 mt-3">⚠️ Schedule H/H1 दवाई होने पर डॉक्टर का नाम और पर्चा नंबर जरूरी है — अपने आप पूछेगा।</p>
+          </div>
+
+          {/* Step 6 */}
+          <div className="mb-8 bg-teal-50 rounded-2xl p-6 border border-teal-100">
+            <h3 className="text-2xl font-extrabold text-teal-700 mb-3">📋 चरण ६ — Promise Order</h3>
+            <p className="text-lg font-bold text-gray-700 mb-2">दवाई स्टॉक में नहीं है तो:</p>
+            <ul className="space-y-2 text-lg text-gray-700">
+              <li className="font-bold">▸ बिल बनाते समय अगर दवाई Out of Stock है तो <span className="text-teal-600">Promise Order बटन</span> दिखेगा।</li>
+              <li className="font-bold">▸ दबाने पर ग्राहक का नाम और दवाई का नाम save हो जाएगा।</li>
+              <li className="font-bold">▸ Dashboard → Promise Orders में pending list दिखेगी।</li>
+              <li className="font-bold">▸ स्टॉक आने पर Fulfilled + WhatsApp दबाएं — ग्राहक को अपने आप सूचना जाएगी।</li>
+            </ul>
+          </div>
+
+          {/* Step 7 */}
+          <div className="mb-8 bg-gray-50 rounded-2xl p-6 border border-gray-200">
+            <h3 className="text-2xl font-extrabold text-gray-700 mb-3">📊 चरण ७ — रिपोर्ट देखें</h3>
+            <ul className="space-y-2 text-lg text-gray-700">
+              <li className="font-bold">▸ Dashboard → Reports पर जाएं।</li>
+              <li className="font-bold">▸ <span className="text-gray-600">आज की बिक्री, महीने की बिक्री, उधारी</span> एक नज़र में दिखेगी।</li>
+              <li className="font-bold">▸ Top 10 सबसे ज़्यादा बिकने वाली दवाइयाँ देखें।</li>
+              <li className="font-bold">▸ Cash, UPI और Credit का अलग-अलग हिसाब मिलेगा।</li>
+            </ul>
+          </div>
+
+          {/* Step 8 */}
+          <div className="mb-8 bg-orange-50 rounded-2xl p-6 border border-orange-100">
+            <h3 className="text-2xl font-extrabold text-orange-700 mb-3">👤 चरण ८ — मरीज़ का रिकॉर्ड</h3>
+            <ul className="space-y-2 text-lg text-gray-700">
+              <li className="font-bold">▸ Dashboard → Patients → Add Patient से नया मरीज़ जोड़ें।</li>
+              <li className="font-bold">▸ मरीज़ की पूरी purchase history एक जगह दिखेगी।</li>
+              <li className="font-bold">▸ उधारी कितनी बाकी है — सीधे दिखेगा।</li>
+              <li className="font-bold">▸ <span className="text-orange-600">Send Refill Reminder</span> से WhatsApp पर दवाई लेने की याद दिलाएं।</li>
+            </ul>
+          </div>
+
+          {/* Help */}
+          <div className="bg-gray-900 text-white rounded-2xl p-6 text-center">
+            <h3 className="text-2xl font-extrabold mb-2">❓ कोई परेशानी हो तो</h3>
+            <p className="text-lg font-bold text-gray-300 mb-4">हम हर दिन सुबह १० बजे से शाम ७ बजे तक उपलब्ध हैं।</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a href="tel:+919996865069" className="bg-amber-500 text-white font-extrabold text-lg px-6 py-3 rounded-xl hover:bg-amber-400 transition">📞 ९९९६८६५०६९</a>
+              <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-extrabold text-lg px-6 py-3 rounded-xl hover:bg-green-400 transition">💬 WhatsApp करें</a>
+            </div>
+          </div>
+
         </div>
       </section>
 
