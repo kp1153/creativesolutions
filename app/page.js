@@ -11,6 +11,8 @@ const DENTAL_EXE_URL = "https://pub-2bb08b9a599048e48fa0e6a4a9f137bb.r2.dev/Nish
 const HOTEL_EXE_URL = "https://pub-f773dd480900429baad9123bdff7a15f.r2.dev/Nishant%20Hotel%20Pro%20Setup%200.1.0.exe";
 const CLINIC_EXE_URL = "https://pub-70d93acc97f04394bd956a27e7e6b849.r2.dev/ClinicOS%20Setup%201.0.0.exe";
 const CLINIC_PWA_URL = "https://medical-saas-32pt.vercel.app";
+const PSYCHIATRIST_EXE_URL = "https://pub-7dcd195985a44c1c81fd0ef44e78fa01.r2.dev/Psychiatrist%20Pro%20Setup%201.0.0.exe";
+const PSYCHIATRIST_PWA_URL = "https://psychiatrists.nishantsoftwares.in";
 
 const products = [
   { key: "erpbridge", icon: "📊", title: "ERPBridge", subtitle: "Business Intelligence", descHi: "Tally, Busy, Marg का data — Sales, Purchase, P&L, Ledger एक जगह", descEn: "Upload Tally data — instant Sales, Purchase, P&L & Ledger reports", exeUrl: ERPBRIDGE_EXE_URL, pwaUrl: ERPBRIDGE_PWA_URL, software: "erpbridge", newPrice: "₹11,999", renewPrice: "₹4,999", accentText: "text-yellow-400", accentBorder: "border-yellow-500", accent: "bg-yellow-500" },
@@ -25,6 +27,7 @@ const products = [
   { key: "hotel", icon: "🏨", title: "Hotel Pro", subtitle: "Hotel Management", descHi: "होटल के लिए — rooms, booking, billing, staff", descEn: "Room booking, billing & staff management for hotels", exeUrl: HOTEL_EXE_URL, pwaUrl: "/hotel", software: "hotel", newPrice: "₹6,999", renewPrice: "₹2,499", accentText: "text-pink-400", accentBorder: "border-pink-500", accent: "bg-pink-600" },
   { key: "sunar", icon: "💍", title: "स्वर्णशिल्पी", subtitle: "सुनार की दुकान", descHi: "सुनार की दुकान के लिए — गिरवी, कारीगर, भाव, बिल", descEn: "Jewellery shop — girvi, karigar, rates & GST billing", exeUrl: "https://pub-f93bf69cda354eeaadadab7f833d5bbf.r2.dev/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%B6%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A5%80%20Setup%200.1.0.exe", pwaUrl: "https://sunar.nishantsoftwares.in", software: "sunar", newPrice: "₹4,999", renewPrice: "₹2,500", accentText: "text-amber-400", accentBorder: "border-amber-500", accent: "bg-amber-500" },
   { key: "homeo", icon: "🌿", title: "Homeo Pro", subtitle: "होम्योपैथी क्लिनिक", descHi: "होम्योपैथी डॉक्टर के लिए — मरीज, दवा, prescription", descEn: "Homeopathy clinic — patients, medicines & prescriptions", exeUrl: "https://pub-b05b804e53a14a4db299e550b4b5538e.r2.dev/HomeoClinic%20Pro%20Setup%200.1.0.exe", pwaUrl: "https://homeopathy.nishantsoftwares.in", software: "homeo", newPrice: "₹4,999", renewPrice: "₹2,500", accentText: "text-lime-400", accentBorder: "border-lime-500", accent: "bg-lime-500" },
+  { key: "psychiatrist", icon: "🧠", title: "Psychiatrist Pro", subtitle: "मानसिक स्वास्थ्य क्लिनिक", descHi: "मनोचिकित्सक के लिए — मरीज, पर्चा, दवा, follow-up reminder", descEn: "Patients, prescriptions, medicines & follow-up SMS reminders", exeUrl: PSYCHIATRIST_EXE_URL, pwaUrl: PSYCHIATRIST_PWA_URL, software: "psychiatrist", newPrice: "₹4,999", renewPrice: "₹1,999", accentText: "text-violet-400", accentBorder: "border-violet-500", accent: "bg-violet-600" },
 ];
 
 const whyUs = [
@@ -63,7 +66,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
             इंडिया के अपने<br /><span className="text-amber-400">Business Softwares</span>
           </h1>
-          <p className="text-gray-400 text-lg mb-2">10 industries के लिए — एक platform पर</p>
+          <p className="text-gray-400 text-lg mb-2">13 industries के लिए — एक platform पर</p>
           <p className="text-gray-500 mb-10">Built for Indian businesses — affordable, simple, powerful</p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
