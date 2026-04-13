@@ -16,51 +16,40 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const OG_IMAGE_URL = "https://www.web-developer-kp.com/og-image.png";
+const SITE_URL = "https://www.nishantsoftwares.in";
+const OG_IMAGE_URL = `${SITE_URL}/og-image.png`;
 
 export const metadata = {
-  metadataBase: new URL("https://www.web-developer-kp.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Nishant Softwares — आधुनिक, सुरक्षित और किफायती सॉफ्टवेयर समाधान",
+    default: "Nishant Softwares — 13 Industries के लिए लाजवाब सॉफ्टवेयर",
     template: "%s | Nishant Softwares",
   },
   description:
-    "निशांत सॉफ्टवेयर्स लेटेस्ट टेक्नोलॉजी पर आधारित बेहद सुरक्षित और किफायती सॉफ्टवेयर समाधान प्रदान करते हैं।",
+    "दुकानदारों, पेशेवरों और फैक्टरियों के लिए 13 लाजवाब सॉफ्टवेयर। 7 दिन मुफ्त उपयोग करें — फीडबैक दें और पाएं अपनी वेबसाइट का SEO बिल्कुल मुफ्त!",
   keywords:
-    "secure software, affordable erp, modern web applications, custom software india, latest technology solutions",
+    "business software india, shop management software, dental software, school software, ration shop software, hardware shop software, legal software, hotel software, clinic software, pharma software, varanasi software",
   authors: [{ name: "Kamta Prasad" }],
   creator: "Kamta Prasad",
   publisher: "Kamta Prasad",
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "hi_IN",
-    url: "https://www.web-developer-kp.com",
+    url: SITE_URL,
     siteName: "Nishant Softwares",
-    title: "Nishant Softwares — सुरक्षित और किफायती समाधान",
+    title: "Nishant Softwares — 13 Industries के लिए लाजवाब सॉफ्टवेयर",
     description:
-      "आधुनिक तकनीक से बने बेहद सुरक्षित और किफायती सॉफ्टवेयर्स।",
-    images: [
-      {
-        url: OG_IMAGE_URL,
-        width: 1200,
-        height: 630,
-        alt: "Nishant Softwares",
-      },
-    ],
+      "दुकानदारों, पेशेवरों और फैक्टरियों के लिए 13 लाजवाब सॉफ्टवेयर। 7 दिन मुफ्त उपयोग करें!",
+    images: [{ url: OG_IMAGE_URL, width: 1200, height: 630, alt: "Nishant Softwares" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nishant Softwares — Modern & Secure",
-    description: "लेटेस्ट टेक्नोलॉजी पर आधारित सुरक्षित और किफायती सॉफ्टवेयर समाधान।",
+    title: "Nishant Softwares — 13 Industries के लिए लाजवाब सॉफ्टवेयर",
+    description: "दुकानदारों, पेशेवरों और फैक्टरियों के लिए 13 लाजवाब सॉफ्टवेयर।",
     images: [OG_IMAGE_URL],
   },
-  alternates: {
-    canonical: "https://www.web-developer-kp.com",
-  },
+  alternates: { canonical: SITE_URL },
 };
 
 export const viewport = {
@@ -73,10 +62,12 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "Nishant Softwares",
-  operatingSystem: "Windows, Android, Web",
+  operatingSystem: "Windows, Android, iOS, Web",
   applicationCategory: "BusinessApplication",
-  url: "https://www.web-developer-kp.com",
-  description: "निशांत सॉफ्टवेयर्स लेटेस्ट टेक्नोलॉजी पर बने हैं और बेहद सुरक्षित और किफायती हैं।",
+  url: SITE_URL,
+  description:
+    "दुकानदारों, पेशेवरों और फैक्टरियों के लिए 13 लाजवाब सॉफ्टवेयर। ERPBridge, Dental Pro, Hardware Pro, School Pro, Ration Pro, Pharma Pro, Heera Pro, Clinic Pro, Legal Pro, Hotel Pro, Sunar Pro, Homeo Pro, Psychiatrist Pro.",
+  offers: { "@type": "Offer", price: "3999", priceCurrency: "INR" },
 };
 
 export default function RootLayout({ children }) {
