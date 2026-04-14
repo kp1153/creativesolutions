@@ -268,8 +268,8 @@ export default function SchoolPage() {
       </section>
 
       {/* SEO Offer */}
-      <section className="py-12 px-4 bg-gradient-to-br from-yellow-400 to-orange-400 text-white">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-12 px-4 bg-zinc-900 text-white" 
+              <div className="max-w-3xl mx-auto text-center">
           <div className="inline-block bg-white/20 text-white text-base font-bold px-4 py-1 rounded-full mb-4">
             🎁 खरीदने वालों को विशेष उपहार
           </div>
