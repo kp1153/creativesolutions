@@ -1,3 +1,5 @@
+// app/school/page.js
+
 "use client";
 import { useEffect } from "react";
 
@@ -14,6 +16,10 @@ const featuresHi = [
   { icon: "💬", title: "व्हाट्सऐप सूचना", desc: "अनुपस्थित बच्चों के अभिभावकों को एक क्लिक में हिंदी संदेश भेजो — संदेश अपने आप लिखा जाता है।" },
   { icon: "📝", title: "परीक्षा और परिणाम", desc: "परीक्षा निर्धारित करो, अंक डालो — श्रेणी, उत्तीर्ण-अनुत्तीर्ण, कक्षा औसत और अव्वल छात्र अपने आप निकलते हैं।" },
   { icon: "📄", title: "प्रगति पत्र", desc: "सभी विषयों के अंक, श्रेणी और टिप्पणी के साथ प्रगति पत्र अपने आप तैयार — प्रिंट के लिए तैयार।" },
+  { icon: "📊", title: "मार्कशीट", desc: "त्रैमासिक, अर्धवार्षिक और वार्षिक — पूरी कक्षा की एक साथ, विषयवार, उत्तीर्ण-अनुत्तीर्ण के साथ।" },
+  { icon: "🏅", title: "प्रमाण पत्र", desc: "स्थानांतरण, चरित्र, बोनाफाइड और जन्म प्रमाण पत्र — एक क्लिक में प्रिंट के लिए तैयार।" },
+  { icon: "🚌", title: "परिवहन प्रबंधन", desc: "मार्ग, पड़ाव, मासिक शुल्क, चालक, वाहन नंबर — सब दर्ज करो। छात्रवार रसीद भी।" },
+  { icon: "⬆️", title: "कक्षा प्रोन्नति", desc: "वर्ष के अंत में एक क्लिक से पूरी कक्षा के छात्र अगली कक्षा में — हाथ से कुछ नहीं करना।" },
   { icon: "📣", title: "सूचना पटल", desc: "स्कूल की सूचनाएं श्रेणी और प्राथमिकता के साथ पोस्ट करो — जरूरी सूचना लाल बैज के साथ दिखे।" },
   { icon: "🗓️", title: "समय-सारणी", desc: "कक्षावार और दिनवार समय-सारणी बनाओ — कौन से काल में कौन सा विषय और कौन से शिक्षक।" },
   { icon: "📊", title: "रिपोर्ट", desc: "कक्षावार छात्र संख्या, फीस संग्रह और बकाया, उपस्थिति प्रतिशत, परीक्षा औसत — एक पन्ने पर।" },
@@ -47,6 +53,10 @@ const featuresEn = [
   { icon: "💬", title: "WhatsApp Alert", desc: "One-click WhatsApp message to parents of absent students — message auto-written in Hindi." },
   { icon: "📝", title: "Exams & Results", desc: "Schedule exams, enter marks — grade, pass/fail, class average & topper calculated automatically." },
   { icon: "📄", title: "Report Cards", desc: "Auto-generate print-ready report cards with all subjects, marks, grade & remarks." },
+  { icon: "📊", title: "Marksheet", desc: "Quarterly, Half-yearly & Annual — full class at once, subject-wise, with pass/fail." },
+  { icon: "🏅", title: "Certificates", desc: "Transfer, Character, Bonafide & Birth Certificate — print-ready in one click." },
+  { icon: "🚌", title: "Transport Management", desc: "Route, stop, monthly fee, driver, vehicle number — all recorded. Student-wise receipt too." },
+  { icon: "⬆️", title: "Student Promotion", desc: "One click at year-end promotes the entire class to the next — no manual work." },
   { icon: "📣", title: "Notice Board", desc: "Post notices with category & priority — urgent notices shown with red badge." },
   { icon: "🗓️", title: "Timetable", desc: "Create class timetable — period-wise subject & teacher for every day of the week." },
   { icon: "📊", title: "Reports", desc: "Class-wise: student count, fees collected vs pending, attendance % & exam average — one page." },
@@ -70,11 +80,22 @@ const manualEn = [
   { step: "10", icon: "👨‍👩‍👧", title: "Activate Parent Portal", desc: "Go to Student Profile, then Parent, then Set Password. The parent can then login at school.nishantsoftwares.in/parent/login to view their child's fees, attendance and exam results anytime." },
 ];
 
-const comingSoon = [
-  { icon: "💬", label: "व्हाट्सऐप बिजनेस — सीधे संदेश भेजो, लिंक नहीं" },
-  { icon: "📚", label: "पुस्तक और वर्दी मॉड्यूल" },
-  { icon: "💳", label: "ऑनलाइन फीस संग्रह" },
-  { icon: "🚌", label: "परिवहन और मार्ग प्रबंधन" },
+const comparison = [
+  { feature: "छात्र प्रबंधन", market: true, ours: true },
+  { feature: "फीस रसीद", market: true, ours: true },
+  { feature: "दैनिक हाजिरी", market: true, ours: true },
+  { feature: "परीक्षा / परिणाम", market: true, ours: true },
+  { feature: "अभिभावक पोर्टल", market: true, ours: true },
+  { feature: "TC / Character / Bonafide / Birth Certificate", market: false, ours: true },
+  { feature: "Quarterly / Annual Marksheet — पूरी class", market: false, ours: true },
+  { feature: "Transport module + Receipt", market: false, ours: true },
+  { feature: "Student Promotion (year-end, 1 click)", market: false, ours: true },
+  { feature: "Year-wise historical data", market: false, ours: true },
+  { feature: "WhatsApp reminder — fees + attendance", market: false, ours: true },
+  { feature: "Windows .EXE — बिना internet", market: false, ours: true },
+  { feature: "Android PWA + Windows — एक खरीद", market: false, ours: true },
+  { feature: "कीमत", market: false, ours: true, marketLabel: "₹15,000–₹25,000/वर्ष", oursLabel: "₹4,999 एक बार" },
+  { feature: "Support", market: false, ours: true, marketLabel: "Call center", oursLabel: "📞 फोन · 📧 Email · 💬 WhatsApp" },
 ];
 
 export default function SchoolPage() {
@@ -126,12 +147,16 @@ export default function SchoolPage() {
   return (
     <main className="min-h-screen bg-white text-gray-900 font-sans">
 
+      {/* Top bar */}
       <div className="bg-amber-500 py-2 px-4 text-center text-sm font-bold text-white flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
         <a href="tel:+919996865069" className="hover:underline">📞 9996865069</a>
+        <span className="hidden sm:inline text-amber-300">|</span>
+        <a href="mailto:prasad.kamta@gmail.com" className="hover:underline">✉️ prasad.kamta@gmail.com</a>
         <span className="hidden sm:inline text-amber-300">|</span>
         <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="hover:underline">💬 व्हाट्सऐप पर बात करें</a>
       </div>
 
+      {/* Nav */}
       <nav className="sticky top-0 z-50 bg-gray-900 border-b border-gray-800 px-4 py-3">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <a href="/" className="font-extrabold text-white text-lg">🖥️ <span className="text-amber-400">Nishant</span> Software</a>
@@ -139,6 +164,7 @@ export default function SchoolPage() {
         </div>
       </nav>
 
+      {/* Hero */}
       <section className="bg-gradient-to-br from-indigo-700 via-indigo-600 to-purple-700 text-white py-14 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <div className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
@@ -147,7 +173,7 @@ export default function SchoolPage() {
           <h1 className="text-3xl md:text-5xl font-extrabold mb-2 leading-tight">🏫 निशांत स्कूल प्रो</h1>
           <p className="text-lg font-bold text-white mb-2">विद्यालय प्रबंधन सॉफ्टवेयर</p>
           <p className="text-sm mb-2 text-indigo-100">छात्र · फीस · हाजिरी · परीक्षा · सूचना पटल · समय-सारणी · अभिभावक पोर्टल</p>
-          <p className="text-xs mb-8 text-indigo-200/80">१७ सुविधाएं · सीबीएसई निजी विद्यालयों के लिए · मोबाइल और कंप्यूटर दोनों पर</p>
+          <p className="text-xs mb-8 text-indigo-200/80">२१ सुविधाएं · सीबीएसई निजी विद्यालयों के लिए · मोबाइल और कंप्यूटर दोनों पर</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={SCHOOL_EXE_URL} className="inline-block bg-white text-indigo-700 font-bold text-base px-7 py-3 rounded-2xl shadow-lg hover:bg-indigo-50 transition">
               🖥️ विंडोज़ डाउनलोड (.exe)
@@ -162,10 +188,149 @@ export default function SchoolPage() {
         </div>
       </section>
 
+      {/* Comparison Section */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-2">
+            बाजार के सॉफ्टवेयर बनाम निशांत स्कूल प्रो
+          </h2>
+          <p className="text-center text-gray-500 text-sm mb-3">
+            जो बाकियों में है — वो हमारे वाले में भी है
+          </p>
+          <p className="text-center text-red-600 font-extrabold text-base mb-8">
+            लेकिन जो हमारे वाले में है — वो बाकियों में नहीं
+          </p>
+
+          {/* Table */}
+          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm mb-10">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-indigo-600 text-white">
+                  <th className="px-4 py-3 text-left font-bold text-sm">सुविधा</th>
+                  <th className="px-4 py-3 text-center font-bold text-sm">बाजार के सॉफ्टवेयर</th>
+                  <th className="px-4 py-3 text-center font-bold text-sm bg-green-600">निशांत स्कूल प्रो</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparison.map((row, i) => (
+                  <tr key={i} className={`border-t border-gray-100 ${!row.market && row.ours ? "bg-green-50" : i % 2 === 0 ? "bg-white" : "bg-gray-50"}`}>
+                    <td className={`px-4 py-3 font-semibold text-sm ${!row.market && row.ours ? "text-green-800" : "text-gray-800"}`}>
+                      {!row.market && row.ours && <span className="text-orange-500 mr-1">🔥</span>}
+                      {row.feature}
+                    </td>
+                    <td className="px-4 py-3 text-center">
+                      {row.marketLabel ? (
+                        <span className="text-red-600 font-bold text-xs">{row.marketLabel}</span>
+                      ) : row.market ? (
+                        <span className="text-green-600 font-bold text-lg">✅</span>
+                      ) : (
+                        <span className="text-red-500 font-bold text-lg">❌</span>
+                      )}
+                    </td>
+                    <td className="px-4 py-3 text-center bg-green-50">
+                      {row.oursLabel ? (
+                        <span className="text-green-700 font-extrabold text-xs">{row.oursLabel}</span>
+                      ) : (
+                        <span className="text-green-600 font-bold text-lg">✅</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Exclusive features cards */}
+          <h3 className="text-xl font-extrabold text-center text-gray-900 mb-6">
+            🔥 सिर्फ हमारे वाले में — बाकियों में नहीं
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+            {[
+              { icon: "🖥️", title: "बिना internet भी चलेगा", desc: "Windows .EXE मिलेगा — बिजली जाए, नेट जाए, काम नहीं रुकेगा। बाकी सब cloud-only हैं।" },
+              { icon: "💸", title: "कौड़ियों के दाम", desc: "बाजार में ₹15,000–₹25,000 प्रति वर्ष। हमारे वाले में ₹4,999 एक बार — फिर हर साल सिर्फ ₹2,500।" },
+              { icon: "🏅", title: "TC, Character, Bonafide, Birth Certificate", desc: "एक click में print-ready — school letterhead के साथ। सस्ते software में यह नहीं होता।" },
+              { icon: "📊", title: "Quarterly/Annual Marksheet", desc: "पूरी class की एक साथ, subject-wise, pass/fail के साथ — एक page पर।" },
+              { icon: "🚌", title: "Transport module", desc: "Route, stop, monthly fee, driver, vehicle number, student-wise receipt — सब कुछ।" },
+              { icon: "⬆️", title: "Student Promotion", desc: "साल के अंत में एक click से पूरी class अगली class में — हाथ से कुछ नहीं।" },
+              { icon: "📅", title: "Year-wise historical data", desc: "2-3 साल पुराना marksheet, fees record — सब देख सकते हो।" },
+              { icon: "💬", title: "WhatsApp reminder दोनों के लिए", desc: "Fees बाकी है तो reminder, बच्चा absent है तो reminder — message अपने आप लिखा जाता है।" },
+              { icon: "📱", title: "Android + Windows — एक खरीद", desc: "एक ही software — mobile पर भी, computer पर भी। अलग से एक पैसा नहीं।" },
+              { icon: "🤝", title: "सीधे developer से बात", desc: "📞 फोन · 📧 Email · 💬 WhatsApp — कोई call center नहीं, कोई ticket नहीं।" },
+            ].map((item, i) => (
+              <div key={i} className="bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-2xl p-4 flex gap-3 items-start shadow-sm">
+                <span className="text-2xl shrink-0">{item.icon}</span>
+                <div>
+                  <p className="font-extrabold text-gray-900 text-sm mb-1">{item.title}</p>
+                  <p className="text-gray-600 text-xs leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Offer Section */}
+      <section className="py-12 px-4 bg-gradient-to-br from-yellow-400 to-orange-400 text-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="inline-block bg-white/20 text-white text-sm font-bold px-4 py-1 rounded-full mb-4">
+            🎁 खरीदने वालों को विशेष उपहार
+          </div>
+          <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
+            निशांत स्कूल प्रो खरीदो —<br />स्कूल की वेबसाइट का SEO मुफ्त पाओ
+          </h2>
+          <p className="text-white/90 text-sm mb-6 max-w-xl mx-auto">
+            गूगल पर आपके स्कूल का नाम ऊपर आए — इसके लिए अलग से पैसे देने की जरूरत नहीं।
+            सॉफ्टवेयर खरीदने पर यह सब मुफ्त मिलेगा:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left mb-8">
+            {[
+              "✅ Google My Business profile setup — गूगल मैप पर स्कूल दिखेगा",
+              "✅ Local SEO — 'best school in [your city]' में नाम आएगा",
+              "✅ स्कूल website की basic on-page SEO",
+              "✅ Title, description, keywords — सब optimize होगा",
+              "✅ बाजार में कीमत: ₹5,000–₹10,000",
+              "✅ आपके लिए: बिल्कुल मुफ्त",
+            ].map((item, i) => (
+              <div key={i} className="bg-white/20 rounded-xl px-4 py-3 text-sm font-semibold">
+                {item}
+              </div>
+            ))}
+          </div>
+          <button onClick={pay} className="bg-white text-orange-600 font-extrabold text-lg px-10 py-4 rounded-2xl shadow-xl hover:bg-orange-50 transition">
+            💳 अभी खरीदें — ₹4,999 और SEO मुफ्त पाएं
+          </button>
+        </div>
+      </section>
+
+      {/* Self-hosting offer */}
+      <section className="py-10 px-4 bg-gray-900 text-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-xl font-extrabold text-amber-400 mb-3">
+            🖥️ अपना खुद का server चाहिए?
+          </h2>
+          <p className="text-gray-300 text-sm mb-4 max-w-xl mx-auto">
+            अगर आप हम पर निर्भर नहीं रहना चाहते — तो हम <strong>Digital Ocean</strong> पर आपका
+            अलग server setup करके दे सकते हैं। आपका data, आपका server, आपका control।
+            इसके लिए अलग से nominal charge लिया जाएगा।
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer"
+              className="bg-green-500 text-white font-bold px-6 py-3 rounded-xl hover:bg-green-600 transition text-sm">
+              💬 WhatsApp पर पूछें
+            </a>
+            <a href="tel:+919996865069"
+              className="bg-white text-gray-900 font-bold px-6 py-3 rounded-xl hover:bg-gray-100 transition text-sm">
+              📞 9996865069
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Hindi */}
       <section className="py-12 px-4 bg-gray-900 text-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-1 text-indigo-400">क्या-क्या मिलेगा?</h2>
-          <p className="text-center text-gray-400 text-sm mb-8">१७ सुविधाएं — एक सॉफ्टवेयर में, एक कीमत पर</p>
+          <p className="text-center text-gray-400 text-sm mb-8">२१ सुविधाएं — एक सॉफ्टवेयर में, एक कीमत पर</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {featuresHi.map((f, i) => (
               <div key={i} className="bg-gray-800 border border-indigo-500/20 rounded-xl px-4 py-4 flex gap-3 items-start">
@@ -180,6 +345,7 @@ export default function SchoolPage() {
         </div>
       </section>
 
+      {/* Manual Hindi */}
       <section className="py-12 px-4 bg-indigo-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-1 text-gray-800">📖 उपयोगकर्ता पुस्तिका</h2>
@@ -198,6 +364,7 @@ export default function SchoolPage() {
         </div>
       </section>
 
+      {/* Windows warning */}
       <section className="py-8 px-4 bg-yellow-50 border-y-4 border-yellow-400">
         <div className="max-w-3xl mx-auto bg-white rounded-2xl border-2 border-yellow-400 p-6 shadow">
           <p className="text-xl font-extrabold text-gray-800 mb-3">⚠️ स्थापना के समय यह संदेश आ सकता है — घबराएं नहीं</p>
@@ -212,10 +379,12 @@ export default function SchoolPage() {
         </div>
       </section>
 
+      {/* Pricing */}
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-1 text-gray-800">कीमत — Pricing</h2>
-          <p className="text-center text-gray-500 text-sm mb-8">कोई छिपा हुआ शुल्क नहीं · एक बार भुगतान, पूरा साल उपयोग</p>
+          <p className="text-center text-gray-500 text-sm mb-2">कोई छिपा हुआ शुल्क नहीं · एक बार भुगतान, पूरा साल उपयोग</p>
+          <p className="text-center text-red-600 font-extrabold text-sm mb-8">बाजार में ₹15,000–₹25,000 प्रति वर्ष — हमारे वाले में ₹4,999 एक बार</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="rounded-2xl border-2 border-indigo-500 p-6 text-center shadow-lg relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">नया खाता</div>
@@ -223,18 +392,20 @@ export default function SchoolPage() {
               <div className="text-4xl font-extrabold text-indigo-600 mb-1">₹4,999</div>
               <p className="text-gray-400 text-sm mb-3">एक बार — १ साल शामिल</p>
               <ul className="text-xs text-gray-600 text-left space-y-1.5 mb-5">
-                <li>✅ सभी १७ सुविधाएं खुली</li>
+                <li>✅ सभी २१ सुविधाएं खुली</li>
                 <li>✅ व्हाट्सऐप अनुपस्थिति सूचना</li>
                 <li>✅ अभिभावक और छात्र पोर्टल</li>
                 <li>✅ फीस रसीद प्रिंट</li>
+                <li>✅ TC, Marksheet, Transport सब</li>
                 <li>✅ विंडोज़ और एंड्रॉयड दोनों</li>
-                <li>✅ व्हाट्सऐप पर निःशुल्क सहयोग</li>
+                <li>✅ 📞 📧 💬 सीधे developer से बात</li>
+                <li className="text-green-700 font-bold">🎁 School website का SEO मुफ्त</li>
               </ul>
               <a href={SCHOOL_PWA_URL} target="_blank" rel="noopener noreferrer" className="block w-full bg-indigo-600 text-white font-bold py-2.5 rounded-xl hover:bg-indigo-500 transition text-sm mb-3">
                 🆓 ७ दिन मुफ्त आज़माएं
               </a>
               <button onClick={pay} className="block w-full bg-gray-800 text-white font-bold py-2.5 rounded-xl hover:bg-gray-700 transition text-sm">
-                {"💳 अभी खरीदें — ₹4,999"}
+                💳 अभी खरीदें — ₹4,999
               </button>
             </div>
             <div className="rounded-2xl border-2 border-gray-200 p-6 text-center shadow-sm">
@@ -245,7 +416,7 @@ export default function SchoolPage() {
                 <li>✅ सभी सुविधाएं जारी</li>
                 <li>✅ नई सुविधाएं अपने आप मिलेंगी</li>
                 <li>✅ डेटा सुरक्षित रहेगा</li>
-                <li>✅ व्हाट्सऐप सहयोग प्राथमिकता से</li>
+                <li>✅ 📞 📧 💬 सहयोग प्राथमिकता से</li>
               </ul>
               <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="block w-full bg-indigo-600 text-white font-bold py-2.5 rounded-xl hover:bg-indigo-500 transition text-sm">
                 💬 व्हाट्सऐप करें
@@ -255,26 +426,11 @@ export default function SchoolPage() {
         </div>
       </section>
 
-      <section className="py-10 px-4 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-lg font-bold text-center text-gray-700 mb-1">🚀 जल्द आ रहा है</h2>
-          <p className="text-center text-gray-400 text-xs mb-5">अभी निर्माण में — पुराने उपयोगकर्ताओं को निःशुल्क अपडेट मिलेगा</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {comingSoon.map((c, i) => (
-              <div key={i} className="bg-white border border-dashed border-gray-300 rounded-xl px-4 py-3 flex items-center gap-3">
-                <span className="text-lg shrink-0">{c.icon}</span>
-                <span className="text-sm text-gray-500 flex-1">{c.label}</span>
-                <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-medium shrink-0">जल्द</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* Features English */}
       <section className="py-12 px-4 bg-gray-900 text-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-1 text-indigo-400">What's Included?</h2>
-          <p className="text-center text-gray-400 text-sm mb-8">17 features — one software, one price</p>
+          <h2 className="text-2xl font-bold text-center mb-1 text-indigo-400">What&apos;s Included?</h2>
+          <p className="text-center text-gray-400 text-sm mb-8">21 features — one software, one price</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {featuresEn.map((f, i) => (
               <div key={i} className="bg-gray-800 border border-indigo-500/20 rounded-xl px-4 py-4 flex gap-3 items-start">
@@ -289,6 +445,7 @@ export default function SchoolPage() {
         </div>
       </section>
 
+      {/* Manual English */}
       <section className="py-12 px-4 bg-indigo-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-1 text-gray-800">📖 User Manual</h2>
@@ -307,10 +464,11 @@ export default function SchoolPage() {
         </div>
       </section>
 
+      {/* Footer CTA */}
       <section className="bg-indigo-700 py-12 px-4 text-center text-white">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-extrabold mb-2">आज ही शुरू करें — ७ दिन मुफ्त</h2>
-          <p className="text-indigo-200 mb-6 text-sm">कोई कार्ड नहीं · कोई प्रतिबद्धता नहीं · व्हाट्सऐप पर सीधे डेवलपर से बात</p>
+          <p className="text-indigo-200 mb-6 text-sm">कोई कार्ड नहीं · कोई प्रतिबद्धता नहीं · सीधे developer से बात</p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 text-sm font-bold">
             <a href="tel:+919996865069" className="hover:underline">📞 9996865069</a>
             <span className="hidden sm:inline text-indigo-400">|</span>
