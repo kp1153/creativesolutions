@@ -94,8 +94,8 @@ const comparison = [
   { feature: "WhatsApp reminder — fees + attendance", market: false, ours: true },
   { feature: "Windows .EXE — बिना internet", market: false, ours: true },
   { feature: "Android PWA + Windows — एक खरीद", market: false, ours: true },
-  { feature: "कीमत", market: false, ours: true, marketLabel: "₹15,000–₹25,000/वर्ष", oursLabel: "₹4,999 एक बार" },
-  { feature: "Support", market: false, ours: true, marketLabel: "Call center", oursLabel: "📞 फोन · 📧 Email · 💬 WhatsApp" },
+  { feature: "कीमत", market: false, ours: true, marketLabel: "₹15,000–₹25,000/वर्ष", oursLabel: "पहली बार ₹4,999 · server खर्च ₹2,500/वर्ष" },
+  { feature: "Support", market: false, ours: true, marketLabel: "Call center / Ticket", oursLabel: "📞 फोन · 📧 Email · 💬 WhatsApp" },
 ];
 
 export default function SchoolPage() {
@@ -120,7 +120,7 @@ export default function SchoolPage() {
       amount: 4999 * 100,
       currency: "INR",
       name: "निशांत सॉफ्टवेयर्स",
-      description: "स्कूल प्रो — १ साल",
+      description: "निशांत स्कूल सॉफ्टवेयर — १ साल",
       order_id: order.id,
       prefill: { email: emailFromUrl },
       handler: async (response) => {
@@ -148,7 +148,7 @@ export default function SchoolPage() {
     <main className="min-h-screen bg-white text-gray-900 font-sans">
 
       {/* Top bar */}
-      <div className="bg-amber-500 py-2 px-4 text-center text-sm font-bold text-white flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
+      <div className="bg-amber-700 py-2 px-4 text-center text-base font-bold text-white flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
         <a href="tel:+919996865069" className="hover:underline">📞 9996865069</a>
         <span className="hidden sm:inline text-amber-300">|</span>
         <a href="mailto:prasad.kamta@gmail.com" className="hover:underline">✉️ prasad.kamta@gmail.com</a>
@@ -160,20 +160,20 @@ export default function SchoolPage() {
       <nav className="sticky top-0 z-50 bg-gray-900 border-b border-gray-800 px-4 py-3">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <a href="/" className="font-extrabold text-white text-lg">🖥️ <span className="text-amber-400">Nishant</span> Software</a>
-          <a href="/" className="text-xs text-gray-400 hover:text-white border border-gray-700 px-3 py-1.5 rounded-lg transition">← सभी Products</a>
+          <a href="/" className="text-sm text-gray-400 hover:text-white border border-gray-700 px-3 py-1.5 rounded-lg transition">← सभी Products</a>
         </div>
       </nav>
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-indigo-700 via-indigo-600 to-purple-700 text-white py-14 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <div className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
+          <div className="inline-block bg-white/20 text-white text-base font-semibold px-4 py-1 rounded-full mb-4">
             🆓 ७ दिन बिल्कुल मुफ्त — कोई कार्ड नहीं
           </div>
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-2 leading-tight">🏫 निशांत स्कूल प्रो</h1>
-          <p className="text-lg font-bold text-white mb-2">विद्यालय प्रबंधन सॉफ्टवेयर</p>
-          <p className="text-sm mb-2 text-indigo-100">छात्र · फीस · हाजिरी · परीक्षा · सूचना पटल · समय-सारणी · अभिभावक पोर्टल</p>
-          <p className="text-xs mb-8 text-indigo-200/80">२१ सुविधाएं · सीबीएसई निजी विद्यालयों के लिए · मोबाइल और कंप्यूटर दोनों पर</p>
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-2 leading-tight">🏫 निशांत स्कूल सॉफ्टवेयर</h1>
+          <p className="text-xl font-bold text-white mb-2">विद्यालय प्रबंधन सॉफ्टवेयर</p>
+          <p className="text-base mb-2 text-indigo-100">छात्र · फीस · हाजिरी · परीक्षा · सूचना पटल · समय-सारणी · अभिभावक पोर्टल</p>
+          <p className="text-sm mb-8 text-indigo-200/80">२१ सुविधाएं · सीबीएसई निजी विद्यालयों के लिए · मोबाइल और कंप्यूटर दोनों पर</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={SCHOOL_EXE_URL} className="inline-block bg-white text-indigo-700 font-bold text-base px-7 py-3 rounded-2xl shadow-lg hover:bg-indigo-50 transition">
               🖥️ विंडोज़ डाउनलोड (.exe)
@@ -182,7 +182,7 @@ export default function SchoolPage() {
               <a href={SCHOOL_PWA_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white font-bold text-base px-7 py-3 rounded-2xl shadow-lg hover:bg-green-600 transition">
                 📱 Android पर Install करें
               </a>
-              <p className="text-xs text-indigo-200/70">Chrome ⋮ → Add to Home Screen</p>
+              <p className="text-sm text-indigo-200/70">Chrome ⋮ → Add to Home Screen</p>
             </div>
           </div>
         </div>
@@ -192,46 +192,45 @@ export default function SchoolPage() {
       <section className="py-14 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-2">
-            बाजार के सॉफ्टवेयर बनाम निशांत स्कूल प्रो
+            बाजार के सॉफ्टवेयर बनाम निशांत स्कूल सॉफ्टवेयर
           </h2>
-          <p className="text-center text-gray-500 text-sm mb-3">
+          <p className="text-center text-gray-500 text-base mb-3">
             जो बाकियों में है — वो हमारे वाले में भी है
           </p>
-          <p className="text-center text-red-600 font-extrabold text-base mb-8">
-            लेकिन जो हमारे वाले में है — वो बाकियों में नहीं
+          <p className="text-center text-red-600 font-extrabold text-lg mb-8">
+            लेकिन जो हमारे वाले में है — वो बाकियों में नहीं। और दाम? कौड़ियों के।
           </p>
 
-          {/* Table */}
           <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm mb-10">
-            <table className="w-full text-sm">
+            <table className="w-full text-base">
               <thead>
                 <tr className="bg-indigo-600 text-white">
-                  <th className="px-4 py-3 text-left font-bold text-sm">सुविधा</th>
-                  <th className="px-4 py-3 text-center font-bold text-sm">बाजार के सॉफ्टवेयर</th>
-                  <th className="px-4 py-3 text-center font-bold text-sm bg-green-600">निशांत स्कूल प्रो</th>
+                  <th className="px-4 py-3 text-left font-bold text-base">सुविधा</th>
+                  <th className="px-4 py-3 text-center font-bold text-base">बाजार के सॉफ्टवेयर</th>
+                  <th className="px-4 py-3 text-center font-bold text-base bg-green-600">निशांत स्कूल सॉफ्टवेयर</th>
                 </tr>
               </thead>
               <tbody>
                 {comparison.map((row, i) => (
                   <tr key={i} className={`border-t border-gray-100 ${!row.market && row.ours ? "bg-green-50" : i % 2 === 0 ? "bg-white" : "bg-gray-50"}`}>
-                    <td className={`px-4 py-3 font-semibold text-sm ${!row.market && row.ours ? "text-green-800" : "text-gray-800"}`}>
+                    <td className={`px-4 py-3 font-semibold text-base ${!row.market && row.ours ? "text-green-800" : "text-gray-800"}`}>
                       {!row.market && row.ours && <span className="text-orange-500 mr-1">🔥</span>}
                       {row.feature}
                     </td>
                     <td className="px-4 py-3 text-center">
                       {row.marketLabel ? (
-                        <span className="text-red-600 font-bold text-xs">{row.marketLabel}</span>
+                        <span className="text-red-600 font-bold text-sm">{row.marketLabel}</span>
                       ) : row.market ? (
-                        <span className="text-green-600 font-bold text-lg">✅</span>
+                        <span className="text-green-600 font-bold text-xl">✅</span>
                       ) : (
-                        <span className="text-red-500 font-bold text-lg">❌</span>
+                        <span className="text-red-500 font-bold text-xl">❌</span>
                       )}
                     </td>
                     <td className="px-4 py-3 text-center bg-green-50">
                       {row.oursLabel ? (
-                        <span className="text-green-700 font-extrabold text-xs">{row.oursLabel}</span>
+                        <span className="text-green-700 font-extrabold text-sm">{row.oursLabel}</span>
                       ) : (
-                        <span className="text-green-600 font-bold text-lg">✅</span>
+                        <span className="text-green-600 font-bold text-xl">✅</span>
                       )}
                     </td>
                   </tr>
@@ -240,14 +239,13 @@ export default function SchoolPage() {
             </table>
           </div>
 
-          {/* Exclusive features cards */}
           <h3 className="text-xl font-extrabold text-center text-gray-900 mb-6">
             🔥 सिर्फ हमारे वाले में — बाकियों में नहीं
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
             {[
               { icon: "🖥️", title: "बिना internet भी चलेगा", desc: "Windows .EXE मिलेगा — बिजली जाए, नेट जाए, काम नहीं रुकेगा। बाकी सब cloud-only हैं।" },
-              { icon: "💸", title: "कौड़ियों के दाम", desc: "बाजार में ₹15,000–₹25,000 प्रति वर्ष। हमारे वाले में ₹4,999 एक बार — फिर हर साल सिर्फ ₹2,500।" },
+              { icon: "💸", title: "कौड़ियों के दाम", desc: "बाजार में ₹15,000–₹25,000 प्रति वर्ष। हमारे वाले में पहली बार ₹4,999 — फिर server खर्च मात्र ₹2,500 सालाना।" },
               { icon: "🏅", title: "TC, Character, Bonafide, Birth Certificate", desc: "एक click में print-ready — school letterhead के साथ। सस्ते software में यह नहीं होता।" },
               { icon: "📊", title: "Quarterly/Annual Marksheet", desc: "पूरी class की एक साथ, subject-wise, pass/fail के साथ — एक page पर।" },
               { icon: "🚌", title: "Transport module", desc: "Route, stop, monthly fee, driver, vehicle number, student-wise receipt — सब कुछ।" },
@@ -260,8 +258,8 @@ export default function SchoolPage() {
               <div key={i} className="bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-2xl p-4 flex gap-3 items-start shadow-sm">
                 <span className="text-2xl shrink-0">{item.icon}</span>
                 <div>
-                  <p className="font-extrabold text-gray-900 text-sm mb-1">{item.title}</p>
-                  <p className="text-gray-600 text-xs leading-relaxed">{item.desc}</p>
+                  <p className="font-extrabold text-gray-900 text-base mb-1">{item.title}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -269,16 +267,16 @@ export default function SchoolPage() {
         </div>
       </section>
 
-      {/* SEO Offer Section */}
+      {/* SEO Offer */}
       <section className="py-12 px-4 bg-gradient-to-br from-yellow-400 to-orange-400 text-white">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-block bg-white/20 text-white text-sm font-bold px-4 py-1 rounded-full mb-4">
+          <div className="inline-block bg-white/20 text-white text-base font-bold px-4 py-1 rounded-full mb-4">
             🎁 खरीदने वालों को विशेष उपहार
           </div>
           <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
-            निशांत स्कूल प्रो खरीदो —<br />स्कूल की वेबसाइट का SEO मुफ्त पाओ
+            निशांत स्कूल सॉफ्टवेयर खरीदो —<br />स्कूल की वेबसाइट का SEO मुफ्त पाओ
           </h2>
-          <p className="text-white/90 text-sm mb-6 max-w-xl mx-auto">
+          <p className="text-white/90 text-base mb-6 max-w-xl mx-auto">
             गूगल पर आपके स्कूल का नाम ऊपर आए — इसके लिए अलग से पैसे देने की जरूरत नहीं।
             सॉफ्टवेयर खरीदने पर यह सब मुफ्त मिलेगा:
           </p>
@@ -291,7 +289,7 @@ export default function SchoolPage() {
               "✅ बाजार में कीमत: ₹5,000–₹10,000",
               "✅ आपके लिए: बिल्कुल मुफ्त",
             ].map((item, i) => (
-              <div key={i} className="bg-white/20 rounded-xl px-4 py-3 text-sm font-semibold">
+              <div key={i} className="bg-white/20 rounded-xl px-4 py-3 text-base font-semibold">
                 {item}
               </div>
             ))}
@@ -306,20 +304,30 @@ export default function SchoolPage() {
       <section className="py-10 px-4 bg-gray-900 text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-xl font-extrabold text-amber-400 mb-3">
-            🖥️ अपना खुद का server चाहिए?
+            🖥️ अपना खुद का server चाहिए? पूरा नियंत्रण अपने हाथ में?
           </h2>
-          <p className="text-gray-300 text-sm mb-4 max-w-xl mx-auto">
-            अगर आप हम पर निर्भर नहीं रहना चाहते — तो हम <strong>Digital Ocean</strong> पर आपका
-            अलग server setup करके दे सकते हैं। आपका data, आपका server, आपका control।
-            इसके लिए अलग से nominal charge लिया जाएगा।
+          <p className="text-gray-300 text-base mb-4 max-w-xl mx-auto">
+            अगर आप किसी पर निर्भर नहीं रहना चाहते — तो हम <strong>Digital Ocean</strong> पर
+            सिर्फ आपके विद्यालय के लिए अलग server setup करके <strong>ताला-चाबी आपको सौंप देंगे</strong>।
+            आपका data, आपका server, आपका पूरा control।
           </p>
+          <div className="bg-white/10 rounded-2xl px-6 py-4 inline-block mb-6 text-left">
+            <p className="text-white font-extrabold text-base mb-2">इसमें क्या मिलेगा:</p>
+            <ul className="text-gray-300 text-base space-y-1">
+              <li>✅ Digital Ocean पर सिर्फ आपका अलग server</li>
+              <li>✅ Setup, deployment, domain — सब हम करेंगे</li>
+              <li>✅ काम पूरा होने पर login credentials आपको</li>
+              <li>✅ हमारी मजदूरी — सिर्फ <strong className="text-amber-400">₹10,000 एक बार</strong></li>
+              <li>✅ Server खर्च — विद्यालय खुद Digital Ocean को देगा (approx ₹800–₹1,500/माह)</li>
+            </ul>
+          </div>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer"
-              className="bg-green-500 text-white font-bold px-6 py-3 rounded-xl hover:bg-green-600 transition text-sm">
+              className="bg-green-500 text-white font-bold px-6 py-3 rounded-xl hover:bg-green-600 transition text-base">
               💬 WhatsApp पर पूछें
             </a>
             <a href="tel:+919996865069"
-              className="bg-white text-gray-900 font-bold px-6 py-3 rounded-xl hover:bg-gray-100 transition text-sm">
+              className="bg-white text-gray-900 font-bold px-6 py-3 rounded-xl hover:bg-gray-100 transition text-base">
               📞 9996865069
             </a>
           </div>
@@ -330,14 +338,14 @@ export default function SchoolPage() {
       <section className="py-12 px-4 bg-gray-900 text-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-1 text-indigo-400">क्या-क्या मिलेगा?</h2>
-          <p className="text-center text-gray-400 text-sm mb-8">२१ सुविधाएं — एक सॉफ्टवेयर में, एक कीमत पर</p>
+          <p className="text-center text-gray-400 text-base mb-8">२१ सुविधाएं — एक सॉफ्टवेयर में, एक कीमत पर</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {featuresHi.map((f, i) => (
               <div key={i} className="bg-gray-800 border border-indigo-500/20 rounded-xl px-4 py-4 flex gap-3 items-start">
                 <span className="text-xl shrink-0 mt-0.5">{f.icon}</span>
                 <div>
-                  <div className="text-indigo-300 font-bold text-sm mb-1">{f.title}</div>
-                  <div className="text-gray-300 text-xs leading-relaxed">{f.desc}</div>
+                  <div className="text-indigo-300 font-bold text-base mb-1">{f.title}</div>
+                  <div className="text-gray-300 text-sm leading-relaxed">{f.desc}</div>
                 </div>
               </div>
             ))}
@@ -349,14 +357,14 @@ export default function SchoolPage() {
       <section className="py-12 px-4 bg-indigo-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-1 text-gray-800">📖 उपयोगकर्ता पुस्तिका</h2>
-          <p className="text-center text-gray-500 text-sm mb-8">पहले दिन से शुरू करें — आसान भाषा में</p>
+          <p className="text-center text-gray-500 text-base mb-8">पहले दिन से शुरू करें — आसान भाषा में</p>
           <div className="space-y-4">
             {manualHi.map((h) => (
               <div key={h.step} className="bg-white border border-indigo-200 rounded-xl p-5 flex gap-4 items-start shadow-sm">
                 <div className="w-10 h-10 bg-indigo-600 text-white font-extrabold text-base rounded-full flex items-center justify-center shrink-0">{h.step}</div>
                 <div>
                   <div className="text-lg font-extrabold text-gray-800 mb-1">{h.icon} {h.title}</div>
-                  <div className="text-gray-600 text-sm leading-relaxed">{h.desc}</div>
+                  <div className="text-gray-600 text-base leading-relaxed">{h.desc}</div>
                 </div>
               </div>
             ))}
@@ -383,42 +391,40 @@ export default function SchoolPage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-1 text-gray-800">कीमत — Pricing</h2>
-          <p className="text-center text-gray-500 text-sm mb-2">कोई छिपा हुआ शुल्क नहीं · एक बार भुगतान, पूरा साल उपयोग</p>
-          <p className="text-center text-red-600 font-extrabold text-sm mb-8">बाजार में ₹15,000–₹25,000 प्रति वर्ष — हमारे वाले में ₹4,999 एक बार</p>
+          <p className="text-center text-gray-500 text-base mb-2">कोई छिपा हुआ शुल्क नहीं</p>
+          <p className="text-center text-red-600 font-extrabold text-base mb-8">बाजार में ₹15,000–₹25,000 प्रति वर्ष — हमारे वाले में पहली बार ₹4,999, फिर server खर्च मात्र ₹2,500 सालाना</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="rounded-2xl border-2 border-indigo-500 p-6 text-center shadow-lg relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">नया खाता</div>
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-sm font-bold px-4 py-1 rounded-full whitespace-nowrap">नया खाता</div>
               <h3 className="text-lg font-bold mb-1 text-gray-700 mt-2">पहली बार</h3>
               <div className="text-4xl font-extrabold text-indigo-600 mb-1">₹4,999</div>
-              <p className="text-gray-400 text-sm mb-3">एक बार — १ साल शामिल</p>
-              <ul className="text-xs text-gray-600 text-left space-y-1.5 mb-5">
+              <p className="text-gray-400 text-base mb-1">एक बार — १ साल शामिल</p>
+              <p className="text-gray-500 text-base mb-3">उसके बाद server खर्च <strong>₹2,500/वर्ष</strong></p>
+              <ul className="text-sm text-gray-600 text-left space-y-1.5 mb-5">
                 <li>✅ सभी २१ सुविधाएं खुली</li>
-                <li>✅ व्हाट्सऐप अनुपस्थिति सूचना</li>
-                <li>✅ अभिभावक और छात्र पोर्टल</li>
-                <li>✅ फीस रसीद प्रिंट</li>
                 <li>✅ TC, Marksheet, Transport सब</li>
                 <li>✅ विंडोज़ और एंड्रॉयड दोनों</li>
                 <li>✅ 📞 📧 💬 सीधे developer से बात</li>
                 <li className="text-green-700 font-bold">🎁 School website का SEO मुफ्त</li>
               </ul>
-              <a href={SCHOOL_PWA_URL} target="_blank" rel="noopener noreferrer" className="block w-full bg-indigo-600 text-white font-bold py-2.5 rounded-xl hover:bg-indigo-500 transition text-sm mb-3">
+              <a href={SCHOOL_PWA_URL} target="_blank" rel="noopener noreferrer" className="block w-full bg-indigo-600 text-white font-bold py-2.5 rounded-xl hover:bg-indigo-500 transition text-base mb-3">
                 🆓 ७ दिन मुफ्त आज़माएं
               </a>
-              <button onClick={pay} className="block w-full bg-gray-800 text-white font-bold py-2.5 rounded-xl hover:bg-gray-700 transition text-sm">
+              <button onClick={pay} className="block w-full bg-gray-800 text-white font-bold py-2.5 rounded-xl hover:bg-gray-700 transition text-base">
                 💳 अभी खरीदें — ₹4,999
               </button>
             </div>
             <div className="rounded-2xl border-2 border-gray-200 p-6 text-center shadow-sm">
               <h3 className="text-lg font-bold mb-1 text-gray-700 mt-2">नवीनीकरण — Renewal</h3>
               <div className="text-4xl font-extrabold text-indigo-600 mb-1">₹2,500</div>
-              <p className="text-gray-400 text-sm mb-3">प्रति वर्ष — Per year</p>
-              <ul className="text-xs text-gray-600 text-left space-y-1.5 mb-5">
+              <p className="text-gray-400 text-base mb-3">server खर्च — प्रति वर्ष</p>
+              <ul className="text-sm text-gray-600 text-left space-y-1.5 mb-5">
                 <li>✅ सभी सुविधाएं जारी</li>
                 <li>✅ नई सुविधाएं अपने आप मिलेंगी</li>
                 <li>✅ डेटा सुरक्षित रहेगा</li>
                 <li>✅ 📞 📧 💬 सहयोग प्राथमिकता से</li>
               </ul>
-              <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="block w-full bg-indigo-600 text-white font-bold py-2.5 rounded-xl hover:bg-indigo-500 transition text-sm">
+              <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="block w-full bg-indigo-600 text-white font-bold py-2.5 rounded-xl hover:bg-indigo-500 transition text-base">
                 💬 व्हाट्सऐप करें
               </a>
             </div>
@@ -430,14 +436,14 @@ export default function SchoolPage() {
       <section className="py-12 px-4 bg-gray-900 text-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-1 text-indigo-400">What&apos;s Included?</h2>
-          <p className="text-center text-gray-400 text-sm mb-8">21 features — one software, one price</p>
+          <p className="text-center text-gray-400 text-base mb-8">21 features — one software, one price</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {featuresEn.map((f, i) => (
               <div key={i} className="bg-gray-800 border border-indigo-500/20 rounded-xl px-4 py-4 flex gap-3 items-start">
                 <span className="text-xl shrink-0 mt-0.5">{f.icon}</span>
                 <div>
-                  <div className="text-indigo-300 font-bold text-sm mb-1">{f.title}</div>
-                  <div className="text-gray-300 text-xs leading-relaxed">{f.desc}</div>
+                  <div className="text-indigo-300 font-bold text-base mb-1">{f.title}</div>
+                  <div className="text-gray-300 text-sm leading-relaxed">{f.desc}</div>
                 </div>
               </div>
             ))}
@@ -449,14 +455,14 @@ export default function SchoolPage() {
       <section className="py-12 px-4 bg-indigo-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-1 text-gray-800">📖 User Manual</h2>
-          <p className="text-center text-gray-500 text-sm mb-8">Get started from day one — step by step</p>
+          <p className="text-center text-gray-500 text-base mb-8">Get started from day one — step by step</p>
           <div className="space-y-4">
             {manualEn.map((h) => (
               <div key={h.step} className="bg-white border border-indigo-200 rounded-xl p-5 flex gap-4 items-start shadow-sm">
                 <div className="w-10 h-10 bg-indigo-600 text-white font-extrabold text-base rounded-full flex items-center justify-center shrink-0">{h.step}</div>
                 <div>
                   <div className="text-lg font-extrabold text-gray-800 mb-1">{h.icon} {h.title}</div>
-                  <div className="text-gray-600 text-sm leading-relaxed">{h.desc}</div>
+                  <div className="text-gray-600 text-base leading-relaxed">{h.desc}</div>
                 </div>
               </div>
             ))}
@@ -468,8 +474,8 @@ export default function SchoolPage() {
       <section className="bg-indigo-700 py-12 px-4 text-center text-white">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-extrabold mb-2">आज ही शुरू करें — ७ दिन मुफ्त</h2>
-          <p className="text-indigo-200 mb-6 text-sm">कोई कार्ड नहीं · कोई प्रतिबद्धता नहीं · सीधे developer से बात</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 text-sm font-bold">
+          <p className="text-indigo-200 mb-6 text-base">कोई कार्ड नहीं · कोई प्रतिबद्धता नहीं · सीधे developer से बात</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 text-base font-bold">
             <a href="tel:+919996865069" className="hover:underline">📞 9996865069</a>
             <span className="hidden sm:inline text-indigo-400">|</span>
             <a href="mailto:prasad.kamta@gmail.com" className="hover:underline">✉️ prasad.kamta@gmail.com</a>
