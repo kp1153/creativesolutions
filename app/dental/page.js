@@ -5,106 +5,89 @@ const DENTAL_EXE_URL =
   "https://pub-2bb08b9a599048e48fa0e6a4a9f137bb.r2.dev/Nishant%20Dental%20Pro%20Setup%201.0.0.exe";
 
 const features = [
-  {
-    icon: "🧑‍⚕️",
-    hi: "हर मरीज का पूरा रिकॉर्ड",
-    en: "नाम, उम्र, मोबाइल, पता — सब एक जगह। Auto patient number (P0001, P0002...) ताकि कभी गड़बड़ी न हो।",
-  },
-  {
-    icon: "💊",
-    hi: "Digital Prescription — 30+ दवाइयाँ ready",
-    en: "Amoxicillin, Ibuprofen, Pantoprazole जैसी 30+ dental medicines पहले से loaded। बस choose करो, dose भरो, print करो।",
-  },
-  {
-    icon: "🦷",
-    hi: "Treatment Tracking — कौन सा दाँत, कितनी sitting",
-    en: "RCT, Capping, Scaling, Extraction — tooth number के साथ। Sitting 1/3, 2/3 track होती है।",
-  },
-  {
-    icon: "💰",
-    hi: "Billing — total, paid, due — एक click में",
-    en: "₹ कितना बना, कितना मिला, कितना बाकी — हर patient का अलग हिसाब। Cash, UPI, Card सब modes।",
-  },
-  {
-    icon: "🖨️",
-    hi: "Print-ready Prescription",
-    en: "Clinic का नाम, Doctor का नाम, date — सब automatically आता है। Browser से सीधे print।",
-  },
-  {
-    icon: "🔢",
-    hi: "Counter Boy के लिए PIN Login",
-    en: "Receptionist को सिर्फ नया patient register करने का access। Billing, prescription, settings — कुछ नहीं छू सकता।",
-  },
-  {
-    icon: "📱",
-    hi: "Mobile पर भी — कोई app install नहीं",
-    en: "Android में Chrome से Home Screen पर add करो — बिल्कुल app जैसा चलेगा। PWA technology।",
-  },
-  {
-    icon: "🖥️",
-    hi: "Windows Desktop App भी",
-    en: ".exe download करो — offline-like experience। Internet से connect होकर data Turso cloud में safe।",
-  },
+  { icon: "🧑‍⚕️", hi: "हर मरीज का पूरा रिकॉर्ड", en: "नाम, उम्र, मोबाइल, पता — सब एक जगह। Auto patient number (P0001, P0002...) ताकि कभी गड़बड़ी न हो।" },
+  { icon: "💊", hi: "Digital Prescription — 30+ दवाइयाँ ready", en: "Amoxicillin, Ibuprofen, Pantoprazole जैसी 30+ dental medicines पहले से loaded। बस choose करो, dose भरो, print करो।" },
+  { icon: "🦷", hi: "Treatment Tracking — कौन सा दाँत, कितनी sitting", en: "RCT, Capping, Scaling, Extraction — tooth number के साथ। Sitting 1/3, 2/3 track होती है।" },
+  { icon: "💰", hi: "Billing — total, paid, due — एक click में", en: "₹ कितना बना, कितना मिला, कितना बाकी — हर patient का अलग हिसाब। Cash, UPI, Card सब modes।" },
+  { icon: "🖨️", hi: "Print-ready Prescription", en: "Clinic का नाम, Doctor का नाम, date — सब automatically आता है। Browser से सीधे print।" },
+  { icon: "🔢", hi: "Counter Boy के लिए PIN Login", en: "Receptionist को सिर्फ नया patient register करने का access। Billing, prescription, settings — कुछ नहीं छू सकता।" },
+  { icon: "📱", hi: "Mobile पर भी — कोई app install नहीं", en: "Android में Chrome से Home Screen पर add करो — बिल्कुल app जैसा चलेगा। PWA technology।" },
+  { icon: "🖥️", hi: "Windows Desktop App भी", en: ".exe download करो — offline-like experience। Internet से connect होकर data Turso cloud में safe।" },
 ];
 
 const steps = [
-  {
-    step: "01",
-    icon: "🔐",
-    title: "Google से Login करें",
-    hi: "अपने Gmail से login करें — यही doctor का account बनेगा।",
-    en: "First 7 days completely free — no card, no payment.",
-  },
-  {
-    step: "02",
-    icon: "⚙️",
-    title: "Settings भरें",
-    hi: "Clinic का नाम, Doctor का नाम, और Receptionist का PIN set करें।",
-    en: "This info appears on every prescription you print.",
-  },
-  {
-    step: "03",
-    icon: "🔢",
-    title: "Counter Boy को PIN दें",
-    hi: "Receptionist /login/pin से 4-digit PIN से login करेगा।",
-    en: "He can only register new patients — nothing else.",
-  },
-  {
-    step: "04",
-    icon: "🧑‍⚕️",
-    title: "Patient Register करें",
-    hi: "Patients → New Patient → नाम, मोबाइल, उम्र भरो।",
-    en: "Auto patient number assign होता है।",
-  },
-  {
-    step: "05",
-    icon: "💊",
-    title: "Prescription / Treatment / Billing",
-    hi: "Patient खोलो → जो चाहो करो — prescription लिखो, treatment add करो, bill बनाओ।",
-    en: "Everything linked to the patient — no mess.",
-  },
+  { step: "01", icon: "🔐", title: "Google से Login करें", hi: "अपने Gmail से login करें — यही doctor का account बनेगा।", en: "First 7 days completely free — no card, no payment." },
+  { step: "02", icon: "⚙️", title: "Settings भरें", hi: "Clinic का नाम, Doctor का नाम, और Receptionist का PIN set करें।", en: "This info appears on every prescription you print." },
+  { step: "03", icon: "🔢", title: "Counter Boy को PIN दें", hi: "Receptionist /login/pin से 4-digit PIN से login करेगा।", en: "He can only register new patients — nothing else." },
+  { step: "04", icon: "🧑‍⚕️", title: "Patient Register करें", hi: "Patients → New Patient → नाम, मोबाइल, उम्र भरो।", en: "Auto patient number assign होता है।" },
+  { step: "05", icon: "💊", title: "Prescription / Treatment / Billing", hi: "Patient खोलो → जो चाहो करो — prescription लिखो, treatment add करो, bill बनाओ।", en: "Everything linked to the patient — no mess." },
 ];
 
 const pinGuide = [
+  { can: "नया Patient register कर सकता है", cannot: "Billing नहीं देख सकता" },
+  { can: "Patient list देख सकता है", cannot: "Prescription नहीं लिख सकता" },
+  { can: "Patient जोड़ सकता है", cannot: "Treatment record नहीं छू सकता" },
+  { can: "बस इतना — और कुछ नहीं", cannot: "Settings नहीं बदल सकता" },
+];
+
+const manual = [
   {
-    icon: "✅",
-    can: "नया Patient register कर सकता है",
-    cannot: "Billing नहीं देख सकता",
+    icon: "🔐", title: "पहली बार Login करें",
+    steps: [
+      "dental.nishantsoftwares.in खोलें",
+      "Sign in with Google दबाएं",
+      "अपनी Gmail से login करें",
+      "Dashboard खुल जाएगा",
+    ],
   },
   {
-    icon: "✅",
-    can: "Patient list देख सकता है",
-    cannot: "Prescription नहीं लिख सकता",
+    icon: "⚙️", title: "Settings पहले करें",
+    steps: [
+      "नीचे ⚙️ Settings दबाएं",
+      "Clinic का नाम और Doctor का नाम भरें → Save दबाएं",
+      "Receptionist के लिए 4 अंकों का PIN सेट करें → Update PIN दबाएं",
+      "Clinic ID नोट कर लें — यही receptionist को देना है",
+    ],
   },
   {
-    icon: "✅",
-    can: "Patient जोड़ सकता है",
-    cannot: "Treatment record नहीं छू सकता",
+    icon: "🔢", title: "Receptionist कैसे Login करे",
+    steps: [
+      "dental.nishantsoftwares.in/login खोलें",
+      "PIN Login दबाएं",
+      "Doctor का Clinic ID और PIN डालें",
+      "Patient registration form खुल जाएगा",
+    ],
   },
   {
-    icon: "🔒",
-    can: "बस इतना — और कुछ नहीं",
-    cannot: "Settings नहीं बदल सकता",
+    icon: "🧑‍⚕️", title: "नया मरीज़ जोड़ें",
+    steps: [
+      "🧑‍⚕️ Patients → + New Patient दबाएं",
+      "नाम और मोबाइल भरें → Register दबाएं",
+      "मरीज़ का पेज खुलेगा — यहाँ से Treatment, Prescription, Billing सब होगा",
+    ],
+  },
+  {
+    icon: "🦷", title: "Treatment जोड़ें",
+    steps: [
+      "मरीज़ के पेज पर + Treatment दबाएं",
+      "Procedure, दाँत नंबर, बैठकें, राशि भरें → Save",
+    ],
+  },
+  {
+    icon: "💊", title: "Prescription लिखें",
+    steps: [
+      "मरीज़ के पेज पर + Prescription दबाएं",
+      "दवाइयां, जाँच, नोट्स लिखें → Save",
+      "🖨️ बटन से print निकालें",
+    ],
+  },
+  {
+    icon: "💰", title: "Bill बनाएं",
+    steps: [
+      "मरीज़ के पेज पर + Billing दबाएं",
+      "कुल राशि, जमा राशि, payment mode भरें → Save",
+      "बकाया अपने आप calculate होगा",
+    ],
   },
 ];
 
@@ -140,8 +123,7 @@ export default function DentalPage() {
             🆓 7 दिन बिल्कुल मुफ्त — कोई card नहीं
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
-            🦷 Dental Pro
-            <br />
+            🦷 Dental Pro<br />
             <span className="text-green-200">सिर्फ Dental Clinic के लिए</span>
           </h1>
           <p className="text-lg font-semibold text-green-100 mb-2">
@@ -166,7 +148,7 @@ export default function DentalPage() {
         </div>
       </section>
 
-      {/* Pain point section */}
+      {/* Pain point */}
       <section className="py-10 px-4 bg-red-50 border-b border-red-100">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-xl font-extrabold text-red-700 mb-6">😤 क्या यही हाल है आपके clinic का?</h2>
@@ -179,9 +161,7 @@ export default function DentalPage() {
               "📞 पुराने मरीज का mobile number याद नहीं — register कहाँ है?",
               "🖨️ Prescription print करना हो — format बनाते रहो",
             ].map((p, i) => (
-              <div key={i} className="bg-white border border-red-200 rounded-xl px-4 py-3 text-sm text-red-800 font-medium">
-                {p}
-              </div>
+              <div key={i} className="bg-white border border-red-200 rounded-xl px-4 py-3 text-sm text-red-800 font-medium">{p}</div>
             ))}
           </div>
           <p className="text-red-600 font-bold text-lg mt-6">Dental Pro इन सब से मुक्ति देता है। ₹4,999 में — एक बार।</p>
@@ -204,7 +184,7 @@ export default function DentalPage() {
         </div>
       </section>
 
-      {/* How to use — Doctor */}
+      {/* How to use */}
       <section className="py-12 px-4 bg-green-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-extrabold text-center mb-1 text-gray-800">Doctor कैसे use करें?</h2>
@@ -227,13 +207,12 @@ export default function DentalPage() {
         </div>
       </section>
 
-      {/* PIN Guide — Receptionist */}
+      {/* PIN Guide */}
       <section className="py-12 px-4 bg-gray-900 text-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-extrabold text-center mb-1 text-yellow-400">🔢 Counter Boy का PIN Login</h2>
           <p className="text-center text-gray-400 text-sm mb-2">Receptionist को सिर्फ मरीज register करने का access</p>
           <p className="text-center text-gray-500 text-xs mb-8">Settings → Receptionist PIN set करो → Counter boy को दो → बस</p>
-
           <div className="bg-gray-800 border border-yellow-500/30 rounded-2xl p-6 mb-6">
             <div className="grid sm:grid-cols-2 gap-3">
               {pinGuide.map((p, i) => (
@@ -250,17 +229,59 @@ export default function DentalPage() {
               ))}
             </div>
           </div>
-
           <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-5">
             <h3 className="text-yellow-400 font-extrabold mb-3">PIN कैसे set करें?</h3>
             <ol className="flex flex-col gap-2 text-sm text-gray-300">
               <li className="flex gap-3"><span className="text-yellow-400 font-bold shrink-0">1.</span> Doctor अपने Google account से login करें</li>
               <li className="flex gap-3"><span className="text-yellow-400 font-bold shrink-0">2.</span> Dashboard → Settings ⚙️ पर जाएं</li>
-              <li className="flex gap-3"><span className="text-yellow-400 font-bold shrink-0">3.</span> "Receptionist PIN" वाले box में 4 digit का PIN भरें (जैसे 1234)</li>
+              <li className="flex gap-3"><span className="text-yellow-400 font-bold shrink-0">3.</span> "Receptionist PIN" वाले box में 4 digit का PIN भरें (जैसे 5678)</li>
               <li className="flex gap-3"><span className="text-yellow-400 font-bold shrink-0">4.</span> Save करें</li>
               <li className="flex gap-3"><span className="text-yellow-400 font-bold shrink-0">5.</span> Counter boy को बताएं — वो <strong className="text-white">/login/pin</strong> पर जाकर PIN से login करेगा</li>
               <li className="flex gap-3"><span className="text-yellow-400 font-bold shrink-0">6.</span> PIN बदलना हो — Settings में जाकर फिर से save करें</li>
             </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* Manual */}
+      <section className="py-12 px-4 bg-gray-950 text-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-extrabold text-center mb-1 text-green-400">📖 डॉक्टर गाइड — Step by Step</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">पहले दिन से लेकर रोज़ के काम तक — सब यहाँ</p>
+          <div className="flex flex-col gap-4">
+            {manual.map((sec, i) => (
+              <div key={i} className="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden">
+                <div className="bg-gray-800 px-5 py-4 flex items-center gap-3">
+                  <span className="text-2xl">{sec.icon}</span>
+                  <h3 className="text-lg font-black text-white">{sec.title}</h3>
+                  <span className="ml-auto text-xs font-bold text-gray-500 bg-gray-700 px-2 py-1 rounded-full">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <div className="px-5 py-4 flex flex-col gap-3">
+                  {sec.steps.map((st, j) => (
+                    <div key={j} className="flex items-start gap-4">
+                      <span className="shrink-0 w-7 h-7 rounded-full bg-green-500 text-gray-900 font-black text-sm flex items-center justify-center">
+                        {j + 1}
+                      </span>
+                      <p className="text-gray-200 text-base font-semibold leading-snug pt-0.5">{st}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <div className="bg-gray-900 border border-gray-800 rounded-2xl px-5 py-5">
+              <div className="text-3xl mb-2">📊</div>
+              <h3 className="text-lg font-black text-white mb-1">Dashboard</h3>
+              <p className="text-gray-300 text-base font-semibold leading-snug">हर बार login पर — कुल मरीज़, treatments, कमाई और बकाया एक नज़र में दिखेगा।</p>
+            </div>
+            <div className="bg-gray-900 border border-gray-800 rounded-2xl px-5 py-5">
+              <div className="text-3xl mb-2">🚪</div>
+              <h3 className="text-lg font-black text-white mb-1">Logout</h3>
+              <p className="text-gray-300 text-base font-semibold leading-snug">Settings में नीचे 🚪 Logout दबाएं।</p>
+            </div>
           </div>
         </div>
       </section>
@@ -289,7 +310,7 @@ export default function DentalPage() {
               </a>
             </div>
             <div className="rounded-2xl border-2 border-gray-200 p-6 text-center shadow-sm">
-              <div className="text-4xl font-extrabold text-green-600 mt-4 mb-1">₹1,999</div>
+              <div className="text-4xl font-extrabold text-green-600 mt-4 mb-1">₹2,500</div>
               <p className="text-gray-500 text-sm mb-1">Renewal — प्रति वर्ष</p>
               <ul className="text-gray-600 text-xs mb-5 text-left mt-3 flex flex-col gap-1">
                 <li>✅ पुराना सारा data safe रहेगा</li>
