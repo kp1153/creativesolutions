@@ -135,47 +135,112 @@ export default function HomeoPage() {
 
       {/* Roles Section */}
       <section className="py-16 px-4 bg-green-50">
-        <h2 className="text-center text-3xl font-black text-green-900 mb-12">आप कौन हैं?</h2>
+        <h2 className="text-center text-3xl font-black text-green-900 mb-4">आप कौन हैं?</h2>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">सॉफ्टवेयर में तीन तरह के लोग काम करते हैं — मालिक, डॉक्टर और काउंटर स्टाफ। हर किसी का login अलग है। नीचे अपना रोल देखें।</p>
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+
+          {/* मालिक */}
           <div className="bg-orange-50 border-2 border-orange-400 rounded-2xl p-6">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-2">
               <span className="text-3xl">👑</span>
               <span className="text-2xl font-black text-orange-700">मालिक</span>
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3"><span className="font-bold">१.</span> Google से Login करें</li>
-              <li className="flex items-start gap-3"><span className="font-bold">२.</span> क्लिनिक का नाम, पता और रजिस्ट्रेशन नंबर भरें</li>
-              <li className="flex items-start gap-3"><span className="font-bold">३.</span> डॉक्टर और काउंटर स्टाफ को मंजूरी दें</li>
-              <li className="flex items-start gap-3"><span className="font-bold">४.</span> दवाओं का स्टॉक जोड़ें और मैनेज करें</li>
-              <li className="flex items-start gap-3"><span className="font-bold">५.</span> सभी पर्चे और रिपोर्ट देखें</li>
+            <p className="text-sm text-orange-700 font-semibold mb-5">Login: हमेशा Gmail से</p>
+            <ul className="space-y-4 text-gray-700 text-sm">
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-orange-600 mt-0.5">१.</span>
+                <span>सॉफ्टवेयर खोलें → <strong>"Google से Login करें"</strong> बटन दबाएं → अपनी Gmail से sign in करें। यह सिर्फ एक बार होता है।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-orange-600 mt-0.5">२.</span>
+                <span>Settings में जाकर क्लिनिक का नाम, पता और रजिस्ट्रेशन नंबर भरें।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-orange-600 mt-0.5">३.</span>
+                <span>जब डॉक्टर पहली बार Gmail से login करे, तो मालिक के panel में उनका नाम दिखेगा — <strong>Approve</strong> करें।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-orange-600 mt-0.5">४.</span>
+                <span><strong>डॉक्टर और काउंटर स्टाफ का 4 अंकों का PIN सेट करें</strong> — Settings → Staff → PIN बदलें। यह PIN ही उनका रोज़ का पासवर्ड है।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-orange-600 mt-0.5">५.</span>
+                <span>दवाओं का स्टॉक जोड़ें, सभी पर्चे और रिपोर्ट देखें।</span>
+              </li>
             </ul>
+            <div className="mt-5 bg-orange-100 border border-orange-300 rounded-xl p-3 text-xs text-orange-800">
+              ⚠️ <strong>ज़रूरी:</strong> जब तक मालिक किसी का PIN सेट नहीं करता, वह व्यक्ति login नहीं कर सकता। पहले Approve करें, फिर PIN दें।
+            </div>
           </div>
+
+          {/* डॉक्टर */}
           <div className="bg-green-50 border-2 border-green-500 rounded-2xl p-6">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-2">
               <span className="text-3xl">🩺</span>
               <span className="text-2xl font-black text-green-700">डॉक्टर</span>
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3"><span className="font-bold">१.</span> Google से Login करें — मालिक से मंजूरी लें</li>
-              <li className="flex items-start gap-3"><span className="font-bold">२.</span> मरीज का नाम या मोबाइल से खोजें या नया बनाएं</li>
-              <li className="flex items-start gap-3"><span className="font-bold">३.</span> शिकायत लिखें और दवाएं चुनें</li>
-              <li className="flex items-start gap-3"><span className="font-bold">४.</span> पोटेंसी, मात्रा और समय भरें</li>
-              <li className="flex items-start gap-3"><span className="font-bold">५.</span> Save करें — पर्चा काउंटर पर फौरन पहुँच जाएगा</li>
+            <p className="text-sm text-green-700 font-semibold mb-5">Login: पहली बार Gmail से, उसके बाद हर बार PIN से</p>
+            <ul className="space-y-4 text-gray-700 text-sm">
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-green-600 mt-0.5">१.</span>
+                <span><strong>सिर्फ पहली बार:</strong> सॉफ्टवेयर खोलें → "Google से Login करें" → अपनी Gmail से sign in करें। यह सिर्फ एक बार करना है ताकि मालिक आपको पहचान सके।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-green-600 mt-0.5">२.</span>
+                <span>मालिक आपको Approve करेगा और एक <strong>4 अंकों का PIN</strong> देगा। यह PIN संभालकर रखें।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-green-600 mt-0.5">३.</span>
+                <span><strong>रोज़ का login:</strong> सॉफ्टवेयर खोलें → "Doctor PIN Login" → अपना 4 अंकों का PIN डालें। Gmail की जरूरत नहीं।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-green-600 mt-0.5">४.</span>
+                <span>मरीज का नाम या मोबाइल नंबर डालकर खोजें, या नया मरीज बनाएं।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-green-600 mt-0.5">५.</span>
+                <span>शिकायत लिखें → दवा चुनें → पोटेंसी, मात्रा और समय भरें → Save करें। पर्चा उसी पल काउंटर पर पहुँच जाएगा।</span>
+              </li>
             </ul>
+            <div className="mt-5 bg-green-100 border border-green-300 rounded-xl p-3 text-xs text-green-800">
+              💡 <strong>PIN भूल गए?</strong> मालिक से कहें — वह Settings में जाकर नया PIN सेट कर देगा। Gmail से दोबारा login की जरूरत नहीं।
+            </div>
           </div>
+
+          {/* काउंटर स्टाफ */}
           <div className="bg-blue-50 border-2 border-blue-400 rounded-2xl p-6">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-2">
               <span className="text-3xl">💊</span>
               <span className="text-2xl font-black text-blue-700">काउंटर स्टाफ</span>
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3"><span className="font-bold">१.</span> 4 अंकों का PIN डालकर Login करें</li>
-              <li className="flex items-start gap-3"><span className="font-bold">२.</span> नए पर्चे की सूची देखें</li>
-              <li className="flex items-start gap-3"><span className="font-bold">३.</span> दवाएं निकालें और Dispense करें</li>
-              <li className="flex items-start gap-3"><span className="font-bold">४.</span> Print निकालें या मरीज को दिखाएं</li>
-              <li className="flex items-start gap-3"><span className="font-bold">५.</span> स्टॉक कम हो तो मालिक को बताएं</li>
+            <p className="text-sm text-blue-700 font-semibold mb-5">Login: हमेशा सिर्फ PIN से — Gmail की कोई जरूरत नहीं</p>
+            <ul className="space-y-4 text-gray-700 text-sm">
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-blue-600 mt-0.5">१.</span>
+                <span>सबसे पहले मालिक से अपना <strong>4 अंकों का PIN</strong> लें। बिना PIN के login नहीं होगा।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-blue-600 mt-0.5">२.</span>
+                <span>सॉफ्टवेयर खोलें → <strong>"Counter PIN Login"</strong> → अपना PIN डालें → अंदर आ जाएं। इतना ही काफी है।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-blue-600 mt-0.5">३.</span>
+                <span>नए पर्चे की सूची अपने आप दिखेगी — जैसे ही डॉक्टर save करेगा।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-blue-600 mt-0.5">४.</span>
+                <span>दवाएं निकालें → Dispense करें → चाहें तो Print निकालें या मरीज को स्क्रीन दिखाएं।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-blue-600 mt-0.5">५.</span>
+                <span>कोई दवा खत्म होने वाली हो तो मालिक को बताएं।</span>
+              </li>
             </ul>
+            <div className="mt-5 bg-blue-100 border border-blue-300 rounded-xl p-3 text-xs text-blue-800">
+              💡 <strong>PIN नहीं मिला या भूल गए?</strong> मालिक से संपर्क करें — वही PIN बनाता और बदलता है। आपको कोई Gmail account की जरूरत नहीं है।
+            </div>
           </div>
+
         </div>
       </section>
 
