@@ -37,10 +37,10 @@ export default function PsychiatristPage() {
       <section className="bg-yellow-50 border-b border-yellow-200 py-4 px-4">
         <div className="max-w-4xl mx-auto">
           <p className="text-yellow-800 text-sm text-center font-semibold">
-            ⚠ Windows Smart App Control: यदि install करते समय warning आए तो "More info" → "Run anyway" क्लिक करें। यह software पूरी तरह सुरक्षित है।
+            ⚠ Windows Smart App Control: यदि install करते समय warning आए तो &quot;More info&quot; → &quot;Run anyway&quot; क्लिक करें। यह software पूरी तरह सुरक्षित है।
           </p>
           <p className="text-yellow-700 text-xs text-center mt-1">
-            ⚠ Windows Smart App Control Warning: Click "More info" → "Run anyway" if prompted. This software is completely safe.
+            ⚠ Windows Smart App Control Warning: Click &quot;More info&quot; → &quot;Run anyway&quot; if prompted. This software is completely safe.
           </p>
         </div>
       </section>
@@ -55,6 +55,8 @@ export default function PsychiatristPage() {
             <li>✅ असीमित मरीज / Unlimited Patients</li>
             <li>✅ असीमित पर्चे / Unlimited Prescriptions</li>
             <li>✅ Doctor + Receptionist + Pharmacy Login</li>
+            <li>✅ Multi-select Medicine Picker (142+ दवाएँ)</li>
+            <li>✅ Walk-in Sale & Brand Mapping</li>
             <li>✅ SMS Follow-up Reminders</li>
             <li>✅ Windows App + Web App + Mobile PWA</li>
             <li>✅ Free Updates</li>
@@ -72,10 +74,10 @@ export default function PsychiatristPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">मुख्य विशेषताएँ / Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: '👨‍⚕️', title: 'Doctor Dashboard', desc: 'Google Login से सुरक्षित। पर्चा लिखें, जाँच लिखें, दवाएँ लिखें, follow-up date set करें।' },
+              { icon: '👨‍⚕️', title: 'Doctor Dashboard', desc: 'Google Login से सुरक्षित। Multi-select picker से एक साथ कई दवाएँ, smart defaults के साथ।' },
               { icon: '📋', title: 'Receptionist Module', desc: 'PIN से login। मरीज का नाम और मोबाइल नंबर दर्ज करें — बस इतना काफी है।' },
-              { icon: '💊', title: 'Pharmacy Module', desc: 'PIN से login। Doctor द्वारा लिखी दवाएँ देखें और dispense करें।' },
-              { icon: '📱', title: 'Mobile PWA', desc: 'Mobile पर install होता है। बिना internet भी basic features काम करते हैं।' },
+              { icon: '💊', title: 'Pharmacy Module', desc: 'PIN से login। Doctor की prescriptions + Walk-in sale + Brand mapping, सब एक जगह।' },
+              { icon: '🧠', title: '142+ Psychiatric Drugs', desc: 'Latest और प्रचलित दवाएँ — Bipolar, Depression, Antipsychotics, Epilepsy, ADHD, PTSD, De-addiction सब।' },
               { icon: '🔔', title: 'Follow-up Reminders', desc: 'Follow-up date आने पर मरीज को SMS reminder automatically भेजा जाता है।' },
               { icon: '🖨️', title: 'Print Prescription', desc: 'Professional prescription print करें — doctor का नाम, दवाएँ, जाँच सब सहित।' },
             ].map((f, i) => (
@@ -101,7 +103,7 @@ export default function PsychiatristPage() {
               <p className="text-gray-700 leading-relaxed">
                 <strong>Download</strong> बटन पर क्लिक करके <strong>Psychiatrist Pro Setup 1.0.0.exe</strong> file download करें।
                 File पर double-click करके install करें। यदि Windows Smart App Control की warning आए तो
-                <strong> "More info"</strong> पर क्लिक करें, फिर <strong>"Run anyway"</strong> पर क्लिक करें।
+                <strong> &quot;More info&quot;</strong> पर क्लिक करें, फिर <strong>&quot;Run anyway&quot;</strong> पर क्लिक करें।
                 Installation पूरी होने के बाद Desktop पर <strong>Psychiatrist Pro</strong> का icon दिखेगा।
               </p>
             </div>
@@ -109,7 +111,7 @@ export default function PsychiatristPage() {
             <div className="bg-white rounded-2xl p-6 shadow">
               <h3 className="text-xl font-bold text-indigo-700 mb-3">🔐 Step 2 — Doctor Login (पहली बार)</h3>
               <p className="text-gray-700 leading-relaxed">
-                Software खोलें। <strong>"Sign in with Google"</strong> बटन पर क्लिक करें और अपने Gmail account से login करें।
+                Software खोलें। <strong>&quot;Sign in with Google&quot;</strong> बटन पर क्लिक करें और अपने Gmail account से login करें।
                 पहली बार login करने पर account बन जाएगा लेकिन <strong>activate नहीं होगा</strong>।
                 Account activate करने के लिए <strong>nishantsoftwares.in</strong> पर जाकर ₹4,999 का भुगतान करें।
                 भुगतान के बाद आपका account 24 घंटे में activate हो जाएगा।
@@ -120,55 +122,80 @@ export default function PsychiatristPage() {
             <div className="bg-white rounded-2xl p-6 shadow">
               <h3 className="text-xl font-bold text-indigo-700 mb-3">⚙️ Step 3 — Settings (पहली बार जरूरी)</h3>
               <p className="text-gray-700 leading-relaxed">
-                Doctor Dashboard में नीचे <strong>Settings</strong> icon पर क्लिक करें।
-                यहाँ आपको <strong>Clinic ID</strong> दिखेगा — यह नंबर अपने Receptionist और Pharmacist को दें।
-                <strong>Receptionist PIN</strong> set करें (4 अंक) — यह PIN Receptionist को बताएँ।
-                <strong>Pharmacy PIN</strong> set करें (4 अंक) — यह PIN Pharmacist को बताएँ।
-                <strong>Clinic Name</strong> भरें। Save करें।
+                Doctor Dashboard में <strong>Settings</strong> में जाएँ।
+                <strong>Clinic का नाम, Doctor का नाम, qualification, पता और phone number</strong> भरें — ये सब prescription letterhead पर print होगा।
+                <strong>Clinic logo</strong> upload करें।
+                <strong>Receptionist PIN</strong> set करें (4 अंक) — यह PIN receptionist को बताएँ।
+                <strong>Pharmacy PIN</strong> set करें (4 अंक) — यह PIN pharmacist को बताएँ।
+                Save करें।
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow">
               <h3 className="text-xl font-bold text-indigo-700 mb-3">📋 Step 4 — Receptionist कैसे काम करे</h3>
               <p className="text-gray-700 leading-relaxed">
-                Receptionist अपने मोबाइल या कंप्यूटर पर <strong>psychiatrists.nishantsoftwares.in</strong> खोले।
-                <strong>"Receptionist"</strong> बटन पर क्लिक करे। <strong>Clinic ID</strong> और <strong>PIN</strong> डाले।
-                Login होने पर <strong>"New Patient Entry"</strong> screen खुलेगी।
-                मरीज का <strong>नाम</strong> और <strong>10 अंकों का मोबाइल नंबर</strong> भरे।
-                चाहे तो मुख्य शिकायत (complaints) भी लिख सकते हैं।
-                <strong>"Register Patient"</strong> बटन दबाएँ — Token number generate होगा और Doctor की queue में entry चली जाएगी।
+                Receptionist अपने मोबाइल या कंप्यूटर पर <strong>psychiatrists.nishantsoftwares.in/receptionist</strong> खोले।
+                Doctor द्वारा दिया गया <strong>4-digit PIN</strong> डाले।
+                Login होने पर <strong>&quot;+ New Patient&quot;</strong> बटन दबाए।
+                मरीज का <strong>पूरा नाम, 10-digit मोबाइल नंबर, उम्र, लिंग</strong> भरे (पता optional)।
+                <strong>&quot;Register &amp; Add to Queue&quot;</strong> दबाए — मरीज Doctor की queue में आ जाएगा।
+                पहले से registered मरीज के लिए Search box में नाम/फोन डालकर <strong>&quot;Add to Today&apos;s Queue&quot;</strong> दबाए।
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow">
               <h3 className="text-xl font-bold text-indigo-700 mb-3">👨‍⚕️ Step 5 — Doctor पर्चा कैसे लिखे</h3>
               <p className="text-gray-700 leading-relaxed">
-                Doctor Dashboard में <strong>Patient Queue</strong> दिखेगी।
-                किसी भी मरीज के नाम पर क्लिक करें।
-                <strong>Tests/Investigations</strong> लिखें (जैसे CBC, Blood Sugar आदि)।
-                <strong>Medicines</strong> section में <strong>"+ Add"</strong> बटन दबाकर दवाएँ जोड़ें —
-                दवा का नाम, dose, timing (Morning/Afternoon/Evening/Night) और duration select करें।
-                <strong>Doctor Notes</strong> में follow-up instructions लिखें।
-                <strong>Follow-up Date</strong> set करें — इस date पर मरीज को SMS reminder जाएगा।
-                <strong>"Save"</strong> बटन दबाएँ — पर्चा Pharmacy queue में चला जाएगा।
-                <strong>"Save & Print"</strong> दबाने पर पर्चा print भी होगा।
+                Doctor Dashboard में आज की queue से मरीज पर tap करें।
+                <strong>Chief Complaints</strong> और <strong>Diagnosis</strong> (ICD-10 code जैसे F20, F32) भरें।
+                जरूरत हो तो <strong>MSE</strong> (Mood, Affect, Insight) one-tap buttons से भरें।
+                <strong>Tests/Investigations</strong> लिखें (CBC, LFT, TSH आदि)।
+                <strong>Add Medicines</strong> section में search या condition tab (Bipolar, Depression, Insomnia etc.) से filter करें।
+                <strong>🆕 Latest / 🔹 प्रचलित</strong> tabs से चुनें कि कौन सी पीढ़ी की दवाएँ दिखें।
+                दवाओं पर tap करके <strong>multi-select</strong> करें (✓ tick आएगा)।
+                नीचे <strong>&quot;Add X Selected →&quot;</strong> button दबाएँ — सारी दवाएँ smart defaults (timing, food, duration) के साथ prescription list में आ जाएँगी।
+                जरूरत हो तो हर दवा की dose/timing बदलें।
+                <strong>Follow-up Date</strong> set करें। <strong>&quot;Save&quot;</strong> या <strong>&quot;Save &amp; Print&quot;</strong> दबाएँ।
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow">
               <h3 className="text-xl font-bold text-indigo-700 mb-3">💊 Step 6 — Pharmacy दवा कैसे दे</h3>
               <p className="text-gray-700 leading-relaxed">
-                Pharmacist अपने मोबाइल या कंप्यूटर पर <strong>psychiatrists.nishantsoftwares.in</strong> खोले।
-                <strong>"Pharmacy"</strong> बटन पर क्लिक करे। Clinic ID और PIN डाले।
-                <strong>Pharmacy Queue</strong> में Doctor द्वारा complete किए गए पर्चे दिखेंगे।
+                Pharmacist <strong>psychiatrists.nishantsoftwares.in/pharmacy/login</strong> खोले।
+                Doctor द्वारा दिया गया <strong>4-digit PIN</strong> डाले।
+                <strong>Pharmacy Queue</strong> में Doctor द्वारा लिखी prescriptions दिखेंगी।
                 मरीज का नाम click करें — पूरा पर्चा दिखेगा।
-                हर दवा पर click करके <strong>tick</strong> करें जैसे-जैसे दी जाए।
-                सब दवाएँ देने के बाद <strong>"Mark as Dispensed"</strong> बटन दबाएँ।
+                दवाएँ निकालें, brand confirm करें, <strong>&quot;Print Bill&quot;</strong> दबाएँ — bill letterhead के साथ print होगा।
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow">
-              <h3 className="text-xl font-bold text-indigo-700 mb-3">🔔 Step 7 — Follow-up Reminder</h3>
+              <h3 className="text-xl font-bold text-indigo-700 mb-3">🛒 Step 7 — Walk-in Sale (बिना प्रिस्क्रिप्शन)</h3>
+              <p className="text-gray-700 leading-relaxed">
+                कोई customer बिना doctor visit के सीधे दवा लेने आए तो Pharmacy dashboard से <strong>&quot;Walk-in Sale&quot;</strong> खोलें।
+                Patient details optional हैं।
+                <strong>&quot;Tap to select salt...&quot;</strong> पर tap करें — modal खुलेगा।
+                Search box में दवा type करें या 142+ salts की list से चुनें।
+                Salt select होते ही brand auto-fill हो जाएगा (अगर पहले से mapped है)।
+                Quantity और price डालें — Amount अपने आप calculate होगा।
+                <strong>&quot;+ Add Medicine&quot;</strong> से और दवाएँ जोड़ें। <strong>&quot;🖨️ Print Bill&quot;</strong> दबाएँ।
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow">
+              <h3 className="text-xl font-bold text-indigo-700 mb-3">💾 Step 8 — Brand Mapping (एक-बार का setup)</h3>
+              <p className="text-gray-700 leading-relaxed">
+                हर salt का brand अलग होता है (Olanzapine → Oleanz, Olzap)।
+                Walk-in sale में salt select करने के बाद brand type करें,
+                फिर brand field के ऊपर <strong>&quot;💾 Save as my brand&quot;</strong> link दबाएँ।
+                अगली बार जब वही salt select करेंगे, brand और price <strong>auto-fill</strong> हो जाएँगे।
+                अगर कोई नई दवा list में नहीं है तो modal में <strong>&quot;+ Add New Salt&quot;</strong> से उसे permanent list में add करें।
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow">
+              <h3 className="text-xl font-bold text-indigo-700 mb-3">🔔 Step 9 — Follow-up Reminder</h3>
               <p className="text-gray-700 leading-relaxed">
                 Doctor जब पर्चे में <strong>Follow-up Date</strong> set करते हैं, तो उस date पर
                 system automatically मरीज के मोबाइल नंबर पर <strong>SMS reminder</strong> भेज देता है।
@@ -177,10 +204,10 @@ export default function PsychiatristPage() {
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow">
-              <h3 className="text-xl font-bold text-indigo-700 mb-3">📱 Step 8 — Mobile पर Install करें (PWA)</h3>
+              <h3 className="text-xl font-bold text-indigo-700 mb-3">📱 Step 10 — Mobile पर Install करें (PWA)</h3>
               <p className="text-gray-700 leading-relaxed">
                 Mobile browser में <strong>psychiatrists.nishantsoftwares.in</strong> खोलें।
-                Browser के menu में <strong>"Add to Home Screen"</strong> या <strong>"Install App"</strong> option पर click करें।
+                Browser के menu में <strong>&quot;Add to Home Screen&quot;</strong> या <strong>&quot;Install App&quot;</strong> option पर click करें।
                 App mobile की home screen पर install हो जाएगा।
                 अब बिना browser खोले सीधे app की तरह use कर सकते हैं।
               </p>
@@ -202,7 +229,7 @@ export default function PsychiatristPage() {
               <p className="text-gray-700 leading-relaxed">
                 Click the <strong>Download</strong> button to download <strong>Psychiatrist Pro Setup 1.0.0.exe</strong>.
                 Double-click the file to install. If Windows Smart App Control shows a warning,
-                click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.
+                click <strong>&quot;More info&quot;</strong> and then <strong>&quot;Run anyway&quot;</strong>.
                 After installation, the <strong>Psychiatrist Pro</strong> icon will appear on your Desktop.
               </p>
             </div>
@@ -210,7 +237,7 @@ export default function PsychiatristPage() {
             <div className="bg-indigo-50 rounded-2xl p-6 shadow">
               <h3 className="text-xl font-bold text-indigo-700 mb-3">🔐 Step 2 — Doctor Login (First Time)</h3>
               <p className="text-gray-700 leading-relaxed">
-                Open the software. Click <strong>"Sign in with Google"</strong> and login with your Gmail account.
+                Open the software. Click <strong>&quot;Sign in with Google&quot;</strong> and login with your Gmail account.
                 On first login, your account will be created but <strong>not yet activated</strong>.
                 To activate, visit <strong>nishantsoftwares.in</strong> and complete the ₹4,999 payment.
                 Your account will be activated within 24 hours of payment.
@@ -221,67 +248,91 @@ export default function PsychiatristPage() {
             <div className="bg-indigo-50 rounded-2xl p-6 shadow">
               <h3 className="text-xl font-bold text-indigo-700 mb-3">⚙️ Step 3 — Settings (Required on First Login)</h3>
               <p className="text-gray-700 leading-relaxed">
-                In the Doctor Dashboard, click the <strong>Settings</strong> icon at the bottom.
-                Your <strong>Clinic ID</strong> will be displayed — share this number with your Receptionist and Pharmacist.
+                Open Settings from the Doctor Dashboard.
+                Fill in <strong>Clinic Name, Doctor Name, Qualification, Address and Phone</strong> — all appear on the prescription letterhead.
+                Upload your <strong>Clinic Logo</strong>.
                 Set a <strong>Receptionist PIN</strong> (4 digits) and share it with your receptionist.
                 Set a <strong>Pharmacy PIN</strong> (4 digits) and share it with your pharmacist.
-                Enter your <strong>Clinic Name</strong> and click Save.
+                Click Save.
               </p>
             </div>
 
             <div className="bg-indigo-50 rounded-2xl p-6 shadow">
               <h3 className="text-xl font-bold text-indigo-700 mb-3">📋 Step 4 — Receptionist Workflow</h3>
               <p className="text-gray-700 leading-relaxed">
-                The receptionist opens <strong>psychiatrists.nishantsoftwares.in</strong> on their mobile or computer.
-                Click <strong>"Receptionist"</strong>, enter the <strong>Clinic ID</strong> and <strong>PIN</strong>.
-                The <strong>New Patient Entry</strong> screen will open.
-                Enter the patient's <strong>name</strong> and <strong>10-digit mobile number</strong>.
-                Optionally add chief complaints.
-                Click <strong>"Register Patient"</strong> — a token number will be generated and the entry will appear in the Doctor's queue.
+                The receptionist opens <strong>psychiatrists.nishantsoftwares.in/receptionist</strong> on their mobile or computer.
+                Enter the <strong>4-digit PIN</strong> provided by the doctor.
+                Click <strong>&quot;+ New Patient&quot;</strong> and fill in the patient&apos;s <strong>full name, 10-digit mobile number, age and gender</strong> (address optional).
+                Click <strong>&quot;Register &amp; Add to Queue&quot;</strong> — the patient appears in the doctor&apos;s queue.
+                For an existing patient, search by name/phone and click <strong>&quot;Add to Today&apos;s Queue&quot;</strong>.
               </p>
             </div>
 
             <div className="bg-indigo-50 rounded-2xl p-6 shadow">
               <h3 className="text-xl font-bold text-indigo-700 mb-3">👨‍⚕️ Step 5 — Doctor Writing a Prescription</h3>
               <p className="text-gray-700 leading-relaxed">
-                The Doctor Dashboard shows the <strong>Patient Queue</strong>.
-                Click on any patient's name to open their prescription.
-                Enter <strong>Tests/Investigations</strong> (e.g. CBC, Blood Sugar).
-                In the <strong>Medicines</strong> section, click <strong>"+ Add"</strong> to add medicines —
-                enter medicine name, dose, timing (Morning/Afternoon/Evening/Night) and duration.
-                Write follow-up instructions in <strong>Doctor Notes</strong>.
-                Set a <strong>Follow-up Date</strong> — an SMS reminder will be sent to the patient on that date.
-                Click <strong>"Save"</strong> — the prescription moves to the Pharmacy queue.
-                Click <strong>"Save & Print"</strong> to also print the prescription.
+                Tap a patient from today&apos;s queue.
+                Fill in <strong>Chief Complaints</strong> and <strong>Diagnosis</strong> (ICD-10 codes like F20, F32).
+                Optionally fill <strong>MSE</strong> (Mood, Affect, Insight) using one-tap buttons.
+                Enter <strong>Tests/Investigations</strong>.
+                In <strong>Add Medicines</strong>, search or filter by condition (Bipolar, Depression, Insomnia etc.).
+                Use <strong>🆕 Latest / 🔹 Common</strong> tabs to pick drug generation.
+                Tap drugs to <strong>multi-select</strong> (✓ tick appears).
+                Press <strong>&quot;Add X Selected →&quot;</strong> — all drugs go to the prescription list with smart defaults (timing, food, duration).
+                Adjust dose/timing if needed.
+                Set <strong>Follow-up Date</strong>. Click <strong>&quot;Save&quot;</strong> or <strong>&quot;Save &amp; Print&quot;</strong>.
               </p>
             </div>
 
             <div className="bg-indigo-50 rounded-2xl p-6 shadow">
               <h3 className="text-xl font-bold text-indigo-700 mb-3">💊 Step 6 — Pharmacy Dispensing Medicines</h3>
               <p className="text-gray-700 leading-relaxed">
-                The pharmacist opens <strong>psychiatrists.nishantsoftwares.in</strong> on their device.
-                Click <strong>"Pharmacy"</strong>, enter the Clinic ID and PIN.
-                The <strong>Pharmacy Queue</strong> shows prescriptions completed by the doctor.
-                Click on a patient's name to see the full prescription.
-                Tap each medicine to <strong>tick it off</strong> as it is dispensed.
-                After dispensing all medicines, click <strong>"Mark as Dispensed"</strong>.
+                The pharmacist opens <strong>psychiatrists.nishantsoftwares.in/pharmacy/login</strong>.
+                Enter the <strong>4-digit PIN</strong> provided by the doctor.
+                The <strong>Pharmacy Queue</strong> shows prescriptions written by the doctor.
+                Click on a patient&apos;s name to see the full prescription.
+                Pick the medicines, confirm brands, click <strong>&quot;Print Bill&quot;</strong> — the bill prints with letterhead.
               </p>
             </div>
 
             <div className="bg-indigo-50 rounded-2xl p-6 shadow">
-              <h3 className="text-xl font-bold text-indigo-700 mb-3">🔔 Step 7 — Follow-up Reminders</h3>
+              <h3 className="text-xl font-bold text-indigo-700 mb-3">🛒 Step 7 — Walk-in Sale (without prescription)</h3>
+              <p className="text-gray-700 leading-relaxed">
+                If a customer walks in without a doctor visit, open <strong>&quot;Walk-in Sale&quot;</strong> from the pharmacy dashboard.
+                Patient details are optional.
+                Tap <strong>&quot;Tap to select salt...&quot;</strong> — a modal opens.
+                Search or pick from the list of 142+ salts.
+                On selection, the brand auto-fills (if previously mapped).
+                Enter quantity and price — amount calculates automatically.
+                Add more medicines with <strong>&quot;+ Add Medicine&quot;</strong> and click <strong>&quot;🖨️ Print Bill&quot;</strong>.
+              </p>
+            </div>
+
+            <div className="bg-indigo-50 rounded-2xl p-6 shadow">
+              <h3 className="text-xl font-bold text-indigo-700 mb-3">💾 Step 8 — Brand Mapping (one-time setup)</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Every salt has different brands (Olanzapine → Oleanz, Olzap).
+                After selecting a salt in walk-in sale, type the brand name,
+                then click <strong>&quot;💾 Save as my brand&quot;</strong> above the brand field.
+                Next time the same salt is selected, brand and price <strong>auto-fill</strong>.
+                For a drug not in the list, use <strong>&quot;+ Add New Salt&quot;</strong> in the modal to add it permanently.
+              </p>
+            </div>
+
+            <div className="bg-indigo-50 rounded-2xl p-6 shadow">
+              <h3 className="text-xl font-bold text-indigo-700 mb-3">🔔 Step 9 — Follow-up Reminders</h3>
               <p className="text-gray-700 leading-relaxed">
                 When the doctor sets a <strong>Follow-up Date</strong> in a prescription,
-                the system automatically sends an <strong>SMS reminder</strong> to the patient's mobile number on that date.
+                the system automatically sends an <strong>SMS reminder</strong> to the patient&apos;s mobile number on that date.
                 This happens automatically every night at 9 PM — no action required from the doctor.
               </p>
             </div>
 
             <div className="bg-indigo-50 rounded-2xl p-6 shadow">
-              <h3 className="text-xl font-bold text-indigo-700 mb-3">📱 Step 8 — Install on Mobile (PWA)</h3>
+              <h3 className="text-xl font-bold text-indigo-700 mb-3">📱 Step 10 — Install on Mobile (PWA)</h3>
               <p className="text-gray-700 leading-relaxed">
                 Open <strong>psychiatrists.nishantsoftwares.in</strong> in your mobile browser.
-                Tap <strong>"Add to Home Screen"</strong> or <strong>"Install App"</strong> from the browser menu.
+                Tap <strong>&quot;Add to Home Screen&quot;</strong> or <strong>&quot;Install App&quot;</strong> from the browser menu.
                 The app will be installed on your home screen.
                 You can now use it like a native app without opening the browser.
               </p>
