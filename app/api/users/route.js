@@ -1,8 +1,8 @@
-import { db } from "../../../db";
-import { users } from "../../../db/schema";
+import { db } from "@/db";
+import { users } from "@/db/schema";
 import { eq, and, ne } from "drizzle-orm";
 import { cookies } from "next/headers";
-import { getSession } from "../../../lib/session";
+import { getSession } from "@/lib/session";
 
 // ─── GET — doctor + counter staff list ────────────────
 export async function GET() {
