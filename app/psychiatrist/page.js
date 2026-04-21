@@ -78,7 +78,7 @@ export default function PsychiatristPage() {
           <ul className="text-left text-sm text-gray-600 flex flex-col gap-2 mb-6">
             <li>✅ असीमित मरीज / Unlimited Patients</li>
             <li>✅ असीमित पर्चे / Unlimited Prescriptions</li>
-            <li>✅ Doctor + Receptionist + Pharmacy Login</li>
+            <li>✅ Doctor + Receptionist + Pharmacy + Psychologist Login</li>
             <li>✅ Multi-select Medicine Picker (142+ दवाएँ)</li>
             <li>✅ Walk-in Sale & Brand Mapping</li>
             <li>✅ SMS Follow-up Reminders</li>
@@ -119,6 +119,11 @@ export default function PsychiatristPage() {
               },
               {
                 icon: "🧠",
+                title: "Psychologist Module",
+                desc: "PIN से login। मरीज का psychological assessment करें — mood, history, symptoms। Doctor को forward करें।",
+              },
+              {
+                icon: "💊",
                 title: "142+ Psychiatric Drugs",
                 desc: "Latest और प्रचलित दवाएँ — Bipolar, Depression, Antipsychotics, Epilepsy, ADHD, PTSD, De-addiction सब।",
               },
@@ -172,14 +177,15 @@ export default function PsychiatristPage() {
                 🔐 Step 2 — Doctor Login (पहली बार)
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Software खोलें। <strong>&quot;Sign in with Google&quot;</strong>{" "}
-                बटन पर क्लिक करें और अपने Gmail account से login करें। पहली बार
-                login करने पर account बन जाएगा लेकिन{" "}
+                Software खोलें।{" "}
+                <strong>&quot;Sign in with Google&quot;</strong> बटन पर क्लिक
+                करें और अपने Gmail account से login करें। पहली बार login करने
+                पर account बन जाएगा लेकिन{" "}
                 <strong>activate नहीं होगा</strong>। Account activate करने के
                 लिए <strong>nishantsoftwares.in</strong> पर जाकर ₹4,999 का
-                भुगतान करें। भुगतान के बाद आपका account 24 घंटे में activate हो
-                जाएगा। Activate होने के बाद दोबारा login करें — Doctor Dashboard
-                खुल जाएगा।
+                भुगतान करें। भुगतान के बाद आपका account 24 घंटे में activate
+                हो जाएगा। Activate होने के बाद दोबारा login करें — Doctor
+                Dashboard खुल जाएगा।
               </p>
             </div>
 
@@ -188,25 +194,26 @@ export default function PsychiatristPage() {
                 ⚙️ Step 3 — Settings (पहली बार जरूरी)
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Doctor Dashboard में <strong>Settings</strong> में जाएँ।
+                Doctor Dashboard में <strong>Settings ⚙️</strong> में जाएँ।{" "}
                 <strong>
                   Clinic का नाम, Doctor का नाम, qualification, पता और phone
                   number
                 </strong>{" "}
-                भरें — ये सब prescription letterhead पर print होगा।
-                <strong>Clinic logo</strong> upload करें।
-                <strong>⚠ जरूरी:</strong> नए clinic में तीनों PIN{" "}
-                <strong>खाली</strong> होते हैं। जब तक आप PIN set नहीं करते, आपका
-                staff login नहीं कर पाएगा।
-                <strong>Receptionist PIN</strong> set करें (4 अंक) — यह PIN
-                receptionist को मुंह से बताएँ, लिखकर न दें।
-                <strong>Pharmacy PIN</strong> set करें (4 अंक) — यह PIN
-                pharmacist को मुंह से बताएँ। अगर आपके क्लिनिक में{" "}
-                <strong>Psychologist</strong> भी है तो{" "}
-                <strong>Psychologist PIN</strong> भी set करें।
-                <strong>PIN कब बदलें?</strong> जब कोई staff छोड़कर जाए, या आपको
-                लगे PIN किसी और को पता चल गया है।
-                 Save करें।
+                भरें — ये सब prescription letterhead पर print होगा।{" "}
+                <strong>Clinic logo</strong> upload करें।{" "}
+                <strong>⚠ जरूरी — Staff PINs:</strong> नए clinic में सभी PIN{" "}
+                <strong>खाली</strong> होते हैं। जब तक PIN set नहीं करते, staff
+                login नहीं कर पाएगा।{" "}
+                <strong>Receptionist PIN</strong> set करें (4 अंक)।{" "}
+                <strong>Pharmacy PIN</strong> set करें (4 अंक)। अगर आपके
+                clinic में <strong>Psychologist</strong> है तो{" "}
+                <strong>Psychologist toggle ON</strong> करें और{" "}
+                <strong>Psychologist PIN</strong> set करें।{" "}
+                <strong>PIN कब बदलें?</strong> जब कोई staff छोड़कर जाए।{" "}
+                <strong>Save</strong> करें।{" "}
+                <strong>⚠ Clinic ID:</strong> Settings में आपकी{" "}
+                <strong>Clinic ID</strong> दिखती है — यह number अपने staff को
+                बताएँ। Staff login के समय यही ID डालेगा।
               </p>
             </div>
 
@@ -216,16 +223,38 @@ export default function PsychiatristPage() {
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 Receptionist अपने मोबाइल या कंप्यूटर पर{" "}
-                <strong>psychiatrists.nishantsoftwares.in/receptionist</strong>{" "}
-                खोले। Doctor द्वारा दिया गया <strong>4-digit PIN</strong> डाले।
-                Login होने पर <strong>&quot;+ New Patient&quot;</strong> बटन
-                दबाए। मरीज का{" "}
-                <strong>पूरा नाम, 10-digit मोबाइल नंबर, उम्र, लिंग</strong> भरे
-                (पता optional)।
-                <strong>&quot;Register &amp; Add to Queue&quot;</strong> दबाए —
-                मरीज Doctor की queue में आ जाएगा। पहले से registered मरीज के लिए
-                Search box में नाम/फोन डालकर{" "}
-                <strong>&quot;Add to Today&apos;s Queue&quot;</strong> दबाए।
+                <strong>
+                  psychiatrists.nishantsoftwares.in/receptionist/login
+                </strong>{" "}
+                खोले — या home page पर <strong>Receptionist</strong> button
+                दबाए। <strong>Clinic ID</strong> डाले (Doctor से लें) और{" "}
+                <strong>4-digit PIN</strong> डाले। Login होने पर मरीज का{" "}
+                <strong>मोबाइल नंबर</strong> डालें — अगर पहले आ चुका है तो नाम
+                अपने आप भर जाएगा। नए मरीज के लिए{" "}
+                <strong>नाम और chief complaint</strong> भरें।{" "}
+                <strong>&quot;Register Patient&quot;</strong> दबाएँ — मरीज
+                queue में चला जाएगा।
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow">
+              <h3 className="text-xl font-bold text-indigo-700 mb-3">
+                🧠 Step 4b — Psychologist कैसे काम करे
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>यह step सिर्फ उन clinics के लिए है जहाँ Psychologist है।</strong>{" "}
+                Receptionist के register करने के बाद मरीज सीधे Psychologist
+                के पास जाएगा। Psychologist{" "}
+                <strong>
+                  psychiatrists.nishantsoftwares.in/psychologist/login
+                </strong>{" "}
+                खोले। <strong>Clinic ID</strong> और{" "}
+                <strong>Psychologist PIN</strong> डाले। Queue में मरीज का नाम
+                दिखेगा — tap करें। <strong>Mood score</strong> (1-10),{" "}
+                <strong>History</strong>, <strong>Symptoms</strong> और{" "}
+                <strong>Notes</strong> भरें।{" "}
+                <strong>&quot;Send to Doctor →&quot;</strong> दबाएँ — मरीज
+                Doctor की queue में चला जाएगा।
               </p>
             </div>
 
@@ -234,22 +263,14 @@ export default function PsychiatristPage() {
                 👨‍⚕️ Step 5 — Doctor पर्चा कैसे लिखे
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Doctor Dashboard में आज की queue से मरीज पर tap करें।
-                <strong>Chief Complaints</strong> और <strong>Diagnosis</strong>{" "}
-                (ICD-10 code जैसे F20, F32) भरें। जरूरत हो तो{" "}
-                <strong>MSE</strong> (Mood, Affect, Insight) one-tap buttons से
-                भरें।
-                <strong>Tests/Investigations</strong> लिखें (CBC, LFT, TSH आदि)।
-                <strong>Add Medicines</strong> section में search या condition
-                tab (Bipolar, Depression, Insomnia etc.) से filter करें।
-                <strong>🆕 Latest / 🔹 प्रचलित</strong> tabs से चुनें कि कौन सी
-                पीढ़ी की दवाएँ दिखें। दवाओं पर tap करके{" "}
-                <strong>multi-select</strong> करें (✓ tick आएगा)। नीचे{" "}
-                <strong>&quot;Add X Selected →&quot;</strong> button दबाएँ —
-                सारी दवाएँ smart defaults (timing, food, duration) के साथ
-                prescription list में आ जाएँगी। जरूरत हो तो हर दवा की
-                dose/timing बदलें।
-                <strong>Follow-up Date</strong> set करें।{" "}
+                Doctor Dashboard में आज की queue से मरीज पर tap करें। अगर
+                Psychologist का assessment है तो वो ऊपर{" "}
+                <strong>purple card</strong> में दिखेगा।{" "}
+                <strong>Chief Complaints</strong> और{" "}
+                <strong>Diagnosis</strong> (ICD-10 code जैसे F20, F32) भरें।
+                जरूरत हो तो <strong>MSE</strong> भरें।{" "}
+                <strong>Add Medicines</strong> section में दवाएँ multi-select
+                करें। <strong>Follow-up Date</strong> set करें।{" "}
                 <strong>&quot;Save&quot;</strong> या{" "}
                 <strong>&quot;Save &amp; Print&quot;</strong> दबाएँ।
               </p>
@@ -264,12 +285,12 @@ export default function PsychiatristPage() {
                 <strong>
                   psychiatrists.nishantsoftwares.in/pharmacy/login
                 </strong>{" "}
-                खोले। Doctor द्वारा दिया गया <strong>4-digit PIN</strong> डाले।
+                खोले। <strong>Clinic ID</strong> और Doctor द्वारा दिया गया{" "}
+                <strong>4-digit PIN</strong> डाले।{" "}
                 <strong>Pharmacy Queue</strong> में Doctor द्वारा लिखी
                 prescriptions दिखेंगी। मरीज का नाम click करें — पूरा पर्चा
                 दिखेगा। दवाएँ निकालें, brand confirm करें,{" "}
-                <strong>&quot;Print Bill&quot;</strong> दबाएँ — bill letterhead
-                के साथ print होगा।
+                <strong>&quot;Print Bill&quot;</strong> दबाएँ।
               </p>
             </div>
 
@@ -280,12 +301,12 @@ export default function PsychiatristPage() {
               <p className="text-gray-700 leading-relaxed">
                 कोई customer बिना doctor visit के सीधे दवा लेने आए तो Pharmacy
                 dashboard से <strong>&quot;Walk-in Sale&quot;</strong> खोलें।
-                Patient details optional हैं।
-                <strong>&quot;Tap to select salt...&quot;</strong> पर tap करें —
-                modal खुलेगा। Search box में दवा type करें या 142+ salts की list
-                से चुनें। Salt select होते ही brand auto-fill हो जाएगा (अगर पहले
-                से mapped है)। Quantity और price डालें — Amount अपने आप
-                calculate होगा।
+                Patient details optional हैं।{" "}
+                <strong>&quot;Tap to select salt...&quot;</strong> पर tap करें
+                — modal खुलेगा। Search box में दवा type करें या 142+ salts की
+                list से चुनें। Salt select होते ही brand auto-fill हो जाएगा
+                (अगर पहले से mapped है)। Quantity और price डालें — Amount अपने
+                आप calculate होगा।{" "}
                 <strong>&quot;+ Add Medicine&quot;</strong> से और दवाएँ जोड़ें।{" "}
                 <strong>&quot;🖨️ Print Bill&quot;</strong> दबाएँ।
               </p>
@@ -302,8 +323,9 @@ export default function PsychiatristPage() {
                 <strong>&quot;💾 Save as my brand&quot;</strong> link दबाएँ।
                 अगली बार जब वही salt select करेंगे, brand और price{" "}
                 <strong>auto-fill</strong> हो जाएँगे। अगर कोई नई दवा list में
-                नहीं है तो modal में <strong>&quot;+ Add New Salt&quot;</strong>{" "}
-                से उसे permanent list में add करें।
+                नहीं है तो modal में{" "}
+                <strong>&quot;+ Add New Salt&quot;</strong> से उसे permanent
+                list में add करें।
               </p>
             </div>
 
@@ -329,8 +351,7 @@ export default function PsychiatristPage() {
                 Browser के menu में{" "}
                 <strong>&quot;Add to Home Screen&quot;</strong> या{" "}
                 <strong>&quot;Install App&quot;</strong> option पर click करें।
-                App mobile की home screen पर install हो जाएगा। अब बिना browser
-                खोले सीधे app की तरह use कर सकते हैं।
+                App mobile की home screen पर install हो जाएगा।
               </p>
             </div>
           </div>
@@ -370,9 +391,8 @@ export default function PsychiatristPage() {
                 your Gmail account. On first login, your account will be created
                 but <strong>not yet activated</strong>. To activate, visit{" "}
                 <strong>nishantsoftwares.in</strong> and complete the ₹4,999
-                payment. Your account will be activated within 24 hours of
-                payment. After activation, login again — the Doctor Dashboard
-                will open.
+                payment. Your account will be activated within 24 hours. After
+                activation, login again — the Doctor Dashboard will open.
               </p>
             </div>
 
@@ -381,24 +401,26 @@ export default function PsychiatristPage() {
                 ⚙️ Step 3 — Settings (Required on First Login)
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Open Settings from the Doctor Dashboard. Fill in{" "}
+                Open <strong>Settings ⚙️</strong> from the Doctor Dashboard.
+                Fill in{" "}
                 <strong>
                   Clinic Name, Doctor Name, Qualification, Address and Phone
                 </strong>{" "}
                 — all appear on the prescription letterhead. Upload your{" "}
                 <strong>Clinic Logo</strong>.{" "}
-                <strong>⚠ Important:</strong> New clinics have all PINs{" "}
-                <strong>empty</strong> by default. Your staff cannot log in
+                <strong>⚠ Important — Staff PINs:</strong> New clinics have all
+                PINs <strong>empty</strong> by default. Your staff cannot log in
                 until you set the PINs. Set a{" "}
-                <strong>Receptionist PIN</strong> (4 digits) and share it
-                verbally with your receptionist — do not write it down. Set a{" "}
-                <strong>Pharmacy PIN</strong> (4 digits) and share it verbally
-                with your pharmacist. If your clinic also has a{" "}
-                <strong>Psychologist</strong>, set the{" "}
-                <strong>Psychologist PIN</strong> too.{" "}
-                <strong>When to change PINs?</strong> When a staff member
-                leaves, or if you suspect someone else knows the PIN. Click
-                Save.
+                <strong>Receptionist PIN</strong> (4 digits). Set a{" "}
+                <strong>Pharmacy PIN</strong> (4 digits). If your clinic has a{" "}
+                <strong>Psychologist</strong>, toggle{" "}
+                <strong>Psychologist ON</strong> and set the{" "}
+                <strong>Psychologist PIN</strong>. Change PINs whenever a staff
+                member leaves. Click <strong>Save</strong>.{" "}
+                <strong>⚠ Clinic ID:</strong> Your{" "}
+                <strong>Clinic ID</strong> is shown in Settings — share this
+                number with your staff. They will enter it at login along with
+                their PIN.
               </p>
             </div>
 
@@ -408,19 +430,38 @@ export default function PsychiatristPage() {
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 The receptionist opens{" "}
-                <strong>psychiatrists.nishantsoftwares.in/receptionist</strong>{" "}
-                on their mobile or computer. Enter the{" "}
-                <strong>4-digit PIN</strong> provided by the doctor. Click{" "}
-                <strong>&quot;+ New Patient&quot;</strong> and fill in the
-                patient&apos;s{" "}
                 <strong>
-                  full name, 10-digit mobile number, age and gender
+                  psychiatrists.nishantsoftwares.in/receptionist/login
                 </strong>{" "}
-                (address optional). Click{" "}
-                <strong>&quot;Register &amp; Add to Queue&quot;</strong> — the
-                patient appears in the doctor&apos;s queue. For an existing
-                patient, search by name/phone and click{" "}
-                <strong>&quot;Add to Today&apos;s Queue&quot;</strong>.
+                — or taps <strong>Receptionist</strong> on the home page. Enter
+                the <strong>Clinic ID</strong> (given by doctor) and the{" "}
+                <strong>4-digit PIN</strong>. After login, enter the
+                patient&apos;s <strong>mobile number</strong> — if the patient
+                has visited before, the name auto-fills. For a new patient,
+                enter <strong>name and chief complaint</strong>. Tap{" "}
+                <strong>&quot;Register Patient&quot;</strong> — the patient is
+                added to the queue.
+              </p>
+            </div>
+
+            <div className="bg-indigo-50 rounded-2xl p-6 shadow">
+              <h3 className="text-xl font-bold text-indigo-700 mb-3">
+                🧠 Step 4b — Psychologist Workflow
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>Only for clinics that have a Psychologist.</strong>{" "}
+                After the receptionist registers the patient, they go to the
+                Psychologist first. The psychologist opens{" "}
+                <strong>
+                  psychiatrists.nishantsoftwares.in/psychologist/login
+                </strong>
+                . Enter the <strong>Clinic ID</strong> and{" "}
+                <strong>Psychologist PIN</strong>. The queue shows waiting
+                patients — tap a name. Fill in <strong>Mood score</strong>{" "}
+                (1–10), <strong>History</strong>, <strong>Symptoms</strong> and{" "}
+                <strong>Notes</strong>. Tap{" "}
+                <strong>&quot;Send to Doctor →&quot;</strong> — the patient
+                moves to the Doctor&apos;s queue.
               </p>
             </div>
 
@@ -429,18 +470,13 @@ export default function PsychiatristPage() {
                 👨‍⚕️ Step 5 — Doctor Writing a Prescription
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Tap a patient from today&apos;s queue. Fill in{" "}
-                <strong>Chief Complaints</strong> and <strong>Diagnosis</strong>{" "}
-                (ICD-10 codes like F20, F32). Optionally fill{" "}
-                <strong>MSE</strong> (Mood, Affect, Insight) using one-tap
-                buttons. Enter <strong>Tests/Investigations</strong>. In{" "}
-                <strong>Add Medicines</strong>, search or filter by condition
-                (Bipolar, Depression, Insomnia etc.). Use{" "}
-                <strong>🆕 Latest / 🔹 Common</strong> tabs to pick drug
-                generation. Tap drugs to <strong>multi-select</strong> (✓ tick
-                appears). Press <strong>&quot;Add X Selected →&quot;</strong> —
-                all drugs go to the prescription list with smart defaults
-                (timing, food, duration). Adjust dose/timing if needed. Set{" "}
+                Tap a patient from today&apos;s queue. If a Psychologist
+                assessment exists, it appears in a{" "}
+                <strong>purple card</strong> at the top. Fill in{" "}
+                <strong>Chief Complaints</strong> and{" "}
+                <strong>Diagnosis</strong> (ICD-10 codes like F20, F32).
+                Optionally fill <strong>MSE</strong>. In{" "}
+                <strong>Add Medicines</strong>, multi-select drugs. Set{" "}
                 <strong>Follow-up Date</strong>. Click{" "}
                 <strong>&quot;Save&quot;</strong> or{" "}
                 <strong>&quot;Save &amp; Print&quot;</strong>.
@@ -456,12 +492,12 @@ export default function PsychiatristPage() {
                 <strong>
                   psychiatrists.nishantsoftwares.in/pharmacy/login
                 </strong>
-                . Enter the <strong>4-digit PIN</strong> provided by the doctor.
-                The <strong>Pharmacy Queue</strong> shows prescriptions written
-                by the doctor. Click on a patient&apos;s name to see the full
-                prescription. Pick the medicines, confirm brands, click{" "}
-                <strong>&quot;Print Bill&quot;</strong> — the bill prints with
-                letterhead.
+                . Enter the <strong>Clinic ID</strong> and the{" "}
+                <strong>4-digit PIN</strong>. The{" "}
+                <strong>Pharmacy Queue</strong> shows prescriptions written by
+                the doctor. Click on a patient&apos;s name to see the full
+                prescription. Pick medicines, confirm brands, click{" "}
+                <strong>&quot;Print Bill&quot;</strong>.
               </p>
             </div>
 
@@ -474,10 +510,9 @@ export default function PsychiatristPage() {
                 <strong>&quot;Walk-in Sale&quot;</strong> from the pharmacy
                 dashboard. Patient details are optional. Tap{" "}
                 <strong>&quot;Tap to select salt...&quot;</strong> — a modal
-                opens. Search or pick from the list of 142+ salts. On selection,
-                the brand auto-fills (if previously mapped). Enter quantity and
-                price — amount calculates automatically. Add more medicines with{" "}
-                <strong>&quot;+ Add Medicine&quot;</strong> and click{" "}
+                opens. Search or pick from 142+ salts. Brand auto-fills if
+                previously mapped. Enter quantity and price. Add more medicines
+                with <strong>&quot;+ Add Medicine&quot;</strong> and click{" "}
                 <strong>&quot;🖨️ Print Bill&quot;</strong>.
               </p>
             </div>
@@ -488,12 +523,12 @@ export default function PsychiatristPage() {
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 Every salt has different brands (Olanzapine → Oleanz, Olzap).
-                After selecting a salt in walk-in sale, type the brand name,
-                then click <strong>&quot;💾 Save as my brand&quot;</strong>{" "}
-                above the brand field. Next time the same salt is selected,
-                brand and price <strong>auto-fill</strong>. For a drug not in
-                the list, use <strong>&quot;+ Add New Salt&quot;</strong> in the
-                modal to add it permanently.
+                After selecting a salt, type the brand name and click{" "}
+                <strong>&quot;💾 Save as my brand&quot;</strong>. Next time the
+                same salt is selected, brand and price{" "}
+                <strong>auto-fill</strong>. For a drug not in the list, use{" "}
+                <strong>&quot;+ Add New Salt&quot;</strong> to add it
+                permanently.
               </p>
             </div>
 
@@ -502,11 +537,10 @@ export default function PsychiatristPage() {
                 🔔 Step 9 — Follow-up Reminders
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                When the doctor sets a <strong>Follow-up Date</strong> in a
-                prescription, the system automatically sends an{" "}
-                <strong>SMS reminder</strong> to the patient&apos;s mobile
-                number on that date. This happens automatically every night at 9
-                PM — no action required from the doctor.
+                When the doctor sets a <strong>Follow-up Date</strong>, the
+                system automatically sends an <strong>SMS reminder</strong> to
+                the patient on that date every night at 9 PM — no action
+                required.
               </p>
             </div>
 
@@ -519,8 +553,7 @@ export default function PsychiatristPage() {
                 mobile browser. Tap{" "}
                 <strong>&quot;Add to Home Screen&quot;</strong> or{" "}
                 <strong>&quot;Install App&quot;</strong> from the browser menu.
-                The app will be installed on your home screen. You can now use
-                it like a native app without opening the browser.
+                The app installs on your home screen like a native app.
               </p>
             </div>
           </div>
