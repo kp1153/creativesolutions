@@ -133,6 +133,112 @@ export default function HomeoPage() {
         </div>
       </section>
 
+      {/* PIN Rules — Simple Explanation */}
+      <section className="py-16 px-4 bg-amber-50 border-y-4 border-amber-300">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-block text-5xl mb-3">🔐</div>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3">PIN क्या है? कैसे बनाएं?</h2>
+            <p className="text-gray-700 text-lg">4 अंकों का छोटा पासवर्ड — जैसे ATM कार्ड का PIN।</p>
+          </div>
+
+          {/* मुख्य बात */}
+          <div className="bg-white rounded-2xl border-2 border-amber-400 p-6 mb-6 shadow">
+            <p className="text-xl font-black text-gray-900 mb-4">🎯 सीधी बात</p>
+            <ul className="space-y-3 text-gray-800 text-base">
+              <li className="flex items-start gap-3">
+                <span className="text-green-600 text-xl font-bold mt-0.5">✓</span>
+                <span><strong>मालिक Gmail से login करता है</strong> — उसे PIN की जरूरत नहीं।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-600 text-xl font-bold mt-0.5">✓</span>
+                <span><strong>डॉक्टर और काउंटर स्टाफ सिर्फ PIN से login करते हैं</strong> — Gmail की जरूरत नहीं (पहली बार को छोड़कर)।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-600 text-xl font-bold mt-0.5">✓</span>
+                <span><strong>मालिक ही सबका PIN बनाता है</strong> — डॉक्टर या स्टाफ खुद नहीं बना सकते।</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* नियम */}
+          <div className="bg-white rounded-2xl border-2 border-amber-400 p-6 mb-6 shadow">
+            <p className="text-xl font-black text-gray-900 mb-4">📏 PIN बनाने के नियम</p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="bg-green-50 border-2 border-green-300 rounded-xl p-4">
+                <p className="text-sm font-bold text-green-700 mb-2">✓ क्या सही है</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• सिर्फ अंक (0-9)</li>
+                  <li>• ठीक 4 अंक होने चाहिए</li>
+                  <li>• जैसे: 2580, 7413, 9046</li>
+                  <li>• हर व्यक्ति का PIN अलग हो</li>
+                </ul>
+              </div>
+              <div className="bg-red-50 border-2 border-red-300 rounded-xl p-4">
+                <p className="text-sm font-bold text-red-700 mb-2">✗ क्या गलत है</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• अक्षर या चिन्ह नहीं चलेंगे</li>
+                  <li>• 3 अंक या 5 अंक नहीं</li>
+                  <li>• 1234 या 0000 न रखें (आसान है)</li>
+                  <li>• दो डॉक्टरों का एक ही PIN नहीं</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* PIN कैसे सेट करें — मालिक के लिए */}
+          <div className="bg-white rounded-2xl border-2 border-orange-400 p-6 mb-6 shadow">
+            <p className="text-xl font-black text-orange-700 mb-2">👑 मालिक के लिए: PIN कैसे सेट करें?</p>
+            <p className="text-sm text-gray-600 mb-4">तीन आसान कदम:</p>
+            <ol className="space-y-4 text-gray-800 text-base">
+              <li className="flex items-start gap-3">
+                <span className="bg-orange-500 text-white font-black w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0">१</span>
+                <span>Owner Panel खोलें → ऊपर <strong>"🔐 PIN Setup"</strong> वाली tab पर क्लिक करें।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="bg-orange-500 text-white font-black w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0">२</span>
+                <span>जिस डॉक्टर या स्टाफ को PIN देना है, उसके सामने के खाने में <strong>4 अंक</strong> डालें।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="bg-orange-500 text-white font-black w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0">३</span>
+                <span><strong>"Set"</strong> बटन दबाएं → हो गया। ✅</span>
+              </li>
+            </ol>
+            <div className="mt-5 bg-orange-50 border border-orange-300 rounded-xl p-4 text-sm text-orange-900">
+              💡 <strong>PIN बदलना है?</strong> वही तरीका — नया PIN डालें और Set करें। पुराना PIN अपने आप बदल जाएगा।
+            </div>
+          </div>
+
+          {/* याद रखने की बातें */}
+          <div className="bg-white rounded-2xl border-2 border-amber-400 p-6 shadow">
+            <p className="text-xl font-black text-gray-900 mb-4">⚠️ ज़रूरी बातें</p>
+            <ul className="space-y-3 text-gray-800 text-base">
+              <li className="flex items-start gap-3">
+                <span className="text-amber-600 text-xl mt-0.5">•</span>
+                <span><strong>डॉक्टर को पहले Approve करें, फिर PIN दें।</strong> बिना Approve किए PIN काम नहीं करेगा।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-600 text-xl mt-0.5">•</span>
+                <span><strong>PIN किसी को लिखकर न दें</strong> — सीधे मुंह से बताएं। कागज पर लिखा PIN कोई भी देख सकता है।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-600 text-xl mt-0.5">•</span>
+                <span><strong>डॉक्टर के जाने पर उसका PIN तुरंत बदल दें</strong> — ताकि पुराना कर्मचारी अंदर न आ सके।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-600 text-xl mt-0.5">•</span>
+                <span><strong>कोई PIN भूल गया?</strong> मालिक Settings में जाकर नया PIN सेट कर देगा — पुराना अपने आप खत्म।</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-600 text-xl mt-0.5">•</span>
+                <span><strong>दो लोगों का एक जैसा PIN नहीं हो सकता।</strong> सॉफ्टवेयर खुद रोक देगा।</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
       {/* Roles Section */}
       <section className="py-16 px-4 bg-green-50">
         <h2 className="text-center text-3xl font-black text-green-900 mb-4">आप कौन हैं?</h2>
