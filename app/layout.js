@@ -22,11 +22,11 @@ const OG_IMAGE_URL = `${SITE_URL}/og-image.png`;
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Nishant Softwares — 13 Industries के लिए लाजवाब सॉफ्टवेयर",
+    default: "Nishant Softwares — 14 Industries के लिए लाजवाब सॉफ्टवेयर",
     template: "%s | Nishant Softwares",
   },
   description:
-    "दुकानदारों, पेशेवरों और फैक्टरियों के लिए 15 लाजवाब सॉफ्टवेयर। 7 दिन मुफ्त उपयोग करें — फीडबैक दें और पाएं अपनी वेबसाइट का SEO बिल्कुल मुफ्त!",
+    "दुकानदारों, पेशेवरों और फैक्टरियों के लिए 14 लाजवाब सॉफ्टवेयर। 7 दिन मुफ्त उपयोग करें — फीडबैक दें और पाएं अपनी वेबसाइट का SEO बिल्कुल मुफ्त!",
   keywords:
     "business software india, shop management software, dental software, school software, ration shop software, hardware shop software, legal software, hotel software, clinic software, pharma software, varanasi software",
   authors: [{ name: "Kamta Prasad" }],
