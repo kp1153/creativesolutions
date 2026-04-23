@@ -37,7 +37,7 @@ function PaymentForm() {
   }, [software]);
 
   async function handlePayment() {
-    if (!form.name || !form.phone) {
+    if (!form.name || !form.email || !form.phone) {
       alert("नाम और फोन नंबर जरूरी है");
       return;
     }
@@ -113,11 +113,15 @@ function PaymentForm() {
             Payment
           </h1>
           {softwareName && (
-            <p className="text-center text-sm text-gray-500 mb-6">{softwareName}</p>
+            <p className="text-center text-sm text-gray-500 mb-6">
+              {softwareName}
+            </p>
           )}
 
           {plansLoading ? (
-            <p className="text-center text-gray-400 text-sm mb-6">Loading plans...</p>
+            <p className="text-center text-gray-400 text-sm mb-6">
+              Loading plans...
+            </p>
           ) : (
             <div className="flex gap-3 mb-6">
               {plans.map((p) => (
@@ -143,8 +147,8 @@ function PaymentForm() {
               className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-400"
             />
             <input
-              type="email"
-              placeholder="Email (optional)"
+              type="email"          
+              placeholder="Email *"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-400"
@@ -163,12 +167,19 @@ function PaymentForm() {
             disabled={loading || plansLoading || !selectedPlan}
             className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition disabled:opacity-50"
           >
-            {loading ? "Processing..." : `₹${selectedPlan?.amount || ""} — Pay Now`}
+            {loading
+              ? "Processing..."
+              : `₹${selectedPlan?.amount || ""} — Pay Now`}
           </button>
 
           <p className="text-center text-xs text-gray-400 mt-4">
             Need help?{" "}
-            <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="text-green-600 underline">
+            <a
+              href="https://wa.me/919996865069"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 underline"
+            >
               WhatsApp us
             </a>
           </p>
@@ -180,7 +191,13 @@ function PaymentForm() {
 
 export default function PaymentPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-gray-400">Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center text-gray-400">
+          Loading...
+        </div>
+      }
+    >
       <PaymentForm />
     </Suspense>
   );
