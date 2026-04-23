@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "Psychiatrist Pro - Complete clinic management system for psychiatrists",
 };
-
+const PSYCHIATRIST_PWA_URL = "https://psychiatrists.nishantsoftwares.in";
 const EXE_URL =
   "https://pub-7dcd195985a44c1c81fd0ef44e78fa01.r2.dev/Psychiatrist%20Pro%20Setup%201.0.0.exe";
 
@@ -35,12 +35,12 @@ export default function PsychiatristPage() {
               ⬇ Download for Windows
             </a>
             <a
-              href="https://psychiatrists.nishantsoftwares.in"
+              href={PSYCHIATRIST_PWA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-indigo-500 text-white font-bold py-4 px-8 rounded-2xl text-lg hover:bg-indigo-400 transition active:scale-95 border border-indigo-400"
+              className="bg-green-500 text-white font-bold py-4 px-8 rounded-2xl text-lg hover:bg-green-400 transition active:scale-95"
             >
-              🌐 Open Web App
+              📱 Mobile पर Install करें (Android)
             </a>
           </div>
           <p className="text-indigo-300 text-sm mt-4">
@@ -177,15 +177,14 @@ export default function PsychiatristPage() {
                 🔐 Step 2 — Doctor Login (पहली बार)
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Software खोलें।{" "}
-                <strong>&quot;Sign in with Google&quot;</strong> बटन पर क्लिक
-                करें और अपने Gmail account से login करें। पहली बार login करने
-                पर account बन जाएगा लेकिन{" "}
+                Software खोलें। <strong>&quot;Sign in with Google&quot;</strong>{" "}
+                बटन पर क्लिक करें और अपने Gmail account से login करें। पहली बार
+                login करने पर account बन जाएगा लेकिन{" "}
                 <strong>activate नहीं होगा</strong>। Account activate करने के
                 लिए <strong>nishantsoftwares.in</strong> पर जाकर ₹4,999 का
-                भुगतान करें। भुगतान के बाद आपका account 24 घंटे में activate
-                हो जाएगा। Activate होने के बाद दोबारा login करें — Doctor
-                Dashboard खुल जाएगा।
+                भुगतान करें। भुगतान के बाद आपका account{" "}
+                <strong>तुरंत activate</strong> हो जाएगा। Activate होने के बाद
+                दोबारा login करें — Doctor Dashboard खुल जाएगा।
               </p>
             </div>
 
@@ -203,17 +202,15 @@ export default function PsychiatristPage() {
                 <strong>Clinic logo</strong> upload करें।{" "}
                 <strong>⚠ जरूरी — Staff PINs:</strong> नए clinic में सभी PIN{" "}
                 <strong>खाली</strong> होते हैं। जब तक PIN set नहीं करते, staff
-                login नहीं कर पाएगा।{" "}
-                <strong>Receptionist PIN</strong> set करें (4 अंक)।{" "}
-                <strong>Pharmacy PIN</strong> set करें (4 अंक)। अगर आपके
-                clinic में <strong>Psychologist</strong> है तो{" "}
+                login नहीं कर पाएगा। <strong>Receptionist PIN</strong> set करें
+                (4 अंक)। <strong>Pharmacy PIN</strong> set करें (4 अंक)। अगर
+                आपके clinic में <strong>Psychologist</strong> है तो{" "}
                 <strong>Psychologist toggle ON</strong> करें और{" "}
                 <strong>Psychologist PIN</strong> set करें।{" "}
                 <strong>PIN कब बदलें?</strong> जब कोई staff छोड़कर जाए।{" "}
-                <strong>Save</strong> करें।{" "}
-                <strong>⚠ Clinic ID:</strong> Settings में आपकी{" "}
-                <strong>Clinic ID</strong> दिखती है — यह number अपने staff को
-                बताएँ। Staff login के समय यही ID डालेगा।
+                <strong>Save</strong> करें। <strong>⚠ Clinic ID:</strong>{" "}
+                Settings में आपकी <strong>Clinic ID</strong> दिखती है — यह
+                number अपने staff को बताएँ। Staff login के समय यही ID डालेगा।
               </p>
             </div>
 
@@ -232,8 +229,8 @@ export default function PsychiatristPage() {
                 <strong>मोबाइल नंबर</strong> डालें — अगर पहले आ चुका है तो नाम
                 अपने आप भर जाएगा। नए मरीज के लिए{" "}
                 <strong>नाम और chief complaint</strong> भरें।{" "}
-                <strong>&quot;Register Patient&quot;</strong> दबाएँ — मरीज
-                queue में चला जाएगा।
+                <strong>&quot;Register Patient&quot;</strong> दबाएँ — मरीज queue
+                में चला जाएगा।
               </p>
             </div>
 
@@ -242,9 +239,11 @@ export default function PsychiatristPage() {
                 🧠 Step 4b — Psychologist कैसे काम करे
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                <strong>यह step सिर्फ उन clinics के लिए है जहाँ Psychologist है।</strong>{" "}
-                Receptionist के register करने के बाद मरीज सीधे Psychologist
-                के पास जाएगा। Psychologist{" "}
+                <strong>
+                  यह step सिर्फ उन clinics के लिए है जहाँ Psychologist है।
+                </strong>{" "}
+                Receptionist के register करने के बाद मरीज सीधे Psychologist के
+                पास जाएगा। Psychologist{" "}
                 <strong>
                   psychiatrists.nishantsoftwares.in/psychologist/login
                 </strong>{" "}
@@ -266,11 +265,11 @@ export default function PsychiatristPage() {
                 Doctor Dashboard में आज की queue से मरीज पर tap करें। अगर
                 Psychologist का assessment है तो वो ऊपर{" "}
                 <strong>purple card</strong> में दिखेगा।{" "}
-                <strong>Chief Complaints</strong> और{" "}
-                <strong>Diagnosis</strong> (ICD-10 code जैसे F20, F32) भरें।
-                जरूरत हो तो <strong>MSE</strong> भरें।{" "}
-                <strong>Add Medicines</strong> section में दवाएँ multi-select
-                करें। <strong>Follow-up Date</strong> set करें।{" "}
+                <strong>Chief Complaints</strong> और <strong>Diagnosis</strong>{" "}
+                (ICD-10 code जैसे F20, F32) भरें। जरूरत हो तो{" "}
+                <strong>MSE</strong> भरें। <strong>Add Medicines</strong>{" "}
+                section में दवाएँ multi-select करें।{" "}
+                <strong>Follow-up Date</strong> set करें।{" "}
                 <strong>&quot;Save&quot;</strong> या{" "}
                 <strong>&quot;Save &amp; Print&quot;</strong> दबाएँ।
               </p>
@@ -302,13 +301,13 @@ export default function PsychiatristPage() {
                 कोई customer बिना doctor visit के सीधे दवा लेने आए तो Pharmacy
                 dashboard से <strong>&quot;Walk-in Sale&quot;</strong> खोलें।
                 Patient details optional हैं।{" "}
-                <strong>&quot;Tap to select salt...&quot;</strong> पर tap करें
-                — modal खुलेगा। Search box में दवा type करें या 142+ salts की
-                list से चुनें। Salt select होते ही brand auto-fill हो जाएगा
-                (अगर पहले से mapped है)। Quantity और price डालें — Amount अपने
-                आप calculate होगा।{" "}
-                <strong>&quot;+ Add Medicine&quot;</strong> से और दवाएँ जोड़ें।{" "}
-                <strong>&quot;🖨️ Print Bill&quot;</strong> दबाएँ।
+                <strong>&quot;Tap to select salt...&quot;</strong> पर tap करें —
+                modal खुलेगा। Search box में दवा type करें या 142+ salts की list
+                से चुनें। Salt select होते ही brand auto-fill हो जाएगा (अगर पहले
+                से mapped है)। Quantity और price डालें — Amount अपने आप
+                calculate होगा। <strong>&quot;+ Add Medicine&quot;</strong> से
+                और दवाएँ जोड़ें। <strong>&quot;🖨️ Print Bill&quot;</strong>{" "}
+                दबाएँ।
               </p>
             </div>
 
@@ -323,9 +322,8 @@ export default function PsychiatristPage() {
                 <strong>&quot;💾 Save as my brand&quot;</strong> link दबाएँ।
                 अगली बार जब वही salt select करेंगे, brand और price{" "}
                 <strong>auto-fill</strong> हो जाएँगे। अगर कोई नई दवा list में
-                नहीं है तो modal में{" "}
-                <strong>&quot;+ Add New Salt&quot;</strong> से उसे permanent
-                list में add करें।
+                नहीं है तो modal में <strong>&quot;+ Add New Salt&quot;</strong>{" "}
+                से उसे permanent list में add करें।
               </p>
             </div>
 
@@ -410,17 +408,15 @@ export default function PsychiatristPage() {
                 <strong>Clinic Logo</strong>.{" "}
                 <strong>⚠ Important — Staff PINs:</strong> New clinics have all
                 PINs <strong>empty</strong> by default. Your staff cannot log in
-                until you set the PINs. Set a{" "}
-                <strong>Receptionist PIN</strong> (4 digits). Set a{" "}
-                <strong>Pharmacy PIN</strong> (4 digits). If your clinic has a{" "}
-                <strong>Psychologist</strong>, toggle{" "}
+                until you set the PINs. Set a <strong>Receptionist PIN</strong>{" "}
+                (4 digits). Set a <strong>Pharmacy PIN</strong> (4 digits). If
+                your clinic has a <strong>Psychologist</strong>, toggle{" "}
                 <strong>Psychologist ON</strong> and set the{" "}
                 <strong>Psychologist PIN</strong>. Change PINs whenever a staff
                 member leaves. Click <strong>Save</strong>.{" "}
-                <strong>⚠ Clinic ID:</strong> Your{" "}
-                <strong>Clinic ID</strong> is shown in Settings — share this
-                number with your staff. They will enter it at login along with
-                their PIN.
+                <strong>⚠ Clinic ID:</strong> Your <strong>Clinic ID</strong> is
+                shown in Settings — share this number with your staff. They will
+                enter it at login along with their PIN.
               </p>
             </div>
 
@@ -471,9 +467,8 @@ export default function PsychiatristPage() {
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 Tap a patient from today&apos;s queue. If a Psychologist
-                assessment exists, it appears in a{" "}
-                <strong>purple card</strong> at the top. Fill in{" "}
-                <strong>Chief Complaints</strong> and{" "}
+                assessment exists, it appears in a <strong>purple card</strong>{" "}
+                at the top. Fill in <strong>Chief Complaints</strong> and{" "}
                 <strong>Diagnosis</strong> (ICD-10 codes like F20, F32).
                 Optionally fill <strong>MSE</strong>. In{" "}
                 <strong>Add Medicines</strong>, multi-select drugs. Set{" "}
@@ -581,6 +576,14 @@ export default function PsychiatristPage() {
             className="bg-indigo-500 text-white font-bold py-4 px-8 rounded-2xl text-lg hover:bg-indigo-400 transition active:scale-95 border border-indigo-400"
           >
             ⬇ Download Windows App
+          </a>
+          <a
+            href={PSYCHIATRIST_PWA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 text-white font-bold py-4 px-8 rounded-2xl text-lg hover:bg-green-400 transition active:scale-95 border border-green-400"
+          >
+            📱 Mobile पर Install
           </a>
         </div>
       </section>

@@ -56,7 +56,7 @@ export default function BillingPage() {
               rel="noopener noreferrer"
               className="bg-green-600 hover:bg-green-700 text-white font-black px-6 py-3.5 rounded-2xl text-base transition"
             >
-              📱 Mobile पर खोलें (PWA)
+              📱 Mobile पर Install करें (Android)
             </a>
           </div>
           <p className="text-zinc-400 text-sm font-bold">
