@@ -38,9 +38,9 @@ export const metadata = {
     locale: "hi_IN",
     url: SITE_URL,
     siteName: "Nishant Softwares",
-    title: "Nishant Softwares — 13 Industries के लिए लाजवाब सॉफ्टवेयर",
+    title: "Nishant Softwares — 14 Industries के लिए लाजवाब सॉफ्टवेयर",
     description:
-      "दुकानदारों, पेशेवरों और फैक्टरियों के लिए 13 लाजवाब सॉफ्टवेयर। 7 दिन मुफ्त उपयोग करें!",
+      "दुकानदारों, पेशेवरों और फैक्टरियों के लिए 14 लाजवाब सॉफ्टवेयर। 7 दिन मुफ्त उपयोग करें!",
     images: [{ url: OG_IMAGE_URL, width: 1200, height: 630, alt: "Nishant Softwares" }],
   },
   twitter: {
@@ -66,7 +66,7 @@ const structuredData = {
   applicationCategory: "BusinessApplication",
   url: SITE_URL,
   description:
-    "दुकानदारों, पेशेवरों और फैक्टरियों के लिए 13 लाजवाब सॉफ्टवेयर। ERPBridge, Dental Pro, Hardware Pro, School Pro, Ration Pro, Pharma Pro, Heera Pro, Clinic Pro, Legal Pro, Hotel Pro, Sunar Pro, Homeo Pro, Psychiatrist Pro.",
+    "दुकानदारों, पेशेवरों और फैक्टरियों के लिए 14 लाजवाब सॉफ्टवेयर। ERPBridge, Dental Pro, Hardware Pro, School Pro, Ration Pro, Pharma Pro, Heera Pro, Clinic Pro, Legal Pro, Hotel Pro, Sunar Pro, Homeo Pro, Psychiatrist Pro.",
   offers: { "@type": "Offer", price: "3999", priceCurrency: "INR" },
 };
 
