@@ -34,7 +34,7 @@ const products = [
     exeUrl: ERPBRIDGE_EXE_URL,
     pwaUrl: ERPBRIDGE_PWA_URL,
     software: "erpbridge",
-    newPrice: "₹25,000",
+    newPrice: "₹4,999",
     renewPrice: "₹2,500",
     accentText: "text-yellow-400",
     accentBorder: "border-yellow-500",

@@ -325,7 +325,7 @@ export default function ERPBridgePage() {
                 पहली बार / First Time
               </h3>
               <div className="text-4xl font-extrabold text-white mb-1">
-                ₹11,999
+                ₹4,999
               </div>
               <p className="text-zinc-300 font-medium text-sm mb-1">
                 एक बार — 1 साल included
@@ -345,7 +345,7 @@ export default function ERPBridgePage() {
                 नवीनीकरण / Renewal
               </h3>
               <div className="text-4xl font-extrabold text-white mb-1">
-                ₹4,999
+                ₹2,500
               </div>
               <p className="text-zinc-300 font-medium text-sm mb-1">
                 प्रति वर्ष
