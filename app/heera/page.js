@@ -467,7 +467,7 @@ export default function HeeraPage() {
                 onClick={pay}
                 className="block w-full mt-3 bg-cyan-800 text-white font-extrabold text-lg py-3 rounded-xl hover:bg-cyan-700 transition"
               >
-                💳 अभी खरीदें — ₹5,500
+                💳 अभी खरीदें — ₹4,999
               </button>
             </div>
             <div className="rounded-2xl border-2 border-gray-200 p-8 text-center shadow-sm">
