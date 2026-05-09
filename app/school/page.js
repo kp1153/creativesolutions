@@ -5,7 +5,7 @@ const HARDWARE_EXE_URL =
   "https://pub-36b3216d45d24541a20e55f6b3f26d07.r2.dev/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%A4%20Setup%200.1.0.exe";
 const HARDWARE_PWA_URL = "https://hardware.nishantsoftwares.in";
 const SCHOOL_EXE_URL =
-  "https://github.com/kp1153/school-saas/releases/download/v1.0.0/EduSaaS%20School%20Setup%200.1.0.exe";
+  "https://github.com/kp1153/school-saas/releases/download/v1.0.0/EduSaaS.School.Setup.0.1.0.exe";
 const ERPBRIDGE_EXE_URL =
   "https://pub-b7b15d809a3649a48535433d66376f24.r2.dev/ERPBridge%20Setup%200.1.0.exe";
 const ERPBRIDGE_PWA_URL = "https://erpbridge.nishantsoftwares.in";
