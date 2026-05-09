@@ -1,388 +1,126 @@
 "use client";
-import { useEffect, useState } from "react";
 
-const HARDWARE_EXE_URL =
-  "https://pub-36b3216d45d24541a20e55f6b3f26d07.r2.dev/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%A4%20Setup%200.1.0.exe";
-const HARDWARE_PWA_URL = "https://hardware.nishantsoftwares.in";
-const SCHOOL_EXE_URL =
-  "https://github.com/kp1153/school-saas/releases/download/v1.0.0/EduSaaS.School.Setup.0.1.0.exe";
-const ERPBRIDGE_EXE_URL =
-  "https://pub-b7b15d809a3649a48535433d66376f24.r2.dev/ERPBridge%20Setup%200.1.0.exe";
-const ERPBRIDGE_PWA_URL = "https://erpbridge.nishantsoftwares.in";
-const DENTAL_PWA_URL = "https://dental.nishantsoftwares.in";
-const DENTAL_EXE_URL =
-  "https://pub-2bb08b9a599048e48fa0e6a4a9f137bb.r2.dev/Nishant%20Dental%20Pro%20Setup%201.0.0.exe";
-const HOTEL_EXE_URL =
-  "https://pub-f773dd480900429baad9123bdff7a15f.r2.dev/Nishant%20Hotel%20Pro%20Setup%200.1.0.exe";
-const CLINIC_EXE_URL =
-  "https://pub-70d93acc97f04394bd956a27e7e6b849.r2.dev/ClinicOS%20Setup%201.0.0.exe";
-const CLINIC_PWA_URL = "https://clinic.nishantsoftwares.in";
-const PSYCHIATRIST_EXE_URL =
-  "https://pub-7dcd195985a44c1c81fd0ef44e78fa01.r2.dev/Psychiatrist%20Pro%20Setup%201.0.0.exe";
-const PSYCHIATRIST_PWA_URL = "https://psychiatrists.nishantsoftwares.in";
-const BILLING_EXE_URL =
-  "https://pub-ef61c868f2a7481d8c2857d0de28bd51.r2.dev/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%A4%20%E0%A4%AC%E0%A4%BF%E0%A4%B2%E0%A4%BF%E0%A4%82%E0%A4%97%20Setup%201.0.0.exe";
-const BILLING_PWA_URL = "https://billing.nishantsoftwares.in";
-const products = [
-  {
-    key: "erpbridge",
-    icon: "📊",
-    title: "ERPBridge",
-    subtitle: "Business Intelligence",
-    descHi: "Tally, Busy, Marg का data — Sales, Purchase, P&L, Ledger एक जगह",
-    descEn: "Upload Tally data — instant Sales, Purchase, P&L & Ledger reports",
-    exeUrl: ERPBRIDGE_EXE_URL,
-    pwaUrl: ERPBRIDGE_PWA_URL,
-    software: "erpbridge",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-yellow-400",
-    accentBorder: "border-yellow-500",
-    accent: "bg-yellow-500",
-  },
-  {
-    key: "dental",
-    icon: "🦷",
-    title: "Dental Pro",
-    subtitle: "Clinic Management",
-    descHi: "डेंटल क्लिनिक के लिए — मरीज, prescription, treatment, billing",
-    descEn: "Patients, Prescriptions, Treatments & Billing — all in one place",
-    exeUrl: DENTAL_EXE_URL,
-    pwaUrl: DENTAL_PWA_URL,
-    software: "dental",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-green-400",
-    accentBorder: "border-green-500",
-    accent: "bg-green-600",
-  },
-  {
-    key: "hardware",
-    icon: "🔧",
-    title: "Hardware Pro",
-    subtitle: "Shop Management",
-    descHi: "हार्डवेयर दुकान के लिए — बिल, स्टॉक, उधारी, GST",
-    descEn: "Billing, stock, credit & GST reports for hardware shops",
-    exeUrl: HARDWARE_EXE_URL,
-    pwaUrl: HARDWARE_PWA_URL,
-    software: "hardware",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-blue-400",
-    accentBorder: "border-blue-500",
-    accent: "bg-blue-600",
-  },
-  {
-    key: "billing-saas",
-    icon: "🧾",
-    title: "निशांत बिलिंग",
-    subtitle: "GST Billing Software",
-    descHi: "किसी भी दुकान के लिए — बिल, ग्राहक, सामान, GST, WhatsApp share",
-    descEn: "GST billing, customers, products & WhatsApp sharing for any shop",
-    exeUrl: BILLING_EXE_URL,
-    pwaUrl: BILLING_PWA_URL,
-    software: "billing",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-blue-400",
-    accentBorder: "border-blue-500",
-    accent: "bg-blue-600",
-  },
-  {
-    key: "school",
-    icon: "🏫",
-    title: "निशांत स्कूल सॉफ्टवेयर",
-    subtitle: "School Management",
-    descHi: "CBSE स्कूलों के लिए — Students, Fees, Attendance, Exams",
-    descEn:
-      "Students, Fees, Attendance, Exams & Parent Portal all in one place",
-    exeUrl: SCHOOL_EXE_URL,
-    pwaUrl: "https://school.nishantsoftwares.in",
-    software: "school",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-indigo-400",
-    accentBorder: "border-indigo-500",
-    accent: "bg-indigo-600",
-  },
-  {
-    key: "ration",
-    icon: "🏪",
-    title: "Ration Pro",
-    subtitle: "राशन दुकान प्रबंधन",
-    descHi: "राशन की दुकान के लिए — स्टॉक, बिक्री, उधारी सब एक जगह",
-    descEn: "Stock, sales & credit management for ration shops",
-    exeUrl: "",
-    pwaUrl: "#",
-    software: "ration",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-orange-400",
-    accentBorder: "border-orange-500",
-    accent: "bg-orange-500",
-  },
-  {
-    key: "pharma",
-    icon: "💊",
-    title: "Pharma Pro",
-    subtitle: "Medical Store Management",
-    descHi: "दवा की दुकान के लिए — stock, expiry, billing, GST",
-    descEn: "Medicine stock, expiry alerts, billing & GST for pharmacies",
-    exeUrl: "",
-    pwaUrl: "#",
-    software: "pharma",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-red-400",
-    accentBorder: "border-red-500",
-    accent: "bg-red-600",
-  },
-  {
-    key: "heera",
-    icon: "💎",
-    title: "Heera Pro",
-    subtitle: "हीरा उद्योग प्रबंधन",
-    descHi: "हीरा उद्योग के लिए — rough, polished, karigar, party ledger",
-    descEn:
-      "Diamond industry — rough tracking, karigar management & party ledger",
-    exeUrl:
-      "https://pub-31ce429b28bc4ce8bf56e0a2af375815.r2.dev/Heera%20Desk%20Setup%200.1.0.exe",
-    pwaUrl: "https://heera.nishantsoftwares.in",
-    software: "heera",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-cyan-400",
-    accentBorder: "border-cyan-500",
-    accent: "bg-cyan-600",
-  },
-  {
-    key: "clinic",
-    icon: "🏥",
-    title: "Clinic Pro",
-    subtitle: "सामान्य क्लिनिक",
-    descHi: "डॉक्टर के क्लिनिक के लिए — OPD, prescription, billing",
-    descEn: "OPD management, prescriptions & billing for general clinics",
-    exeUrl: CLINIC_EXE_URL,
-    pwaUrl: CLINIC_PWA_URL,
-    software: "clinic",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-teal-400",
-    accentBorder: "border-teal-500",
-    accent: "bg-teal-600",
-  },
-  {
-    key: "legal",
-    icon: "⚖️",
-    title: "Legal Pro",
-    subtitle: "वकीलों के लिए",
-    descHi: "वकीलों के लिए — cases, clients, dates, documents",
-    descEn: "Cases, clients, court dates & document management for lawyers",
-    exeUrl: "",
-    pwaUrl: "#",
-    software: "legal",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-purple-400",
-    accentBorder: "border-purple-500",
-    accent: "bg-purple-600",
-  },
-  {
-    key: "hotel",
-    icon: "🏨",
-    title: "Hotel Pro",
-    subtitle: "Hotel Management",
-    descHi: "होटल के लिए — rooms, booking, billing, staff",
-    descEn: "Room booking, billing & staff management for hotels",
-    exeUrl: HOTEL_EXE_URL,
-    pwaUrl: "/hotel",
-    software: "hotel",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-pink-400",
-    accentBorder: "border-pink-500",
-    accent: "bg-pink-600",
-  },
-  {
-    key: "sunar",
-    icon: "💍",
-    title: "स्वर्णशिल्पी",
-    subtitle: "सुनार की दुकान",
-    descHi: "सुनार की दुकान के लिए — गिरवी, कारीगर, भाव, बिल",
-    descEn: "Jewellery shop — girvi, karigar, rates & GST billing",
-    exeUrl:
-      "https://pub-f93bf69cda354eeaadadab7f833d5bbf.r2.dev/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%B6%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A5%80%20Setup%200.1.0.exe",
-    pwaUrl: "https://sunar.nishantsoftwares.in",
-    software: "sunar",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-amber-400",
-    accentBorder: "border-amber-500",
-    accent: "bg-amber-500",
-  },
-  {
-    key: "homeo",
-    icon: "🌿",
-    title: "Homeo Pro",
-    subtitle: "होम्योपैथी क्लिनिक",
-    descHi: "होम्योपैथी डॉक्टर के लिए — मरीज, दवा, prescription",
-    descEn: "Homeopathy clinic — patients, medicines & prescriptions",
-    exeUrl:
-      "https://pub-b05b804e53a14a4db299e550b4b5538e.r2.dev/HomeoClinic%20Pro%20Setup%200.1.0.exe",
-    pwaUrl: "https://homeopathy.nishantsoftwares.in",
-    software: "homeo",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-lime-400",
-    accentBorder: "border-lime-500",
-    accent: "bg-lime-500",
-  },
-  {
-    key: "psychiatrist",
-    icon: "🧠",
-    title: "Psychiatrist Pro",
-    subtitle: "मानसिक स्वास्थ्य क्लिनिक",
-    descHi: "मनोचिकित्सक के लिए — मरीज, पर्चा, दवा, follow-up reminder",
-    descEn: "Patients, prescriptions, medicines & follow-up SMS reminders",
-    exeUrl: PSYCHIATRIST_EXE_URL,
-    pwaUrl: PSYCHIATRIST_PWA_URL,
-    software: "psychiatrist",
-    newPrice: "₹4,999",
-    renewPrice: "₹2,500",
-    accentText: "text-violet-400",
-    accentBorder: "border-violet-500",
-    accent: "bg-violet-600",
-  },
+const SCHOOL_EXE_URL = "https://github.com/kp1153/school-saas/releases/download/v1.0.0/EduSaaS.School.Setup.0.1.0.exe";
+const SCHOOL_PWA_URL = "https://school.nishantsoftwares.in";
+
+const features = [
+  { icon: "🎓", title: "Student Management", desc: "Complete records — name, class, roll number, parent phone. Add one by one or import hundreds at once." },
+  { icon: "💰", title: "Fee Collection & Receipt", desc: "Record fees, print receipts instantly. See who paid, who hasn't. WhatsApp reminders in one click." },
+  { icon: "✅", title: "Daily Attendance", desc: "Class-wise attendance every day. WhatsApp alert to absent students' parents automatically." },
+  { icon: "🔑", title: "Teacher Attendance via PIN", desc: "Each teacher gets a 6-digit PIN. They log in from their mobile, mark their class attendance only." },
+  { icon: "📝", title: "Exams & Results", desc: "Schedule exams, enter marks — grade and pass/fail calculated automatically. Print report cards." },
+  { icon: "📄", title: "Marksheet", desc: "Quarterly, half-yearly and annual marksheets for entire class. Print or share as PDF on WhatsApp." },
+  { icon: "🏅", title: "Certificates", desc: "TC, Character, Bonafide and Birth Certificate — one click, ready to print with school logo." },
+  { icon: "🚌", title: "Transport", desc: "Routes, stops, monthly fees, driver details. Assign students and generate transport receipts." },
+  { icon: "📊", title: "Reports", desc: "Class-wise student count, fee collection, attendance percentage — all on one page." },
 ];
 
-const whyUs = [
-  {
-    icon: "🇮🇳",
-    title: "भारत के लिए बना",
-    desc: "GST, HSN code, हिंदी UI — सब कुछ Indian business की ज़रूरत के हिसाब से।",
-  },
-  {
-    icon: "📴",
-    title: "Offline भी काम करे",
-    desc: "Internet नहीं है? Desktop app बिना internet के भी पूरी तरह काम करती है।",
-  },
-  {
-    icon: "💸",
-    title: "सबसे सस्ता — सबसे अच्छा",
-    desc: "कम कीमत में ज़्यादा features। कोई hidden charge नहीं।",
-  },
-  {
-    icon: "🔒",
-    title: "आपका data — आपके पास",
-    desc: "Data आपके device पर। कोई third-party cloud नहीं। पूरी privacy।",
-  },
-  {
-    icon: "📱",
-    title: "Mobile + Desktop दोनों",
-    desc: "PWA से mobile पर चलाओ, या Desktop app install करो — एक ही software।",
-  },
-  {
-    icon: "🛠️",
-    title: "7 दिन मुफ्त Trial",
-    desc: "पहले आज़माओ — फिर खरीदो। कोई card नहीं, कोई commitment नहीं।",
-  },
-  {
-    icon: "📞",
-    title: "सीधी Support",
-    desc: "WhatsApp पर बात करो — कोई IVR नहीं, कोई ticket नहीं। सीधे developer से।",
-  },
-  {
-    icon: "🔄",
-    title: "हमेशा अपडेट",
-    desc: "नई GST changes, नए features — सब automatic update। कोई extra charge नहीं।",
-  },
-];
-
-export default function Home() {
-  const [views, setViews] = useState(null);
-
-  useEffect(() => {
-    fetch("/api/views")
-      .then((r) => r.json())
-      .then((d) => setViews(d.views));
-  }, []);
-
+export default function SchoolPage() {
   return (
     <main className="min-h-screen bg-zinc-900 text-white font-sans">
-      {views && (
-        <div className="bg-zinc-800 text-center py-2 px-4 text-xs text-amber-400 font-semibold">
-          👁️ अब तक {Number(views).toLocaleString("hi-IN")} बार देखा गया
+
+      {/* Top bar */}
+      <div className="bg-amber-600 py-2 px-4 text-center text-sm font-bold text-white flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
+        <a href="tel:+919996865069" className="hover:underline">📞 9996865069</a>
+        <span className="hidden sm:inline text-amber-300">|</span>
+        <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="hover:underline">💬 WhatsApp</a>
+        <span className="hidden sm:inline text-amber-300">|</span>
+        <a href="mailto:prasad.kamta@gmail.com" className="hover:underline">✉️ prasad.kamta@gmail.com</a>
+      </div>
+
+      {/* Nav */}
+      <nav className="sticky top-0 z-50 bg-zinc-900 border-b border-zinc-800 px-4 py-3">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <a href="/" className="font-extrabold text-white text-lg">
+            🖥️ <span className="text-amber-400">Nishant</span> Software
+          </a>
+          <a href="/" className="text-sm text-zinc-400 hover:text-white border border-zinc-700 px-3 py-1.5 rounded-lg transition">
+            ← All Products
+          </a>
         </div>
-      )}
+      </nav>
 
       {/* Hero */}
-      <section className="py-16 px-4 text-center bg-gradient-to-b from-zinc-800 to-zinc-900">
-        <div className="max-w-4xl mx-auto">
-          <div className="inline-block bg-amber-500/20 text-amber-400 text-xs font-bold px-4 py-1 rounded-full mb-4 tracking-widest uppercase">
+      <section className="py-14 px-4 text-center bg-gradient-to-b from-zinc-800 to-zinc-900">
+        <div className="max-w-3xl mx-auto">
+          <div className="inline-block bg-indigo-500/20 text-indigo-400 text-xs font-bold px-4 py-1 rounded-full mb-4 tracking-widest uppercase">
             🆓 7 Days Free Trial — No Card Required
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-            इंडिया के अपने
-            <br />
-            <span className="text-amber-400">Business Softwares</span>
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-3 leading-tight">
+            🏫 Nishant School Software
           </h1>
-          <p className="text-gray-400 text-lg mb-2">
-            13 industries के लिए — एक platform पर
+          <p className="text-zinc-400 text-lg mb-2">
+            Students · Fees · Attendance · Exams · Certificates
           </p>
-          <p className="text-gray-500 mb-10">
-            Built for Indian businesses — affordable, simple, powerful
+          <p className="text-zinc-500 text-sm mb-8">
+            Built for Indian schools — mobile first, affordable, simple
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+            <a href={SCHOOL_EXE_URL}
+              className="inline-block bg-white text-zinc-900 font-bold text-base px-7 py-3 rounded-2xl shadow-lg hover:bg-zinc-100 transition">
+              🖥️ Download Windows App (.exe)
+            </a>
+            <a href={SCHOOL_PWA_URL} target="_blank" rel="noopener noreferrer"
+              className="inline-block bg-indigo-600 text-white font-bold text-base px-7 py-3 rounded-2xl shadow-lg hover:bg-indigo-500 transition">
+              📱 Open Web App
+            </a>
+          </div>
+          <p className="text-xs text-zinc-500 mt-3">
+            Android: Chrome → ⋮ → Add to Home Screen
+          </p>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {products.map((p) => (
-              <a
-                key={p.key}
-                href={"/" + p.key}
-                className={`relative flex flex-col items-center gap-2 p-4 rounded-2xl border ${p.accentBorder} border-opacity-40 bg-zinc-800 hover:bg-zinc-700 transition group`}
-              >
-                {p.comingSoon && (
-                  <span className="absolute top-2 right-2 text-xs bg-zinc-700 text-zinc-400 px-2 py-0.5 rounded-full">
-                    Soon
-                  </span>
-                )}
-                <span className="text-3xl">{p.icon}</span>
-                <span className={`font-bold text-sm ${p.accentText}`}>
-                  {p.title}
-                </span>
-                <span className="text-zinc-400 text-xs text-center leading-tight">
-                  {p.subtitle}
-                </span>
-                <span className={`text-xs font-bold ${p.accentText}`}>
-                  {p.newPrice}
-                </span>
-              </a>
+      {/* Features */}
+      <section className="py-12 px-4 bg-zinc-900">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-2 text-indigo-400">What's Included?</h2>
+          <p className="text-center text-zinc-400 text-sm mb-8">9 features — one software, one price</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {features.map((f, i) => (
+              <div key={i} className="bg-zinc-800 border border-indigo-500/20 rounded-xl px-4 py-4 flex gap-3 items-start">
+                <span className="text-xl shrink-0 mt-0.5">{f.icon}</span>
+                <div>
+                  <div className="text-indigo-300 font-bold text-sm mb-1">{f.title}</div>
+                  <div className="text-zinc-400 text-xs leading-relaxed">{f.desc}</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Us */}
-      <section className="py-16 px-4 bg-zinc-900">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-center text-white mb-2">
-            Nishant Software क्यों चुनें?
-          </h2>
-          <p className="text-center text-gray-400 mb-10 text-sm">
-            जो बात हमें बाकी सबसे अलग बनाती है
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-            {whyUs.map((w, i) => (
-              <div
-                key={i}
-                className="bg-zinc-800 rounded-2xl p-5 border border-zinc-700 hover:border-amber-500/40 transition"
-              >
-                <div className="text-3xl mb-3">{w.icon}</div>
-                <h3 className="font-bold text-white text-sm mb-1">{w.title}</h3>
-                <p className="text-zinc-400 text-xs leading-relaxed">
-                  {w.desc}
-                </p>
+      {/* Pricing */}
+      <section className="py-12 px-4 bg-zinc-800">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-2 text-white">Pricing</h2>
+          <p className="text-center text-zinc-400 text-sm mb-8">7 days completely free — no card required</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl border-2 border-indigo-500 p-6 text-center shadow-lg relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-sm font-bold px-4 py-1 rounded-full whitespace-nowrap">
+                New Account
               </div>
-            ))}
+              <h3 className="text-lg font-bold mb-1 text-zinc-300 mt-2">First Year</h3>
+              <div className="text-4xl font-extrabold text-indigo-400 mb-1">₹4,999</div>
+              <p className="text-zinc-500 text-sm mb-4">One-time — 1 year included</p>
+              <a href={SCHOOL_PWA_URL} target="_blank" rel="noopener noreferrer"
+                className="block w-full bg-indigo-600 text-white font-bold py-2.5 rounded-xl hover:bg-indigo-500 transition mb-3 text-sm">
+                🆓 Try Free for 7 Days
+              </a>
+              <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer"
+                className="block w-full bg-zinc-700 text-white font-bold py-2.5 rounded-xl hover:bg-zinc-600 transition text-sm">
+                💳 Buy Now — ₹4,999
+              </a>
+            </div>
+            <div className="rounded-2xl border-2 border-zinc-600 p-6 text-center">
+              <h3 className="text-lg font-bold mb-1 text-zinc-300 mt-2">Renewal</h3>
+              <div className="text-4xl font-extrabold text-indigo-400 mb-1">₹2,500</div>
+              <p className="text-zinc-500 text-sm mb-4">Per year — server cost only</p>
+              <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer"
+                className="block w-full bg-indigo-600 text-white font-bold py-2.5 rounded-xl hover:bg-indigo-500 transition text-sm">
+                💬 WhatsApp to Renew
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -390,32 +128,18 @@ export default function Home() {
       {/* CTA */}
       <section className="bg-zinc-900 py-12 px-4 text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-2xl font-extrabold text-white mb-2">
-            आज ही शुरू करें — मुफ्त में
-          </h2>
-          <p className="text-amber-100 mb-6 text-sm">
-            7 दिन पूरी तरह मुफ्त — कोई card नहीं | 7 days free, no card required
-          </p>
+          <h2 className="text-2xl font-extrabold text-white mb-2">Start Today — 7 Days Free</h2>
+          <p className="text-zinc-400 mb-6 text-sm">No card required. Direct support from the developer.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm text-white font-bold">
-            <a href="tel:+919996865069" className="hover:underline">
-              📞 9996865069
-            </a>
-            <span className="hidden sm:inline">|</span>
-            <a href="mailto:prasad.kamta@gmail.com" className="hover:underline">
-              ✉️ prasad.kamta@gmail.com
-            </a>
-            <span className="hidden sm:inline">|</span>
-            <a
-              href="https://wa.me/919996865069"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              💬 WhatsApp
-            </a>
+            <a href="tel:+919996865069" className="hover:underline">📞 9996865069</a>
+            <span className="hidden sm:inline text-zinc-600">|</span>
+            <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="hover:underline">💬 WhatsApp</a>
+            <span className="hidden sm:inline text-zinc-600">|</span>
+            <a href="mailto:prasad.kamta@gmail.com" className="hover:underline">✉️ prasad.kamta@gmail.com</a>
           </div>
         </div>
       </section>
+
     </main>
   );
 }
