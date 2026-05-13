@@ -6,6 +6,8 @@ const HARDWARE_EXE_URL =
 const HARDWARE_PWA_URL = "https://hardware.nishantsoftwares.in";
 const SCHOOL_EXE_URL =
   "https://pub-ba88bef35aa84924b5e8bc26eb733d33.r2.dev/EduSaaS%20School%20Setup%200.1.0.exe";
+const COLLEGE_EXE_URL =
+  "https://github.com/kp1153/college-saas/releases/download/v1.0.0/Nishant.PG.College.Setup.0.1.0.exe";
 const ERPBRIDGE_EXE_URL =
   "https://pub-b7b15d809a3649a48535433d66376f24.r2.dev/ERPBridge%20Setup%200.1.0.exe";
 const ERPBRIDGE_PWA_URL = "https://erpbridge.nishantsoftwares.in";
@@ -99,6 +101,24 @@ const products = [
     exeUrl: SCHOOL_EXE_URL,
     pwaUrl: "https://school.nishantsoftwares.in",
     software: "school",
+    newPrice: "₹4,999",
+    renewPrice: "₹2,500",
+    accentText: "text-indigo-400",
+    accentBorder: "border-indigo-500",
+    accent: "bg-indigo-600",
+  },
+
+  {
+    key: "college",
+    icon: "🎓",
+    title: "Nishant PG College",
+    subtitle: "College Management",
+    descHi: "PG कॉलेज के लिए — Students, Fees, Attendance, Exams, Exam Forms",
+    descEn: "Students, Fees, Attendance, Exams & Exam Forms for PG colleges",
+    exeUrl:
+      "https://github.com/kp1153/college-saas/releases/download/v1.0.0/Nishant.PG.College.Setup.0.1.0.exe",
+    pwaUrl: "https://college.nishantsoftwares.in",
+    software: "college",
     newPrice: "₹4,999",
     renewPrice: "₹2,500",
     accentText: "text-indigo-400",
