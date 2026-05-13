@@ -154,7 +154,7 @@ export default function CollegePage() {
             >
               🔑 Professor Login
             </a>
-            <
+            <a
               href="https://college.nishantsoftwares.in/student/login"
               className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 font-medium text-sm shadow-sm"
             >
