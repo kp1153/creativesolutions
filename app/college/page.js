@@ -4,7 +4,7 @@ const COLLEGE_EXE_URL = "https://github.com/kp1153/college-saas/releases/downloa
 
 const features = [
   { icon: "🎓", title: "Student Management", desc: "Students की पूरी जानकारी दर्ज करें — नाम, कोर्स, सेमेस्टर, फैकल्टी, रोल नंबर, स्कॉलर नंबर, PEN, आधार, फोटो, पिता/माता का नाम और फोन। CSV से एक साथ सैकड़ों Students import करें।" },
-  { icon: "💰", title: "फीस संग्रह और रसीद", desc: "ट्यूशन, एडमिशन, परीक्षा और विविध शुल्क दर्ज करें। कॉलेज लोगो के साथ प्रोफेशनल रसीद प्रिंट करें। किसने दिया, किसने नहीं — एक नज़र में देखें। एक click में WhatsApp reminder भेजें।" },
+  { icon: "💰", title: "फीस संग्रह और रसीद", desc: "ट्यूशन, एडमिशन, परीक्षा और विविध शुल्क दर्ज करें। कॉलेज लोगो के साथ प्रोफेशनल रसीद प्रिंट करें। किसने दिया, किसने नहीं — एक नज़र में देखें। हर absent Student का WhatsApp link तुरंत मिलेगा — message ready, सिर्फ Send करना है।" },
   { icon: "✅", title: "दैनिक उपस्थिति", desc: "हर दिन कोर्स और सेमेस्टर-वार उपस्थिति दर्ज करें। उपस्थित/अनुपस्थित की संख्या तुरंत देखें। अनुपस्थित Students के अभिभावकों को WhatsApp अलर्ट। मासिक उपस्थिति प्रतिशत देखें।" },
   { icon: "🔑", title: "Professor PIN Login", desc: "हर Professor को Principal द्वारा 6 अंकों का PIN मिलता है। वे अपने मोबाइल से login करते हैं — कोई email नहीं, कोई password नहीं। वे सिर्फ अपने assigned courses देखते हैं। Principal सब monitor करते हैं।" },
   { icon: "📝", title: "परीक्षा और परिणाम", desc: "Internal, Mid Term, Practical और Annual परीक्षाएं schedule करें। हर Student के अंक दर्ज करें — grade और pass/fail अपने आप calculate होगा। Subject-wise result sheets प्रिंट करें।" },
