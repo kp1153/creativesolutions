@@ -3,36 +3,108 @@ import Link from "next/link";
 const COLLEGE_EXE_URL = "https://github.com/kp1153/college-saas/releases/download/v1.0.0/Nishant.PG.College.Setup.0.1.0.exe";
 
 const features = [
-  { icon: "🎓", title: "Student Management", desc: "Students की पूरी जानकारी दर्ज करें — नाम, कोर्स, सेमेस्टर, फैकल्टी, रोल नंबर, स्कॉलर नंबर, PEN, आधार, फोटो, पिता/माता का नाम और फोन। CSV से एक साथ सैकड़ों Students import करें।" },
-  { icon: "💰", title: "फीस संग्रह और रसीद", desc: "ट्यूशन, एडमिशन, परीक्षा और विविध शुल्क दर्ज करें। कॉलेज लोगो के साथ प्रोफेशनल रसीद प्रिंट करें। किसने दिया, किसने नहीं — एक नज़र में देखें। हर absent Student का WhatsApp link तुरंत मिलेगा — message ready, सिर्फ Send करना है।" },
-  { icon: "✅", title: "दैनिक उपस्थिति", desc: "हर दिन कोर्स और सेमेस्टर-वार उपस्थिति दर्ज करें। उपस्थित/अनुपस्थित की संख्या तुरंत देखें। अनुपस्थित Students के अभिभावकों को WhatsApp अलर्ट। मासिक उपस्थिति प्रतिशत देखें।" },
-  { icon: "🔑", title: "Professor PIN Login", desc: "हर Professor को Principal द्वारा 6 अंकों का PIN मिलता है। वे अपने मोबाइल से login करते हैं — कोई email नहीं, कोई password नहीं। वे सिर्फ अपने assigned courses देखते हैं। Principal सब monitor करते हैं।" },
-  { icon: "📝", title: "परीक्षा और परिणाम", desc: "Internal, Mid Term, Practical और Annual परीक्षाएं schedule करें। हर Student के अंक दर्ज करें — grade और pass/fail अपने आप calculate होगा। Subject-wise result sheets प्रिंट करें।" },
-  { icon: "📄", title: "अंकसूची", desc: "किसी भी course और exam type की complete marksheet generate करें। सभी subjects एक table में — कुल अंक, प्रतिशत, grade और परिणाम। एक click में print के लिए तैयार।" },
-  { icon: "🏅", title: "प्रमाण पत्र", desc: "Transfer Certificate, Character Certificate, Bonafide Certificate और Migration Certificate seconds में जारी करें। कॉलेज का नाम, लोगो और Principal का हस्ताक्षर अपने आप print होगा।" },
-  { icon: "📋", title: "परीक्षा फॉर्म", desc: "हर semester में exam form submission track करें। परीक्षा शुल्क paid है या नहीं — record करें। Forms approve या reject करें। Dashboard पर pending forms का alert देखें।" },
-  { icon: "🗓️", title: "Timetable", desc: "Course-wise साप्ताहिक timetable बनाएं। हर period में subject और Professor assign करें। Professors login के बाद अपना schedule देखते हैं।" },
-  { icon: "📊", title: "Reports — NAAC के लिए तैयार", desc: "Course-wise Student संख्या, फीस संग्रह, उपस्थिति प्रतिशत और परीक्षा परिणाम — सब एक जगह। NAAC accreditation के लिए ज़रूरी सभी data उपलब्ध।" },
-  { icon: "📣", title: "सूचना पट्ट", desc: "Normal, Important या Urgent priority के साथ कॉलेज की सूचनाएं post करें। Students और Professors login के बाद सूचनाएं देखते हैं। Urgent सूचनाएं लाल रंग में highlighted।" },
-  { icon: "📱", title: "Mobile + Desktop", desc: "Android app की तरह (Add to Home Screen) और Windows EXE की तरह — दोनों पर काम करता है। एक खरीद — दोनों पर। कोई अलग app store नहीं चाहिए।" },
+  {
+    icon: "🎓",
+    title: "विद्यार्थी प्रबंधन",
+    desc: "विद्यार्थियों की पूरी जानकारी दर्ज करें — नाम, कोर्स, सेमेस्टर, फैकल्टी, रोल नंबर, PEN, आधार, फोटो, पिता/माता का नाम और फोन।",
+  },
+  {
+    icon: "💰",
+    title: "फीस संग्रह और रसीद",
+    desc: "ट्यूशन, एडमिशन, परीक्षा और विविध शुल्क दर्ज करें। कॉलेज लोगो के साथ प्रोफेशनल रसीद प्रिंट करें। किसने दिया, किसने नहीं — एक नज़र में। Defaulters का WhatsApp link तैयार — message ready, सिर्फ Send करना है।",
+  },
+  {
+    icon: "✅",
+    title: "दैनिक उपस्थिति",
+    desc: "हर दिन कोर्स और सेमेस्टर-वार उपस्थिति दर्ज करें। उपस्थित/अनुपस्थित की संख्या तुरंत देखें। अनुपस्थित विद्यार्थियों के अभिभावकों का WhatsApp link तैयार — एक click में message खुलेगा।",
+  },
+  {
+    icon: "🔑",
+    title: "Professor PIN Login",
+    desc: "हर Professor को Principal द्वारा 6 अंकों का PIN मिलता है। वे अपने mobile से login करते हैं — कोई email नहीं, कोई password नहीं। वे सिर्फ अपने assigned courses देखते हैं। Principal सब monitor करते हैं।",
+  },
+  {
+    icon: "📝",
+    title: "परीक्षा और परिणाम",
+    desc: "Internal, Mid Term, Practical और Annual परीक्षाएं schedule करें। हर विद्यार्थी के अंक दर्ज करें — grade और pass/fail अपने आप calculate होगा। Subject-wise result sheets प्रिंट करें।",
+  },
+  {
+    icon: "📄",
+    title: "अंकसूची",
+    desc: "किसी भी course और exam type की complete marksheet generate करें। सभी subjects एक table में — कुल अंक, प्रतिशत, grade और परिणाम। एक click में print के लिए तैयार।",
+  },
+  {
+    icon: "🏅",
+    title: "प्रमाण पत्र",
+    desc: "Transfer Certificate, Character Certificate, Bonafide Certificate और Migration Certificate seconds में जारी करें। कॉलेज का नाम, logo और Principal का नाम अपने आप print होगा।",
+  },
+  {
+    icon: "📋",
+    title: "परीक्षा फॉर्म",
+    desc: "हर semester में exam form submission track करें। परीक्षा शुल्क paid है या नहीं — record करें। Forms approve या reject करें। Dashboard पर pending forms का alert देखें।",
+  },
+  {
+    icon: "🗓️",
+    title: "Timetable",
+    desc: "Course-wise साप्ताहिक timetable बनाएं। हर period में subject और Professor assign करें। Professors login के बाद अपना schedule देखते हैं।",
+  },
+  {
+    icon: "📊",
+    title: "Reports — NAAC के लिए तैयार",
+    desc: "Course-wise विद्यार्थी संख्या, फीस संग्रह, उपस्थिति प्रतिशत और परीक्षा परिणाम — सब एक जगह। NAAC accreditation के लिए ज़रूरी सभी data उपलब्ध।",
+  },
+  {
+    icon: "📣",
+    title: "सूचना पट्ट",
+    desc: "Normal, Important या Urgent priority के साथ कॉलेज की सूचनाएं post करें। विद्यार्थी और Professors login के बाद सूचनाएं देखते हैं। Urgent सूचनाएं लाल रंग में highlighted।",
+  },
+  {
+    icon: "📱",
+    title: "Mobile + Desktop",
+    desc: "Android app की तरह (Add to Home Screen) और Windows EXE की तरह — दोनों पर काम करता है। एक खरीद — दोनों पर। कोई अलग app store नहीं चाहिए।",
+  },
 ];
 
 const howTo = [
-  { step: "1", icon: "🔐", title: "Google से Login करें", desc: "college.nishantsoftwares.in खोलें और Admin Login पर click करें। अपने college Gmail से sign in करें। 7 दिन का free trial अपने आप शुरू — कोई card नहीं, कोई payment नहीं।" },
-  { step: "2", icon: "⚙️", title: "College की जानकारी दर्ज करें", desc: "Settings में जाएं। College का नाम, university का नाम (जैसे MGKVP), पता, Principal का नाम, affiliation number दर्ज करें और college logo upload करें। यह हर receipt और certificate पर दिखेगा।" },
-  { step: "3", icon: "🎓", title: "Students जोड़ें", desc: "Students → Add New Student में जाएं। नाम, faculty, course, semester, roll number और phone भरें। या CSV file से एक साथ सैकड़ों Students import करें।" },
-  { step: "4", icon: "👨‍🏫", title: "Professors जोड़ें", desc: "Professors → Add New में जाएं। नाम, designation, qualification दर्ज करें और 6 अंकों का PIN set करें। उनके profile में जाकर कौन से subjects और courses पढ़ाते हैं — assign करें।" },
-  { step: "5", icon: "💰", title: "फीस दर्ज करें", desc: "Fees → Record Fee में जाएं। Student चुनें, राशि और due date दर्ज करें। Payment होने पर Mark Paid click करें — receipt अपने आप generate होगी। Defaulters tab से WhatsApp reminder भेजें।" },
-  { step: "6", icon: "✅", title: "उपस्थिति दर्ज करें", desc: "Attendance → Mark में जाएं। Date और course चुनें। उपस्थित Students को check करें, अनुपस्थित को uncheck करें। Save करें। अनुपस्थित Students के अभिभावकों को एक click में WhatsApp alert।" },
-  { step: "7", icon: "📝", title: "परीक्षा प्रबंधन", desc: "Exams → Schedule New Exam में जाएं। Course, semester, subject, type और date चुनें। परीक्षा के बाद उस exam में जाएं और हर Student के अंक दर्ज करें। Grade और pass/fail अपने आप calculate।" },
-  { step: "8", icon: "📋", title: "परीक्षा फॉर्म", desc: "Exam Forms → Add में जाएं। Student, semester और academic year चुनें। परीक्षा शुल्क paid है या नहीं — mark करें। List से forms approve या reject करें। Dashboard पर pending forms का alert।" },
+  {
+    step: "1", icon: "🔐", title: "Google से Login करें",
+    desc: "college.nishantsoftwares.in खोलें और Admin Login पर click करें। अपने college Gmail से sign in करें। 7 दिन का free trial अपने आप शुरू — कोई card नहीं, कोई payment नहीं।",
+  },
+  {
+    step: "2", icon: "⚙️", title: "College की जानकारी दर्ज करें",
+    desc: "Settings में जाएं। College का नाम, university का नाम (जैसे MGKVP), पता, Principal का नाम, affiliation number दर्ज करें और college logo upload करें। यह हर receipt और certificate पर दिखेगा।",
+  },
+  {
+    step: "3", icon: "🎓", title: "विद्यार्थी जोड़ें",
+    desc: "Students → Add New Student में जाएं। नाम, faculty, course, semester, roll number और phone भरें। PEN और आधार नंबर भी दर्ज कर सकते हैं।",
+  },
+  {
+    step: "4", icon: "👨‍🏫", title: "Professors जोड़ें",
+    desc: "Professors → Add New में जाएं। नाम, designation, qualification दर्ज करें और 6 अंकों का PIN set करें। उनके profile में जाकर कौन से subjects और courses पढ़ाते हैं — assign करें।",
+  },
+  {
+    step: "5", icon: "💰", title: "फीस दर्ज करें",
+    desc: "Fees → Record Fee में जाएं। विद्यार्थी चुनें, राशि और due date दर्ज करें। Payment होने पर Mark Paid click करें — receipt अपने आप generate होगी। Defaulters tab से WhatsApp link खोलें और reminder भेजें।",
+  },
+  {
+    step: "6", icon: "✅", title: "उपस्थिति दर्ज करें",
+    desc: "Attendance → Mark में जाएं। Date और course चुनें। उपस्थित विद्यार्थियों को check करें, अनुपस्थित को uncheck करें। Save करें। अनुपस्थित विद्यार्थियों के अभिभावकों का WhatsApp link एक click में मिलेगा।",
+  },
+  {
+    step: "7", icon: "📝", title: "परीक्षा प्रबंधन",
+    desc: "Exams → Schedule New Exam में जाएं। Course, semester, subject, type और date चुनें। परीक्षा के बाद उस exam में जाएं और हर विद्यार्थी के अंक दर्ज करें। Grade और pass/fail अपने आप calculate।",
+  },
+  {
+    step: "8", icon: "📋", title: "परीक्षा फॉर्म",
+    desc: "Exam Forms → Add में जाएं। विद्यार्थी, semester और academic year चुनें। परीक्षा शुल्क paid है या नहीं — mark करें। List से forms approve या reject करें। Dashboard पर pending forms का alert।",
+  },
 ];
 
 const professorSteps = [
   { step: "1", text: "Principal, Professors section से Professor जोड़ते हैं और 6 अंकों का PIN set करते हैं।" },
   { step: "2", text: "Professor अपने mobile पर college.nishantsoftwares.in खोलते हैं और Professor Login click करते हैं।" },
   { step: "3", text: "Professor अपना mobile number और PIN दर्ज करते हैं — वे सिर्फ अपने assigned courses देखते हैं।" },
-  { step: "4", text: "Professor उपस्थिति दर्ज करते हैं, Students देखते हैं और exam results check करते हैं। Principal को सब कुछ तुरंत दिखता है।" },
+  { step: "4", text: "Professor उपस्थिति दर्ज करते हैं, विद्यार्थी देखते हैं और exam results check करते हैं। Principal को सब कुछ तुरंत दिखता है।" },
 ];
 
 export default function CollegePage() {
@@ -51,7 +123,7 @@ export default function CollegePage() {
             <span className="text-amber-500">एक Software में — Mobile पर</span>
           </h1>
           <p className="text-lg text-amber-600 max-w-2xl mx-auto mb-4 leading-relaxed">
-            Students · Fees · उपस्थिति · परीक्षा · प्रमाण पत्र · परीक्षा फॉर्म — UP के private PG colleges के लिए।
+            विद्यार्थी · फीस · उपस्थिति · परीक्षा · प्रमाण पत्र · परीक्षा फॉर्म — UP के private colleges के लिए।
           </p>
           <p className="text-lg font-bold text-amber-600 mb-8">
             NAAC accreditation के लिए ज़रूरी सभी records digital रखें।
@@ -67,7 +139,7 @@ export default function CollegePage() {
             </a>
             <a href="https://college.nishantsoftwares.in/student/login"
               className="bg-amber-700 text-white px-8 py-4 rounded-lg hover:bg-amber-800 font-bold text-lg shadow-sm">
-              🎓 Student Login
+              🎓 विद्यार्थी Login
             </a>
             <a href={COLLEGE_EXE_URL}
               className="bg-gray-800 text-white px-8 py-4 rounded-lg hover:bg-gray-700 font-bold text-lg shadow-sm">
@@ -82,7 +154,7 @@ export default function CollegePage() {
         {/* Features */}
         <div className="mb-16">
           <h2 className="text-3xl font-extrabold text-center text-amber-600 mb-2">क्या-क्या मिलेगा?</h2>
-          <p className="text-center text-amber-600 text-lg mb-8">13 features — एक software, एक price</p>
+          <p className="text-center text-amber-600 text-lg mb-8">{features.length} features — एक software, एक price</p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {features.map((f, i) => (
               <div key={i} className="bg-white p-5 rounded-xl shadow-sm border border-amber-100">
