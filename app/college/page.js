@@ -3,109 +3,112 @@ import Link from "next/link";
 const COLLEGE_EXE_URL = "https://github.com/kp1153/college-saas/releases/download/v1.0.0/Nishant.PG.College.Setup.0.1.0.exe";
 
 const features = [
-  { icon: "🎓", title: "Student Management", desc: "Add students with complete details — name, course, semester, faculty, roll number, scholar number, PEN, Aadhaar, photo, father/mother name, phone. Import hundreds at once via CSV." },
-  { icon: "💰", title: "Fee Collection & Receipt", desc: "Record tuition, admission, exam and miscellaneous fees. Print professional receipts with college logo. See who paid, who hasn't. Send WhatsApp payment reminders in one click." },
-  { icon: "✅", title: "Daily Attendance", desc: "Mark course and semester-wise attendance every day. See present/absent count instantly. Auto WhatsApp alert to absent students' parents. View monthly attendance percentage." },
-  { icon: "🔑", title: "Professor Login via PIN", desc: "Each professor gets a unique 6-digit PIN from the Principal. They log in from their own mobile — no email, no password. They see only their assigned courses. Principal monitors everything." },
-  { icon: "📝", title: "Exams & Results", desc: "Schedule Internal, Mid Term, Practical and Annual exams. Enter marks for each student — grade and pass/fail calculated automatically. Print subject-wise result sheets." },
-  { icon: "📄", title: "Marksheet", desc: "Generate complete marksheets for any course and exam type. All subjects in one table — total marks, percentage, grade and result. Ready to print in one click." },
-  { icon: "🏅", title: "Certificates", desc: "Issue Transfer Certificate, Character Certificate, Bonafide Certificate and Migration Certificate in seconds. College name, logo and Principal's signature printed automatically." },
-  { icon: "📋", title: "Exam Forms", desc: "Track exam form submission every semester. Record whether exam fee is paid or not. Approve or reject forms. See pending forms alert on dashboard." },
-  { icon: "🗓️", title: "Timetable", desc: "Build course-wise weekly timetable. Assign subject and professor to each period. Professors see their own schedule after login." },
-  { icon: "📊", title: "Reports", desc: "Course-wise student count, fee collection summary, attendance percentage and exam results — all in one place. No manual calculation needed." },
-  { icon: "📣", title: "Notice Board", desc: "Post college notices with Normal, Important or Urgent priority. Students and professors see notices after login. Urgent notices highlighted in red." },
-  { icon: "📱", title: "Mobile + Desktop", desc: "Works as an Android app (Add to Home Screen) and as a Windows EXE. One purchase covers both. No separate app store needed." },
+  { icon: "🎓", title: "Student Management", desc: "Students की पूरी जानकारी दर्ज करें — नाम, कोर्स, सेमेस्टर, फैकल्टी, रोल नंबर, स्कॉलर नंबर, PEN, आधार, फोटो, पिता/माता का नाम और फोन। CSV से एक साथ सैकड़ों Students import करें।" },
+  { icon: "💰", title: "फीस संग्रह और रसीद", desc: "ट्यूशन, एडमिशन, परीक्षा और विविध शुल्क दर्ज करें। कॉलेज लोगो के साथ प्रोफेशनल रसीद प्रिंट करें। किसने दिया, किसने नहीं — एक नज़र में देखें। एक click में WhatsApp reminder भेजें।" },
+  { icon: "✅", title: "दैनिक उपस्थिति", desc: "हर दिन कोर्स और सेमेस्टर-वार उपस्थिति दर्ज करें। उपस्थित/अनुपस्थित की संख्या तुरंत देखें। अनुपस्थित Students के अभिभावकों को WhatsApp अलर्ट। मासिक उपस्थिति प्रतिशत देखें।" },
+  { icon: "🔑", title: "Professor PIN Login", desc: "हर Professor को Principal द्वारा 6 अंकों का PIN मिलता है। वे अपने मोबाइल से login करते हैं — कोई email नहीं, कोई password नहीं। वे सिर्फ अपने assigned courses देखते हैं। Principal सब monitor करते हैं।" },
+  { icon: "📝", title: "परीक्षा और परिणाम", desc: "Internal, Mid Term, Practical और Annual परीक्षाएं schedule करें। हर Student के अंक दर्ज करें — grade और pass/fail अपने आप calculate होगा। Subject-wise result sheets प्रिंट करें।" },
+  { icon: "📄", title: "अंकसूची", desc: "किसी भी course और exam type की complete marksheet generate करें। सभी subjects एक table में — कुल अंक, प्रतिशत, grade और परिणाम। एक click में print के लिए तैयार।" },
+  { icon: "🏅", title: "प्रमाण पत्र", desc: "Transfer Certificate, Character Certificate, Bonafide Certificate और Migration Certificate seconds में जारी करें। कॉलेज का नाम, लोगो और Principal का हस्ताक्षर अपने आप print होगा।" },
+  { icon: "📋", title: "परीक्षा फॉर्म", desc: "हर semester में exam form submission track करें। परीक्षा शुल्क paid है या नहीं — record करें। Forms approve या reject करें। Dashboard पर pending forms का alert देखें।" },
+  { icon: "🗓️", title: "Timetable", desc: "Course-wise साप्ताहिक timetable बनाएं। हर period में subject और Professor assign करें। Professors login के बाद अपना schedule देखते हैं।" },
+  { icon: "📊", title: "Reports — NAAC के लिए तैयार", desc: "Course-wise Student संख्या, फीस संग्रह, उपस्थिति प्रतिशत और परीक्षा परिणाम — सब एक जगह। NAAC accreditation के लिए ज़रूरी सभी data उपलब्ध।" },
+  { icon: "📣", title: "सूचना पट्ट", desc: "Normal, Important या Urgent priority के साथ कॉलेज की सूचनाएं post करें। Students और Professors login के बाद सूचनाएं देखते हैं। Urgent सूचनाएं लाल रंग में highlighted।" },
+  { icon: "📱", title: "Mobile + Desktop", desc: "Android app की तरह (Add to Home Screen) और Windows EXE की तरह — दोनों पर काम करता है। एक खरीद — दोनों पर। कोई अलग app store नहीं चाहिए।" },
 ];
 
 const howTo = [
-  { step: "1", icon: "🔐", title: "Login with Google", desc: "Open college.nishantsoftwares.in and click Admin Login. Sign in with your college Gmail account. Your 7-day free trial starts automatically — no card, no payment." },
-  { step: "2", icon: "⚙️", title: "Setup College Details", desc: "Go to Settings. Enter college name, university name (e.g. MGKVP), address, Principal name, affiliation number and upload your college logo. This appears on every receipt and certificate." },
-  { step: "3", icon: "🎓", title: "Add Students", desc: "Go to Students → Add New Student. Fill name, faculty (Arts/Commerce/Science/Agriculture), course (B.A./B.Com etc.), semester, roll number and phone. Or import hundreds at once from a CSV file." },
-  { step: "4", icon: "👨‍🏫", title: "Add Professors", desc: "Go to Professors → Add New. Enter name, designation (Assistant/Associate/Professor), qualification and set a 6-digit PIN. Go to their profile and assign which subjects and courses they teach." },
-  { step: "5", icon: "💰", title: "Record Fees", desc: "Go to Fees → Record Fee. Select student, enter amount and due date. Once paid, click Mark Paid — receipt generates automatically. Send WhatsApp reminder to defaulters from the Defaulters tab." },
-  { step: "6", icon: "✅", title: "Mark Attendance", desc: "Go to Attendance → Mark. Select date and course. Check present students, uncheck absent. Click Save. Parents of absent students can be alerted via WhatsApp in one click." },
-  { step: "7", icon: "📝", title: "Manage Exams", desc: "Go to Exams → Schedule New Exam. Select course, semester, subject, type and date. After exam, go to that exam and enter marks for each student. Grades and pass/fail are calculated automatically." },
-  { step: "8", icon: "📋", title: "Exam Forms", desc: "Go to Exam Forms → Add. Select student, semester and academic year. Mark whether exam fee is paid. Approve or reject forms from the list. Dashboard shows pending forms alert." },
+  { step: "1", icon: "🔐", title: "Google से Login करें", desc: "college.nishantsoftwares.in खोलें और Admin Login पर click करें। अपने college Gmail से sign in करें। 7 दिन का free trial अपने आप शुरू — कोई card नहीं, कोई payment नहीं।" },
+  { step: "2", icon: "⚙️", title: "College की जानकारी दर्ज करें", desc: "Settings में जाएं। College का नाम, university का नाम (जैसे MGKVP), पता, Principal का नाम, affiliation number दर्ज करें और college logo upload करें। यह हर receipt और certificate पर दिखेगा।" },
+  { step: "3", icon: "🎓", title: "Students जोड़ें", desc: "Students → Add New Student में जाएं। नाम, faculty, course, semester, roll number और phone भरें। या CSV file से एक साथ सैकड़ों Students import करें।" },
+  { step: "4", icon: "👨‍🏫", title: "Professors जोड़ें", desc: "Professors → Add New में जाएं। नाम, designation, qualification दर्ज करें और 6 अंकों का PIN set करें। उनके profile में जाकर कौन से subjects और courses पढ़ाते हैं — assign करें।" },
+  { step: "5", icon: "💰", title: "फीस दर्ज करें", desc: "Fees → Record Fee में जाएं। Student चुनें, राशि और due date दर्ज करें। Payment होने पर Mark Paid click करें — receipt अपने आप generate होगी। Defaulters tab से WhatsApp reminder भेजें।" },
+  { step: "6", icon: "✅", title: "उपस्थिति दर्ज करें", desc: "Attendance → Mark में जाएं। Date और course चुनें। उपस्थित Students को check करें, अनुपस्थित को uncheck करें। Save करें। अनुपस्थित Students के अभिभावकों को एक click में WhatsApp alert।" },
+  { step: "7", icon: "📝", title: "परीक्षा प्रबंधन", desc: "Exams → Schedule New Exam में जाएं। Course, semester, subject, type और date चुनें। परीक्षा के बाद उस exam में जाएं और हर Student के अंक दर्ज करें। Grade और pass/fail अपने आप calculate।" },
+  { step: "8", icon: "📋", title: "परीक्षा फॉर्म", desc: "Exam Forms → Add में जाएं। Student, semester और academic year चुनें। परीक्षा शुल्क paid है या नहीं — mark करें। List से forms approve या reject करें। Dashboard पर pending forms का alert।" },
 ];
 
 const professorSteps = [
-  { step: "1", text: "Principal adds professor and sets a 6-digit PIN from the Professors section." },
-  { step: "2", text: "Professor opens college.nishantsoftwares.in on their mobile and clicks Professor Login." },
-  { step: "3", text: "Professor enters their mobile number and PIN — they see only their assigned courses." },
-  { step: "4", text: "Professor marks attendance, views students and checks exam results. Principal sees everything instantly." },
+  { step: "1", text: "Principal, Professors section से Professor जोड़ते हैं और 6 अंकों का PIN set करते हैं।" },
+  { step: "2", text: "Professor अपने mobile पर college.nishantsoftwares.in खोलते हैं और Professor Login click करते हैं।" },
+  { step: "3", text: "Professor अपना mobile number और PIN दर्ज करते हैं — वे सिर्फ अपने assigned courses देखते हैं।" },
+  { step: "4", text: "Professor उपस्थिति दर्ज करते हैं, Students देखते हैं और exam results check करते हैं। Principal को सब कुछ तुरंत दिखता है।" },
 ];
 
 export default function CollegePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-white">
+    <div className="min-h-screen bg-white">
       <div className="max-w-5xl mx-auto px-4 py-12">
 
         {/* Hero */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-base font-bold mb-5">
-            🎓 Nishant PG College Software
+          <div className="inline-block px-4 py-2 bg-amber-100 text-amber-600 rounded-full text-lg font-bold mb-5">
+            🎓 निशांत PG College Software
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-            Everything Your College Needs
+          <h1 className="text-5xl md:text-6xl font-extrabold text-amber-600 mb-6 leading-tight">
+            कॉलेज की हर ज़रूरत
             <br />
-            <span className="text-indigo-600">In One Place — On Mobile</span>
+            <span className="text-amber-500">एक Software में — Mobile पर</span>
           </h1>
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Students · Fees · Attendance · Exams · Certificates · Exam Forms — designed for UP's private PG colleges.
+          <p className="text-lg text-amber-600 max-w-2xl mx-auto mb-4 leading-relaxed">
+            Students · Fees · उपस्थिति · परीक्षा · प्रमाण पत्र · परीक्षा फॉर्म — UP के private PG colleges के लिए।
+          </p>
+          <p className="text-lg font-bold text-amber-600 mb-8">
+            NAAC accreditation के लिए ज़रूरी सभी records digital रखें।
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
             <a href="https://college.nishantsoftwares.in/login"
-              className="bg-indigo-600 text-white px-8 py-4 rounded-lg hover:bg-indigo-700 font-bold text-base shadow-sm">
+              className="bg-amber-600 text-white px-8 py-4 rounded-lg hover:bg-amber-700 font-bold text-lg shadow-sm">
               Admin Login →
             </a>
             <a href="https://college.nishantsoftwares.in/professor-login"
-              className="bg-yellow-500 text-white px-8 py-4 rounded-lg hover:bg-yellow-600 font-bold text-base shadow-sm">
+              className="bg-amber-500 text-white px-8 py-4 rounded-lg hover:bg-amber-600 font-bold text-lg shadow-sm">
               🔑 Professor Login
             </a>
             <a href="https://college.nishantsoftwares.in/student/login"
-              className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 font-bold text-base shadow-sm">
+              className="bg-amber-700 text-white px-8 py-4 rounded-lg hover:bg-amber-800 font-bold text-lg shadow-sm">
               🎓 Student Login
             </a>
             <a href={COLLEGE_EXE_URL}
-              className="bg-gray-800 text-white px-8 py-4 rounded-lg hover:bg-gray-700 font-bold text-base shadow-sm">
-              🖥️ Download Windows App
+              className="bg-gray-800 text-white px-8 py-4 rounded-lg hover:bg-gray-700 font-bold text-lg shadow-sm">
+              🖥️ Windows App Download करें
             </a>
           </div>
-          <p className="text-sm text-gray-400 mt-4">
+          <p className="text-lg text-amber-600 mt-4">
             Android पर install करें: Chrome → ⋮ → Add to Home Screen
           </p>
         </div>
 
         {/* Features */}
         <div className="mb-16">
-          <h2 className="text-3xl font-extrabold text-center text-gray-900 mb-2">क्या-क्या मिलेगा?</h2>
-          <p className="text-center text-gray-400 text-base mb-8">12 features — एक software, एक price</p>
+          <h2 className="text-3xl font-extrabold text-center text-amber-600 mb-2">क्या-क्या मिलेगा?</h2>
+          <p className="text-center text-amber-600 text-lg mb-8">13 features — एक software, एक price</p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {features.map((f, i) => (
-              <div key={i} className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+              <div key={i} className="bg-white p-5 rounded-xl shadow-sm border border-amber-100">
                 <div className="text-4xl mb-3">{f.icon}</div>
-                <h3 className="font-extrabold text-gray-900 text-base mb-2">{f.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
+                <h3 className="font-extrabold text-amber-600 text-lg mb-2">{f.title}</h3>
+                <p className="text-amber-600 text-lg leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* How To — User Manual */}
+        {/* How To */}
         <div className="mb-16">
-          <h2 className="text-3xl font-extrabold text-center text-gray-900 mb-2">कैसे शुरू करें?</h2>
-          <p className="text-center text-gray-400 text-base mb-8">8 steps — 15 मिनट में पूरा setup</p>
+          <h2 className="text-3xl font-extrabold text-center text-amber-600 mb-2">कैसे शुरू करें?</h2>
+          <p className="text-center text-amber-600 text-lg mb-8">8 steps — 15 मिनट में पूरा setup</p>
           <div className="space-y-4">
             {howTo.map((h) => (
-              <div key={h.step} className="bg-white rounded-xl border border-indigo-100 p-5 shadow-sm flex gap-4 items-start">
-                <div className="w-11 h-11 bg-indigo-600 text-white font-black rounded-full flex items-center justify-center shrink-0 text-lg">
+              <div key={h.step} className="bg-white rounded-xl border border-amber-100 p-5 shadow-sm flex gap-4 items-start">
+                <div className="w-11 h-11 bg-amber-600 text-white font-black rounded-full flex items-center justify-center shrink-0 text-lg">
                   {h.step}
                 </div>
                 <div>
-                  <div className="font-extrabold text-gray-900 text-base mb-1.5">
+                  <div className="font-extrabold text-amber-600 text-lg mb-1.5">
                     {h.icon} {h.title}
                   </div>
-                  <div className="text-gray-500 text-sm leading-relaxed">{h.desc}</div>
+                  <div className="text-amber-600 text-lg leading-relaxed">{h.desc}</div>
                 </div>
               </div>
             ))}
@@ -113,16 +116,16 @@ export default function CollegePage() {
         </div>
 
         {/* Professor Login Explainer */}
-        <div className="mb-16 bg-indigo-50 rounded-2xl p-6 border border-indigo-100">
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-1">🔑 Professor Attendance कैसे काम करती है?</h2>
-          <p className="text-gray-500 text-base mb-5">कोई email नहीं — सिर्फ PIN।</p>
+        <div className="mb-16 bg-amber-50 rounded-2xl p-6 border border-amber-100">
+          <h2 className="text-2xl font-extrabold text-amber-600 mb-1">🔑 Professor Attendance कैसे काम करती है?</h2>
+          <p className="text-amber-600 text-lg mb-5">कोई email नहीं — सिर्फ PIN।</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {professorSteps.map((s) => (
               <div key={s.step} className="bg-white rounded-xl p-4 shadow-sm flex gap-3 items-start">
-                <div className="w-9 h-9 bg-indigo-600 text-white font-black rounded-full flex items-center justify-center shrink-0 text-base">
+                <div className="w-9 h-9 bg-amber-600 text-white font-black rounded-full flex items-center justify-center shrink-0 text-lg">
                   {s.step}
                 </div>
-                <p className="text-base text-gray-700 leading-relaxed">{s.text}</p>
+                <p className="text-lg text-amber-600 leading-relaxed">{s.text}</p>
               </div>
             ))}
           </div>
@@ -130,71 +133,71 @@ export default function CollegePage() {
 
         {/* Windows App */}
         <div className="mb-16 bg-gray-900 rounded-2xl p-6 text-white">
-          <h2 className="text-2xl font-extrabold mb-2">🖥️ Windows App — EXE installer</h2>
-          <p className="text-gray-400 text-base mb-4">
-            Computer पर भी exactly वही experience जो mobile पर है। College का पूरा software एक click में खुलेगा।
+          <h2 className="text-2xl font-extrabold mb-2">🖥️ Windows App — EXE Installer</h2>
+          <p className="text-gray-400 text-lg mb-4">
+            Computer पर भी exactly वही experience जो mobile पर है। एक click में पूरा software खुलेगा।
           </p>
           <div className="bg-yellow-900/40 border border-yellow-600/40 rounded-xl p-4 mb-4 text-yellow-200">
-            <p className="font-bold text-base mb-2">⚠️ Windows Smart App Control Warning</p>
-            <p className="text-sm leading-relaxed">
-              Install करते समय Windows "Unknown Publisher" warning दे सकता है। यह normal है क्योंकि software digitally signed नहीं है।
+            <p className="font-bold text-lg mb-2">⚠️ Windows Smart App Control Warning</p>
+            <p className="text-lg leading-relaxed">
+              Install करते समय Windows "Unknown Publisher" warning दे सकता है। यह normal है।
               Install करने के लिए: <strong>More info → Run anyway</strong> पर click करें।
             </p>
           </div>
           <a href={COLLEGE_EXE_URL}
-            className="inline-block bg-white text-gray-900 font-extrabold px-6 py-3 rounded-xl text-base hover:bg-gray-100 transition">
+            className="inline-block bg-white text-gray-900 font-extrabold px-6 py-3 rounded-xl text-lg hover:bg-gray-100 transition">
             ⬇️ Download — Nishant PG College Setup
           </a>
         </div>
 
         {/* Pricing */}
         <div className="mb-16">
-          <h2 className="text-3xl font-extrabold text-center text-gray-900 mb-2">Pricing</h2>
-          <p className="text-center text-gray-400 text-base mb-8">7 days completely free — कोई card नहीं चाहिए</p>
+          <h2 className="text-3xl font-extrabold text-center text-amber-600 mb-2">मूल्य</h2>
+          <p className="text-center text-amber-600 text-lg mb-8">7 दिन बिल्कुल मुफ्त — कोई card नहीं चाहिए</p>
           <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <div className="rounded-2xl border-2 border-indigo-600 p-6 text-center shadow-lg relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-sm font-bold px-4 py-1 rounded-full">
-                New Account
+            <div className="rounded-2xl border-2 border-amber-600 p-6 text-center shadow-lg relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-600 text-white text-lg font-bold px-4 py-1 rounded-full">
+                नया खाता
               </div>
-              <h3 className="text-2xl font-extrabold mb-1 text-gray-700 mt-2">First Year</h3>
-              <div className="text-6xl font-extrabold text-indigo-600 mb-1">₹4,999</div>
-              <p className="text-gray-400 text-base mb-1">One-time — 1 year included</p>
-              <p className="text-gray-400 text-sm mb-4">Mobile + Desktop दोनों</p>
+              <h3 className="text-2xl font-extrabold mb-1 text-amber-600 mt-2">पहला वर्ष</h3>
+              <div className="text-6xl font-extrabold text-amber-600 mb-1">₹4,999</div>
+              <p className="text-amber-600 text-lg mb-1">एकमुश्त — 1 साल शामिल</p>
+              <p className="text-amber-600 text-lg mb-4">Mobile + Desktop दोनों</p>
               <a href="https://college.nishantsoftwares.in/login"
-                className="block w-full bg-indigo-600 text-white font-extrabold py-3 rounded-xl hover:bg-indigo-700 transition mb-3 text-base">
-                Try Free for 7 Days
+                className="block w-full bg-amber-600 text-white font-extrabold py-3 rounded-xl hover:bg-amber-700 transition mb-3 text-lg">
+                7 दिन मुफ्त आज़माएं
               </a>
               <a href="https://nishantsoftwares.in/payment?software=college"
                 target="_blank" rel="noopener noreferrer"
-                className="block w-full bg-gray-800 text-white font-extrabold py-3 rounded-xl hover:bg-gray-700 transition text-base">
-                💳 Buy Now — ₹4,999
+                className="block w-full bg-gray-800 text-white font-extrabold py-3 rounded-xl hover:bg-gray-700 transition text-lg">
+                💳 अभी खरीदें — ₹4,999
               </a>
             </div>
-            <div className="rounded-2xl border-2 border-gray-200 p-6 text-center shadow-sm">
-              <h3 className="text-2xl font-extrabold mb-1 text-gray-700 mt-2">Renewal</h3>
-              <div className="text-6xl font-extrabold text-indigo-600 mb-1">₹2,500</div>
-              <p className="text-gray-400 text-base mb-4">Per year</p>
+            <div className="rounded-2xl border-2 border-amber-200 p-6 text-center shadow-sm">
+              <h3 className="text-2xl font-extrabold mb-1 text-amber-600 mt-2">नवीनीकरण</h3>
+              <div className="text-6xl font-extrabold text-amber-600 mb-1">₹2,500</div>
+              <p className="text-amber-600 text-lg mb-4">प्रति वर्ष</p>
               <a href="https://nishantsoftwares.in/payment?software=college"
                 target="_blank" rel="noopener noreferrer"
-                className="block w-full bg-indigo-600 text-white font-extrabold py-3 rounded-xl hover:bg-indigo-700 transition text-base">
-                💳 Renew Now
+                className="block w-full bg-amber-600 text-white font-extrabold py-3 rounded-xl hover:bg-amber-700 transition text-lg">
+                💳 नवीनीकरण करें
               </a>
             </div>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="text-center bg-indigo-900 rounded-2xl p-10 text-white">
+        <div className="text-center bg-amber-600 rounded-2xl p-10 text-white">
           <h2 className="text-3xl font-extrabold mb-3">आज शुरू करें — 7 दिन Free</h2>
-          <p className="text-indigo-300 mb-6 text-base">
+          <p className="text-white mb-6 text-lg">
             कोई card नहीं। कोई setup fee नहीं। Developer से सीधे support।
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 text-base text-indigo-300 font-bold">
-            <a href="tel:+919996865069" className="hover:text-white">📞 9996865069</a>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 text-lg text-white font-bold">
+            <a href="tel:+919996865069" className="hover:text-amber-200">📞 9996865069</a>
             <span className="hidden sm:inline">|</span>
-            <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="hover:text-white">💬 WhatsApp</a>
+            <a href="https://wa.me/919996865069" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200">💬 WhatsApp</a>
             <span className="hidden sm:inline">|</span>
-            <a href="mailto:prasad.kamta@gmail.com" className="hover:text-white">✉️ prasad.kamta@gmail.com</a>
+            <a href="mailto:prasad.kamta@gmail.com" className="hover:text-amber-200">✉️ prasad.kamta@gmail.com</a>
           </div>
         </div>
 
